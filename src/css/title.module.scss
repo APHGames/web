@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.title__title {
+	display: flex;
+}
+
+.title__title h2 {
+	font-weight: 300;
+	padding: 20px;
+	text-transform: uppercase;
+	font-size: $font-size-xxlarge;
+	text-align: center;
+}
+
+.title__logo {
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 610px;
+	align-items: self-start;
+	position: relative;
+}

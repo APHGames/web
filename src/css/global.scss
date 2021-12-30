@@ -1,0 +1,105 @@
+/**
+*
+* Override Infima's variables + set color palette
+*
+**/
+
+@import './fonts.scss';
+@import "./variables.scss";
+@import "../internals/aph-colors.scss";
+@import "../internals/docusaurus-aph-dark.scss";
+@import "../internals/docusaurus-aph-light.scss";
+
+:root {
+	--transition-bezier: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	--font-family-base: "Source Sans Pro", Helvetica, sans-serif;
+	--ifm-code-font-size: #{$font-size-small};
+	--ifm-font-family-base: var(--font-family-base);
+	--ifm-font-family-monospace: "Inconsolata", monospace;
+	--ifm-font-size-base: #{$font-size-small};
+	--ifm-h1-font-size: #{$font-size-xxlarge};
+	--ifm-h2-font-size: #{$font-size-llarge};
+	--ifm-h4-font-size: #{$font-size-large};
+	--ifm-heading-margin-bottom: 1.5rem;
+	--ifm-menu-link-sublist-icon: url("/img/infima/arrow.svg");
+	--ifm-navbar-height: 80px;
+	--ifm-navbar-item-padding-horizontal: 20px;
+	--ifm-paragraph-margin-bottom: 1.25rem;
+	--ifm-table-cell-padding: 0.15rem 1rem;
+}
+
+html[data-theme="dark"] {
+	--ifm-menu-link-sublist-icon: url("/img/infima/arrow.svg");
+}
+
+/**
+ *
+ * Override Docusaurus/Infima
+ *
+ **/
+nav {
+	--ifm-font-size-base: #{$font-size-normal};
+}
+
+canvas {
+	max-width: 100%;
+}
+
+.menu__link {
+	border-radius: 8px;
+}
+
+.markdown {
+	--ifm-h2-vertical-rhythm-top: 3;
+	--ifm-h3-vertical-rhythm-top: 2;
+	--ifm-heading-vertical-rhythm-top: 2; /* h4 */
+	--ifm-heading-vertical-rhythm-bottom: 0.4;
+	--ifm-table-border-width: 4px;
+}
+
+
+/* This is from Layout.tsx (cf. upstream) */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	transition: var(--ifm-transition-fast) ease color;
+}
+
+#__docusaurus {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Pagination */
+.navbar__link,
+.dropdown__link {
+	font-size: var(--ifm-font-size-base);
+}
+
+
+/**
+ *
+ * Custom global styles
+ *
+ **/
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+}
+
+/* WebKit / Blink */
+::-webkit-scrollbar {
+	width: 7px !important;
+	height: 7px !important;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0 !important;
+}

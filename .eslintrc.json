@@ -1,0 +1,23 @@
+{
+	"extends": [
+		"airbnb",
+		"airbnb-typescript"
+	],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"rules": {
+		"indent": ["error", "tab"],
+		"@typescript-eslint/indent": ["error", "tab"],
+		"@typescript-eslint/lines-between-class-members": ["off"],
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["off"],
+		"react/jsx-props-no-spreading": ["off"],
+		"react/no-array-index-key": ["off"],
+		"linebreak-style": ["off"],
+		"jsx-a11y/alt-text": ["off"],
+		"jsx-a11y/anchor-has-content": ["off"],
+		"jsx-a11y/control-has-associated-label": ["off"]
+	 }
+}

@@ -1,0 +1,141 @@
+@use 'sass:math';
+@import "../internals/aph-colors.scss";
+
+$pacman-size: 50px;
+$ball-size: 16px;
+
+
+.pacman {
+	position: absolute;
+	right: 30%;
+	bottom: 50%;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 5em;
+	border-radius: 100em 100em 0 0;
+	transform-origin: bottom;
+	animation: eating-top 0.5s infinite;
+}
+
+
+.pacman,
+.pacman::before {
+	width: $pacman-size;
+	height: math.div($pacman-size, 2);
+	background: $color-lemon;
+}
+
+.pacman::before {
+	content: "";
+	display: block;
+	margin-top: math.div($pacman-size, 2);
+	position: absolute;
+	transform-origin: top;
+	border-radius: 0 0 100em 100em;
+	transform: rotate(80deg);
+	animation: eating-bottom 0.5s infinite;
+}
+
+.pacman::after {
+	position: absolute;
+	border-radius: 100em;
+	content: "";
+	display: block;
+	height: $ball-size;
+	width: $ball-size;
+	margin-top: math.div($pacman-size, 2) - math.div($ball-size, 2);
+	margin-left: math.div($pacman-size, 2) - math.div($ball-size, 2);
+	transform-origin: center;
+	animation: center 0.5s infinite, ball 0.5s -0.33s infinite linear;
+}
+
+@media (max-width: 996px) {
+	$pacman-size: 50px;
+	$ball-size: 14px;
+
+
+	.pacman,
+	.pacman::before {
+		width: $pacman-size;
+		height: math.div($pacman-size, 2);
+		background: $color-lemon;
+	}
+	
+	.pacman::before {
+		content: "";
+		display: block;
+		margin-top: math.div($pacman-size, 2);
+		position: absolute;
+		transform-origin: top;
+		border-radius: 0 0 100em 100em;
+		transform: rotate(80deg);
+		animation: eating-bottom 0.5s infinite;
+	}
+	
+	.pacman::after {
+		position: absolute;
+		border-radius: 100em;
+		content: "";
+		display: block;
+		height: $ball-size;
+		width: $ball-size;
+		margin-top: math.div($pacman-size, 2) - math.div($ball-size, 2);
+		margin-left: math.div($pacman-size, 2) - math.div($ball-size, 2);
+		transform-origin: center;
+		animation: center 0.5s infinite, ball 0.5s -0.33s infinite linear;
+	}
+}
+
+
+/* freeze for pdf printing mode */
+.print-pdf {
+	.pacman, .pacman::before, .pacman::after {
+		animation: unset;
+		display: none;
+	}
+}
+
+@keyframes eating-top {
+	0% {
+		transform: rotate(40deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(40deg);
+	}
+}
+
+@keyframes eating-bottom {
+	0% {
+		transform: rotate(-80deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-80deg);
+	}
+}
+
+@keyframes center {
+	0% {
+		transform: rotate(-40deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-40deg);
+	}
+}
+
+@keyframes ball {
+	0% {
+		box-shadow: -80px 0 0 0 $color-white, -140px 0 0 0 $color-white;
+	}
+	100% {
+		box-shadow: -20px 0 0 0 $color-white, -80px 0 0 0 $color-white;
+	}
+}

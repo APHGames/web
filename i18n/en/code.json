@@ -1,0 +1,199 @@
+{
+	"gallery.preview": {
+		"message": "Preview Games"
+	},
+	"gallery.vlak": {
+		"message": "Vlak Clone"
+	},
+	"gallery.tetris": {
+		"message": "Tetris Clone"
+	},
+	"gallery.aph2021": {
+		"message": "NI-APH Projects 2021"
+	},
+	"gallery.aph2020": {
+		"message": "NI-APH Projects 2020"
+	},
+	"gallery.aph2019": {
+		"message": "MI-APH Projects 2019"
+	},
+	"gallery.aph2018": {
+		"message": "MI-APH Projects 2018"
+	},
+	"gallery.aph2017": {
+		"message": "MI-APH Demos 2017"
+	},
+	"gallery.arkanoid": {
+		"message": "Arkanoid Clone"
+	},
+	"gallery.pacman": {
+		"message": "Pacman Clone"
+	},
+	"gallery.paratrooper": {
+		"message": "Paratrooper Clone"
+	},
+
+
+	"pages.lectures": {
+		"message": "Lectures"
+	},
+	"pages.lectures.intro": {
+		"message": "Intro"
+	},
+	"pages.lectures.organization": {
+		"message": "Organization"
+	},
+	"pages.lectures.lecture": {
+		"message": "Lecture"
+	},
+	"pages.lectures.games": {
+		"message": "Games"
+	},
+	"pages.lectures.engines": {
+		"message": "Engines"
+	},
+	"pages.lectures.assets": {
+		"message": "Assets"
+	},
+	"pages.lectures.components": {
+		"message": "Components"
+	},
+	"pages.lectures.patterns": {
+		"message": "Patterns"
+	},
+	"pages.lectures.audio": {
+		"message": "Audio"
+	},
+	"pages.lectures.space": {
+		"message": "Space"
+	},
+	"pages.lectures.physics": {
+		"message": "Physics"
+	},
+	"pages.lectures.graphics": {
+		"message": "Graphics"
+	},
+	"pages.lectures.ai": {
+		"message": "AI"
+	},
+	"pages.lectures.multiplayer": {
+		"message": "Multiplayer"
+	},
+	"pages.lectures.design": {
+		"message": "Design"
+	},
+
+	"pages.minitalks": {
+		"message": "Minitalks"
+	},
+	"pages.minitalks.minitalk": {
+		"message": "Minitalk"
+	},
+	"pages.minitalks.mechanics": {
+		"message": "Essential Mechanics"
+	},
+	"pages.minitalks.speedrunning": {
+		"message": "Speedrunning"
+	},
+	"pages.minitalks.styles": {
+		"message": "Game Art Styles"
+	},
+	"pages.minitalks.adventures": {
+		"message": "Adventures Games"
+	},
+	"pages.minitalks.storytelling": {
+		"message": "Storytelling"
+	},
+	"pages.minitalks.leveldesign": {
+		"message": "Level Design"
+	},
+	"pages.minitalks.demoscene": {
+		"message": "Demoscene"
+	},
+	"pages.minitalks.blizzard": {
+		"message": "The Story of Blizzard"
+	},
+	"pages.minitalks.solodevs": {
+		"message": "Solo Developers"
+	},
+
+	"pages.resources.assets": {
+		"message": "Assets"
+	},
+	"pages.resources.assets.opengameart": {
+		"message": "Various game assets"
+	},
+	"pages.resources.assets.free3d": {
+		"message": "Free 3D models"
+	},
+	"pages.resources.assets.spriters": {
+		"message": "Sprites from existing games (for inspiration)"
+	},
+	"pages.resources.assets.pixelart": {
+		"message": "Pixel-art icons from devianart"
+	},
+	"pages.resources.assets.gameicons": {
+		"message": "Free game icons"
+	},
+	"pages.resources.assets.blender": {
+		"message": "Free Blender models"
+	},
+	"pages.resources.assets.tilesets": {
+		"message": "Free Tilesets"
+	},
+	"pages.resources.assets.vecteezy": {
+		"message": "Free Vector Art"
+	},
+	"pages.resources.assets.texking": {
+		"message": "Free Textures"
+	},
+	"pages.resources.assets.gamesounds": {
+		"message": "Royalty-free sounds"
+	},
+	"pages.resources.assets.freepd": {
+		"message": "Public Domain Music"
+	},
+	"pages.resources.assets.freesfx": {
+		"message": "Free Sound Effects"
+	},
+
+	"pages.resources.portals": {
+		"message": "Portals"
+	},
+	"pages.resources.portals.itchio": {
+		"message": "For sharing free indie games"
+	},
+	"pages.resources.portals.gamescz": {
+		"message": "CZ portal with latest news from Game Industry"
+	},
+	"pages.resources.portals.gamedev": {
+		"message": "Former Gamasutra, portal for gamedev articles"
+	},
+	"pages.resources.portals.unseen": {
+		"message": "Never released games"
+	},
+	"pages.resources.portals.howlong": {
+		"message": "How long it takes to beat a game DB"
+	},
+	"pages.resources.portals.clones": {
+		"message": "List of open-source clones"
+	},
+
+
+	"pages.resources.books": {
+		"message": "Books"
+	},
+
+	"index.title": {
+		"message": "APH Games Portal"
+	},
+	"index.workshops": {
+		"message": "Workshops"
+	},
+	"index.tutorials": {
+		"message": "Tutorials"
+	},
+	"index.minigames": {
+		"message": "Minigames"
+	}
+  }

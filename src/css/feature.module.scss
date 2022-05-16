@@ -2,63 +2,44 @@
 @import "../internals/aph-colors.scss";
 
 
-@mixin content($theme) {
+.feature {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+}
+
+.feature__illustration {
+	margin-bottom: 1rem;
+	align-self: start;
+}
+
+.feature__title {
+	font-weight: var(--ifm-font-weight-semibold);
+}
+
+.feature__description {
+	margin: 0;
+	color: $color-royal-light;
+	font-size: $font-size-normal;
+}
+
+.feature__description::before {
+	content: "> ";
+	color: $color-royal-light;
+}
+
+@media (max-width: 996px) {
 	.feature {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
+		align-items: center;
 	}
-	
-	.feature__illustration {
+
+	.feature:not(:last-child) {
 		margin-bottom: 3rem;
-		align-self: start;
-	}
-	
-	.feature__title {
-		font-weight: var(--ifm-font-weight-semibold);
-	}
-	
-	.feature__description {
-		margin: 0;
-		@if $theme == "dark" {
-			color: $color-royal-light;
-
-		} @else {
-			color: $color-royal-dark;
-		}
-		font-size: $font-size-normal;
-	}
-	
-	.feature__description::before {
-		content: "> ";
-		@if $theme == "dark" {
-			color: $color-royal-light;
-
-		} @else {
-			color: $color-royal-dark;
-		}
 	}
 
-	@media (max-width: 996px) {
-		.feature {
-			align-items: center;
-		}
-	
-		.feature:not(:last-child) {
-			margin-bottom: 3rem;
-		}
-	
-		.feature__illustration {
-			margin-bottom: 2rem;
-			align-self: center;
-		}
+	.feature__illustration {
+		margin-bottom: 2rem;
+		align-self: center;
 	}
-}
-
-
-html[data-theme="dark"] {
-	@include content("dark");
-}
-html[data-theme="light"] {
-	@include content("light");
 }

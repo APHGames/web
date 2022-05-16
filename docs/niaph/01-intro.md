@@ -1,56 +1,14 @@
 ---
-title: NI-APH
-description: NI-APH game development course
+title: Intro
+description: Introduction
 
 ---
 
-import Lectures from './lectures.tsx'
-
-## Materials
-- requirements to finish this course can be found in [requirements](./02-requirements.md)
-- evaluation of the classes will be located on [grades.fit.cvut.cz](https://grades.fit.cvut.cz/)
+import Lectures from '@site/docs/niaph/lectures.tsx'
 
 ### Code examples
-- examples can be found either on [github](https://github.com/APHGames/examples) or [university gitlab](https://gitlab.fit.cvut.cz/NI-APH/examples)
-- template project for those that would like to use PixiJS and ECS library can be found either on [github](https://github.com/APHGames/ecs-template) or [university gitlab](https://gitlab.fit.cvut.cz/NI-APH/ecs-template)
-
-<Lectures />
-
-### Lectures schedule
-
-| Week | Date | Content | 
-| ------ | ------ | ------ | 
-| 01 | 23.9.2021 | Games |
-| 02 | 30.9.2021 | Engines |
-| 03 | 7.10.2021 | Assets |
-| 04 | 14.10.2021 | Components |
-| 05 | 21.10.2021 | Patterns |
-| 06 | 28.10.2021 | --- |
-| 07 | 4.11.2021 | Audio |
-| 08 | 11.11.2021 | Space |
-| 09 | 18.11.2021 | Physics |
-| 10 | 25.11.2021 | Graphics |
-| 11 | 2.12.2021 | AI |
-| 12 | 9.12.2021 | Multiplayer |
-| 13 | 16.12.2021 | Design |
-
-### Labs schedule
-
-| Week | Date | Content | 
-| ------ | ------ | ------ | 
-| 01 | 23.9.2021 | Introduction |
-| 02 | 30.9.2021 | Introduction |
-| 03 | 7.10.2021 | Consultation |
-| 04 | 14.10.2021 | Components |
-| 05 | 21.10.2021 | Components |
-| 06 | 28.10.2021 | --- |
-| 07 | 4.11.2021 | Progress pres. |
-| 08 | 11.11.2021 | Progress pres. |
-| 09 | 18.11.2021 | Simple Physics |
-| 10 | 25.11.2021 | Simple Physics |
-| 11 | 2.12.2021 | Vision Cone |
-| 12 | 9.12.2021 | Vision Cone |
-| 13 | 16.12.2021 | Design follow-up |
+- examples can be found on [github](https://github.com/APHGames/examples)
+- template project for those that would like to use PixiJS and ECS library can be found on [github](https://github.com/APHGames/ecs-template)
 
 ### Presentation Slides
 - slides are written in HTML, powered by [**RevealJS**](https://revealjs.com/) library
@@ -84,3 +42,5 @@ Keyboard shortcuts for the slides:
 - press right mouse button, select `print`
 - select `Save as PDF` as the Destination
 - wait for the preview to be generated and click on `Save`
+
+<Lectures />

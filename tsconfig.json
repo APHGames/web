@@ -1,7 +1,13 @@
 {
+	"compilerOptions": {
+		"jsx": "react",
+		"paths": {
+			"@site/*": ["."],
+		}
+	},
 	// Docusaurus doesn't use this tsconfig.json to compile your project. 
 	// It is added just for a nicer Editor experience, 
 	// although you can choose to run tsc to type check your code for yourself or on CI.
 	"extends": "@tsconfig/docusaurus/tsconfig.json",  
-	"include": ["src/"]
+	"include": ["src/", "docs/"],
 }

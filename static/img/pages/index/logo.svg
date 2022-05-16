@@ -1,300 +1,45 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0rc1 (09960d6f05, 2020-04-09)"
-   sodipodi:docname="logo.svg"
-   id="svg68"
-   viewBox="0 0 160.28087 69.454035"
-   version="1.1"
-   height="262.50345"
-   width="605.78595">
-  <defs
-     id="defs72" />
-  <sodipodi:namedview
-     fit-margin-bottom="0"
-     fit-margin-right="0"
-     fit-margin-left="0"
-     fit-margin-top="0"
-     inkscape:current-layer="g66"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="85.296332"
-     inkscape:cx="249.23703"
-     inkscape:zoom="1.3111386"
-     units="px"
-     showgrid="false"
-     id="namedview70"
-     inkscape:window-height="1377"
-     inkscape:window-width="2560"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#454545"
-     inkscape:document-rotation="0" />
-  <metadata
-     id="metadata2">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     style="stroke-width:0.137689"
-     id="g66"
-     transform="matrix(7.2627119,0,0,7.2627119,-776.29088,-721.1512)">
-    <rect
-       y="99.478935"
-       x="106.88719"
-       height="9.1954136"
-       width="22.06901"
-       id="rect2586"
-       style="opacity:1;fill:#1d232d;fill-opacity:1;stroke:none;stroke-width:0.0728608;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:40;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:export-xdpi="1600"
-       inkscape:export-ydpi="1600" />
-    <path
-       id="path2590"
-       style="opacity:1;fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.145722;stroke-linecap:round;stroke-miterlimit:40;stroke-dasharray:none;stroke-opacity:1"
-       d="m 111.48495,101.31802 v 1.83909 h -1.83912 v 1.83908 h 1.83912 v 1.83907 h 1.83906 v -1.83907 h 1.83911 v -1.83908 h -1.83911 v -1.83909 z"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccc"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:export-xdpi="1600"
-       inkscape:export-ydpi="1600" />
-    <circle
-       r="0.9195413"
-       style="opacity:1;fill:#47d58a;fill-opacity:1;stroke:none;stroke-width:0.145722;stroke-linecap:round;stroke-miterlimit:40;stroke-dasharray:none;stroke-opacity:1"
-       id="circle2592"
-       cx="125.27809"
-       cy="104.07664"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:export-xdpi="1600"
-       inkscape:export-ydpi="1600" />
-    <circle
-       r="0.9195413"
-       cy="102.23756"
-       cx="123.439"
-       id="circle2594"
-       style="opacity:1;fill:#cf2f25;fill-opacity:1;stroke:none;stroke-width:0.145722;stroke-linecap:round;stroke-miterlimit:40;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:export-xdpi="1600"
-       inkscape:export-ydpi="1600" />
-    <circle
-       r="0.9195413"
-       style="opacity:1;fill:#2c57df;fill-opacity:1;stroke:none;stroke-width:0.145722;stroke-linecap:round;stroke-miterlimit:40;stroke-dasharray:none;stroke-opacity:1"
-       id="circle2596"
-       cx="123.439"
-       cy="105.91572"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:export-xdpi="1600"
-       inkscape:export-ydpi="1600" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2850"
-       d="m 107.25505,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 109.09411,99.29503 h 1.10349 v 0.183907 h -1.10349 z"
-       id="path2854"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2856"
-       d="m 110.93323,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 112.77229,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       id="path2858"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2860"
-       d="m 114.61136,99.29503 h 1.10348 v 0.183907 h -1.10348 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 116.45047,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       id="path2862"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2864"
-       d="m 118.28953,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 120.12865,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       id="path2866"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2868"
-       d="m 121.96771,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 123.80677,99.29503 h 1.10349 v 0.183907 h -1.10349 z"
-       id="path2870"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2872"
-       d="m 125.64589,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 127.48495,99.29503 h 1.10344 v 0.183907 h -1.10344 z"
-       id="path2874"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2876"
-       d="m 127.48495,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 125.64589,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       id="path2878"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2880"
-       d="m 123.80677,108.67437 h 1.10349 v 0.18376 h -1.10349 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 121.96771,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       id="path2882"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2884"
-       d="m 120.12865,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 118.28953,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       id="path2886"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2888"
-       d="m 116.45047,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 114.61136,108.67437 h 1.10348 v 0.18376 h -1.10348 z"
-       id="path2890"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2892"
-       d="m 112.77229,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 110.93323,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       id="path2894"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       inkscape:connector-curvature="0"
-       id="path2896"
-       d="m 109.09411,108.67437 h 1.10349 v 0.18376 h -1.10349 z"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40" />
-    <path
-       inkscape:export-ydpi="1600"
-       inkscape:export-xdpi="1600"
-       inkscape:export-filename="C:\Users\vesec\Desktop\aphlogo@3.png"
-       style="fill:#7b8694;fill-opacity:1;stroke:none;stroke-width:0.0275379;stroke-miterlimit:40"
-       d="m 107.25505,108.67437 h 1.10344 v 0.18376 h -1.10344 z"
-       id="path2898"
-       inkscape:connector-curvature="0" />
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="605.84" height="262.53" version="1.1" viewBox="0 0 160.29 69.461" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <rect y="1.3358" width="160.29" height="66.789" fill="#1d232d" style="paint-order:normal"/>
+ <g fill="#7b8694">
+  <path d="m33.395 14.694v13.358h-13.358v13.358h13.358v13.358h13.358v-13.358h13.358v-13.358h-13.358v-13.358z"/>
+  <circle cx="133.58" cy="34.73" r="6.6789"/>
+  <circle cx="120.22" cy="21.373" r="6.6789"/>
+  <circle cx="120.22" cy="48.088" r="6.6789"/>
+ </g>
+ <g fill="#7b8694">
+  <path d="m1.3359 0h10.686v1.3358h-10.686z"/>
+  <path d="m14.694 0h10.686v1.3358h-10.686z"/>
+  <path d="m28.052 0h10.686v1.3358h-10.686z"/>
+  <path d="m41.409 0h10.686v1.3358h-10.686z"/>
+  <path d="m54.767 0h10.686v1.3358h-10.686z"/>
+  <path d="m68.125 0h10.686v1.3358h-10.686z"/>
+  <path d="m81.483 0h10.686v1.3358h-10.686z"/>
+  <path d="m94.841 0h10.686v1.3358h-10.686z"/>
+  <path d="m108.2 0h10.686v1.3358h-10.686z"/>
+  <path d="m121.56 0h10.686v1.3358h-10.686z"/>
+  <path d="m134.91 0h10.686v1.3358h-10.686z"/>
+  <path d="m148.27 0h10.686v1.3358h-10.686z"/>
+  <path d="m1.3359 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m14.694 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m28.052 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m41.409 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m54.767 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m68.125 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m81.483 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m94.841 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m108.2 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m121.56 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m134.91 68.125h10.686v1.3358h-10.686z"/>
+  <path d="m148.27 68.125h10.686v1.3358h-10.686z"/>
+ </g>
 </svg>

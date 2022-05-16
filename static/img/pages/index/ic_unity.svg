@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0rc1 (09960d6f05, 2020-04-09)"
+   sodipodi:docname="ic_unity.svg"
+   xml:space="preserve"
+   viewBox="0 0 36.337 15.64"
+   version="1.1"
+   enable-background="new 0 0 198.44 105.83"
+   height="112.06"
+   width="140.29"
+   class="animated inactive"
+   id="lecture05Logo"><metadata
+   id="metadata12"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs10" /><sodipodi:namedview
+   inkscape:current-layer="lecture05Logo"
+   inkscape:window-maximized="1"
+   inkscape:window-y="1432"
+   inkscape:window-x="292"
+   inkscape:cy="75.135131"
+   inkscape:cx="54.193299"
+   inkscape:zoom="3.3644595"
+   showgrid="false"
+   id="namedview8"
+   inkscape:window-height="1017"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#6c6c6c"
+   inkscape:document-rotation="0" />
+  <filter
+   height="200"
+   width="200"
+   y="-2"
+   x="-2"
+   id="blur-filter">
+    <feGaussianBlur
+   id="feGaussianBlur2"
+   stdDeviation="2"
+   in="SourceGraphic" />
+  </filter><path
+   sodipodi:nodetypes="cccccccccccccccccccccccccccc"
+   style="fill:#ffffff;fill-opacity:1;stroke-width:0.225131"
+   inkscape:connector-curvature="0"
+   fill="#110b09"
+   d="M 24.20688,14.497636 20.182657,7.7286127 24.20688,0.95958634 26.146837,7.7286127 Z M 15.250478,13.837101 10.194252,8.8223006 H 18.2427 l 4.024223,6.7690254 z m 0,-12.2376906 6.995959,-1.75422386 L 18.222212,6.614212 H 10.173765 Z M 25.527727,-3.4773026 16.385365,-1.1039675 15.02332,1.227943 12.278743,1.20723 5.5716291,7.7286117 l 6.7071139,6.5213803 2.744577,-0.02072 1.362045,2.331911 9.142362,2.394048 2.455733,-8.894716 -1.382757,-2.3111989 1.382757,-2.3114246 z"
+   id="path2" /></svg>

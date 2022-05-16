@@ -1,72 +1,60 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "./mixins.scss";
 
-@mixin content($theme) {
-	
-	.resources__title {
-		width: 100%;
-		margin-bottom: 0;
-		margin-top: 30px;
-	}
 
-	.resources__group {
+.resources__title {
+	width: 100%;
+	margin-bottom: 0;
+	margin-top: 30px;
+}
+
+.resources__group {
+	display: flex;
+	max-width: var(--ifm-container-width);
+	justify-content: center;
+	margin: 0 auto;
+	--ifm-code-padding-horizontal: 1.5rem;
+	--ifm-code-padding-vertical: 1rem;
+	--ifm-pre-padding: 1rem 1.5rem;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 40px;
+	flex-direction: row;
+
+	.resource__container {
+		position: relative;
+		@include widget;
+		width: 16rem;
+		height: 30rem;
+		margin: 0.5rem;
+		padding: 0.1rem;
 		display: flex;
-		max-width: var(--ifm-container-width);
-		justify-content: center;
-		margin: 0 auto;
-		--ifm-code-padding-horizontal: 1.5rem;
-		--ifm-code-padding-vertical: 1rem;
-		--ifm-pre-padding: 1rem 1.5rem;
-		flex-wrap: wrap;
-		align-items: center;
-		margin-top: 40px;
-		flex-direction: row;
+		flex-direction: column;
 
-		.resource__container {
-			position: relative;
-			@if $theme == "dark" {
-				background-color: $color-rhino-90;
-			} @else {
-				background-color: $color-rhino-10;
+		.content {
+			width: 80%;
+			margin-left: 1rem;
+			h3 {
+				font-size: 1.2rem;
+				margin-bottom: 0.6rem;
 			}
-			width: 20rem;
-			height: 30rem;
-			margin: 0.5rem;
-			padding: 0.5rem;
-			display: flex;
-			flex-direction: column;
-
-			.content {
-				width: 80%;
-				margin-left: 1rem;
-				h3 {
-					font-size: 1.4rem;
-					margin-bottom: 0.6rem;
-				}
-				h4 {
-					font-size: 1.2rem;
-					margin-bottom: 0.6rem;
-				}
+			h4 {
+				font-size: 1rem;
+				margin-bottom: 0.6rem;
 			}
+		}
 
-			.icon {
-				padding: 5px;
-				margin-left: 10px;
-				width: calc(100% - 1rem);
-				img {
-					width: 100%;
-					height: 20rem;
-					margin: auto;
-					object-fit: contain;
-				}
+		.icon {
+			padding: 5px;
+			margin-left: 10px;
+			width: calc(100% - 1rem);
+			img {
+				width: 100%;
+				height: 20rem;
+				margin: auto;
+				object-fit: contain;
 			}
 		}
 	}
-}
-
-html[data-theme="dark"] {
-	@include content("dark");
-}
-html[data-theme="light"] {
-	@include content("light");
 }

@@ -1,7 +1,6 @@
 ---
 title: Brand
 description: NI-APH brand colors, fonts, and assets
-
 ---
 
 import styles from '@site/src/css/docs.module.scss';
@@ -37,6 +36,10 @@ The visual language of the NI-APH course has made a long way since 2017.
         <img src={useBaseUrl('img/docs/brand/aph_2021.png')} />
         <span>APH 2021</span>
     </div>
+    <div>
+        <img src={useBaseUrl('img/docs/brand/aph_2022.png')} />
+        <span>APH 2022+</span>
+    </div>
 </div>
 
 
@@ -49,7 +52,9 @@ titles were animated with a slight touch of chromatic aberration. Along with tec
 Ultimately, in 2020, a fully-fledged brand template was introduced - color palette, a logo that has a good ring to the course itself, and unique visuals, including a grid-like pattern for the slides, suggesting
 graph paper for architectural sketches. All fancy animations from 2019 have receded in a blaze of simplicity and minimalism.
 
-In 2021, some minor changes were introduced - slightly modified logo and better color selection for the diagrams. 
+In 2021, some minor changes were introduced - slightly modified logo and better color selection for the diagrams.
+
+In 2022, final touches were made and the black-and-white version was promoted as the main version of the logo.
 
 ## Logo
 
@@ -73,9 +78,15 @@ The logo represents the mission, purpose, and message of the **APH Games** brand
 
 The symbol is represented by ABXY buttons that appear on the right side of the logo. It is a detachable part of the logo and can be used in specific cases, such as favicons.
 
-<div className={styles.figure}>
-        <img src={useBaseUrl('img/docs/brand/logo_detached.svg')} />
-        <span>APH symbol</span>
+<div className={styles.figurelistsm}>
+    <div>
+            <img src={useBaseUrl('img/docs/brand/logo_detached.svg')} />
+            <span>APH symbol</span>
+    </div>
+    <div>
+            <img src={useBaseUrl('img/docs/brand/logo_detached_white.svg')} />
+            <span>APH symbol (black and white)</span>
+    </div>
 </div>
 
 
@@ -96,10 +107,6 @@ In case of a solid dark background, logo can be used without the cover. If the b
     <div>
         <img src={useBaseUrl('img/docs/brand/logo_nocover.svg')} />
         <div>Without cover</div>
-    </div>
-    <div>
-        <img src={useBaseUrl('img/docs/brand/logo_masked.svg')} />
-        <div>Masked</div>
     </div>
 </div>
 

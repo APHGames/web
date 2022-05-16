@@ -1,3 +1,5 @@
+import { translate } from "@docusaurus/Translate";
+
 export type Slide = {
 	group: number;
 	id: string;
@@ -13,150 +15,144 @@ export type SlideSection = {
 
 export const slidesData: SlideSection[] = [
 	{
-		name: 'Lectures',
+		name: translate({message: 'pages.lectures'}),
 		slides: [
 			{
 				group: 1,
 				id: 'lecture_org',
-				hint: 'Intro',
-				desc: 'Organization'
-			},
-			{
-				group: 1,
-				id: 'summary',
-				hint: 'Summary',
-				desc: 'Course Summary'
+				hint: translate({message: 'pages.lectures.intro'}),
+				desc: translate({message: 'pages.lectures.organization'})
 			},
 			{
 				group: 2,
 				id: 'lecture01',
-				hint: 'Lecture 1',
-				desc: 'Games'
+				hint: `${translate({message: 'pages.lectures.lecture'})} 1`,
+				desc: translate({message: 'pages.lectures.games'})
 			},
 			{
 				group: 2,
 				id: 'lecture02',
-				hint: 'Lecture 2',
-				desc: 'Engines',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 2`,
+				desc: translate({message: 'pages.lectures.engines'})
 			},
 			{
 				id: 'lecture03',
 				group: 2,
-				hint: 'Lecture 3',
-				desc: 'Assets',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 3`,
+				desc: translate({message: 'pages.lectures.assets'})
 			},
 			{
 				id: 'lecture04',
 				group: 2,
-				hint: 'Lecture 4',
-				desc: 'Components',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 4`,
+				desc: translate({message: 'pages.lectures.components'})
 			},
 			{
 				id: 'lecture05',
 				group: 2,
-				hint: 'Lecture 5',
-				desc: 'Patterns',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 5`,
+				desc: translate({message: 'pages.lectures.patterns'})
 			},
 			{
 				id: 'lecture06',
 				group: 2,
-				hint: 'Lecture 6',
-				desc: 'Audio',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 6`,
+				desc: translate({message: 'pages.lectures.audio'})
 			},
 			{
 				id: 'lecture07',
 				group: 2,
-				hint: 'Lecture 7',
-				desc: 'Space',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 7`,
+				desc: translate({message: 'pages.lectures.space'})
 			},
 			{
 				id: 'lecture08',
 				group: 2,
-				hint: 'Lecture 8',
-				desc: 'Physics',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 8`,
+				desc: translate({message: 'pages.lectures.physics'})
 			},
 			{
 				id: 'lecture09',
 				group: 2,
-				hint: 'Lecture 9',
-				desc: 'Graphics'
+				hint: `${translate({message: 'pages.lectures.lecture'})} 9`,
+				desc: translate({message: 'pages.lectures.graphics'})
 			},
 			{
 				id: 'lecture10',
 				group: 2,
-				hint: 'Lecture 10',
-				desc: 'Game AI',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 10`,
+				desc: translate({message: 'pages.lectures.ai'})
 			},
 			{
 				id: 'lecture11',
 				group: 2,
-				hint: 'Lecture 11',
-				desc: 'Multiplayer',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 11`,
+				desc: translate({message: 'pages.lectures.multiplayer'})
 			},
 			{
 				id: 'lecture12',
 				group: 2,
-				hint: 'Lecture 12',
-				desc: 'Design',
+				hint: `${translate({message: 'pages.lectures.lecture'})} 12`,
+				desc: translate({message: 'pages.lectures.design'})
 			},
 		],
 	},
 	{
-		name: 'Minitalks',
+		name: translate({message: 'pages.minitalks'}),
 		slides: [
 			{
 				group: 1,
 				id: 'minitalk_mechanics',
-				hint: 'Minitalk',
-				desc: 'Essential Mechanics',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.mechanics'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_speedrunning',
-				hint: 'Minitalk',
-				desc: 'Speedrunning',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.speedrunning'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_styles',
-				hint: 'Minitalk',
-				desc: 'Game Art Styles',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.styles'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_adventures',
-				hint: 'Minitalk',
-				desc: 'Adventure Games',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.adventures'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_storytelling',
-				hint: 'Minitalk',
-				desc: 'Storytelling',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.storytelling'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_leveldesign',
-				hint: 'Minitalk',
-				desc: 'Level Design',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.leveldesign'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_demoscene',
-				hint: 'Minitalk',
-				desc: 'Demoscene',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.demoscene'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_blizzard',
-				hint: 'Minitalk',
-				desc: 'The Story of Blizzard',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.blizzard'}),
 			},
 			{
 				group: 1,
 				id: 'minitalk_solodevs',
-				hint: 'Minitalk',
-				desc: 'Solo Developers',
+				hint: translate({message: 'pages.minitalks.minitalk'}),
+				desc: translate({message: 'pages.minitalks.solodevs'}),
 			},
 		],
 	},

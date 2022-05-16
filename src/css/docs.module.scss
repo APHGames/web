@@ -1,84 +1,86 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
 
-@mixin content($theme) {
-	.colors {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		column-gap: 10px;
-		row-gap: 10px;
+.colors {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap: 10px;
+	row-gap: 10px;
 
-		&.smaller {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
+	&.smaller {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 
-			&.gradients > div > div {
-				@media screen and (max-width: 500px) and (orientation: portrait) {
-					height: 80px;
-				}
-			}
-
-
-		> div {
-			text-align: center;
-			> :nth-child(1) {
-				height: 40px;
-				line-height: 40px;
+		&.gradients > div > div {
+			@media screen and (max-width: 500px) and (orientation: portrait) {
+				height: 80px;
 			}
 		}
-	}
 
-	.oldaph {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 10px;
 
-		> div {
-			text-align: center;
-		}
-	}
-
-	.figurelist {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 10px;
-
-		img {
-			width: 100%;
-		}
-		> div {
-			text-align: center;
-		}
-	}
-
-	.figure {
-		display: flex;
-		flex-direction: column;
-		margin-top: 20px;
-		margin-bottom: 20px;
+	> div {
 		text-align: center;
-
-		img {
-			object-fit: contain;
-		}
-
-		img.fill {
-			width: 100%;
-		}
-
-		/* SVGs don't have light mode. Therefore, they need to have dark background */
-		@if $theme == "light" {
-			background-color: $color-rhino-100;
+		> :nth-child(1) {
+			height: 40px;
+			line-height: 40px;
 		}
 	}
 }
 
-html[data-theme="dark"] {
-	@include content("dark");
+.oldaph {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+
+	> div {
+		text-align: center;
+	}
 }
-html[data-theme="light"] {
-	@include content("light");
+
+.figurelistsm {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	img {
+		width: 100%;
+	}
+	> div {
+		text-align: center;
+		min-width: 50%;
+	}
+}
+
+.figurelist {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	img {
+		width: 100%;
+	}
+	> div {
+		text-align: center;
+		min-width: 33.33%;
+	}
+}
+
+.figure {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	img {
+		object-fit: contain;
+	}
+
+	img.fill {
+		width: 100%;
+	}
 }

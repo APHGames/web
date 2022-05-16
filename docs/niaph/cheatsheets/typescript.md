@@ -43,6 +43,22 @@ let myCar: any = 'BMW'; // any
 const greeting = `Hello I'm ${userName}`; // template literal
 ```
 
+### Casting
+```typescript
+const user = result as User;
+const user = (<User>)result;
+
+// we can cast nested objects as well in both wayss
+const users: User[] = [
+  <Employee> {
+    firstname: 'Kunio',
+    surname: 'Otani',
+    role: 'Developer' 
+  }
+]
+
+```
+
 ### Functions
 
 ```typescript

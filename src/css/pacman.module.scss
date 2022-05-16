@@ -2,7 +2,7 @@
 @import "../internals/aph-colors.scss";
 
 $pacman-size: 50px;
-$ball-size: 16px;
+$ball-size: 20px;
 
 
 .pacman {
@@ -22,7 +22,7 @@ $ball-size: 16px;
 .pacman::before {
 	width: $pacman-size;
 	height: math.div($pacman-size, 2);
-	background: $color-lemon;
+	background: $color-white;
 }
 
 .pacman::before {
@@ -49,22 +49,22 @@ $ball-size: 16px;
 	animation: center 0.5s infinite, ball 0.5s -0.33s infinite linear;
 }
 
-@media (max-width: 996px) {
+/* once we start scaling below 700px, we need to take VW as the main calc unit */
+@media (max-width: 700px) {
 	$pacman-size: 50px;
 	$ball-size: 14px;
 
 
 	.pacman,
 	.pacman::before {
-		width: $pacman-size;
-		height: math.div($pacman-size, 2);
-		background: $color-lemon;
+		width: 8vw;
+		height: 4vw;
 	}
 	
 	.pacman::before {
 		content: "";
 		display: block;
-		margin-top: math.div($pacman-size, 2);
+		margin-top: 4vw;
 		position: absolute;
 		transform-origin: top;
 		border-radius: 0 0 100em 100em;
@@ -77,12 +77,12 @@ $ball-size: 16px;
 		border-radius: 100em;
 		content: "";
 		display: block;
-		height: $ball-size;
-		width: $ball-size;
-		margin-top: math.div($pacman-size, 2) - math.div($ball-size, 2);
-		margin-left: math.div($pacman-size, 2) - math.div($ball-size, 2);
+		height: 3vw;
+		width: 3vw;
+		margin-top: 8vw - 6vw;
+		margin-left: 8vw - 6vw;
 		transform-origin: center;
-		animation: center 0.5s infinite, ball 0.5s -0.33s infinite linear;
+		animation: center 0.5s infinite, ballscaled 0.5s -0.33s infinite linear;
 	}
 }
 
@@ -137,5 +137,14 @@ $ball-size: 16px;
 	}
 	100% {
 		box-shadow: -20px 0 0 0 $color-white, -80px 0 0 0 $color-white;
+	}
+}
+
+@keyframes ballscaled {
+	0% {
+		box-shadow: -12vw 0 0 0 $color-white, -22vw 0 0 0 $color-white;
+	}
+	100% {
+		box-shadow: -2vw 0 0 0 $color-white, -12vw 0 0 0 $color-white;
 	}
 }

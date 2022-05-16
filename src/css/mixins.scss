@@ -1,0 +1,9 @@
+@mixin widget  {
+	background-color: $color-rhino-100;
+	border: 10px solid transparent;
+	border-image-slice: 36;
+	border-image-width: 80px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: repeat repeat;
+	border-image-source: url("/img/pages/index/items_bgr.svg");
+}

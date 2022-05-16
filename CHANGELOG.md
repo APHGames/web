@@ -6,6 +6,24 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.0.0] - 2022-05-07
+### Added
+Support for more languages (CZ/EN)
+A short info about APHGames for the main page
+docusaurus-search-local plugin (translated into CZ)
+Artifacts from games.tiscali.cz for the CZ version
+
+### Changed
+Update docusaurus library to 2.0.0-beta.17
+Redesign web and logo
+Split deployment into CZ and EN version, as they differ
+A few slides that contained typos
+
+### Removed
+Light theme. Sorry jako.
+Course summary
+
+
 ## [5.12.5] - 2021-12-30
 
 ### Added

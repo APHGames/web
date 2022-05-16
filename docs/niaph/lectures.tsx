@@ -16,7 +16,6 @@ const Slides = () => (
 				return (
 					<section
 						key={`ssection_${slideSect.name}`}
-						className={clsx(sectionStyles.section)}
 					>
 						<h3
 							className={clsx(sectionStyles.section__title, slidesStyles.slides__title, 'text--center')}
@@ -43,7 +42,7 @@ const Slides = () => (
 																	</a>
 																	<div className={slidesStyles.inner_hint}>{slide.hint}</div>
 																	<div className={slidesStyles.icon}>
-																		<img src={`/img/pages/index/${slide.id}.svg`} />
+																		<img src={`/slides/icons/${slide.id}.svg`} />
 																	</div>
 																	<label
 																		className={slidesStyles.link_tile_label}
@@ -77,12 +76,6 @@ const Slides = () => (
 	</>
 );
 
-const Home = () => {
-
-	return (
-		<div></div>
-	);
-};
 
 export default (props) => {
 	if (typeof (window) !== 'undefined') {

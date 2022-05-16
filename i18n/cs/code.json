@@ -1,0 +1,210 @@
+{
+	"cmfcmf/d-s-l.searchBar.placeholder": {
+	  "message": "Hledat..."
+	},
+	"cmfcmf/d-s-l.searchBar.clearButtonTitle": {
+	  "message": "Smazat"
+	},
+	"cmfcmf/d-s-l.searchBar.detachedCancelButtonText": {
+		"message": "Zrušit"
+	},
+	"cmfcmf/d-s-l.searchBar.submitButtonTitle": {
+		"message": "Potvrdit"
+	},
+	"cmfcmf/d-s-l.searchBar.noResults": {
+		"message": "Nenalezeny žádné záznamy"
+	},
+	"gallery.preview": {
+		"message": "Ukázkové hry"
+	},
+	"gallery.vlak": {
+		"message": "Vlak (klon)"
+	},
+	"gallery.tetris": {
+		"message": "Tetris (klon)"
+	},
+	"gallery.aph2021": {
+		"message": "NI-APH Projekty 2021"
+	},
+	"gallery.aph2020": {
+		"message": "NI-APH Projekty 2020"
+	},
+	"gallery.aph2019": {
+		"message": "MI-APH Projects 2019"
+	},
+	"gallery.aph2018": {
+		"message": "MI-APH Projekty 2018"
+	},
+	"gallery.aph2017": {
+		"message": "MI-APH Dema 2017"
+	},
+	"gallery.arkanoid": {
+		"message": "Arkanoid (klon)"
+	},
+	"gallery.pacman": {
+		"message": "Pacman (klon)"
+	},
+	"gallery.paratrooper": {
+		"message": "Paratrooper (klon)"
+	},
+
+
+	"pages.lectures": {
+		"message": "Přednášky"
+	},
+	"pages.lectures.intro": {
+		"message": "Úvod"
+	},
+	"pages.lectures.organization": {
+		"message": "Organizace"
+	},
+	"pages.lectures.lecture": {
+		"message": "Přednáška"
+	},
+	"pages.lectures.games": {
+		"message": "Hry"
+	},
+	"pages.lectures.engines": {
+		"message": "Enginy"
+	},
+	"pages.lectures.assets": {
+		"message": "Assety"
+	},
+	"pages.lectures.components": {
+		"message": "Komponenty"
+	},
+	"pages.lectures.patterns": {
+		"message": "Patterny"
+	},
+	"pages.lectures.audio": {
+		"message": "Audio"
+	},
+	"pages.lectures.space": {
+		"message": "Prostor"
+	},
+	"pages.lectures.physics": {
+		"message": "Fyzika"
+	},
+	"pages.lectures.graphics": {
+		"message": "Grafika"
+	},
+	"pages.lectures.ai": {
+		"message": "AIčko"
+	},
+	"pages.lectures.multiplayer": {
+		"message": "Multiplayer"
+	},
+	"pages.lectures.design": {
+		"message": "Design"
+	},
+
+	"pages.minitalks": {
+		"message": "Minitalky"
+	},
+	"pages.minitalks.minitalk": {
+		"message": "Minitalk"
+	},
+	"pages.minitalks.mechanics": {
+		"message": "Herní Mechaniky"
+	},
+	"pages.minitalks.speedrunning": {
+		"message": "Speedrunning"
+	},
+	"pages.minitalks.styles": {
+		"message": "Herní umělecké styly"
+	},
+	"pages.minitalks.adventures": {
+		"message": "Adventury"
+	},
+	"pages.minitalks.storytelling": {
+		"message": "Storytelling"
+	},
+	"pages.minitalks.leveldesign": {
+		"message": "Level Design"
+	},
+	"pages.minitalks.demoscene": {
+		"message": "Demoscéna"
+	},
+	"pages.minitalks.blizzard": {
+		"message": "Příběh Blizzardu"
+	},
+	"pages.minitalks.solodevs": {
+		"message": "Solo Developeři"
+	},
+
+	"pages.resources.assets": {
+		"message": "Assety"
+	},
+	"pages.resources.assets.opengameart": {
+		"message": "Různé herní assety"
+	},
+	"pages.resources.assets.free3d": {
+		"message": "Volné 3D modely"
+	},
+	"pages.resources.assets.spriters": {
+		"message": "Sprity z existujících her (pro inspiraci)"
+	},
+	"pages.resources.assets.pixelart": {
+		"message": "Pixel-art ikony z devian-artu"
+	},
+	"pages.resources.assets.gameicons": {
+		"message": "Volné herní ikony"
+	},
+	"pages.resources.assets.blender": {
+		"message": "Volné Blender modely"
+	},
+	"pages.resources.assets.tilesets": {
+		"message": "Volné Tilesety"
+	},
+	"pages.resources.assets.vecteezy": {
+		"message": "Volné vektorové obrázky"
+	},
+	"pages.resources.assets.texking": {
+		"message": "Volné textury"
+	},
+	"pages.resources.assets.gamesounds": {
+		"message": "Zvukové efekty"
+	},
+	"pages.resources.assets.freepd": {
+		"message": "Public Domain Hudba"
+	},
+	"pages.resources.assets.freesfx": {
+		"message": "Zvukové efekty"
+	},
+	"pages.resources.portals": {
+		"message": "Portály"
+	},
+	"pages.resources.portals.itchio": {
+		"message": "Pro sdílení indie her"
+	},
+	"pages.resources.portals.gamescz": {
+		"message": "Články a novinky z herního průmyslu"
+	},
+	"pages.resources.portals.gamedev": {
+		"message": "Dříve Gamasutra, portál s články z herního průmyslu"
+	},
+	"pages.resources.portals.unseen": {
+		"message": "Nikdy nepublikované hry"
+	},
+	"pages.resources.portals.howlong": {
+		"message": "Jak dlouho trvá dokončit hry"
+	},
+	"pages.resources.portals.clones": {
+		"message": "Seznam open-source klonů"
+	},
+	"pages.resources.books": {
+		"message": "Knihy"
+	},
+	"index.title": {
+		"message": "APH Games Portál"
+	},
+	"index.workshops": {
+		"message": "Workshopy"
+	},
+	"index.tutorials": {
+		"message": "Tutoriály"
+	},
+	"index.minigames": {
+		"message": "Minihry"
+	}
+  }

@@ -1,7 +1,6 @@
 const path = require('path')
 
 
-
 // parse the current locale from CLI
 const idx = process.argv.findIndex(arg => arg === '--locale');
 const currentLocale = (idx !== -1) ? process.argv[idx + 1] : 'en';
@@ -24,6 +23,7 @@ const i18n = require(path.resolve(__dirname, `i18n/${currentLocale}/static.ts`))
 const customFields = {
 	copyright: `Copyright © ${new Date().getFullYear()} Adam Vesecký`,
 	description: 'APHGames Web',
+	url,
 	currentLocale,
 }
 
@@ -62,7 +62,7 @@ const output = {
 			// whether to index static pages 404.html is never indexed
 			indexPages: true,
 	  
-			// language of your documentation, see next section
+			// fr is a hack for replacing cs, as cs is not supported by the plugin by default
 			language: ["en", "fr"],
 	  
 			// setting this to "none" will prevent the default CSS to be included. The default CSS
@@ -100,7 +100,7 @@ const output = {
 		require.resolve('docusaurus-plugin-sass'),
 	],
 	themeConfig: {
-		colorMode: {
+			colorMode: {
 			defaultMode: 'dark',
 			disableSwitch: true,
 		},
@@ -120,7 +120,7 @@ const output = {
 				{
 					label: i18n['config.materials'],
 					position: 'left',
-					to: '/docs/niaph/intro',
+					to: '/docs/learning/intro',
 				},
 				{
 					label: i18n['config.brand'],

@@ -48,7 +48,7 @@
 }
 
 .artifacts__date {
-	width: 6%;
+	width: max(6%, 4rem);
 	margin-right: 1rem;
 	margin-left: 0.5rem;
 	color: $color-goldenrod;
@@ -58,7 +58,12 @@
 	font-size: 1.5rem;
 }
 
-@media screen and (max-width: 700px) and (orientation: portrait) {
+@media (max-width: 700px) and (orientation: portrait) {
+
+	.artifacts__title h3 {
+		font-size: 1rem;
+	}
+
 	.artifacts__item {
 		flex-direction: column;
 		align-items: flex-start;

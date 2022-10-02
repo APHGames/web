@@ -1,0 +1,43 @@
+name: Deploy CS
+
+on:
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  deploy:
+    env:
+      AWS_REGION: 'us-east-1'
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID || '' }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_CS }}
+      PATH_TO_DELETE: 'aph'
+      SOURCE_DIR: 'build'
+      DEST_DIR: 'aph'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        registry-url: 'https://registry.npmjs.org'
+    - name: Install npm
+      run: npm install -g npm@>=7
+    - name: Install Dependencies
+      run: npm ci
+    - name: Download external data
+      run: npm run download_data
+    - name: Build for Distribution
+      run: npm run build_cs
+    - name: Remove from S3
+      uses: vitorsgomes/s3-rm-action@master
+      with:
+        args: --recursive
+    - name: Deploy
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --follow-symlinks

@@ -1,0 +1,44 @@
+{
+  "sidebar.tutorialSidebar.category.cheatsheets": {
+    "message": "Cheatsheets"
+  },
+  "sidebar.tutorialSidebar.category.examples": {
+    "message": "Examples"
+  },
+  "sidebar.tutorialSidebar.category.pixi-intro": {
+    "message": "Pixi Introduction"
+  },
+  "sidebar.tutorialSidebar.category.three-intro": {
+    "message": "ThreeJS Introduction"
+  },
+  "sidebar.tutorialSidebar.category.components": {
+    "message": "Components"
+  },
+  "sidebar.tutorialSidebar.category.space": {
+    "message": "Space"
+  },
+  "sidebar.tutorialSidebar.category.dynamics": {
+    "message": "Dynamics"
+  },
+  "sidebar.tutorialSidebar.category.physics": {
+    "message": "Physics"
+  },
+  "sidebar.tutorialSidebar.category.graphics": {
+    "message": "Graphics"
+  },
+  "sidebar.tutorialSidebar.category.ai": {
+    "message": "AI"
+  },
+  "sidebar.tutorialSidebar.category.other": {
+    "message": "Other"
+  },
+  "sidebar.tutorialSidebar.category.games": {
+    "message": "Games"
+  },
+  "sidebar.tutorialSidebar.category.misc": {
+    "message": "Misc"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Tutorials"
+  }
+}

@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
+		"resolveJsonModule": true,
 		"jsx": "react",
 		"paths": {
 			"@site/*": ["."],
-		}
+		},
+		"downlevelIteration": true		
 	},
 	// Docusaurus doesn't use this tsconfig.json to compile your project. 
 	// It is added just for a nicer Editor experience, 

@@ -1,12 +1,11 @@
 # APHGames Web
 
 <p align="center">
-    <img alt="NI-APH" src="./slides/logo.png" width="500">
+    <img alt="APHGames" src="./logo.png" width="500">
 </p>
 
-- 🎓 intended mainly for education at FIT CTU
+- 🎓 wiki, slides, and examples
 - 📦 built on top of [docusaurus library](https://docusaurus.io/)
-- 🔥 slides and examples are built by using [parcelJS](https://parceljs.org) pipeline
 
 
 ## Project Structure
@@ -17,7 +16,7 @@ project
 │   │   docs                // markdown documents with instructions, tutorials, guides etc.
 │   │   plugins             // some plugins
 │   │   src                 // React sources with custom components and themes
-│   │   static              // static files (slides and examples are copied into this folder) 
+│   │   static              // static files (slides and examples are downloaded into this folder) 
 │   │   types               // additional Typescript declarations
 │
 │   CHANGELOG.md            // changelog
@@ -30,15 +29,20 @@ project
 ## How to build this project
 - clone it
 - install [nodeJS](https://nodejs.org/en/download/), LTS version if possible 
-- run `npm install`
-- download and extract examples and slides into the static folder (create folders static/examples and static/slides):
-  - examples: https://github.com/APHGames/examples/releases/download/6.3.2/release.zip
-  - slides: https://github.com/APHGames/slides/releases/download/6.3.1/release.zip
-- run `npm run download_data` to download external assets (examples, slides, etc.)
-- run `npm run start` to run the web, navigate to `localhost:3000` 
+- execute `npm install`
+- download external assets (slides and examples) by running `npm run download_data`
+- run `npm start_en` to run the English version, or `npm start_cs` to run the Czech version
+- navigate to `localhost:3000`
+
+## What is not included in this repository
+- gallery of past projects (they are maintained separately by the contributors)
+- slides - they are in a [separate repo](https://github.com/APHGames/slides)
+- examples - they are in a [separate repo](https://github.com/APHGames/examples)
+
 
 Changelog is available [here](./CHANGELOG.md)
 
 ## Deployment
 
-- the current version is deployed on [aphgames.io](https://aphgames.io)
+- the current EN version is deployed on [aphgames.io](https://aphgames.io)
+- the current CZ version is deployed on [aphgames.cz](https://aphgames.cz)

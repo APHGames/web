@@ -1,0 +1,45 @@
+{
+	"sidebar.tutorialSidebar.category.cheatsheets": {
+	  "message": "Cheatsheety"
+	},
+	"sidebar.tutorialSidebar.category.examples": {
+	  "message": "Příklady"
+	},
+	"sidebar.tutorialSidebar.category.pixi-intro": {
+	  "message": "Úvod do PIXI"
+	},
+	"sidebar.tutorialSidebar.category.three-intro": {
+	  "message": "Úvod do ThreeJS"
+	},
+	"sidebar.tutorialSidebar.category.components": {
+	  "message": "Komponenty"
+	},
+	"sidebar.tutorialSidebar.category.space": {
+	  "message": "Prostor"
+	},
+	"sidebar.tutorialSidebar.category.dynamics": {
+	  "message": "Dynamika"
+	},
+	"sidebar.tutorialSidebar.category.physics": {
+	  "message": "Fyzika"
+	},
+	"sidebar.tutorialSidebar.category.graphics": {
+	  "message": "Grafika"
+	},
+	"sidebar.tutorialSidebar.category.ai": {
+	  "message": "AIčko"
+	},
+	"sidebar.tutorialSidebar.category.other": {
+	  "message": "Ostatní"
+	},
+	"sidebar.tutorialSidebar.category.games": {
+	  "message": "Hry"
+	},
+	"sidebar.tutorialSidebar.category.misc": {
+	  "message": "Různé"
+	},
+	"sidebar.tutorialSidebar.category.tutorials": {
+	  "message": "Tutoriály"
+	}
+  }
+  

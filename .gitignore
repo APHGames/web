@@ -10,7 +10,6 @@
 .cache/
 .parcel-cache/
 
-
 # Misc
 .DS_Store
 .env.local

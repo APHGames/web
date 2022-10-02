@@ -99,3 +99,10 @@ body {
 ::-webkit-scrollbar-thumb {
 	border-radius: 0 !important;
 }
+
+/* There are too many links*/
+@media (max-width: 1100px) {
+	.navbar__item, .navbar__item > .navbar__link {
+		font-size: 0.9rem;
+	}
+}

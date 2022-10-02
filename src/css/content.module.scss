@@ -43,7 +43,7 @@
 	}
 
 	.list_text {
-		font-size: 1.5rem;
+		font-size: clamp(1rem, 2vw, 1.5rem);
 	}
 }
 
@@ -52,7 +52,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	font-size: 1.3rem;
+	font-size: clamp(1rem, 2vw, 1.3rem);
 
 	> div {
 		width: 50%;
@@ -70,6 +70,6 @@
 	}
 
 	h3 {
-		font-size: 2rem;
+		font-size: clamp(1.5rem, 4vw, 2rem);;
 	}
 }

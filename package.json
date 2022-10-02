@@ -1,6 +1,6 @@
 {
 	"name": "aphgames-wiki",
-	"version": "5.2.0",
+	"version": "6.1.0",
 	"license": "MIT",
 	"scripts": {
 		"start": "docusaurus start",
@@ -12,6 +12,7 @@
 		"start_en": "docusaurus start --locale en",
 		"build_en": "docusaurus build --locale en",
 		"deploy_en": "docusaurus deploy --locale en",
+		"download_data": "node scripts/download_data.js",
 		"swizzle": "docusaurus swizzle",
 		"serve": "docusaurus serve",
 		"lint": "eslint ./src",
@@ -23,10 +24,10 @@
 		"@docusaurus/core": "2.0.0-beta.17",
 		"@docusaurus/module-type-aliases": "2.0.0-beta.17",
 		"@docusaurus/preset-classic": "2.0.0-beta.17",
-		"docusaurus-plugin-sass": "^0.2.2",
 		"@mdx-js/react": "^1.6.21",
 		"@svgr/webpack": "^5.5.0",
 		"clsx": "^1.1.1",
+		"docusaurus-plugin-sass": "^0.2.2",
 		"file-loader": "^6.2.0",
 		"prism-react-renderer": "^1.2.1",
 		"react": "^17.0.1",
@@ -50,7 +51,9 @@
 		"eslint-plugin-jsx-a11y": "^6.4.1",
 		"eslint-plugin-react": "^7.25.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
-		"fork-ts-checker-webpack-plugin": "6.3.3"
+		"fork-ts-checker-webpack-plugin": "6.3.3",
+		"node-libcurl": "^2.3.4",
+		"unzipper": "^0.10.11"
 	},
 	"browserslist": {
 		"production": [

@@ -1,5 +1,17 @@
 export const newsDataCs = [
 	{
+		date: '18.7.2022',
+		text: 'Přidány příklady a slidy pro dynamiku autíček'
+	},
+	{
+		date: '14.6.2022',
+		text: 'Přidán GIT tutoriál pro pokročilé'
+	},
+	{
+		date: '20.5.2022',
+		text: 'Přidán GIT tutoriál'
+	},
+	{
 		date: '7.5.2022',
 		text: 'Dokončen redesign'
 	},
@@ -22,6 +34,18 @@ export const newsDataCs = [
 ]
 
 export const newsDataEn = [
+	{
+		date: '18.7.2022',
+		text: 'Added slides and examples for car steering dynamics'
+	},
+	{
+		date: '14.6.2022',
+		text: 'Added Advanced GIT tutorial'
+	},
+	{
+		date: '20.5.2022',
+		text: 'Added GIT tutorial'
+	},
 	{
 		date: '7.5.2022',
 		text: 'Redesign finished'

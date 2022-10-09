@@ -12,6 +12,7 @@ import titleStyles from '../css/title.module.scss';
 import pacmanStyles from '../css/pacman.module.scss';
 import contentStyles from '../css/content.module.scss';
 import { newsDataCs, newsDataEn } from '../internals/news';
+import Logo from '../../static/img/pages/index/logo.svg';
 
 const Title = () => (
 	<section
@@ -20,8 +21,8 @@ const Title = () => (
 		<div className={clsx(sectionStyles['section--inner'], titleStyles.title__section)}>
 			<div className={titleStyles.title}>
 				<div className={titleStyles.title__logo}>
+					<Logo className={titleStyles.svgGlow} />
 					<div className={pacmanStyles.pacman}></div>
-					<img src="/img/pages/index/logo.svg" />
 				</div>
 				<div className={titleStyles.title__title}>
 					<h2>{translate({ message: 'index.title' })}</h2>
@@ -33,7 +34,7 @@ const Title = () => (
 
 const Feature = () => (
 	<section
-		className={clsx(sectionStyles.section, sectionStyles['section--odd'])}
+		className={clsx(sectionStyles.section)}
 	>
 		<div className={sectionStyles['section--inner']}>
 			<div className={featureStyles.feature}>
@@ -127,7 +128,7 @@ const News = () => {
 	const data = currentLocale === 'cs' ? newsDataCs : newsDataEn;
 	const title = currentLocale === 'cs' ? 'Novinky' : 'News';
 	return (<section
-		className={clsx(sectionStyles.section, sectionStyles['section--odd'])}
+		className={clsx(sectionStyles.section)}
 	>
 		<h2 className={contentStyles.content__title}>{title}</h2>
 		<div className={contentStyles.content__list}>

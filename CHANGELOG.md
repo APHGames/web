@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.2] - 2022-10-09
+### Changed
+Main page colors
+
 ## [6.1.1] - 2022-10-09
 ### Changed
 Tiscali articles were extracted to a separate project

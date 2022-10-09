@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
 
 
 .artifacts__title {
@@ -7,10 +8,10 @@
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	margin-top: 3rem;
+	padding-top: 3rem;
 	
 	h3 {
-		background-color: $color-rhino-90;
+		@include noisyBackground;
 		padding: 1rem;
 		width: 50%;
 	}
@@ -30,13 +31,13 @@
 
 	a {
 		width: 80%;
-		background-color: $color-rhino-90;
+		@include noisyBackground;
 		margin: 0.4rem;
 	}
 
 	a:hover {
 		text-decoration: none;
-		background-color: $color-rhino-80;
+		background-color: $color-rhino-100;
 	}
 }
 

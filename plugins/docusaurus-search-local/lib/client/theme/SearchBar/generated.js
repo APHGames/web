@@ -5,7 +5,7 @@ require("@algolia/autocomplete-theme-classic");
 import "./index.css";
 const lunr = require("../../../lunr.js");
 require("lunr-languages/lunr.stemmer.support")(lunr);
-require("lunr-languages/lunr.fr")(lunr);
+require("lunr-languages/lunr.ru")(lunr);
 require("lunr-languages/lunr.multi")(lunr);
 lunr.tokenizer.separator = /[\s\-]+/;
 export const tokenize = (input) => lunr.tokenizer(input)

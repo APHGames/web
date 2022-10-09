@@ -1,4 +1,28 @@
 {
+	"config.keywords": {
+		"message": "počítačové hry, programování her, design her, herní tutoriály"
+	  },
+	"config.title": {
+		"message": "APH Games"
+	},
+	"config.materials": {
+		"message": "Materiály"
+	},
+	"config.brand": {
+		"message": "Brand"
+	},
+	"config.gallery": {
+		"message": "Galerie"
+	},
+	"config.archive": {
+		"message": "Archiv"
+	},
+	"config.lang": {
+		"message": "Angličtina"
+	},
+	"config.artifacts": {
+		"message": "Artefakty"
+	},
 	"cmfcmf/d-s-l.searchBar.placeholder": {
 	  "message": "Hledat..."
 	},
@@ -30,7 +54,7 @@
 		"message": "NI-APH Projekty 2020"
 	},
 	"gallery.aph2019": {
-		"message": "MI-APH Projects 2019"
+		"message": "MI-APH Projekty 2019"
 	},
 	"gallery.aph2018": {
 		"message": "MI-APH Projekty 2018"

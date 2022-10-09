@@ -7,18 +7,18 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1200"
-   height="300"
-   viewBox="0 0 1200 300"
+   width="1212.6832"
+   height="331.01083"
+   viewBox="0 0 1212.6833 331.01083"
    zoomAndPan="disable"
    version="1.1"
    id="svg62"
    sodipodi:docname="logo_light.svg"
-   inkscape:version="1.0rc1 (09960d6f05, 2020-04-09)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <path
      inkscape:connector-curvature="0"
-     d="M 350,50 100,300 H 1100 L 850,50 800,100 750,50 700,100 650,50 600,100 550,50 500,100 450,50 400,100 Z"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
+     d="M 353.69928,55.168477 101.05695,331.01083 H 1111.6262 L 858.98395,55.168477 808.45549,110.33695 757.92702,55.168477 707.39856,110.33695 656.87008,55.168477 606.34162,110.33695 555.81315,55.168477 505.28469,110.33695 454.75622,55.168477 404.22775,110.33695 Z"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.99999994"
      id="polygon872" />
   <metadata
      id="metadata68">
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,9 +48,9 @@
      inkscape:window-height="1377"
      id="namedview64"
      showgrid="false"
-     inkscape:zoom="0.37083822"
-     inkscape:cx="37.631861"
-     inkscape:cy="-275.19554"
+     inkscape:zoom="0.74167644"
+     inkscape:cx="576.17874"
+     inkscape:cy="-35.777755"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -72,113 +72,113 @@
   <!-- Middle line -->
   <!-- Lines -->
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="0"
-     y1="300"
-     x2="300"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="1.9920037e-005"
+     y1="331.01083"
+     x2="303.17081"
+     y2="6.194939e-006"
      id="line16" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="100"
-     y1="300"
-     x2="400"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="101.05695"
+     y1="331.01083"
+     x2="404.22772"
+     y2="6.194939e-006"
      id="line18" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="200"
-     y1="300"
-     x2="500"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="202.11389"
+     y1="331.01083"
+     x2="505.28467"
+     y2="6.194939e-006"
      id="line20" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="300"
-     y1="300"
-     x2="600"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="303.17081"
+     y1="331.01083"
+     x2="606.34161"
+     y2="6.194939e-006"
      id="line22" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="1200"
-     y1="300"
-     x2="900"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="1212.6832"
+     y1="331.01083"
+     x2="909.51245"
+     y2="6.194939e-006"
      id="line38" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="1100"
-     y1="300"
-     x2="800"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="1111.6262"
+     y1="331.01083"
+     x2="808.45544"
+     y2="6.194939e-006"
      id="line40" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="1000"
-     y1="300"
-     x2="700"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="1010.5693"
+     y1="331.01083"
+     x2="707.3985"
+     y2="6.194939e-006"
      id="line42" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="900"
-     y1="300"
-     x2="600"
-     y2="0"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="909.51245"
+     y1="331.01083"
+     x2="606.34161"
+     y2="6.194939e-006"
      id="line44" />
   <!-- Fills -->
   <polygon
-     transform="translate(-300,-600)"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     points="650,650 700,600 750,650 800,600 850,650 900,600 900,900 900,600 950,650 1000,600 1050,650 1100,600 1150,650 1200,600 1500,900 300,900 600,600 "
+     transform="matrix(1.0105693,0,0,1.1033694,-303.17079,-662.02164)"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.94701409"
+     points="900,600 950,650 1000,600 1050,650 1100,600 1150,650 1200,600 1500,900 300,900 600,600 650,650 700,600 750,650 800,600 850,650 900,600 900,900 "
      id="polygon50" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="400"
-     y1="300"
-     x2="600"
-     y2="100"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="404.22772"
+     y1="331.01083"
+     x2="606.34161"
+     y2="110.33694"
      id="line24" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="500"
-     y1="300"
-     x2="600"
-     y2="200"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="505.28467"
+     y1="331.01083"
+     x2="606.34161"
+     y2="220.67389"
      id="line26" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="800"
-     y1="300"
-     x2="600"
-     y2="100"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="808.45544"
+     y1="331.01083"
+     x2="606.34161"
+     y2="110.33694"
      id="line46" />
   <line
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
-     x1="700"
-     y1="300"
-     x2="600"
-     y2="200"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.85000002px"
+     x1="707.3985"
+     y1="331.01083"
+     x2="606.34161"
+     y2="220.67389"
      id="line48" />
   <path
      inkscape:connector-curvature="0"
-     d="M 400,100 200,300 h 800 l -200,-200 -50,50 -50,-50 -50,50 -50,-50 -50,50 -50,-50 -50,50 z"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
+     d="M 404.22775,110.33695 202.11389,331.01083 h 808.45541 l -202.11381,-220.67388 -50.52847,55.16847 -50.52846,-55.16847 -50.52848,55.16847 -50.52846,-55.16847 -50.52847,55.16847 -50.52846,-55.16847 -50.52847,55.16847 z"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.99999994"
      id="polygon54" />
   <path
      inkscape:connector-curvature="0"
-     d="M 450,150 300,300 h 600 l -150,-150 -50,50 -50,-50 -50,50 -50,-50 -50,50 z"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
+     d="m 454.75622,165.50542 -151.5854,165.50541 h 606.3416 l -151.5854,-165.50541 -50.52846,55.16847 -50.52848,-55.16847 -50.52846,55.16847 -50.52847,-55.16847 -50.52846,55.16847 z"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.99999994"
      id="polygon56" />
   <path
      inkscape:connector-curvature="0"
-     d="M 500,200 400,300 h 400 l -100,-100 -50,50 -50,-50 -50,50 z"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
+     d="M 505.28469,220.67389 404.22775,331.01083 h 404.22774 l -101.05693,-110.33694 -50.52848,55.16848 -50.52846,-55.16848 -50.52847,55.16848 z"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.99999994"
      id="polygon58" />
   <path
      inkscape:connector-curvature="0"
-     d="m 550,250 -50,50 h 100 z m 50,50 h 100 l -50,-50 z"
-     style="opacity:1;fill:#7b8694;fill-opacity:0.237903"
+     d="m 555.81315,275.84237 -50.52846,55.16846 h 101.05693 z m 50.52847,55.16846 h 101.05694 l -50.52848,-55.16846 z"
+     style="opacity:1;fill:#7b8694;fill-opacity:0.23790301;stroke-width:0.99999994"
      id="polygon60" />
 </svg>

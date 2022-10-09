@@ -1,6 +1,6 @@
 {
 	"name": "aphgames-wiki",
-	"version": "6.1.0",
+	"version": "6.1.2",
 	"license": "MIT",
 	"scripts": {
 		"start": "docusaurus start",

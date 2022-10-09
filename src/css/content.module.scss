@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
 
 
 .content__text {
@@ -27,7 +28,7 @@
 
 	>div {
 		width: 80%;
-		background-color: $color-rhino-90;
+		@include noisyBackground;
 		margin: 0.4rem;
 		display: flex;
 		flex-direction: row;
@@ -66,7 +67,7 @@
 	}
 
 	> div:first-child {
-		background-color: $color-rhino-90;
+		@include noisyBackground;
 	}
 
 	h3 {

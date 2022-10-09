@@ -1,5 +1,5 @@
 @import "./aph-colors.scss";
-
+@import "../internals/effects.scss";
 
 :root[data-theme="dark"] {
 	--ifm-background-color: #{$color-midnight};
@@ -13,14 +13,14 @@
 	--ifm-color-primary-darkest: #{$color-lemon-dark};
 	--ifm-color-primary-light: #{$color-lemon};
 	--ifm-color-primary-lighter: #{$color-lemon-light};
-	--ifm-color-primary-lightest:#{$color-lemon-light};
+	--ifm-color-primary-lightest: #{$color-lemon-light};
 	--ifm-color-info: #{$color-azure};
 	--ifm-color-success: #{$color-emerald};
 	--ifm-color-warning: #{$color-lemon};
 	--ifm-dropdown-background-color: #{$color-midnight};
 	--ifm-font-color-base: #{$color-white};
 	--ifm-link-color: #{$color-royal-light};
-	--ifm-navbar-background-color: #{$color-rhino-100};
+	--ifm-navbar-background-color: #{$color-midnight};
 	--ifm-navbar-shadow: 0 1px 0 0 #{$color-white-10};
 	--ifm-pre-background: #{$color-rhino-100};
 	--ifm-toc-border-color: #{$color-white-10};
@@ -30,33 +30,64 @@
 	--ifm-footer-padding-vertical: 20px;
 }
 
+.header-github-link, .header-lang-link, .header-youtube-link {
+	opacity: 0.8;
+
+	&:hover {
+		opacity: 1.0;
+	}
+}
+
+
+.header-github-link:before {
+	background: url('/img/global/github.svg');
+	background-size: 100% 100%;
+	content: "";
+	display: flex;
+	height: 26px;
+	width: 26px;
+}
+
+.header-youtube-link:before {
+	background: url('/img/global/youtube.png');
+	background-size: 100% 100%;
+	content: "";
+	display: flex;
+	height: 26px;
+	width: 26px;
+}
+
 /* Search plugin colors */
 body[data-theme="dark"] {
-	.aa-DetachedSearchButton, .aa-Autocomplete, .aa-DetachedSearchButtonIcon,
-	.aa-DetachedFormContainer, .aa-InputWrapper, .aa-SubmitButton, .aa-Label, .aa-Input,
-	#autocomplete-0-input, #autocomplete-0-label {
+	.aa-DetachedSearchButton,
+	.aa-Autocomplete,
+	.aa-DetachedSearchButtonIcon,
+	.aa-DetachedFormContainer,
+	.aa-InputWrapper,
+	.aa-SubmitButton,
+	.aa-Label,
+	.aa-Input,
+	#autocomplete-0-input,
+	#autocomplete-0-label {
 		color: #{$color-rhino-10} !important;
 	}
 
-	.aa-DetachedSearchButton, .aa-Form, .aa-DetachedFormContainer {
+	.aa-DetachedSearchButton,
+	.aa-Form,
+	.aa-DetachedFormContainer {
 		background-color: #{$color-rhino-100} !important;
 	}
 }
 
 html[data-theme="dark"] {
-
 	.menu__link--active.menu__link--sublist {
 		color: var(--ifm-color-primary);
 	}
 
-	.menu {
-		background-color: $color-rhino-100;
-	}
-	
 	nav {
 		--ifm-link-color: #{$color-lemon};
 	}
-	
+
 	.markdown {
 		--ifm-table-background: #{$color-white-3};
 		--ifm-table-border-color: #{$color-midnight};
@@ -64,50 +95,59 @@ html[data-theme="dark"] {
 		--ifm-table-head-color: #{$color-white};
 		--ifm-table-stripe-background: #{$color-white-3};
 	}
-	
+
 	.admonition {
 		--ifm-color-info: #{$color-royal};
 		--ifm-color-success: var(--ifm-color-primary-lightest);
 		--ifm-heading-color: #000;
 	}
-	
+
 	.alert--success {
 		--ifm-alert-background-color: #{$color-emerald};
 		--ifm-alert-border-color: #{$color-emerald};
 	}
-	
+
 	.alert--secondary {
 		--ifm-alert-background-color: #{$color-royal};
 		--ifm-alert-border-color: #{$color-royal};
 	}
-	
+
 	.alert--warning {
 		--ifm-alert-background-color: #{$color-lemon};
 		--ifm-alert-border-color: #{$color-lemon};
 	}
 
 	main {
-		background: 0px 0px/20px 20px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, $color-midnight 10%);
+		background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 2%) 10%, $color-midnight-dark 10%);
+		background-color: $color-rhino-100;
 	}
-	
+
 	main article header h2 a {
 		color: $color-rhino-5;
 	}
-	
+
+	.menu {
+		@include patternBackground;
+	}
+
+	.footer, .navbar {
+		@include patternBackgroundLighter;
+	}
+
 	/* Firefox */
 	* {
 		scrollbar-color: #{$color-royal} #{$color-rhino-90};
 	}
-	
+
 	::-webkit-scrollbar-track {
 		background: #{$color-rhino-90} !important;
 	}
-	
+
 	::-webkit-scrollbar-thumb {
 		border-radius: 0 !important;
 		background: #{$color-royal} !important;
 	}
-	
+
 	::-webkit-scrollbar-corner {
 		background: #{$color-rhino-90} !important;
 	}

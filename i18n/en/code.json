@@ -1,4 +1,25 @@
 {
+  "config.keywords": {
+    "message": "videogames, game programming, game architecture, game design, game tutorials, PixiJS tutorials"
+  },
+  "config.title": {
+		"message": "APH Games"
+	},
+	"config.materials": {
+		"message": "Materials"
+	},
+	"config.brand": {
+		"message": "Brand"
+	},
+	"config.gallery": {
+		"message": "Gallery"
+	},
+	"config.archive": {
+		"message": "Archive"
+	},
+	"config.lang": {
+		"message": "Czech"
+	},
   "gallery.preview": {
     "message": "Preview Games"
   },

@@ -1,12 +1,10 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
 
 .section {
 	width: 100%;
-	/*background-image: url("/img/pages/index/overlay.png");*/
-	/*	background: url('/img/pages/index/noise.png') repeat repeat;*/
-	/*background-size: 2%;*/
-	background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, $color-midnight 10%);
+	@include dottedBackground;
 }
 
 .section--inner {
@@ -25,14 +23,10 @@
 	padding: 2rem;
 }
 
-.section--even {
-	background-color: $color-rhino-100;
-}
-
-.section--odd {
-	background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, lighten($color-midnight, 2%) 10%);
-
-	background-color: $color-rhino-100;
+.section + .section {
+	border-style: dashed none none;
+	border-top-width: 0.15rem;
+	border-top-color: #FFFFFF44;
 }
 
 .section__title {

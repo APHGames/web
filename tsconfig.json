@@ -1,11 +1,11 @@
 {
 	"compilerOptions": {
-		"resolveJsonModule": true,
+		"resolveJsonModule": true, /* allows importing modules with a JSON extension */
 		"jsx": "react",
 		"paths": {
-			"@site/*": ["."],
+			"@site/*": ["."], /* now we can use @site in our imports */
 		},
-		"downlevelIteration": true		
+		"downlevelIteration": true /* enables transpiling to an older JS version */
 	},
 	// Docusaurus doesn't use this tsconfig.json to compile your project. 
 	// It is added just for a nicer Editor experience, 

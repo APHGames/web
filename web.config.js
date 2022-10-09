@@ -13,4 +13,3 @@ module.exports = {
     slides_version: '6.3.1',
     tiscali_url: 'https://raw.githubusercontent.com/APHGames/support/main/scripts/scripts/tiscali-grabber/data_filtered.json'
 };
-  

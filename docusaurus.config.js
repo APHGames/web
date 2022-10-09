@@ -1,27 +1,18 @@
 const path = require('path')
-
+const config = require('./web.config');
 
 // parse the current locale from CLI
 const idx = process.argv.findIndex(arg => arg === '--locale');
+// fallback to EN by default
 const currentLocale = (idx !== -1) ? process.argv[idx + 1] : 'en';
 const isLocaleCS = currentLocale === 'cs';
 const isLocaleEN = currentLocale === 'en';
 
-let url = '';
-switch(currentLocale) {
-	case 'cs':
-		url = 'https://aphgames.cz';
-		break;
-	case 'en':
-	default:
-		url = 'https://aphgames.io';
-
-}
-
-const i18n = require(path.resolve(__dirname, `i18n/${currentLocale}/static.ts`));
+let url = config.urls[currentLocale];
+const i18n = require(path.resolve(__dirname, `i18n/${currentLocale}/code.json`));
 
 const customFields = {
-	copyright: `Copyright © ${new Date().getFullYear()} Adam Vesecký`,
+	copyright: `Copyright © ${new Date().getFullYear()} ${config.owner}`,
 	description: 'APHGames Web',
 	url,
 	currentLocale,
@@ -29,70 +20,41 @@ const customFields = {
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 const output = {
-	title: i18n['config.title'],
+	title: i18n['config.title'].message,
 	url: url,
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'throw',
 	favicon: 'img/favicon.png',
-	organizationName: 'DoDoLab',
-	projectName: 'aphgames-wiki',
+	organizationName: config.org,
+	projectName: 'aphgames-web',
 	i18n: {
 		defaultLocale: currentLocale,
-		locales: ['en', 'cs'],
+		locales: [currentLocale], /* the other locale is in another domain */
 	},
 	customFields,
 	plugins: [
 		[path.resolve(__dirname, 'plugins/docusaurus-search-local'), {
 			// whether to index docs pages
 			indexDocs: true,
-	  
 			// Whether to also index the titles of the parent categories in the sidebar of a doc page.
-			// 0 disables this feature.
-			// 1 indexes the direct parent category in the sidebar of a doc page
-			// 2 indexes up to two nested parent categories of a doc page
-			// 3...
-			//
-			// Do _not_ use Infinity, the value must be a JSON-serializable integer.
+			// 0 = disable, 1 = direct parent, 2 = nested parents
 			indexDocSidebarParentCategories: 3,
-	  
-			// whether to index blog pages
 			indexBlog: true,
-	  
-			// whether to index static pages 404.html is never indexed
 			indexPages: true,
-	  
-			// fr is a hack for replacing cs, as cs is not supported by the plugin by default
-			language: ["en", "fr"],
+			// ru is a hack for replacing cs, as cs is not supported by the plugin by default
+			language: ["en", "ru"],
 	  
 			// setting this to "none" will prevent the default CSS to be included. The default CSS
 			style: undefined,
 	  
 			// lunr.js-specific settings
 			lunr: {
-			  // When indexing your documents, their content is split into "tokens".
-			  // Text entered into the search box is also tokenized.
-			  // This setting configures the separator used to determine where to split the text into tokens.
-			  // By default, it splits the text at whitespace and dashes.
-			  //
-			  // Note: Does not work for "ja" and "th" languages, since these use a different tokenizer.
 			  tokenizerSeparator: /[\s\-]+/,
-			  // https://lunrjs.com/guides/customising.html#similarity-tuning
-			  //
-			  // This parameter controls the importance given to the length of a document and its fields. This
-			  // value must be between 0 and 1, and by default it has a value of 0.75. Reducing this value
-			  // reduces the effect of different length documents on a term’s importance to that document.
+			  // how important is the length of the document
 			  b: 0.75,
-			  // This controls how quickly the boost given by a common word reaches saturation. Increasing it
-			  // will slow down the rate of saturation and lower values result in quicker saturation. The
-			  // default value is 1.2. If the collection of documents being indexed have high occurrences
-			  // of words that are not covered by a stop word filter, these words can quickly dominate any
-			  // similarity calculation. In these cases, this value can be reduced to get more balanced results.
+			  // boost to common words (doesn't work properly for CZ)
 			  k1: 1.2,
-			  // By default, we rank pages where the search term appears in the title higher than pages where
-			  // the search term appears in just the text. This is done by "boosting" title matches with a
-			  // higher value than content matches. The concrete boosting behavior can be controlled by changing
-			  // the following settings.
 			  titleBoost: 5,
 			  contentBoost: 1,
 			  parentCategoriesBoost: 2, // Only used when indexDocSidebarParentCategories > 0
@@ -100,11 +62,22 @@ const output = {
 		require.resolve('docusaurus-plugin-sass'),
 	],
 	themeConfig: {
-			colorMode: {
+		metadata: [
+			{
+				name: 'keywords', 
+				content: i18n['config.keywords'].message
+			},
+			{
+				name: 'keywords', 
+				content: i18n['config.keywords'].message
+			}
+		],
+		colorMode: {
 			defaultMode: 'dark',
+			 /* I really don't have time to maintain two versions of each diagram */
 			disableSwitch: true,
 		},
-		image: 'img/minilogo.png',
+		image: 'img/oglogo.png',
 		prism: {
 			defaultLanguage: 'javascript',
 			theme: require('./src/internals/prism-aph-light'),
@@ -118,22 +91,22 @@ const output = {
 			},
 			items: [
 				{
-					label: i18n['config.materials'],
+					label: i18n['config.materials'].message,
 					position: 'left',
 					to: '/docs/learning/intro',
 				},
 				{
-					label: i18n['config.brand'],
+					label: i18n['config.brand'].message,
 					position: 'left',
 					to: '/docs/brand/',
 				},
 				{
-					label: i18n['config.gallery'],
+					label: i18n['config.gallery'].message,
 					position: 'left',
 					to: '/gallery',
 				},
 				{
-					label: i18n['config.archive'],
+					label: i18n['config.archive'].message,
 					position: 'left',
 					items: [
 						{
@@ -160,18 +133,22 @@ const output = {
 				},
 				{
 					label: isLocaleCS ?  '🇬🇧' : '🇨🇿',
+					"aria-label": i18n['config.lang'].message,
+					className: 'header-lang-link',
 					position: 'right',
-					href: isLocaleCS ? 'https://aphgames.io' : 'https://aphgames.cz',
+					href: isLocaleCS ? config.urls['en'] : config.urls['cs'],
 				},
 				{
-					label: 'GitHub',
+					label: ' ',
+					className: 'header-github-link',
+					"aria-label": 'GitHub',
 					position: 'right',
 					href: 'https://github.com/APHGames',
 				},
 			]
 		},
 		footer: {
-			copyright: `Copyright ©  ${new Date().getFullYear()} Adam Vesecký`,
+			copyright: `Copyright ©  ${new Date().getFullYear()} ${config.owner}`,
 		},
 	},
 	presets: [
@@ -185,7 +162,8 @@ const output = {
 						  defaultSidebarItemsGenerator,
 						  ...args
 						}) {
-							// exclude all items that have "exclude_xx" in their header based on the locale
+							// exclude all items that have "exclude_<lang>" in their header based on the locale
+							// this allow us to completely remove some pages for respective languages 
 							args.docs = args.docs.filter(m => (!isLocaleCS || !m.frontMatter.exclude_cs) && (!isLocaleEN || !m.frontMatter.exclude_en));
 							const sidebarItems = await defaultSidebarItemsGenerator(args);
 							return sidebarItems;
@@ -210,16 +188,17 @@ const output = {
 if(isLocaleCS) {
 	// add next to the archive
 	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 3, 0, {
-		label: i18n['config.artifacts'],
+		label: i18n['config.artifacts'].message,
 		position: 'left',
 		to: '/artifacts',
 	});
 
-	output.themeConfig.navbar.items.push({
-		label: i18n['config.youtube'],
+	// add between language and github
+	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 1, 0, {
+		label: ' ',
+		className: 'header-youtube-link',
 		position: 'right',
-		href: 'https://www.youtube.com/channel/UC1PTa9NCygXV_0IgOBRMw-Q',
-	});
+		href: 'https://www.youtube.com/channel/UC1PTa9NCygXV_0IgOBRMw-Q',	});
 }
 
 module.exports = output;

@@ -79,9 +79,9 @@ const ArtifactsPage = () => {
 				<link rel="canonical" href={siteConfig.url} />
 			</DocusaurusHead>
 			
-			<div className={artifactsStyles.artifacts__title}>
+			<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__title)}>
 				<h3>Zde se nachází velmi velmi pracně odfiltrovaný seznam článků z <a href="https://games.tiscali.cz">games.tiscali</a>. Z celkových cca 60 000 jich tu máme celkem {total} a je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.</h3>
-			</div>
+			</section>
 			<Artifacts />
 		</Layout>
 	);

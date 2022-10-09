@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
 
 .title {
 	display: flex;
@@ -18,26 +19,35 @@
 	font-weight: 300;
 	padding: 20px;
 	text-transform: uppercase;
-	font-size: $font-size-xxlarge;
+	font-size: min($font-size-xxlarge, 8vw);
 	text-align: center;
+	@extend .chromatic;
 }
 
 .title__logo {
 	display: flex;
 	flex-direction: column;
-	flex: 0 1 610px;
+	flex: 0 1 606px;
 	align-items: self-start;
 	position: relative;
 }
 
 .title__section {
 	background: url('/img/pages/index/logo_light.svg') bottom center no-repeat;
-	background-position-y: 110%;
+	background-position-y: 115%;
 }
-
 
 @media (max-width: 700px) {
 	.title__section {
-		background-position-y: 65vw;
+		background-position-y: 60vw;
 	}
+}
+
+.svgGlow {
+	animation: pulseGlow 5s ease infinite;
+}
+
+.chromatic {
+	transition: text-shadow 2s ease;
+	animation: chromaticMove 2.5s ease infinite, pulse 6s ease infinite;
 }

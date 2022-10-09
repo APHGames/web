@@ -1,0 +1,62 @@
+
+@mixin noisyBackground {
+    background: url('/img/pages/index/noise.png') repeat repeat;
+	background-color: $color-midnight-dark;
+}
+
+@mixin dottedBackground {
+    background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 2%) 10%, $color-midnight-dark 10%);
+}
+
+@mixin patternBackground {
+    background: url("/img/pages/index/overlay.png") repeat repeat;
+	background-color: $color-midnight-dark;	
+}
+
+@mixin patternBackgroundLighter {
+    background: url("/img/pages/index/overlay.png") repeat repeat;
+	background-color: $color-midnight;	
+}
+
+@keyframes chromaticMove {
+	0% {
+		text-shadow: 0 0 2px #fff,0 0 1px #ffffffaa,3px 0 6px #cf2f25dd,-3px 0 6px #2c57dfdd;
+	}
+	50% {
+		text-shadow: 0 0 20px #fff,0 0 1px #ffffffaa,3px 0 6px #cf2f25dd,3px .02em -.02em #2c57dfdd;
+	}
+	100% {
+		text-shadow: 0 0 2px #fff,0 0 1px #ffffffaa,3px 0 6px #cf2f25dd,0 -.05em 3px #2c57dfdd;
+	}
+}
+
+@keyframes pulseGlow {
+	0% {
+		filter: drop-shadow(0px 0px 60px #9521f355);
+	}
+	50% {
+		filter: drop-shadow(0px 0px 20px #9521f355);
+	}
+	100% {
+		filter: drop-shadow(0px 0px 60px #9521f355);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		
+	}
+
+	24% {
+		transform: skewX(0deg);
+	}
+
+	25% {
+		transform: skewX(60deg);
+	}
+
+	28% {
+		transform: skewX(0deg);
+	}
+
+}

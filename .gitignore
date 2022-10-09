@@ -25,3 +25,4 @@ src/css/infima.css
 .ignore
 static/slides/
 static/examples/
+static/tiscali.json

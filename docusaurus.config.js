@@ -208,8 +208,8 @@ const output = {
 };
 
 if(isLocaleCS) {
-	// add to the second last item
-	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 2, 0, {
+	// add next to the archive
+	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 3, 0, {
 		label: i18n['config.artifacts'],
 		position: 'left',
 		to: '/artifacts',

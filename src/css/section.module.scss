@@ -3,7 +3,10 @@
 
 .section {
 	width: 100%;
-	background-image: url("/img/pages/index/overlay.png");
+	/*background-image: url("/img/pages/index/overlay.png");*/
+	/*	background: url('/img/pages/index/noise.png') repeat repeat;*/
+	/*background-size: 2%;*/
+	background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, $color-midnight 10%);
 }
 
 .section--inner {
@@ -24,9 +27,11 @@
 
 .section--even {
 	background-color: $color-rhino-100;
-	
 }
+
 .section--odd {
+	background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, lighten($color-midnight, 2%) 10%);
+
 	background-color: $color-rhino-100;
 }
 

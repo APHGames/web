@@ -1,25 +1,17 @@
+/* eslint-disable no-restricted-syntax */
 import clsx from 'clsx';
 import DocusaurusHead from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import Layout from '@theme/Layout';
-import artifacts from '../internals/tiscali';
+import artifacts from '../../static/tiscali.json';
 import sectionStyles from '../css/section.module.scss';
 import artifactsStyles from '../css/artifacts.module.scss';
 
 const comparer = (a: any, b: any) => parseInt(b) - parseInt(a);
 
-let totalNum = 0;
-for(let key of Object.keys(artifacts)) {
-	for(let key2 of Object.keys(artifacts[key])) {
-		for(let key3 of Object.keys(artifacts[key][key2])) {
-			totalNum += artifacts[key][key2][key3].length;
-		}
-	}
-}
-
 const Artifacts = () => {
-	const context = useDocusaurusContext();
+
 	const years = Object.keys(artifacts).sort(comparer);
 
 	return (<>
@@ -69,6 +61,18 @@ const ArtifactsPage = () => {
 	const { siteConfig } = useDocusaurusContext();
 	const title = 'APH';
 
+	const total = React.useMemo(() => {
+		let totalNum = 0;
+		for(const key of Object.keys(artifacts)) {
+			for(const key2 of Object.keys(artifacts[key])) {
+				for(const key3 of Object.keys(artifacts[key][key2])) {
+					totalNum += artifacts[key][key2][key3].length;
+				}
+			}
+		}
+		return totalNum;
+	}, []);
+
 	return (
 		<Layout description={siteConfig.customFields.description as string} title={title}>
 			<DocusaurusHead>
@@ -76,7 +80,7 @@ const ArtifactsPage = () => {
 			</DocusaurusHead>
 			
 			<div className={artifactsStyles.artifacts__title}>
-				<h3>Zde se nachází velmi velmi pracně odfiltrovaný seznam článků z <a href="https://games.tiscali.cz">games.tiscali</a>. Z celkových cca 60 000 jich tu máme celkem {totalNum} a je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.</h3>
+				<h3>Zde se nachází velmi velmi pracně odfiltrovaný seznam článků z <a href="https://games.tiscali.cz">games.tiscali</a>. Z celkových cca 60 000 jich tu máme celkem {total} a je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.</h3>
 			</div>
 			<Artifacts />
 		</Layout>

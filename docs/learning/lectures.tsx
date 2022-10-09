@@ -18,8 +18,8 @@ const Slides = () => {
 		<>
 			{
 				slidesGroups.map((group: string) => {
-					const slideGroup = availableSlides.filter(sl => sl.group === group);
-					return slideGroup.length && (
+					const slideGroup = availableSlides.filter((sl) => sl.group === group);
+					return (slideGroup.length !== 0) && (
 						<section key={`ssection_${group}`}>
 							<h3 className={clsx(sectionStyles.section__title, slidesStyles.slides__title, 'text--center')}>
 								{group}

@@ -6,6 +6,11 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.1] - 2022-10-09
+### Changed
+Tiscali articles were extracted to a separate project
+A few design changes
+
 ## [6.1.0] - 2022-10-02
 ### Added
 GIT tutorial 1 and 2

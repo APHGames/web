@@ -34,7 +34,7 @@ Grafický manuál ušel od roku 2017, kdy byl předmět založen, dlouhou cestu.
     </div>
     <div>
         <img src={useBaseUrl('img/docs/brand/aph_2021.png')} />
-        <span>APH 2021+</span>
+        <span>APH 2021</span>
     </div>
     <div>
         <img src={useBaseUrl('img/docs/brand/aph_2022.png')} />

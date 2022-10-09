@@ -15,9 +15,9 @@ import { newsDataCs, newsDataEn } from '../internals/news';
 
 const Title = () => (
 	<section
-		className={clsx(sectionStyles.section, titleStyles.title__section)}
+		className={clsx(sectionStyles.section)}
 	>
-		<div className={sectionStyles['section--inner']}>
+		<div className={clsx(sectionStyles['section--inner'], titleStyles.title__section)}>
 			<div className={titleStyles.title}>
 				<div className={titleStyles.title__logo}>
 					<div className={pacmanStyles.pacman}></div>

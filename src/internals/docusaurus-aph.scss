@@ -26,6 +26,8 @@
 	--ifm-toc-border-color: #{$color-white-10};
 	--ifm-menu-color-background-active: #{$color-rhino-80};
 	--ifm-menu-color-active: #{$color-white};
+	--ifm-footer-background-color: #{$color-midnight};
+	--ifm-footer-padding-vertical: 20px;
 }
 
 /* Search plugin colors */
@@ -45,6 +47,10 @@ html[data-theme="dark"] {
 
 	.menu__link--active.menu__link--sublist {
 		color: var(--ifm-color-primary);
+	}
+
+	.menu {
+		background-color: $color-rhino-100;
 	}
 	
 	nav {
@@ -78,6 +84,10 @@ html[data-theme="dark"] {
 	.alert--warning {
 		--ifm-alert-background-color: #{$color-lemon};
 		--ifm-alert-border-color: #{$color-lemon};
+	}
+
+	main {
+		background: 0px 0px/20px 20px $color-rhino-100 radial-gradient(lighten($color-midnight, 8%) 10%, $color-midnight 10%);
 	}
 	
 	main article header h2 a {

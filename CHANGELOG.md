@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.3] - 2022-11-19
+### Added
+Progress Bar Example
+
 ## [6.1.2] - 2022-10-09
 ### Changed
 Main page colors

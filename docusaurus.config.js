@@ -143,7 +143,7 @@ const output = {
 					className: 'header-github-link',
 					"aria-label": 'GitHub',
 					position: 'right',
-					href: 'https://github.com/APHGames',
+					href: config.github,
 				},
 			]
 		},
@@ -198,7 +198,7 @@ if(isLocaleCS) {
 		label: ' ',
 		className: 'header-youtube-link',
 		position: 'right',
-		href: 'https://www.youtube.com/channel/UC1PTa9NCygXV_0IgOBRMw-Q',	});
+		href: config.youtube,	});
 }
 
 module.exports = output;

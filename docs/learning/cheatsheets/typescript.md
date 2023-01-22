@@ -427,4 +427,85 @@ export { TagService, LabelService }
 //=======================================================
 // any ts file outside services folder
 import { TagService, LabelService } from './services'; // no need to write /index 
+
+// this will re-export a default element and all other elements respectively
+export { default } from './Overview';
+export * from './Overview';```
+```
+
+### Advanced Generics
+
+#### Indexed type
+
+```typescript
+type Asset = {
+	type: string;
+}
+
+// assetType must be a string
+const getAssetInfo = (assetType: Asset['type']) => {
+}
+```
+
+#### Record
+- Record can be used for dictionaries (objects with a given key type and a value type)
+- keyof typeof list all keys of an object
+
+```typescript
+const Items = {
+	none: 'sth',
+	expired: 'sth',
+}
+
+// LabelMap can only contain keys from Items
+const LabelMap: Record<keyof typeof Items, string> = {
+	none: 'default',
+	expired: 'default',
+}
+```
+
+#### ValueOfKey
+- will get a type of an object property
+
+```typescript
+type ValueOfKey<T, U> = {
+	[K in keyof T]: U extends K ? T[K] : never;
+}[keyof T];
+
+type Obj = {
+	a: string;
+}
+
+// val is 'string'
+type val = ValueOfKey<Obj, a>;
+
+```
+
+#### Unpack Array Type
+- will get a type of an object array property
+
+```typescript
+type UnpackArrayType<T, U> = ValueOfKey<T, U> extends unknown[]
+  ? ValueOfKey<T, U>[number]
+  : never;
+
+type Obj = {
+	a: string[];
+}
+
+type val = UnpackArrayType<Obj, a>;
+```
+
+#### Conditional Generics
+- we can use ternary operators in generics
+
+```typescript
+// intrinsic elements are built-in elements like div, section, etc.
+// infer type is basically a helper that is used inside the generic declaration 
+type ComponentProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> =
+    T extends JSXElementConstructor<infer P> // T is a React component with props P
+	    ? P
+		: T extends keyof JSX.IntrinsicElements // T is an intrinsic component
+		    ? JSX.IntrinsicElements[T]
+			: {} ;
 ```

@@ -35,7 +35,7 @@ const Artifacts = () => {
 									return Object.keys(monthData).sort(comparer).map(day => {
 										const dayData = monthData[day];
 										return dayData.map(data => {
-											const date = `${day}.${month} ${year}`;
+											const date = `${day}.${month}. ${year}`;
 											return (
 												<a href={data.link}>
 													<div className={artifactsStyles.artifacts__item}>

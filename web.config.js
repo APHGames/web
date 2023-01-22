@@ -6,9 +6,9 @@ module.exports = {
     owner: 'Adam Vesecký',
     org: 'DoDoLab',
     github: 'https://github.com/APHGames',
-    youtube: 'https://www.youtube.com/channel/UC1PTa9NCygXV_0IgOBRMw-Q',
+    youtube: 'https://www.youtube.com/@aphgames',
     examples_url: 'https://github.com/APHGames/examples',
-    examples_version: '6.3.3',
+    examples_version: '6.3.4',
     slides_url: 'https://github.com/APHGames/slides',
     slides_version: '6.3.1',
     tiscali_url: 'https://raw.githubusercontent.com/APHGames/support/main/scripts/scripts/tiscali-grabber/data_filtered.json'

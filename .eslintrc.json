@@ -8,7 +8,10 @@
 	},
 	"ignorePatterns" : ["*.js"],
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": ["error", "tab", { "SwitchCase": 1}],
+		"max-len" : ["off"],
+		"radix": ["off"],
+		"react/no-danger": ["off"],
 		"@typescript-eslint/indent": ["error", "tab"],
 		"@typescript-eslint/lines-between-class-members": ["off"],
 		"no-tabs": ["error", { "allowIndentationTabs": true }],

@@ -7,7 +7,7 @@ import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
 ### Source 
-- source: `examples/src/08-ai/pursue`
+- source: [examples/src/08-ai/pursue/index.ts](https://github.com/APHGames/examples/blob/main/src/08-ai/pursue/index.ts)
 
 ### Description
 - use arrows to move the other bot

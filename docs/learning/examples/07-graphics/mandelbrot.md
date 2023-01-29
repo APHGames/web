@@ -14,9 +14,9 @@ import APHCanvas from '@site/src/APHCanvas.tsx'
 - [Wikipedia](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 ### Source 
-- source: `examples/src/07-graphics/mandelbrot.ts`
-- vertex shader: `assets/07-graphics/shaders/mandelbrot.vert`
-- fragment shader: `assets/07-graphics/shaders/mandelbrot.frag`
+- source: [examples/src/07-graphics/mandelbrot.ts](https://github.com/APHGames/examples/blob/main/src/07-graphics/mandelbrot.ts)
+- vertex shader: [assets/07-graphics/shaders/mandelbrot.vert](https://github.com/APHGames/examples/blob/main/assets/07-graphics/shaders/mandelbrot.vert)
+- fragment shader: [assets/07-graphics/shaders/mandelbrot.frag](https://github.com/APHGames/examples/blob/main/assets/07-graphics/shaders/mandelbrot.frag)
 
 <APHCanvas name={'Mandelbrot'} />
 

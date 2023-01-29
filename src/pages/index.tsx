@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 
 import Layout from '@theme/Layout';
-import { translate } from "@docusaurus/Translate";
+import { translate } from '@docusaurus/Translate';
 
 import featureStyles from '../css/feature.module.scss';
 import sectionStyles from '../css/section.module.scss';
@@ -22,7 +22,7 @@ const Title = () => (
 			<div className={titleStyles.title}>
 				<div className={titleStyles.title__logo}>
 					<Logo className={titleStyles.svgGlow} />
-					<div className={pacmanStyles.pacman}></div>
+					<div className={pacmanStyles.pacman} />
 				</div>
 				<div className={titleStyles.title__title}>
 					<h2>{translate({ message: 'index.title' })}</h2>
@@ -76,10 +76,10 @@ const Feature = () => (
 
 const AboutCs = () => (
 	<section
-		className={clsx(sectionStyles.section, sectionStyles['section'])}
+		className={clsx(sectionStyles.section, sectionStyles.section)}
 	>
 		<div className={sectionStyles['section--inner']}>
-			<div className={clsx(contentStyles['content__col2m'], contentStyles['content__text'])}>
+			<div className={clsx(contentStyles.content__col2m, contentStyles.content__text)}>
 				<div>
 					<h3>Co je cílem?</h3>
 					<ul>
@@ -100,10 +100,10 @@ const AboutCs = () => (
 
 const AboutEn = () => (
 	<section
-		className={clsx(sectionStyles.section, sectionStyles['section'])}
+		className={clsx(sectionStyles.section, sectionStyles.section)}
 	>
 		<div className={sectionStyles['section--inner']}>
-			<div className={clsx(contentStyles['content__col2m'], contentStyles['content__text'])}>
+			<div className={clsx(contentStyles.content__col2m, contentStyles.content__text)}>
 				<div>
 					<h3>What is the main goal?</h3>
 					<ul>
@@ -113,7 +113,7 @@ const AboutEn = () => (
 					</ul>
 				</div>
 				<div>
-					<h3>How APH Games was made?</h3>
+					<h3>The story of APH Games</h3>
 					<p>Originally, APH Games was a course at FIT CTU in Prague. It was a solely technical subject, focusing on the architecture of game engines with practical examples in C++ language. Gradually, its scope has expanded into design, art, storytelling, and many others. C++ was replaced by TypeScript for the sake of simpler examples showcasing directly on the web.</p>
 					<p>Today, APH Games is a separate brand with its own web. Its goal is to share interesting insights from all fields of game industry.</p>
 				</div>
@@ -124,27 +124,31 @@ const AboutEn = () => (
 
 const News = () => {
 	const context = useDocusaurusContext();
-	const currentLocale = context.siteConfig.customFields.currentLocale;
+	const { currentLocale } = context.siteConfig.customFields;
 	const data = currentLocale === 'cs' ? newsDataCs : newsDataEn;
 	const title = currentLocale === 'cs' ? 'Novinky' : 'News';
-	return (<section
-		className={clsx(sectionStyles.section)}
-	>
-		<h2 className={contentStyles.content__title}>{title}</h2>
-		<div className={contentStyles.content__list}>
-			{data.map(dt => (<div key={dt.date}>
-				<div className={contentStyles.list_title}>{dt.date}</div>
-				<div className={contentStyles.list_text}>{dt.text}</div>
-			</div>)
-			)}
-		</div>
-	</section>);
+
+	return (
+		<section
+			className={clsx(sectionStyles.section)}
+		>
+			<h2 className={contentStyles.content__title}>{title}</h2>
+			<div className={contentStyles.content__list}>
+				{data.map((dt) => (
+					<div key={dt.date}>
+						<div className={contentStyles.list_title}>{dt.date}</div>
+						<div className={contentStyles.list_text} dangerouslySetInnerHTML={{ __html: dt.text }} />
+					</div>
+				))}
+			</div>
+		</section>
+	);
 };
 
 const Home = () => {
 	const { siteConfig } = useDocusaurusContext();
 	const context = useDocusaurusContext();
-	const currentLocale = context.siteConfig.customFields.currentLocale;
+	const { currentLocale } = context.siteConfig.customFields;
 
 	return (
 		<Layout description={siteConfig.customFields.description as string}>

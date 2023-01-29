@@ -57,6 +57,10 @@
 			width: 100%;
 			margin: 0;
 			cursor: pointer;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 
 		.techicon {
@@ -65,11 +69,16 @@
 			left: 0.3rem;
 
 			img {
-				width: 2.5rem;
+				width: 3.5rem;
+				&.techicon_bigger {
+					width: 7rem;
+					margin-top: 0.75rem;
+				}
 			}
 		}
 
-		.link_button:hover + .link_tile, .link_button:active + .link_tile {
+
+		.link_button:hover .link_tile, .link_button:active  .link_tile {
 			background-color: $color-rhino-80;
 			color: $color-rhino-5;
 			border-image-source: url("/img/pages/index/items_active_bgr.svg");
@@ -80,7 +89,7 @@
 				opacity: 1.0;
 			}
 
-			.link_tile_label {					
+			.link_tile_label {				
 				color: $color-rhino-5;
 				background-color: $color-rhino-80;
 			}
@@ -114,7 +123,7 @@
 			background-color: $color-rhino-90;
 			text-decoration: none;
 			text-align: center;
-			padding-top: 1rem;
+			padding-top: 0.5rem;
 			padding-bottom: 1rem;
 			position: absolute;
 			top: 0;
@@ -122,13 +131,6 @@
 			height: 3rem;
 			width: 3rem;
 
-			&:nth-child(1) {
-				border-top-right-radius: 0px;
-			}
-
-			&:nth-child(2) {
-				right: 3rem;
-			}
 
 			&:hover,
 			&:active {

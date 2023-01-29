@@ -23,22 +23,6 @@ class APHCanvasRenderer extends React.Component<APHCanvasProps> {
 		}
 	}
 
-	initKeyboardBlock = () => {
-		window.addEventListener('keydown', this.preventKeyboard);
-	}
-
-	/**
-	 * Will prevent the keyboard from scrolling the page once we click
-	 * on the canvas
-	 */
-	preventKeyboard = (e: KeyboardEvent) => {
-		switch(e.keyCode){
-            case 37: case 39: case 38:  case 40: // Arrow keys
-            case 32: e.preventDefault(); break; // Space
-            default: break; // do not block other keys
-        }
-	}
-
 	componentDidMount() {
 		const { name } = this.props;
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
@@ -46,7 +30,6 @@ class APHCanvasRenderer extends React.Component<APHCanvasProps> {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 		this.aphExample.init(this.myRef.current);
 	}
-
 
 	componentWillUnmount() {
 		if (this.aphExample) {
@@ -56,8 +39,24 @@ class APHCanvasRenderer extends React.Component<APHCanvasProps> {
 		window.removeEventListener('keydown', this.preventKeyboard);
 	}
 
+	initKeyboardBlock = () => {
+		window.addEventListener('keydown', this.preventKeyboard);
+	};
+
+	/**
+ * Will prevent the keyboard from scrolling the page once we click
+ * on the canvas
+ */
+	preventKeyboard = (e: KeyboardEvent) => {
+		switch (e.keyCode) {
+			case 37: case 39: case 38: case 40: // Arrow keys
+			case 32: e.preventDefault(); break; // Space
+			default: break; // do not block other keys
+		}
+	};
+
 	render() {
-		return <canvas id={'myCanvas'} ref={this.myRef} width={800} height={600} tabIndex={0} onClick={this.initKeyboardBlock} />;
+		return <canvas id="myCanvas" ref={this.myRef} width={800} height={600} tabIndex={0} onClick={this.initKeyboardBlock} />;
 	}
 }
 

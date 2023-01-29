@@ -3,51 +3,52 @@ import DocusaurusHead from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import Layout from '@theme/Layout';
-import { galleryData } from '../internals/gallery-data';
 import galleryStyles from '@site/src/css/gallery.module.scss';
+import { translate } from '@docusaurus/Translate';
+import { galleryData } from '../internals/gallery-data';
 
-const Games = ({galleryUrl}) => (
+const Games = ({ galleryUrl }: { galleryUrl: string }) => (
 	<>
+		<h2 className={clsx(galleryStyles.section__title, galleryStyles.games__title, 'text--center')}>{translate({ message: 'gallery.title' })}</h2>
 		{
-			galleryData.map((galleryGroup) => {
-				return (
-					<section
-						key={`ssection_${galleryGroup.name}`}
-						className={clsx(galleryStyles.section)}
+			galleryData.map((galleryGroup) => (
+				<section
+					key={`ssection_${galleryGroup.name}`}
+					className={clsx(galleryStyles.section)}
+				>
+					<h2
+						className={clsx(galleryStyles.section__title, galleryStyles.games__title, 'text--center')}
 					>
-						<h2
-							className={clsx(galleryStyles.section__title, galleryStyles.games__title, 'text--center')}
-						>
-							{galleryGroup.name}
-						</h2>
-						{
-							<div key={`inner_${galleryData.indexOf(galleryGroup)}`} className={galleryStyles.games__group}>
-								{galleryGroup.items && galleryGroup.items.map((item) => (
-									<div key={`${item.id}`} className={galleryStyles.input_container}>
-										<a className={galleryStyles.link_button} id={item.id} href={`${galleryUrl}/${item.id}/`} />
-										<div className={galleryStyles.link_tile}>
-											<div className={galleryStyles.techicon}>
-												{item.tech === 'PixiJS' && <img src="/img/pages/index/ic_pixi.svg"/> }
-												{item.tech === 'Godot' && <img src="/img/pages/index/ic_godot.svg"/> }
-												{item.tech === 'Unity' && <img src="/img/pages/index/ic_unity.svg"/> }
-											</div>
-											<div className={galleryStyles.icon}>
-												<img src={`${galleryUrl}/${item.id}/screenshot.jpg`} />
-											</div>
-											<label
-												className={galleryStyles.link_tile_label}
-												htmlFor={item.id}
-											>
-												{item.name}
-											</label>
+						{galleryGroup.name}
+					</h2>
+					<div key={`inner_${galleryData.indexOf(galleryGroup)}`} className={galleryStyles.games__group}>
+						{galleryGroup.items && galleryGroup.items.map((item) => (
+							<div key={`${item.id}`} className={galleryStyles.input_container}>
+								<a className={galleryStyles.link_button} id={item.id} href={`${galleryUrl}/${item.id}/`}>
+									<div className={galleryStyles.link_tile}>
+										<div className={galleryStyles.techicon}>
+											{item.tech === 'PixiJS' && <img className={galleryStyles.techicon_bigger} src="/img/pages/index/ic_colfio.png" />}
+											{item.tech === 'Godot' && <img src="/img/pages/index/ic_godot.svg" />}
+											{item.tech === 'Unity' && <img src="/img/pages/index/ic_unity.svg" />}
+										</div>
+										{item.sourceLink && (
+											<a className={galleryStyles.inner_container} href={item.sourceLink}>
+												<img src="/img/global/github.svg" />
+											</a>
+										)}
+										<div className={galleryStyles.icon}>
+											<img src={`${galleryUrl}/${item.id}/screenshot.jpg`} />
+										</div>
+										<div className={galleryStyles.link_tile_label}>
+											{item.name}
 										</div>
 									</div>
-								))}
+								</a>
 							</div>
-						}
-					</section>
-				);
-			})
+						))}
+					</div>
+				</section>
+			))
 		}
 	</>
 );
@@ -56,10 +57,9 @@ const GamesPage = () => {
 	const { siteConfig } = useDocusaurusContext();
 	const title = 'APH';
 	const context = useDocusaurusContext();
-	console.log(context.siteConfig.customFields);
 	const url = context.siteConfig.customFields.url as string;
-	const protEndIndex = url.indexOf('//'); 
-	const galleryUrl = url.substring(0, protEndIndex + 2) + 'gallery.' + url.substring(protEndIndex + 2);
+	const protEndIndex = url.indexOf('//');
+	const galleryUrl = `${url.substring(0, protEndIndex + 2)}gallery.${url.substring(protEndIndex + 2)}`;
 
 	return (
 		<Layout description={siteConfig.customFields.description as string} title={title}>

@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
-- source: `examples/src/01-helloworld/pixi.ts`
+- source: [examples/src/01-helloworld/pixi.ts](https://github.com/APHGames/examples/blob/main/src/01-helloworld/pixi.ts)
 
 
 ### Transparent canvas

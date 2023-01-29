@@ -7,7 +7,7 @@ import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
 - **click to interact**
-- source: `examples/src/04-space/pathfinding.ts`
+- source: [examples/src/04-space/pathfinding.ts](https://github.com/APHGames/examples/blob/main/src/04-space/pathfinding.ts)
 
 ### Breadth-first search
 

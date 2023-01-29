@@ -53,6 +53,9 @@
   "gallery.paratrooper": {
     "message": "Paratrooper Clone"
   },
+  "gallery.title": {
+		"message": "Projects Gallery"
+	},
   "pages.resources.assets": {
     "message": "Assets"
   },

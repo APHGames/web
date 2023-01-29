@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
-- source: `examples/src/05-dynamics/missile.ts`
+- source: [examples/src/05-dynamics/missile.ts](https://github.com/APHGames/examples/blob/main/src/05-dynamics/missile.ts)
   - <span className={styles["color-tomato-light"]}>red color:</span> implicit Euler, decreasing energy
   - <span className={styles["color-lemon"]}>yelow color</span>: explicit Euler
   - <span className={styles["color-royal"]}>blue color</span>: improved Euler, increasing energy

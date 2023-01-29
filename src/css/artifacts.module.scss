@@ -11,7 +11,7 @@
 	padding-top: 3rem;
 	
 	h3 {
-		@include noisyBackground;
+		@include patternBackgroundLighter;
 		padding: 1rem;
 		width: 50%;
 	}
@@ -31,7 +31,7 @@
 
 	a {
 		width: 80%;
-		@include noisyBackground;
+		@include patternBackgroundLighter;
 		margin: 0.4rem;
 	}
 

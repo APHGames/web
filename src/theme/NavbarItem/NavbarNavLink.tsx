@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -7,52 +8,54 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import IconExternalLink from '@theme/IconExternalLink';
-import isInternalUrl from '@docusaurus/isInternalUrl';
-import {isRegexpStringMatch} from '@docusaurus/theme-common';
-const dropdownLinkActiveClass = 'dropdown__link--active';
+// import isInternalUrl from '@docusaurus/isInternalUrl';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { isRegexpStringMatch } from '@docusaurus/theme-common';
+
+// const dropdownLinkActiveClass = 'dropdown__link--active';
+
 export default function NavbarNavLink({
-  activeBasePath,
-  activeBaseRegex,
-  to,
-  href,
-  label,
-  activeClassName = '',
-  prependBaseUrlToHref,
-  ...props
+	activeBasePath,
+	activeBaseRegex,
+	to,
+	href,
+	label,
+	activeClassName = '',
+	prependBaseUrlToHref,
+	...props
 }) {
-  // TODO all this seems hacky
-  // {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
-  const toUrl = useBaseUrl(to);
-  const activeBaseUrl = useBaseUrl(activeBasePath);
-  const normalizedHref = useBaseUrl(href, {
-    forcePrependBaseUrl: true,
-  });
-  const isExternalLink = label && href && !isInternalUrl(href);
-  const isDropdownLink = activeClassName === dropdownLinkActiveClass;
-  return (
-    <Link
-      {...(href
-        ? {
-            href: prependBaseUrlToHref ? normalizedHref : href,
-          }
-        : {
-            isNavLink: true,
-            activeClassName: !props.className?.includes(activeClassName)
-              ? activeClassName
-              : '',
-            to: toUrl,
-            ...(activeBasePath || activeBaseRegex
-              ? {
-                  isActive: (_match, location) =>
-                    activeBaseRegex
-                      ? isRegexpStringMatch(activeBaseRegex, location.pathname)
-                      : location.pathname.startsWith(activeBaseUrl),
-                }
-              : null),
-          })}
-      {...props}>
-        {label}
-    </Link>
-  );
+	// TODO all this seems hacky
+	// {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
+	const toUrl = useBaseUrl(to);
+	const activeBaseUrl = useBaseUrl(activeBasePath);
+	const normalizedHref = useBaseUrl(href, {
+		forcePrependBaseUrl: true,
+	});
+	// const isExternalLink = label && href && !isInternalUrl(href);
+	// const isDropdownLink = activeClassName === dropdownLinkActiveClass;
+	return (
+		<Link
+			{...(href
+				? {
+					href: prependBaseUrlToHref ? normalizedHref : href,
+				}
+				: {
+					isNavLink: true,
+					activeClassName: !props.className?.includes(activeClassName)
+						? activeClassName
+						: '',
+					to: toUrl,
+					...(activeBasePath || activeBaseRegex
+						? {
+							isActive: (_match, location) => (activeBaseRegex
+								? isRegexpStringMatch(activeBaseRegex, location.pathname)
+								: location.pathname.startsWith(activeBaseUrl)),
+						}
+						: null),
+				})}
+			{...props}
+		>
+			{label}
+		</Link>
+	);
 }

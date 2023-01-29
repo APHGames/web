@@ -77,9 +77,11 @@ function neverReturns(): never {
 ```
 
 ### Enumerators
+- we should avoid enums, as they don't transpile well
+  - can be avoided by using const enums: `const enum Color`
 
 ```typescript
-enum Color {
+enum Color = {
   Gray, // 0
   Red, // 1
   Green = 100, // 100
@@ -93,88 +95,6 @@ console.log(myColor); // Prints: 100
 const colors = Object.keys(Color); // gets all enum keys
 ```
 
-### For loop
-
-```typescript
-// For..of, can be used only for iterable objects
-for(let user of activeUsers) {
-  console.log(user);
-}
- 
-// for..in
-// this can be applied to any object, just iterates over its attributes
-// order is undefined, don't use it for iterable objects
-for(let key in activeUsers) {
-  console.log(activeUsers[key])
-}
-```
-
-### Equality
-
-```typescript
-// equality operator 
-'' == '0'              // false 
-0 == ''                // true 
-0 == '0'               // true
-false == 'false'       // false 
-false == '0'           // true 
-false == undefined     // false 
-false == null          // false 
-null == undefined      // true 
-{ } === {}             // false 
-new String('foo') === 'foo' // false 
-10 == '10'             // true 
-10 == '+10'            // true 
-10 == '010'            // true 
-isNan(null) == false   // true, null converts to 0
-new Number(10) === 10  // false, object !== number 
-
-// typeof operator 
-'foo'                  // string 
-new String('foo')      // object 
-true                   // boolean 
-[1, 2, 3]              // object 
-new Function()         // function 
-
-// casting 
-'' + 10 === '10'       // true 
-!!'foo'                // true 
-!!true                 // true
-
-```
-
-### Maps
-
-```typescript
-// regular object
-let totalReplies = {};
-totalReplies[user1] = 5; // keys are converted to strings
- 
-// Map object -> can use strings and numbers as keys
-let totalReplies = new Map();
-totalReplies.set(user1, 5); 
-totalReplies.set(user2, 42);
-
-let has = totalReplies.has(user1);
-totalReplies.delete(user1);
-```
-
-### Array operations
-
-```typescript
-// concat, entries, fill, filter, find, flat, flatMap, forEach, 
-// join, includes, keys, map, push, pop, reduce, reverse, shift, 
-// slice, sort, splice, unshift, values
- 
-[0, 0, 0].fill(7, 1) // [0,7,7]
-[1, 2, 3].find(x => x == 3) // 3
-[1, 2, 3].findIndex(x => x == 2) // 1
-[1, 2, 3, 4, 5].copyWithin(3, 0) // [1, 2, 3, 1, 2]
-["a", "b", "c"].entries() // iterator [0, "a"], [1,"b"], [2,"c"]
-["a", "b", "c"].keys() // iterator 0, 1, 2
-["a", "b", "c"].values() // iterator "a", "b", "c"
-const merge = [...arr1, ...arr2]; // merged arrays
-```
 
 ### Classes
 
@@ -210,6 +130,7 @@ class Point3D extends Point {
   protected z: number;
 }
  
+// if possible, prefer types over interfaces!
 interface Colored {
   select(): void;
 }
@@ -344,93 +265,22 @@ type Point = {
 
 ```
 
-### Asynchronous operations
-
-```typescript
-const downloadData = async () => {
-  const customers = await fetchCustomers(url);
-  const result = await loadCustomers(customers);
-  return result;
-};
-
-async function printDelayed(elements: string[]) {
-  for (const element of elements) {
-      await delay(400);
-      console.log(element);
-  }
-}
-```
-
-### Context binding
-
-```typescript
-class ContextExample {
-  private x = 0;
- 
-  constructor() {
-    setTimeout(this.arrowFunc, 1000);
-    setTimeout(this.regularFunc, 1000); // will not work
-    setTimeout(this.regularFunc.bind(this), 1000);
-  }
- 
-  private arrowFunc = () => {
-    this.x = 5;
-  }
-
-  private regularFunc() {
-    this.x = 5;
-  }
-}
-```
-
 ### Exports and Imports
 
 ```typescript
 export const myConst = 12345; // simple export
- 
-// default exports
-export default calculateRectangle = (width: number, length: number) => {
-  return width * length;
+
+// we can export types as well
+export type Color = {
+  red: number;
+  green: number;
+  blue: number;
 }
- 
-// alternative
-const calculateRectangle2 = (width: number, length: number) => { ... }
-export default calculateRectangle2; // exported function
-export default new MyClass(); // exported instance
-export { read, write, standardOutput as stdout } from './inout'; // re-export
- 
+
 // import
 import { PI, calculateCircumference } from './src/circle' // imports selected types
-import calculateRectangle from './src/rectangle' // imports everything with an alias
-import * as flash from './flash-message'; // imports everything
-```
-
-### Modules
-
-```typescript
-// services/tag-service/service.ts
-// use default export for classes and respective export for utilities
-export default TagService {
-  ... 
-}
-//=======================================================
-// services/index.ts
-// import all services
-import TagService from './tag-service/service';
-import LabelService from './label-service/service';
-...
-
-// export them for other folders
-export { TagService, LabelService }
-
-// and import them from other folders
-//=======================================================
-// any ts file outside services folder
-import { TagService, LabelService } from './services'; // no need to write /index 
-
-// this will re-export a default element and all other elements respectively
-export { default } from './Overview';
-export * from './Overview';```
+// type import
+import { type Color } from './types';
 ```
 
 ### Advanced Generics

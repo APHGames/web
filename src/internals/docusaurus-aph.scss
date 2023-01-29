@@ -118,8 +118,11 @@ html[data-theme="dark"] {
 	}
 
 	main {
-		background: 0px 0px/16px 16px $color-rhino-100 radial-gradient(lighten($color-midnight, 2%) 10%, $color-midnight-dark 10%);
-		background-color: $color-rhino-100;
+		background-color: $color-midnight-dark;
+	}
+
+	.main-wrapper {
+		@include dottedBackground;
 	}
 
 	main article header h2 a {
@@ -131,8 +134,14 @@ html[data-theme="dark"] {
 	}
 
 	.footer, .navbar {
-		@include patternBackgroundLighter;
+		@include patternBackground;
 	}
+
+	.footer {
+		border-style: dashed none none;
+		border-top-width: 0.15rem;
+		border-top-color: #FFFFFF44;
+		}
 
 	/* Firefox */
 	* {

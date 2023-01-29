@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
-- source: <a href="https://github.com/APHGames/examples/tree/master/src/05-dynamics/ackermann-advanced.ts">examples/src/05-dynamics/ackermann-advanced.ts</a>
+- source: [examples/src/05-dynamics/ackermann-advanced.ts](https://github.com/APHGames/examples/blob/main/src/05-dynamics/ackermann-advanced.ts)
 
 ### Principle
 

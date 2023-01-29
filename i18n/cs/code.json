@@ -71,6 +71,9 @@
 	"gallery.paratrooper": {
 		"message": "Paratrooper (klon)"
 	},
+	"gallery.title": {
+		"message": "Galerie projektů"
+	},
 	"pages.resources.assets": {
 		"message": "Assety"
 	},

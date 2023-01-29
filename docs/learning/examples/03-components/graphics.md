@@ -6,7 +6,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '@site/src/css/docs.module.scss';
 import APHCanvas from '@site/src/APHCanvas.tsx'
 
-- source: `examples/src/03-components/graphics.ts`
+- source: [examples/src/03-components/graphics.ts](https://github.com/APHGames/examples/blob/main/src/03-components/graphics.ts)
+  
 - controls
   - `Q` will reverse the direction of all entities
   - `W` will pause/resume the scene

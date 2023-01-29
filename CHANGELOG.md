@@ -6,6 +6,12 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.5] - 2023-02-05
+### Changed
+- eslint code fixes
+- Updated JS and TS cheatsheets
+- minor design changes
+
 ## [6.1.4] - 2023-01-22
 ### Added
 Platformer Example

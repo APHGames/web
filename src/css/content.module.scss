@@ -28,7 +28,7 @@
 
 	>div {
 		width: 80%;
-		@include noisyBackground;
+		@include patternBackgroundLighter;
 		margin: 0.4rem;
 		display: flex;
 		flex-direction: row;
@@ -67,7 +67,7 @@
 	}
 
 	> div:first-child {
-		@include noisyBackground;
+		@include patternBackgroundLighter;
 	}
 
 	h3 {

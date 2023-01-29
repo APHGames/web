@@ -1,5 +1,4 @@
-import { translate } from "@docusaurus/Translate";
-
+import { translate } from '@docusaurus/Translate';
 
 export type ResourceItem = {
 	title: string;
@@ -18,88 +17,88 @@ export type ResourceSection = {
 
 export const resourcesData: ResourceSection[] = [
 	{
-		name: translate({message: 'pages.resources.assets'}),
+		name: translate({ message: 'pages.resources.assets' }),
 		resources: [
 			{
 				title: 'Open Game Art',
-				subTitle: translate({message: 'pages.resources.assets.opengameart'}),
+				subTitle: translate({ message: 'pages.resources.assets.opengameart' }),
 				link: 'https://opengameart.org/',
 				linkDesc: true,
 				icon: 'assets/asset_gameart.jpg',
 			},
 			{
 				title: 'Free3D',
-				subTitle: translate({message: 'pages.resources.assets.free3d'}),
+				subTitle: translate({ message: 'pages.resources.assets.free3d' }),
 				link: 'https://free3d.com',
 				linkDesc: true,
 				icon: 'assets/asset_free3D.jpg',
 			},
 			{
 				title: 'Spriters Resources',
-				subTitle: translate({message: 'pages.resources.assets.spriters'}),
+				subTitle: translate({ message: 'pages.resources.assets.spriters' }),
 				link: 'https://www.spriters-resource.com/',
 				linkDesc: true,
 				icon: 'assets/asset_spriters.jpg',
 			},
 			{
 				title: 'Pixel-art icons',
-				subTitle: translate({message: 'pages.resources.assets.pixelart'}),
+				subTitle: translate({ message: 'pages.resources.assets.pixelart' }),
 				link: 'https://www.deviantart.com/7soul1/art/420-Pixel-Art-Icons-for-RPG-129892453/',
 				linkDesc: false,
 				icon: 'assets/asset_pixelicons.jpg',
 			},
 			{
 				title: 'Game icons',
-				subTitle: translate({message: 'pages.resources.assets.gameicons'}),
+				subTitle: translate({ message: 'pages.resources.assets.gameicons' }),
 				link: 'https://game-icons.net/',
 				linkDesc: true,
 				icon: 'assets/asset_gameicons.jpg',
 			},
 			{
 				title: 'Blender models',
-				subTitle: translate({message: 'pages.resources.assets.blender'}),
+				subTitle: translate({ message: 'pages.resources.assets.blender' }),
 				link: 'https://www.blender-models.com/',
 				linkDesc: true,
 				icon: 'assets/asset_blender.jpg',
 			},
 			{
 				title: 'Reiner\'s Tilesets',
-				subTitle: translate({message: 'pages.resources.assets.tilesets'}),
+				subTitle: translate({ message: 'pages.resources.assets.tilesets' }),
 				link: 'https://www.reinerstilesets.de/',
 				linkDesc: true,
 				icon: 'assets/asset_tilesets.jpg',
 			},
 			{
 				title: 'Vecteezy',
-				subTitle: translate({message: 'pages.resources.assets.vecteezy'}),
+				subTitle: translate({ message: 'pages.resources.assets.vecteezy' }),
 				link: 'https://www.vecteezy.com/',
 				linkDesc: true,
 				icon: 'assets/asset_vecteezy.jpg',
 			},
 			{
 				title: 'Texture King',
-				subTitle: translate({message: 'pages.resources.assets.texking'}),
+				subTitle: translate({ message: 'pages.resources.assets.texking' }),
 				link: 'https://www.textureking.com/',
 				linkDesc: true,
 				icon: 'assets/asset_textures.jpg',
 			},
 			{
 				title: 'GameSounds.xyz',
-				subTitle: translate({message: 'pages.resources.assets.gamesounds'}),
+				subTitle: translate({ message: 'pages.resources.assets.gamesounds' }),
 				link: 'https://gamesounds.xyz/',
 				linkDesc: true,
 				icon: 'assets/asset_gamesound.jpg',
 			},
 			{
 				title: 'FreePd',
-				subTitle: translate({message: 'pages.resources.assets.freepd'}),
+				subTitle: translate({ message: 'pages.resources.assets.freepd' }),
 				link: 'https://freepd.com/',
 				linkDesc: true,
 				icon: 'assets/asset_freepd.jpg',
 			},
 			{
 				title: 'FreeSFX',
-				subTitle: translate({message: 'pages.resources.assets.freesfx'}),
+				subTitle: translate({ message: 'pages.resources.assets.freesfx' }),
 				link: 'https://www.freesfx.co.uk/',
 				linkDesc: true,
 				icon: 'assets/asset_freesfx.jpg',
@@ -107,18 +106,18 @@ export const resourcesData: ResourceSection[] = [
 		],
 	},
 	{
-		name: translate({message: 'pages.resources.portals'}),
+		name: translate({ message: 'pages.resources.portals' }),
 		resources: [
 			{
 				title: 'Itch.Io',
-				subTitle: translate({message: 'pages.resources.portals.itchio'}),
+				subTitle: translate({ message: 'pages.resources.portals.itchio' }),
 				link: 'https://itch.io/',
 				linkDesc: true,
 				icon: 'portals/portal_itchio.jpg',
 			},
 			{
 				title: 'Games.cz',
-				subTitle: translate({message: 'pages.resources.portals.gamescz'}),
+				subTitle: translate({ message: 'pages.resources.portals.gamescz' }),
 				link: 'https://games.tiscali.cz/',
 				linkDesc: true,
 				icon: 'portals/portal_tiscali.jpg',
@@ -126,28 +125,28 @@ export const resourcesData: ResourceSection[] = [
 			},
 			{
 				title: 'Game Developer',
-				subTitle: translate({message: 'pages.resources.portals.gamedev'}),
+				subTitle: translate({ message: 'pages.resources.portals.gamedev' }),
 				link: 'https://www.gamedeveloper.com/',
 				linkDesc: true,
 				icon: 'portals/portal_gamedev.jpg',
 			},
 			{
 				title: 'Unseen',
-				subTitle: translate({message: 'pages.resources.portals.unseen'}),
+				subTitle: translate({ message: 'pages.resources.portals.unseen' }),
 				link: 'https://www.unseen64.net/',
 				linkDesc: true,
 				icon: 'portals/portal_unseen.jpg',
 			},
 			{
 				title: 'How Long To Beat',
-				subTitle: translate({message: 'pages.resources.portals.howlong'}),
+				subTitle: translate({ message: 'pages.resources.portals.howlong' }),
 				link: 'https://howlongtobeat.com/',
 				linkDesc: true,
 				icon: 'portals/portal_howlong.jpg',
 			},
 			{
 				title: 'Game Clones',
-				subTitle: translate({message: 'pages.resources.portals.clones'}),
+				subTitle: translate({ message: 'pages.resources.portals.clones' }),
 				link: 'http://osgameclones.com/',
 				linkDesc: true,
 				icon: 'portals/portal_clones.jpg',
@@ -155,7 +154,7 @@ export const resourcesData: ResourceSection[] = [
 		],
 	},
 	{
-		name: translate({message: 'pages.resources.books'}),
+		name: translate({ message: 'pages.resources.books' }),
 		resources: [
 			{
 				title: 'Game Engine Architecture (3rd ed.)',

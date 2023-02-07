@@ -11,7 +11,7 @@ const Slides = () => {
 	const currentLocale = context.siteConfig.customFields.currentLocale;
 
 	// for now, CS will use CS tutorials and EN slides for other categories, as they haven't been translated yet
-	const availableSlides = SLIDES_DATA.filter(sl => (currentLocale === 'cs' && sl.category !== 'Tutorial') || (sl.locale === currentLocale))
+	const availableSlides = SLIDES_DATA.filter(sl => (currentLocale === 'cs' && sl.category !== 'Tutorial') || (sl.locale === currentLocale));
 	const slidesGroups = [...new Set(SLIDES_DATA.map(s => s.group))];
 
 	return (
@@ -61,7 +61,7 @@ const Slides = () => {
 	)
 };
 
-
+// SSR check
 export default (props) => {
 	if (typeof (window) !== 'undefined') {
 		return <Slides />;

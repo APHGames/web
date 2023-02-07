@@ -37,6 +37,10 @@ jobs:
       uses: vitorsgomes/s3-rm-action@master
       with:
         args: --recursive
+    - name: DeployIndexNoCache
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --follow-symlinks --exclude '*' --include 'index.html' --cache-control max-age=0,public
     - name: Deploy
       uses: jakejarvis/s3-sync-action@master
       with:

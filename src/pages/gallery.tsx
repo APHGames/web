@@ -55,14 +55,12 @@ const Games = ({ galleryUrl }: { galleryUrl: string }) => (
 
 const GamesPage = () => {
 	const { siteConfig } = useDocusaurusContext();
-	const title = 'APH';
 	const context = useDocusaurusContext();
-	const url = context.siteConfig.customFields.url as string;
-	const protEndIndex = url.indexOf('//');
-	const galleryUrl = `${url.substring(0, protEndIndex + 2)}gallery.${url.substring(protEndIndex + 2)}`;
+	// todo create types
+	const galleryUrl = context.siteConfig.customFields.gallery_url as string;
 
 	return (
-		<Layout description={siteConfig.customFields.description as string} title={title}>
+		<Layout description={siteConfig.customFields.description as string} title={translate({ message: 'gallery.title' })}>
 			<DocusaurusHead>
 				<link rel="canonical" href={siteConfig.url} />
 			</DocusaurusHead>

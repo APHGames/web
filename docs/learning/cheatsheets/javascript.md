@@ -86,7 +86,8 @@ displayTags(myElement, ...tags);
 
 
 ### For loops
-- **for-in** - works for **any** object, not only arrays. **The order is undefined**, not recommended to use
+- **for-in** - works for **any** object, not only arrays
+- The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined - not recommended to use
 
 ```javascript
 for(let key in activeUsers) {
@@ -515,6 +516,39 @@ try {
 } catch(err) {
     
 }
+```
+
+- event loop example
+  - Promises are put in the microtask queue that has a high priority
+
+```javascript
+console.log('Synchronous 1');
+setTimeout(() => console.log('Timeout 2'), 0);
+Promise.resolve().then(() => console.log('Promise 3'));
+console.log('Synchronous 4');
+
+// correct order:
+// Synchronous 1
+// Synchronous 4
+// Promise 3
+// Timeout 2
+```
+
+- combining async and await
+
+```javascript
+const makeSmoothie = async() => {
+  try {
+    const a = getFruit('pineapple');
+    const b = getFruit('strawberry');
+
+    const result = await Promise.all([a, b]);
+    return result;
+  } catch(err) {
+    console.log(err);
+  }
+}
+
 ```
 
 - async and map

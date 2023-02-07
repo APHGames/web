@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
 
 
 .feature {
@@ -7,11 +8,28 @@
 	flex-direction: column;
 	flex: 1;
 	align-items: center;
+	padding: 1rem;
+
+	> * {
+		text-decoration: none;
+		@include patternBackground;
+
+		&:hover, &:active {
+			@include patternBackgroundLighter;
+			text-decoration: none;
+		}
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		align-items: center;
+	}
 }
 
 .feature__illustration {
 	margin-bottom: 1rem;
 	align-self: start;
+	width: 300px;
 }
 
 .feature__title {

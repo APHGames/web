@@ -95,6 +95,19 @@ console.log(myColor); // Prints: 100
 const colors = Object.keys(Color); // gets all enum keys
 ```
 
+- a better solution is to use const objects with a values helper type:
+
+```typescript
+const Direction = {
+    Up: 0,
+    Down: 1,
+    Left: 2,
+    Right: 3,
+} as const;
+
+type Values<T> = T[keyof T];
+let direction: Values<typeof Direction>): void
+```
 
 ### Classes
 

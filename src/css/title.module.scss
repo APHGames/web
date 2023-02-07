@@ -51,3 +51,9 @@
 	transition: text-shadow 2s ease;
 	animation: chromaticMove 2.5s ease infinite, pulse 6s ease infinite;
 }
+
+.title__colfio {
+	> div {
+		text-align: center;
+	}
+}

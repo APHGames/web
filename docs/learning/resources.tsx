@@ -51,6 +51,7 @@ const Resources = () => {
 	);
 };
 
+// SSR check
 export default (props) => {
 	if (typeof (window) !== 'undefined') {
 		return <Resources  />;

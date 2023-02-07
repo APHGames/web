@@ -1,7 +1,7 @@
 {
 	"config.keywords": {
 		"message": "počítačové hry, programování her, design her, herní tutoriály"
-	  },
+	},
 	"config.title": {
 		"message": "APH Games"
 	},
@@ -22,21 +22,6 @@
 	},
 	"config.artifacts": {
 		"message": "Artefakty"
-	},
-	"cmfcmf/d-s-l.searchBar.placeholder": {
-	  "message": "Hledat..."
-	},
-	"cmfcmf/d-s-l.searchBar.clearButtonTitle": {
-	  "message": "Smazat"
-	},
-	"cmfcmf/d-s-l.searchBar.detachedCancelButtonText": {
-		"message": "Zrušit"
-	},
-	"cmfcmf/d-s-l.searchBar.submitButtonTitle": {
-		"message": "Potvrdit"
-	},
-	"cmfcmf/d-s-l.searchBar.noResults": {
-		"message": "Nenalezeny žádné záznamy"
 	},
 	"gallery.preview": {
 		"message": "Ukázkové hry"
@@ -146,7 +131,190 @@
 	"index.tutorials": {
 		"message": "Tutoriály"
 	},
+	"index.videos": {
+		"message": "Videa"
+	},
 	"index.minigames": {
 		"message": "Minihry"
+	},
+	"index.news": {
+		"message": "Novinky"
+	},
+	"index.colfio": {
+		"message": "Pro všechny příklady a minihry používáme vlastní knihovnu #COLFIO, která funguje jako nadstavba grafické knihovny #PIXI."
+	},
+	"theme.ErrorPageContent.title": {
+		"message": "Web nám spadnul... kdopak nám ho postaví?"
+	},
+	"theme.ErrorPageContent.tryAgain": {
+		"message": "Zkusit znovu"
+	},
+	"theme.NotFound.title": {
+		"message": "Stránka je fuč nebo tu nikdy nebyla!"
+	},
+	"theme.NotFound.p1": {
+		"message": "Tak tuhle stránku tu fakt nemáme!"
+	},
+	"theme.NotFound.p2": {
+		"message": "Prosím, zkontaktujte vlastníka stránky a dejte mu vědět, že tu něco nefunguje"
+	},
+	"theme.AnnouncementBar.closeButtonAriaLabel": {
+		"message": "Zrušit"
+	},
+	"theme.BackToTopButton.buttonAriaLabel": {
+		"message": "Scrollovat zpět nahoru"
+	},
+	"theme.blog.archive.title": {
+		"message": "Archiv"
+	},
+	"theme.blog.archive.description": {
+		"message": "Archiv"
+	},
+	"theme.blog.paginator.navAriaLabel": {
+		"message": "Navigace stránky blogu"
+	},
+	"theme.blog.paginator.newerEntries": {
+		"message": "Novější záznamy"
+	},
+	"theme.blog.paginator.olderEntries": {
+		"message": "Starší záznamy"
+	},
+	"theme.blog.post.readingTime.plurals": {
+		"message": "Jedna minuta čtení|{readingTime} minut čtení"
+	},
+	"theme.blog.post.readMoreLabel": {
+		"message": "Přečíst si více o {title}"
+	},
+	"theme.blog.post.readMore": {
+		"message": "Více informací"
+	},
+	"theme.blog.post.paginator.navAriaLabel": {
+		"message": "Navigace stránky blogu"
+	},
+	"theme.blog.post.paginator.newerPost": {
+		"message": "Novější posty"
+	},
+	"theme.blog.post.paginator.olderPost": {
+		"message": "Starší posty"
+	},
+	"theme.blog.sidebar.navAriaLabel": {
+		"message": "Navigace nedávných postů"
+	},
+	"theme.blog.post.plurals": {
+		"message": "Jeden post|{count} postů"
+	},
+	"theme.blog.tagTitle": {
+		"message": "{nPosts} otagováno s \"{tagName}\""
+	},
+	"theme.tags.tagsPageLink": {
+		"message": "Zobrazit všechny tagy"
+	},
+	"theme.CodeBlock.copyButtonAriaLabel": {
+		"message": "Zkopírovat do schránky"
+	},
+	"theme.CodeBlock.copied": {
+		"message": "Zkopírováno"
+	},
+	"theme.CodeBlock.copy": {
+		"message": "Kopírovat"
+	},
+	"theme.colorToggle.ariaLabel": {
+		"message": "Přepnout mezi temným a světlým módem (currently {mode})"
+	},
+	"theme.colorToggle.ariaLabel.mode.dark": {
+		"message": "temný mód"
+	},
+	"theme.colorToggle.ariaLabel.mode.light": {
+		"message": "světlý mód"
+	},
+	"theme.docs.DocCard.categoryDescription": {
+		"message": "{count} položek"
+	},
+	"theme.docs.sidebar.expandButtonTitle": {
+		"message": "Expandovat postranní panel"
+	},
+	"theme.docs.sidebar.expandButtonAriaLabel": {
+		"message": "Expandovat postranní panel"
+	},
+	"theme.docs.paginator.navAriaLabel": {
+		"message": "Navigace stránek"
+	},
+	"theme.docs.paginator.previous": {
+		"message": "Předchozí"
+	},
+	"theme.docs.paginator.next": {
+		"message": "Další"
+	},
+	"theme.docs.tagDocListPageTitle.nDocsTagged": {
+		"message": "Jeden dokument otagován|{count} dokumentů otagováno"
+	},
+	"theme.docs.tagDocListPageTitle": {
+		"message": "{nDocsTagged} s \"{tagName}\""
+	},
+	"theme.docs.versionBadge.label": {
+		"message": "Verze: {versionLabel}"
+	},
+	"theme.docs.versions.unreleasedVersionLabel": {
+		"message": "Toto je nereleasnutá dokumentace pro {siteTitle} {versionLabel} verzi."
+	},
+	"theme.docs.versions.unmaintainedVersionLabel": {
+		"message": "Toto je dokumentace pro {siteTitle} {versionLabel}, která už není udržována."
+	},
+	"theme.docs.versions.latestVersionSuggestionLabel": {
+		"message": "Pro aktuální dokumentaci, navštivte {latestVersionLink} ({versionLabel})."
+	},
+	"theme.docs.versions.latestVersionLinkLabel": {
+		"message": "poslední verze"
+	},
+	"theme.common.editThisPage": {
+		"message": "Editovat"
+	},
+	"theme.common.headingLinkTitle": {
+		"message": "Přímý link na hlavičku"
+	},
+	"theme.lastUpdated.atDate": {
+		"message": " dne {date}"
+	},
+	"theme.lastUpdated.byUser": {
+		"message": " uživatelem {user}"
+	},
+	"theme.lastUpdated.lastUpdatedAtBy": {
+		"message": "Naposledy aktualizováno{atDate}{byUser}"
+	},
+	"theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+		"message": "← Do hlavního menu"
+	},
+	"theme.navbar.mobileVersionsDropdown.label": {
+		"message": "Verze"
+	},
+	"theme.common.skipToMainContent": {
+		"message": "Na hlavní obsah"
+	},
+	"theme.tags.tagsListLabel": {
+		"message": "Tagy:"
+	},
+	"theme.TOCCollapsible.toggleButtonLabel": {
+		"message": "Na této stránce"
+	},
+	"theme.navbar.mobileLanguageDropdown.label": {
+		"message": "Jazyky"
+	},
+	"cmfcmf/d-s-l.searchBar.placeholder": {
+		"message": "Hledat..."
+	},
+	"cmfcmf/d-s-l.searchBar.clearButtonTitle": {
+		"message": "Smazat"
+	},
+	"cmfcmf/d-s-l.searchBar.detachedCancelButtonText": {
+		"message": "Zrušit"
+	},
+	"cmfcmf/d-s-l.searchBar.submitButtonTitle": {
+		"message": "Potvrdit"
+	},
+	"cmfcmf/d-s-l.searchBar.noResults": {
+		"message": "Žádné výsledky nenalezeny"
+	},
+	"theme.tags.tagsPageTitle": {
+		"message": "Tagy"
 	}
-  }
+}

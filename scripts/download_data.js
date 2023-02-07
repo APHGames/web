@@ -76,7 +76,8 @@ const loadAndUnzip = (url, folder, onFinish) => {
 		// log each 2 seconds
 		if(currTime - time > 2000 || writtenData === curl.getInfo('CONTENT_LENGTH_DOWNLOAD')) {
 			time = currTime;
-			console.log(Math.floor(writtenData / 1024) + '/' + Math.floor(curl.getInfo('CONTENT_LENGTH_DOWNLOAD') / 1024));
+			const percentage = Math.floor(writtenData / 1024) / Math.floor(curl.getInfo('CONTENT_LENGTH_DOWNLOAD') / 1024);  
+			console.log(Math.floor(percentage * 100));
 		}
 
 		return written

@@ -11,8 +11,8 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID || '' }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_EN }}
-      PATH_TO_DELETE: 'aph'
       SOURCE_DIR: 'build'
+      PATH_TO_DELETE: 'aph'
       DEST_DIR: 'aph'
     runs-on: ubuntu-latest
     steps:
@@ -37,6 +37,10 @@ jobs:
       uses: vitorsgomes/s3-rm-action@master
       with:
         args: --recursive
+    - name: DeployIndexNoCache
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --follow-symlinks --exclude '*' --include 'index.html' --cache-control max-age=0,public
     - name: Deploy
       uses: jakejarvis/s3-sync-action@master
       with:

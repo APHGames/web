@@ -11,11 +11,13 @@ const isLocaleEN = currentLocale === 'en';
 let url = config.urls[currentLocale];
 const i18n = require(path.resolve(__dirname, `i18n/${currentLocale}/code.json`));
 
+// custom fields for the whole app (including data from web.config)
 const customFields = {
 	copyright: `Copyright © ${new Date().getFullYear()} ${config.owner}`,
 	description: 'APHGames Web',
 	url,
 	currentLocale,
+	...config,
 }
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */

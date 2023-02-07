@@ -57,8 +57,6 @@ const Artifacts = () => {
 
 const ArtifactsPage = () => {
 	const { siteConfig } = useDocusaurusContext();
-	const title = 'APH';
-
 	const total = React.useMemo(() => {
 		let totalNum = 0;
 		for (const key of Object.keys(artifacts)) {
@@ -72,7 +70,7 @@ const ArtifactsPage = () => {
 	}, []);
 
 	return (
-		<Layout description={siteConfig.customFields.description as string} title={title}>
+		<Layout description={siteConfig.customFields.description as string} title="Artefakty">
 			<DocusaurusHead>
 				<link rel="canonical" href={siteConfig.url} />
 			</DocusaurusHead>

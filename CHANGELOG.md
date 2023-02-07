@@ -6,6 +6,12 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.6] - 2023-02-07
+### Changed
+- moved news and about content into separate components for each locale
+- added COLF.IO library link
+- replaced the feature list with more usable links
+
 ## [6.1.5] - 2023-02-05
 ### Changed
 - eslint code fixes

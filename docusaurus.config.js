@@ -97,6 +97,11 @@ const output = {
 					position: 'left',
 					to: '/docs/learning/intro',
 				},
+				/*	{
+						label: 'Blog',
+						to: '/blog/',
+						position: 'left'
+					}*/
 				{
 					label: i18n['config.brand'].message,
 					position: 'left',

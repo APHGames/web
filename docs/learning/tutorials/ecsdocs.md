@@ -1,5 +1,5 @@
 ---
-title: PIXI-ECS Docs
+title: COLFIO Docs
 description: Documentation of PIX-ECS library
 
 ---
@@ -7,7 +7,7 @@ description: Documentation of PIX-ECS library
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '@site/src/css/docs.module.scss';
 
-- documentation to the `PIXI-ECS` library that can be found in the repository
+- documentation to the `COLFIO` library that can be found in the repository
 
 ## Pixi architecture
 
@@ -16,7 +16,7 @@ import styles from '@site/src/css/docs.module.scss';
   <img src={useBaseUrl('img/docs/tutorials/02-pixi/diag_pixi_classes.svg')} />
 </div>
 
-## ECS Library
+## COLFIO Library
 - a minimalist library for NI-APH that implements ECS pattern with the most important amenities
 - located in `examples/libs/pixi-ecs`
 - **features**
@@ -56,7 +56,7 @@ import styles from '@site/src/css/docs.module.scss';
   <img src={useBaseUrl('img/docs/pixi-ecs/arch_ecs.svg')} />
 </div>
 
-### PIXI-ECS binding
+### COLFIO binding
 
 - instead of creating `PIXI.Container`, `PIXI.Sprite` etc., we can create `ECS.Container`, `ECS.Sprite`,...
 - those objects inherit from their respective counterparts in PIXI. Additionally, they contain methods from `ECS.GameObject` interface

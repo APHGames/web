@@ -12,7 +12,7 @@
 
 ```
 project
-│   │   blog                // place for a blog... not used right now
+│   │   blog                // place for a blog
 │   │   docs                // markdown documents with instructions, tutorials, guides etc.
 │   │   plugins             // some plugins
 │   │   src                 // React sources with custom components and themes

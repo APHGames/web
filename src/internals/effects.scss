@@ -11,11 +11,13 @@
 @mixin patternBackground {
     background: url("/img/pages/index/overlay.png") repeat repeat;
 	background-color: $color-midnight-dark;	
+	border: 1px solid $color-rhino-90;
+
 }
 
 @mixin patternBackgroundLighter {
     background: url("/img/pages/index/overlay.png") repeat repeat;
-	background-color: $color-midnight;	
+	background-color: $color-midnight;
 }
 
 @keyframes chromaticMove {

@@ -4,9 +4,9 @@ import DocusaurusHead from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import Layout from '@theme/Layout';
+import sectionStyles from '@site/src/css/section.module.scss';
+import artifactsStyles from '@site/src/css/artifacts.module.scss';
 import artifacts from '../../static/tiscali.json';
-import sectionStyles from '../css/section.module.scss';
-import artifactsStyles from '../css/artifacts.module.scss';
 
 const comparer = (a: any, b: any) => parseInt(b) - parseInt(a);
 
@@ -77,9 +77,9 @@ const ArtifactsPage = () => {
 
 			<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__title)}>
 				<h3>
-					Zde se nachází velmi velmi pracně odfiltrovaný seznam článků z
+					Zde se nachází profiltrovaný seznam článků z&nbsp;
 					<a href="https://games.tiscali.cz">games.tiscali</a>
-					. Z celkových cca 60 000 jich tu máme celkem
+					. Z celkových cca 100 000 jich tu máme celkem&nbsp;
 					{total}
 					{' '}
 					a je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.

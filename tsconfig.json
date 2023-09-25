@@ -12,4 +12,5 @@
 	// although you can choose to run tsc to type check your code for yourself or on CI.
 	"extends": "@tsconfig/docusaurus/tsconfig.json",  
 	"include": ["src/", "i18n/", "docs/"],
+	"exclude": ["plugins/"],
 }

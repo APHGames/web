@@ -1,0 +1,11 @@
+{
+	"title": {
+	  "message": "Blog"
+	},
+	"description": {
+	  "message": "Blog"
+	},
+	"sidebar.title": {
+	  "message": "Nedávné posty"
+	}
+  }

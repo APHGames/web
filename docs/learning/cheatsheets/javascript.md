@@ -756,6 +756,22 @@ function Foo() {
 
 ## Tips and tricks
 
+- conditional property assignment
+  - in cases we want an object to either have the property or not at all
+
+```javascript
+function assign(size) {
+
+  // if parameter is undefined, size won't be present at all
+  const myObj = {
+    radius: 12,
+    ...(size ? { size: size } : {})
+  }
+}
+
+
+```
+
 - transforming arguments object into an array
 
 ```javascript

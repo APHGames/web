@@ -6,12 +6,12 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { translate } from '@docusaurus/Translate';
 import Loadable from 'react-loadable';
+import featureStyles from '@site/src/css/feature.module.scss';
+import sectionStyles from '@site/src/css/section.module.scss';
+import titleStyles from '@site/src/css/title.module.scss';
+import pacmanStyles from '@site/src/css/pacman.module.scss';
+import contentStyles from '@site/src/css/content.module.scss';
 import LoadingSpinner from '../components/Loading';
-import featureStyles from '../css/feature.module.scss';
-import sectionStyles from '../css/section.module.scss';
-import titleStyles from '../css/title.module.scss';
-import pacmanStyles from '../css/pacman.module.scss';
-import contentStyles from '../css/content.module.scss';
 import Logo from '../../static/img/pages/index/logo.svg';
 import ColfioLogo from '../../static/img/pages/index/colfio.png';
 

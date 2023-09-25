@@ -15,7 +15,7 @@
 		"download_data": "node scripts/download_data.js",
 		"swizzle": "docusaurus swizzle",
 		"serve": "docusaurus serve",
-		"lint": "eslint ./src",
+		"lint": "eslint src i18n docs",
 		"write-translations": "docusaurus write-translations",
 		"write-heading-ids": "docusaurus write-heading-ids"
 	},

@@ -35,8 +35,8 @@ git diff f5acd..f656a                // diff between X and Y commits
 git diff master bird                 // diff between X and Y branches
 
 ## reset
-git checkout -- .                    // blows aways all changes
-git checkout -- readme.txt           // blows aways all changes since last commit
+git checkout -- .                    // blows aways all changes since last commit
+git checkout -- readme.txt           // blows aways all changes for one file
 git commit -a -m "Modify Readme"     // stages and commits change
 git reset --soft HEAD^               // reset into staging (^ is for ONE commit before head)
 git commit --amend -m "Modified XX"  // add to the last commit, we can specify a new commit message
@@ -210,7 +210,7 @@ git config --global core.autocrlf input     // for unix
 ## cherrypick
 git cherry-pick <commit-hash>                   // applies one commit to current branch
 git cherry-pick --edit 5321                     // cherry-pick that edits the commit msg
-git cherry-pick --no-commit <commitA> <commitB> // cherry-pick that doesnt make new commit
+git cherry-pick --no-commit <commitA> <commitB> // cherry-pick that doesnt make new commit (copy-paste)
 
 ## patch
 ### a good solution if we only want to takes changes from another part of the working tree

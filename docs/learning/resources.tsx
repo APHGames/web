@@ -1,31 +1,29 @@
 import clsx from 'clsx';
 import React from 'react';
-import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { ResourceSection, resourcesData } from '@site/src/internals/resources-data';
 import sectionStyles from '@site/src/css/section.module.scss';
 import resourceStyles from '@site/src/css/resources.module.scss';
 
-
 const Resources = () => {
 	const context = useDocusaurusContext();
-	const currentLocale = context.siteConfig.customFields.currentLocale;
+	const { currentLocale } = context.siteConfig.customFields;
 
-	return (<>
-		{
-			resourcesData.map((rSection: ResourceSection) => (
-				<section
-					key={`resources_${rSection.name}`}
-				>
-					<h3
-						className={clsx(sectionStyles.section__title, resourceStyles.resources__title, 'text--center')}
+	return (
+		<>
+			{
+				resourcesData.map((rSection: ResourceSection) => (
+					<section
+						key={`resources_${rSection.name}`}
 					>
-						{rSection.name}
-					</h3>
-					{
+						<h3
+							className={clsx(sectionStyles.section__title, resourceStyles.resources__title, 'text--center')}
+						>
+							{rSection.name}
+						</h3>
 						<div key={`${rSection.name}`} className={resourceStyles['resources--group']}>
 							<div className={resourceStyles.resources__group}>
-								{rSection.resources.filter(res => !res.locale || res.locale === currentLocale).map((resource, idx) => (
+								{rSection.resources.filter((res) => !res.locale || res.locale === currentLocale).map((resource) => (
 									<a href={resource.link}>
 										<div className={resourceStyles.resource__container}>
 											<div className={resourceStyles.icon}>
@@ -43,18 +41,17 @@ const Resources = () => {
 								))}
 							</div>
 						</div>
-					}
-				</section>
-			))
-		}
-	</>
+					</section>
+				))
+			}
+		</>
 	);
 };
 
 // SSR check
-export default (props) => {
+export default () => {
 	if (typeof (window) !== 'undefined') {
-		return <Resources  />;
+		return <Resources />;
 	}
 	return null;
 };

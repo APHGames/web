@@ -1,5 +1,9 @@
 [
 	{
+		"date": "25.9.2023",
+		"text": "Updated materials"
+	},
+	{
 		"date": "7.2.2023",
 		"text": "Released a library <a href='https://colf.io'>COLF.IO</a> (former ECSLite)"
 	},

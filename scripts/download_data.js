@@ -1,7 +1,7 @@
 const { Curl, CurlFeature } = require('node-libcurl');
 const fs = require('fs');
-const unzipper = require('unzipper');
 const utils = require('./utils');
+const decompress = require("decompress");
 
 const config = require('../web.config');
 
@@ -85,15 +85,12 @@ const loadAndUnzip = (url, folder, onFinish) => {
 	
 	const unzip = () => {
 		console.log(`${folder}...extracting`);
-		fs.createReadStream(tempFile)
-		.pipe(unzipper.Extract({ path: `static/${folder}` }))
-		.on('entry', entry => entry.autodrain())
-		.promise()
-		.then( () => {
+		decompress(tempFile, `static/${folder}`)
+		.then(() => {
 			fs.rmSync(tempFile);
 			console.log(`${folder}...done`);
 			onFinish && onFinish();
-		}, e => console.error(e));
+		}).catch(err => console.error(err));
 	}
 	
 	const close = () => {

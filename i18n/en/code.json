@@ -8,6 +8,15 @@
 	"config.materials": {
 		"message": "Materials"
 	},
+	"config.courses": {
+		"message": "Courses"
+	},
+	"config.courses_aph": {
+		"message": "NI-APH (Architecture of Video Games)"
+	},
+	"config.courses_dph": {
+		"message": "NI-DPH (Video Game Design)"
+	},
 	"config.brand": {
 		"message": "Brand"
 	},

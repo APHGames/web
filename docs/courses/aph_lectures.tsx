@@ -11,7 +11,7 @@ const Slides = () => {
 	const { currentLocale } = context.siteConfig.customFields;
 
 	// for now, CS will use CS tutorials and EN slides for other categories, as they haven't been translated yet
-	const availableSlides = SLIDES_DATA.filter((sl) => ((sl.locale === currentLocale && sl.group !== 'Hlavní') || sl.group === 'Lectures' || sl.group === 'Minitalks'));
+	const availableSlides = SLIDES_DATA.filter((sl) => (currentLocale === sl.locale && sl.course === 'APH'));
 	const slidesGroups = [...new Set(SLIDES_DATA.map((s) => s.group))];
 
 	return (
@@ -21,9 +21,9 @@ const Slides = () => {
 					const slideGroup = availableSlides.filter((sl) => sl.group === group);
 					return (slideGroup.length !== 0) && (
 						<section key={`ssection_${group}`}>
-							<h3 className={clsx(sectionStyles.section__title, slidesStyles.slides__title, 'text--center')}>
+							<h2 className={clsx(slidesStyles.slides__title, 'text--center')}>
 								{group}
-							</h3>
+							</h2>
 							<div className={slidesStyles['slides--group']}>
 								<div className={slidesStyles.slides__group}>
 									{
@@ -37,6 +37,7 @@ const Slides = () => {
 													<a className={slidesStyles.inner_container} href={`/slides/${slides.file_name}.html?presentation`}>
 														<img src="/img/pages/index/ic_presentation.svg" />
 													</a>
+													<div className={slidesStyles.inner_hint}>{slides.category}</div>
 													<div className={slidesStyles.icon}>
 														<img src={`/slides/icons/${slides.file_name}.svg`} />
 													</div>

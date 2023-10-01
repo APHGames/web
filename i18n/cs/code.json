@@ -8,6 +8,15 @@
 	"config.materials": {
 		"message": "Materiály"
 	},
+	"config.courses": {
+		"message": "Kurzy"
+	},
+	"config.courses_aph": {
+		"message": "NI-APH (Architektura Počítačových Her)"
+	},
+	"config.courses_dph": {
+		"message": "NI-DPH (Design Počítačových Her)"
+	},
 	"config.brand": {
 		"message": "Brand"
 	},

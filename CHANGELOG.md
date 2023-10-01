@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.8] - 2023-10-01
+### Added
+Moved course info into a separate section
+
 ## [6.1.7] - 2023-09-25
 ### Changed
 Minor docs fixes

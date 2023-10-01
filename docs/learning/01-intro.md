@@ -8,7 +8,8 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 
 ### Code examples
 - examples can be found on [github](https://github.com/APHGames/examples)
-- template project for those that would like to use PixiJS and ECS library can be found on [github](https://github.com/APHGames/ecs-template)
+- [COLF.IO webpage](https://colf.io)
+  - template project for COLF.IO library with bundling wrapper can be found [here](https://github.com/APHGames/ecs-template)
 
 ### Slides
 - slides can be found on [github](https://github.com/APHGames/slides)

@@ -97,11 +97,25 @@ const output = {
 					position: 'left',
 					to: '/docs/learning/intro',
 				},
-				/*	{
-						label: 'Blog',
-						to: '/blog/',
-						position: 'left'
-					}*/
+				{
+					label: i18n['config.courses'].message,
+					position: 'left',
+					items: [
+						{
+							label: i18n['config.courses_aph'].message,
+							to: '/docs/courses/aph',
+						},
+						{
+							label: i18n['config.courses_dph'].message,
+							to: '/docs/courses/dph',
+						},
+					]
+				},
+				/* {
+					label: 'Blog',
+					to: '/blog/',
+					position: 'left'
+				}, */
 				{
 					label: i18n['config.brand'].message,
 					position: 'left',

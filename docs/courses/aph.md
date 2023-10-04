@@ -13,7 +13,7 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 4. Pass an oral examination.
 5. Acquire at least 50 points throughout the semester.
 
-## Lectures
+## Slides
 <Lectures />
 
 ## Important Dates

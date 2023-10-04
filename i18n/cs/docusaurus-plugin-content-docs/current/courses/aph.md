@@ -14,7 +14,7 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 4. absolvovat ústní zkoušku
 5. získat alespoň 50 bodů za celý semestr
 
-## Lekce
+## Slidy
 <Lectures />
 
 ## Důležité Termíny

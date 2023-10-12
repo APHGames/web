@@ -17,7 +17,7 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 
 :::info
 
-For course-related materials, visit respective sections in the Course tab
+Pro materiály týkající se jednotlivých kurzů, přejděte na příslušné sekce v nabídce Kurzy
 
 :::
 

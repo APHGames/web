@@ -455,7 +455,7 @@ APH paleta je světlá a obsahuje několik primárních barev a mnoho sekundárn
 
 Typografie hraje významnou roli pro obsah. Musí být jednoduchá, elegantní a dobře čitelná, neb obsah je určen primárně pro vzdělávání.
 
-### Patkový font
+### Bezpatkový font
 
 Primární font je **Source Sans Pro**, který je určen pro psaný obsah a některé diagramy. Jeho tenká varianta, která ne náhodou připomíná OCR-B font pro technickou dokumentaci (kolmé písmo typu B), akcentuje architektonické aspekty předmětu.
 
@@ -463,7 +463,7 @@ Primární font je **Source Sans Pro**, který je určen pro psaný obsah a něk
 
 ### Neproporcionální Font
 
-Neproporcionálním fontem je **Inconsolata** a měl by se používat pouze pro ukázky kódu a uvnitř diagramů, kde se použití patkového fontu jeví jako nepříliš vhodné.
+Neproporcionálním fontem je **Inconsolata** a měl by se používat pouze pro ukázky kódu a uvnitř diagramů, kde se použití bezpatkového fontu jeví jako nepříliš vhodné.
 
 <img src={useBaseUrl('img/docs/brand/font_inconsolata.svg')} />
 

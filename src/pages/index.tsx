@@ -17,8 +17,9 @@ import ColfioLogo from '../../static/img/pages/index/colfio.png';
 
 const Title = () => (
 	<section
-		className={clsx(sectionStyles.section)}
+		className={clsx(sectionStyles.section, 'scanline-parent')}
 	>
+		<div className="scanline" />
 		<div className={clsx(sectionStyles['section--inner'], titleStyles.title__section)}>
 			<div className={titleStyles.title}>
 				<div className={titleStyles.title__logo}>
@@ -160,16 +161,18 @@ const Home = () => {
 	});
 
 	return (
-		<Layout description={siteConfig.customFields.description as string}>
-			<DocusaurusHead>
-				<link rel="canonical" href={siteConfig.url} />
-			</DocusaurusHead>
-			<Title />
-			<Feature />
-			<AboutComponent />
-			<Colfio />
-			<News />
-		</Layout>
+		<>
+			<Layout description={siteConfig.customFields.description as string}>
+				<DocusaurusHead>
+					<link rel="canonical" href={siteConfig.url} />
+				</DocusaurusHead>
+				<Title />
+				<Feature />
+				<AboutComponent />
+				<Colfio />
+				<News />
+			</Layout>
+		</>
 	);
 };
 

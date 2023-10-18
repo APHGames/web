@@ -4,6 +4,7 @@ description: Požadavky na absolvování NI-APH předmětu
 exclude_en: true
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Lectures from '@site/docs/courses/aph_lectures.tsx'
 
 
@@ -52,6 +53,61 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 - hra může být využita s použitím herního enginu či grafické knihovny. Pro potřeby výuky vznikla knihovna [COLFIO](https://colf.io/)
 - v případě využití knihovny COLFIO (či enginu s ECS architekturou), musí hra plně využívat ECS pattern (Entity-Component-System)
 
+### Zadání
+- zadání hry je potřeba odevzdat do 5.11. cvičícímu na Discord
+- zadání by mělo mít následující strukturu:
+  - zda budete na hře pracovat sami nebo ve dvojici
+  - žánr hry
+  - knihovna/engine
+  - prostor, objekty, akce, pravidla, cíl hry (podobná struktura jako ve  <a href={useBaseUrl('slides/lecture01_cs.html#24')} target="_blank">slidech</a>)
+  - hlavní mechanika, případně technická challenge
+
+#### Zadání - doporučení
+- pokud zadání hry není možné vměstnat do struktury výše, máte příliš složité zadání
+  - obvykle stačí 5-10 objektů, 2-5 akcí, 5-10 pravidel
+  - začněte must-have elementy, bez kterých by hra nedávala smysl
+- vizuál a příběh do zadání nepatří, ten může vznikat během prototypování
+- scope by měl být co nejmenší, s důrazem na technickou realizaci
+- pokud hra obsahuje levely, stačí 2-3 dobře odladěné levely s narůstající složitostí (pokud se pro daný žánr vybízí)
+- je vhodné, aby hru bylo možno pochopit bez README či manuálu. Nejlepší variantou je in-game tutoriál
+- použitou knihovnu/engine je možno v průběhu prototypování měnit, toto je však vhodné nahlásit cvičícímu
+- pokud se ukáže, že některé objekty/akce/pravidla přestanou při prototypování dávat smysl, není vůbec nutné je do hry zapracovávat "na sílu"
+
+
+#### Zadání - příklad
+Ze hry [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
+
+- **Žánr**: casual sportovní
+- **Knihovna**: COLF.IO
+- **Prostor**: 2D, sidescroller
+- **Objekty**: animovaný hráč, power-upy, mince, pasti, boost platformy
+  - **Akce**:
+    - vystřelení hráče do vzduchu
+    - ovládání hráče během letu
+    - boost během letu
+    - sběr mincí a power-upů
+    - aktivace předmětů v inventáři
+    - nákup vylepšení mezi jednotlivými koly
+- **Pravidla**:
+    - hráč si může zvolit úhel a sílu výstřelu avatara
+    - kolo končí, jakmile hráč dopadne na zem a ztratí veškerou rychlost
+    - hráč dostane odměnu v podobě herní měny, za kterou si může nakoupit vylepšení
+    - mince, pasti a power-upy budou náhodně rozmístěné po celém levelu a aktivují se při kolizi s hráčem
+- **Cíl hry**:
+    - dosáhnout předem určenou vzdálenost
+- **Hlavní mechanika**:
+    - fyzika hráče po výstřelu
+
+### Technická mechanika hry
+- musí se jednat o mechaniku, která je netriviální z programátorského hlediska. Nemusí to být mechanika v pravém slova smyslu (např. pokročilý pathfinding není mechanika, ale jeho použití bude mít vliv na všechny mechaniky týkající se pohybu po mapě)
+- příklady
+  - replay ve hře [Braid](https://store.steampowered.com/app/26800/Braid/)
+  - šplhání po laně
+  - procedurálně generované objekty
+  - guiding wind
+  - hierarchický loot
+
+
 ### Další požadavky
 - hru vytvořte na fakultním [gitlabu](https://gitlab.fit.cvut.cz) s názvem `NI-APH`, aby byl dostupný přes `gitlab.fit.cvut.cz/<username>/NI-APH`
 - repozitář by mimo samotné hry měl obsahovat:
@@ -63,13 +119,6 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 - hra musí mít nějaký název který se zobrazí jak v HTML hlavičce tak v samotné hře
 - repozitář by neměl obsahovat žádná redundantní data (především `node_modules`, `.unitypackage`, `Obj/`, `Temp/`) atd. Použijte `.gitignore` 
 
-### Technická mechanika hry
-- musí se jednat o mechaniku, která je netriviální z programátorského hlediska
-- příklady
-  - replay mechanika
-  - hierarchický pathfinding
-  - šplhání po laně
-  - procedurálně generované objekty
 
 ### COLF.IO
 - původně ECSLite a předtím APHLib

@@ -3,6 +3,7 @@ title: APH course
 description: Requirements for finishing the NI-APH course
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Lectures from '@site/docs/courses/aph_lectures.tsx'
 
 
@@ -51,6 +52,59 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 - The game can be developed using a game engine or graphic library. For educational purposes, the COLFIO library was created [COLFIO](https://colf.io/).
 - In the case of using the COLFIO library (or an engine with ECS architecture), the game must fully utilize the ECS pattern (Entity-Component-System).
 
+### Assignment
+- must be submit until 5.11. to the lecturer on Discord
+- the assignment should have the following structure:
+  - whether you will be working on the game alone or in a pair of two
+  - game genre
+  - library/engine
+  - space, objects, actions, rules, game objective (as described in <a href={useBaseUrl('slides/lecture01.html#24')} target="_blank">slides</a>)
+  - the main mechanic, or a technical challenge
+
+#### Assignment - Recommendations
+- if the game assignment cannot fit into the structure above, you have too complex assignment
+  - usually, 5-10 objects, 2-5 actions, and 5-10 rules are sufficient
+  - start with must-have elements without which the game wouldn't make sense
+- visuals and the story do not belong in the assignment; they can be developed during prototyping
+- the scope should be as small as possible, with an emphasis on technical implementation
+- if the game includes levels, 2-3 polished levels with increasing difficulty (if appropriate for the game) are enough
+  - it is a good thing for the game to be understandable without a README or manual. The best option is an in-game tutorial
+  - the library/engine used can be changed during prototyping, but this should be communicated with the instructor
+  - if it turns out that some objects/actions/rules no longer make sense during prototyping, there is no need to force them into the game.
+
+#### Assignment - Example
+From the game [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
+- Genre: Casual sports
+- Library: COLF.IO
+- Space: 2D, sidescroller
+- Objects: Animated player, power-ups, coins, traps, boost platforms
+- Actions:
+  - Shooting the player into the air
+  - Controlling the player during flight
+  - Mid-air boost
+  - Collecting coins and power-ups
+  - Activating items in the inventory
+  - Purchasing upgrades between rounds
+- Rules:
+  - The player can choose the angle and power of the avatar's shot.
+  - The round ends when the player lands on the ground and loses all speed.
+  - The player receives in-game currency as a reward, which can be used to buy upgrades.
+  - Coins, traps, and power-ups are randomly placed throughout the level and activate upon collision with the player.
+- Game Objective:
+  - Reach a predetermined distance.
+- Main Mechanic:
+  - Player physics after the shot.
+
+### Technical Game Mechanics
+- Must involve a mechanic that is non-trivial from a programming perspective.
+- Examples include
+  - Replay mechani in the game [Braid](https://store.steampowered.com/app/26800/Braid/)
+  - Climbing on a rope
+  - Procedurally generated objects
+  - Guiding wind
+  - Hierarchical loot
+
+
 ### Additional Requirements
 - Create the game on the faculty's [GitLab](https://gitlab.fit.cvut.cz) with the name `NI-APH`, accessible via `gitlab.fit.cvut.cz/<username>/NI-APH`.
 - In addition to the game itself, the repository should include:
@@ -62,13 +116,6 @@ import Lectures from '@site/docs/courses/aph_lectures.tsx'
 - The game must have a title displayed in both the HTML header and the game itself.
 - The repository should not contain any redundant data (especially `node_modules`, `.unitypackage`, `Obj/`, `Temp/`, etc.). Use `.gitignore`.
 
-### Technical Game Mechanics
-- Must involve a mechanic that is non-trivial from a programming perspective.
-- Examples include:
-  - Replay mechanic.
-  - Hierarchical pathfinding.
-  - Rope climbing.
-  - Procedurally generated objects.
 
 ### COLF.IO
 - Originally ECSLite and previously APHLib.

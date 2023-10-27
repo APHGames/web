@@ -112,6 +112,12 @@ html[data-theme="dark"] {
 		--ifm-alert-border-color: #{$color-royal};
 	}
 
+	.alert--info {
+		--ifm-alert-background-color: #{$color-midnight-light};
+		--ifm-alert-border-color: #{$color-goldenrod};
+		--ifm-heading-color: #{$color-rhino-5};
+	}
+
 	.alert--warning {
 		--ifm-alert-background-color: #{$color-lemon};
 		--ifm-alert-border-color: #{$color-lemon};
@@ -123,6 +129,20 @@ html[data-theme="dark"] {
 
 	.main-wrapper {
 		@include dottedBackground;
+	}
+
+	.scanline-parent {
+		position: relative;
+	}
+
+	.scanline {
+		z-index: 5;
+		height: 100%;
+		position: absolute;
+		width: auto;
+		min-width: 100%;
+		pointer-events: none;
+		@include scanlineBackground;
 	}
 
 	main article header h2 a {

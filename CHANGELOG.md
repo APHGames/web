@@ -6,6 +6,13 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.14] - 2023-11-09
+### Added
+Linked new lecture slides
+
+### Changed
+Project name from aphgames-wiki to aphgames-web
+
 ## [6.1.13] - 2023-11-03
 ### Added
 Linked new lecture slides

@@ -17,9 +17,8 @@ import ColfioLogo from '../../static/img/pages/index/colfio.png';
 
 const Title = () => (
 	<section
-		className={clsx(sectionStyles.section, 'scanline-parent')}
+		className={clsx(sectionStyles.section)}
 	>
-		<div className="scanline" />
 		<div className={clsx(sectionStyles['section--inner'], titleStyles.title__section)}>
 			<div className={titleStyles.title}>
 				<div className={titleStyles.title__logo}>

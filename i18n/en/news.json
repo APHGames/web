@@ -1,5 +1,9 @@
 [
 	{
+		"date": "25.11.2023",
+		"text": "Added new pathfinding example - <a href='./docs/learning/examples/space/pathexploring'>Path Explorer</a> for map exploration"
+	},
+	{
 		"date": "25.9.2023",
 		"text": "Updated materials"
 	},

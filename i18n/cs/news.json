@@ -1,5 +1,9 @@
 [
 	{
+		"date": "25.11.2023",
+		"text": "Přidán nový pathfinding příklad - <a href='./docs/learning/examples/space/pathexploring'>Path Explorer</a> pro průzkum mapy"
+	},
+	{
 		"date": "25.9.2023",
 		"text": "Aktualizovány artefakty a materiály"
 	},

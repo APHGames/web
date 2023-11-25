@@ -6,6 +6,11 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.1.16] - 2023-11-25
+### Added
+Linked new lecture slides
+Added path exploring example
+
 ## [6.1.15] - 2023-11-20
 ### Added
 Linked new lecture slides

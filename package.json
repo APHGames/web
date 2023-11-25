@@ -1,6 +1,6 @@
 {
 	"name": "aphgames-web",
-	"version": "6.1.14",
+	"version": "6.1.16",
 	"license": "BSD",
 	"scripts": {
 		"start": "docusaurus start",

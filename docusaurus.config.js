@@ -189,6 +189,9 @@ const output = {
 							const sidebarItems = await defaultSidebarItemsGenerator(args);
 							return sidebarItems;
 						},
+					editUrl: ({ docPath }) => {
+						return `https://holocron.so/github/pr/APHGames/web/main/editor/docs/${docPath}`
+					},
 				},
 				blog: {
 					showReadingTime: true,

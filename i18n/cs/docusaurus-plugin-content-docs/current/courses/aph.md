@@ -133,7 +133,7 @@ Ze hry [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
     - arkádovka obsahuje pro každého ze dvou hráčů joystick (4 pozice), 8 herních tlačítek a dvě funkční (např. menu/zpět)
   - hra je pro dva hráče
   - styl a žánr odpovídá arkádovému způsobu hraní (např. adventura se sem nehodí)
-  - hra je optimalizovaná pro rozlišení 720x576 a 50 snímků za vteřinu
+  - hra je optimalizovaná pro rozlišení 720x480 a 50 snímků za vteřinu
   - hra běží plynule na Raspberry 4 (přetaktované na 1800 MHz), platformou je prohlížeč Chromium
 
 ## Ústní zkouška

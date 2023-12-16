@@ -130,7 +130,7 @@ From the game [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
     - The arcade machine includes a joystick (4 positions) and 8 game buttons for each of the two players, as well as two additional functional buttons (e.g., menu/back).
   - The game is designed for two players.
   - The style and genre match the arcade gaming style (e.g., adventure games are not suitable).
-  - The game is optimized for a resolution of 720x576 and 50 frames per second.
+  - The game is optimized for a resolution of 720x480 and 50 frames per second.
   - The game runs smoothly on Raspberry 4 (overclocked to 1800 MHz), using the Chromium browser platform.
 
 ## Oral Examination

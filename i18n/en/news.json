@@ -1,5 +1,9 @@
 [
 	{
+		"date": "16.12.2023",
+		"text": "Added networking examples - <a href='./docs/learning/examples/multiplayer/basics'>Networking Basics</a>"
+	},
+	{
 		"date": "25.11.2023",
 		"text": "Added new pathfinding example - <a href='./docs/learning/examples/space/pathexploring'>Path Explorer</a> for map exploration"
 	},
@@ -33,11 +37,7 @@
 	},
 	{
 		"date": "7.5.2022",
-		"text": "Redesign finished"
-	},
-	{
-		"date": "5.4.2022",
-		"text": "A slight web redesign"
+		"text": "Web Redesign"
 	},
 	{
 		"date": "12.2.2022",

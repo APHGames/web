@@ -9,8 +9,8 @@ module.exports = {
     youtube: 'https://www.youtube.com/@aphgames',
     examples_url: 'https://github.com/APHGames/examples',
     gallery_url: 'https://gallery.aphgames.io', // same for both versions
-    examples_version: '6.3.7',
+    examples_version: '6.4.0',
     slides_url: 'https://github.com/APHGames/slides',
-    slides_version: '6.12',
+    slides_version: '6.13',
     tiscali_url: 'https://raw.githubusercontent.com/APHGames/support/main/scripts/scripts/tiscali-grabber/data_filtered.json'
 };

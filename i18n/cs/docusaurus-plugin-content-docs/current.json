@@ -29,6 +29,9 @@
 	"sidebar.tutorialSidebar.category.ai": {
 	  "message": "AIčko"
 	},
+	"sidebar.tutorialSidebar.category.multiplayer": {
+		"message": "Multiplayer"
+	  },
 	"sidebar.tutorialSidebar.category.other": {
 	  "message": "Ostatní"
 	},

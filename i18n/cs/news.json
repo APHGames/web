@@ -1,5 +1,9 @@
 [
 	{
+		"date": "16.12.2023",
+		"text": "Přidány příklady na networking - <a href='./docs/learning/examples/multiplayer/basics'>Networking Basics</a>"
+	},
+	{
 		"date": "25.11.2023",
 		"text": "Přidán nový pathfinding příklad - <a href='./docs/learning/examples/space/pathexploring'>Path Explorer</a> pro průzkum mapy"
 	},
@@ -33,15 +37,11 @@
 	},
 	{
 		"date": "7.5.2022",
-		"text": "Dokončen redesign"
+		"text": "Redesign webu"
 	},
 	{
 		"date": "13.4.2022",
 		"text": "Přidány <a href='./artifacts'>artefakty</a>"
-	},
-	{
-		"date": "5.4.2022",
-		"text": "Lehký redesign webu"
 	},
 	{
 		"date": "12.2.2022",

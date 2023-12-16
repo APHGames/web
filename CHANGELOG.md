@@ -6,6 +6,11 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.0] - 2023-12-16
+### Added
+Linked new lecture slides
+Added networking examples
+
 ## [6.1.18] - 2023-12-09
 ### Added
 Linked new lecture slides

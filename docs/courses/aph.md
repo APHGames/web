@@ -129,6 +129,15 @@ From the game [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
   - The game is controlled only by the keyboard, mapped to the arcade machine's buttons.
     - The arcade machine includes a joystick (4 positions) and 8 game buttons for each of the two players, as well as two additional functional buttons (e.g., menu/back).
   - The game is designed for two players.
+    - The gamepads will be mapped to the following keyboard layout:
+      - Player #1:
+        - movement: ↑ ↓ ← →
+        - action buttons: 1 4 2 5 3 6
+        - start/select: 7 8
+      - Player #2:
+        - movement: W S A D
+        - action buttons: G Y H U J I
+        - start/select: O P 
   - The style and genre match the arcade gaming style (e.g., adventure games are not suitable).
   - The game is optimized for a resolution of 720x480 and 50 frames per second.
   - The game runs smoothly on Raspberry 4 (overclocked to 1800 MHz), using the Chromium browser platform.

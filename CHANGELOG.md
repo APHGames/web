@@ -6,10 +6,15 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.1] - 2023-12-23
+### Added
+- Linked new lecture slides
+- Add more info for ggBlaster specs in the APH course
+
 ## [6.2.0] - 2023-12-16
 ### Added
-Linked new lecture slides
-Added networking examples
+- Linked new lecture slides
+- Added networking examples
 
 ## [6.1.18] - 2023-12-09
 ### Added
@@ -21,8 +26,8 @@ Linked new lecture slides
 
 ## [6.1.16] - 2023-11-25
 ### Added
-Linked new lecture slides
-Added path exploring example
+- Linked new lecture slides
+- Added path exploring example
 
 ## [6.1.15] - 2023-11-20
 ### Added
@@ -45,18 +50,16 @@ Linked new lecture slides
 
 ## [6.1.11] - 2023-10-18
 ### Added
-Linked new lecture slides
-Assignment structure
+- Linked new lecture slides
+- Assignment structure
 
 ## [6.1.10] - 2023-10-12
 ### Added
 Linked new lecture slides
 
-
 ## [6.1.9] - 2023-10-04
 ### Added
 Linked new lecture slides
-
 
 ## [6.1.8] - 2023-10-01
 ### Added
@@ -64,8 +67,8 @@ Moved course info into a separate section
 
 ## [6.1.7] - 2023-09-25
 ### Changed
-Minor docs fixes
-Removed lectures before the new course starts
+- Minor docs fixes
+- Removed lectures before the new course starts
 
 ## [6.1.6] - 2023-02-07
 ### Changed
@@ -96,14 +99,14 @@ Main page colors
 
 ## [6.1.1] - 2022-10-09
 ### Changed
-Tiscali articles were extracted to a separate project
-A few design changes
+- Tiscali articles were extracted to a separate project
+- A few design changes
 
 ## [6.1.0] - 2022-10-02
 ### Added
-GIT tutorial 1 and 2
-Ackermann steering examples and slides
-Github actions for auto-deploy
+- GIT tutorial 1 and 2
+- Ackermann steering examples and slides
+- Github actions for auto-deploy
 
 ### Changed
 Tiscali article list (CZ only)
@@ -114,20 +117,20 @@ Separated slides and examples into respective repositories
 
 ## [6.0.0] - 2022-05-07
 ### Added
-Support for more languages (CZ/EN)
-A short info about APHGames for the main page
-docusaurus-search-local plugin (translated into CZ)
-Artifacts from games.tiscali.cz for the CZ version
+- Support for more languages (CZ/EN)
+- A short info about APHGames for the main page
+- docusaurus-search-local plugin (translated into CZ)
+- Artifacts from games.tiscali.cz for the CZ version
 
 ### Changed
-Update docusaurus library to 2.0.0-beta.17
-Redesign web and logo
-Split deployment into CZ and EN version, as they differ
-A few slides that contained typos
+- Update docusaurus library to 2.0.0-beta.17
+- Redesign web and logo
+- Split deployment into CZ and EN version, as they differ
+- A few slides that contained typos
 
 ### Removed
-Light theme. Sorry jako.
-Course summary
+- Light theme. Sorry jako.
+- Course summary
 
 
 ## [5.12.5] - 2021-12-30
@@ -144,35 +147,35 @@ Lecture 12 for NI-APH
 ## [5.11] - 2021-12-11
 
 ### Added
-Lecture 11 for NI-APH
-Minitalk about solo developers
-Tetris minigame
+- Lecture 11 for NI-APH
+- Minitalk about solo developers
+- Tetris minigame
 
 ## [5.10] - 2021-12-04
 
 ### Added
-Lecture 10 for NI-APH
-Minitalk about Blizzard
-A few new examples
+- Lecture 10 for NI-APH
+- Minitalk about Blizzard
+- A few new examples
 
 ## [5.9] - 2021-11-27
 
 ### Added
-Lecture 9 for NI-APH
-Minitalk about Demoscene (recycled from the 4th run)
+- Lecture 9 for NI-APH
+- Minitalk about Demoscene (recycled from the 4th run)
 
 ## [5.8] - 2021-11-19
 
 ### Added
-Lecture 8 for NI-APH
-Minitalk about level design
+- Lecture 8 for NI-APH
+- Minitalk about level design
 
 
 ## [5.7] - 2021-11-13
 
 ### Added
-Lecture 7 for NI-APH
-Minitalk about storytelling
+- Lecture 7 for NI-APH
+- Minitalk about storytelling
 
 ## [5.6] - 2021-11-06
 
@@ -191,40 +194,40 @@ Fixed bug in ECSLite library (deatached child object)
 ## [5.5.0] - 2021-10-26
 
 ### Added
-Lecture 5 for NI-APH
-Minitalk about game adventures
+- Lecture 5 for NI-APH
+- Minitalk about game adventures
 
 ### Changed
-Removed old tslint, added eslint
-Updated TS types
-Changed formatting of all examples
-Fixed linting and tsc compilation errors
+- Removed old tslint, added eslint
+- Updated TS types
+- Changed formatting of all examples
+- Fixed linting and tsc compilation errors
 
 ## [5.4.0] - 2021-10-17
 
 ### Added
-Lecture 4 for NI-APH
-Minitalk about game art styles
+- Lecture 4 for NI-APH
+- Minitalk about game art styles
 
 ## [5.3.0] - 2021-10-09
 ### Added
-Lecture 3 for NI-APH
-Minitalk about speedrunning (recycled from the 4th run)
+- Lecture 3 for NI-APH
+- Minitalk about speedrunning (recycled from the 4th run)
 
 ## [5.2.0] - 2021-10-02
 ### Added
-Lecture 2 for NI-APH
-Minitalk about essential mechanics
+- Lecture 2 for NI-APH
+- Minitalk about essential mechanics
 
 ## [5.1.0] - 2021-09-28
 ### Added
-Matrices example
-First lecture for NI-APH 2021
+- Matrices example
+- First lecture for NI-APH 2021
 
 ### Changed
-Updated dependencies
-Updated docusaurus library
-Reordered wiki docs
+- Updated dependencies
+- Updated docusaurus library
+- Reordered wiki docs
 
 ### Removed
 Slides from NI-APH 2020

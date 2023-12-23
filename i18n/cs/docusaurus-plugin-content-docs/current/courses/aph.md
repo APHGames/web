@@ -132,6 +132,15 @@ Ze hry [Chicken Quest](https://gallery.aphgames.io/2021/chickenquest/)
   - hra se ovládá pouze klávesnicí namapovanou na tlačítka arkádovky
     - arkádovka obsahuje pro každého ze dvou hráčů joystick (4 pozice), 8 herních tlačítek a dvě funkční (např. menu/zpět)
   - hra je pro dva hráče
+    - gamepady budou namapovány na následující klávesy:
+      - Player #1:
+        - movement: ↑ ↓ ← →
+        - action buttons: 1 4 2 5 3 6
+        - start/select: 7 8
+      - Player #2:
+        - movement: W S A D
+        - action buttons: G Y H U J I
+        - start/select: O P 
   - styl a žánr odpovídá arkádovému způsobu hraní (např. adventura se sem nehodí)
   - hra je optimalizovaná pro rozlišení 720x480 a 50 snímků za vteřinu
   - hra běží plynule na Raspberry 4 (přetaktované na 1800 MHz), platformou je prohlížeč Chromium

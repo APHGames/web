@@ -31,6 +31,127 @@ export const galleryData: GallerySection[] = [
 		],
 	},
 	{
+		name: translate({ message: 'gallery.aph2023' }),
+		items: [
+			{
+				id: '2023/pewpewer',
+				name: 'Pew Pewer',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/flappypig',
+				name: 'Flappy Pig',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/overscoped',
+				name: 'Overscoped',
+				tech: 'Unity',
+			},
+			{
+				id: '2023/holyrevenge',
+				name: 'Holy Revenge',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/plasticjourney',
+				name: 'Plastic Journey',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/ducksurvival',
+				name: 'Duck Survival',
+				tech: 'Unity',
+			},
+			{
+				id: '2023/nametodo',
+				name: 'Name TODO',
+				tech: 'Kotlin',
+			},
+			{
+				id: '2023/deadlycolors',
+				name: 'Deadly Colors',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/gravitydefied',
+				name: 'Gravity Defied',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/bottlesort',
+				name: 'Bottle Sort',
+				tech: 'Unity',
+			},
+			{
+				id: '2023/meteorrush',
+				name: 'Meteor Rush',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/shootorvanish',
+				name: 'Shoot or Vanish',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/soundblaster',
+				name: 'Sound Blaster',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/parkinggame',
+				name: 'APH Parking Game',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/immunitydefense',
+				name: 'Immunity Defense',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/supersoup',
+				name: 'Super Soup',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/mesoamerigame',
+				name: 'Mesoamerigame',
+				tech: 'Unity',
+			},
+			{
+				id: '2023/hellgatedefender',
+				name: 'Hell Gate Defender',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/fortressduel',
+				name: 'Fortress Duel',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/leadracers',
+				name: 'Lead Racers',
+				tech: 'Godot',
+			},
+			{
+				id: '2023/hellminator',
+				name: 'Hellminator',
+				tech: 'Unity',
+			},
+			{
+				id: '2023/starshipcarnage',
+				name: 'Starship Carnage',
+				tech: 'PixiJS',
+			},
+			{
+				id: '2023/battleofhoth',
+				name: 'Battle of Hoth',
+				tech: 'PixiJS',
+			},
+		],
+
+	},
+	{
 		name: translate({ message: 'gallery.aph2021' }),
 		items: [
 			{
@@ -227,7 +348,7 @@ export const galleryData: GallerySection[] = [
 			{
 				id: '2019/ballz',
 				name: 'Ballz',
-				tech: 'PixiJS',
+				tech: 'Kotlin',
 			},
 			{
 				id: '2019/blockjumper',

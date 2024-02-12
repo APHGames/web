@@ -14,9 +14,6 @@
 	"config.courses_aph": {
 		"message": "NI-APH (Architecture of Video Games)"
 	},
-	"config.courses_dph": {
-		"message": "NI-DPH (Video Game Design)"
-	},
 	"config.brand": {
 		"message": "Brand"
 	},
@@ -37,6 +34,9 @@
 	},
 	"gallery.tetris": {
 		"message": "Tetris Clone"
+	},
+	"gallery.aph2023": {
+		"message": "NI-APH Projects 2023"
 	},
 	"gallery.aph2021": {
 		"message": "NI-APH Projects 2021"

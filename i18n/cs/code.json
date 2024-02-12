@@ -14,9 +14,6 @@
 	"config.courses_aph": {
 		"message": "NI-APH (Architektura Počítačových Her)"
 	},
-	"config.courses_dph": {
-		"message": "NI-DPH (Design Počítačových Her)"
-	},
 	"config.brand": {
 		"message": "Brand"
 	},
@@ -40,6 +37,9 @@
 	},
 	"gallery.tetris": {
 		"message": "Tetris (klon)"
+	},
+	"gallery.aph2023": {
+		"message": "NI-APH Projekty 2023"
 	},
 	"gallery.aph2021": {
 		"message": "NI-APH Projekty 2021"
@@ -151,6 +151,9 @@
 	},
 	"index.colfio": {
 		"message": "Pro všechny příklady a minihry používáme vlastní knihovnu #COLFIO, která funguje jako nadstavba grafické knihovny #PIXI."
+	},
+	"index.discord": {
+		"message": "Připoj se na náš #DISCORD!"
 	},
 	"theme.ErrorPageContent.title": {
 		"message": "Web nám spadnul... kdopak nám ho postaví?"

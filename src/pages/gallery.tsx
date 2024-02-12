@@ -30,6 +30,7 @@ const Games = ({ galleryUrl }: { galleryUrl: string }) => (
 											{item.tech === 'PixiJS' && <img className={galleryStyles.techicon_bigger} src="/img/pages/index/ic_colfio.png" />}
 											{item.tech === 'Godot' && <img src="/img/pages/index/ic_godot.svg" />}
 											{item.tech === 'Unity' && <img src="/img/pages/index/ic_unity.svg" />}
+											{item.tech === 'Kotlin' && <img src="/img/pages/index/ic_kotlin.svg" />}
 										</div>
 										{item.sourceLink && (
 											<a className={galleryStyles.inner_container} href={item.sourceLink}>

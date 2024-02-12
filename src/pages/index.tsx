@@ -35,64 +35,85 @@ const Title = () => (
 
 const Feature = () => {
 	const context = useDocusaurusContext();
-	const { currentLocale } = context.siteConfig.customFields;
+	const { currentLocale, youtube, discord } = context.siteConfig.customFields;
 
 	return (
 		<section
 			className={clsx(sectionStyles.section)}
 		>
-			<div className={sectionStyles['section--inner']}>
-				<div className={featureStyles.feature}>
-					<a href="./docs/learning/intro">
-						<div>
-							<img
-								className={featureStyles.feature__illustration}
-								src="/img/pages/index/lectures.jpg"
-							/>
-						</div>
+			<div className={clsx(sectionStyles['section--inner'], sectionStyles['section--littlepadding'])}>
+				<div className={sectionStyles.section__innervertical}>
+					<div className={sectionStyles.section__innerflex}>
+						<div className={featureStyles.feature}>
+							<a href="./docs/learning/intro">
+								<div>
+									<img
+										className={featureStyles.feature__illustration}
+										src="/img/pages/index/lectures.jpg"
+									/>
+								</div>
 
-						<h2 className={featureStyles.feature__title}>{translate({ message: 'index.workshops' })}</h2>
-					</a>
-				</div>
-				{currentLocale === 'cs' && (
-					<div className={featureStyles.feature}>
-						<a href="https://youtube.com/@aphgames">
-							<div>
-								<img
-									className={featureStyles.feature__illustration}
-									src="/img/pages/index/videos.jpg"
-								/>
-							</div>
-							<h2 className={featureStyles.feature__title}>
-								{translate({ message: 'index.videos' })}
-							</h2>
-						</a>
+								<h2 className={featureStyles.feature__title}>{translate({ message: 'index.workshops' })}</h2>
+							</a>
+						</div>
+						{currentLocale === 'cs' && (
+							<>
+								<div className={featureStyles.feature}>
+									<a href={youtube as any}>
+										<div>
+											<img
+												className={featureStyles.feature__illustration}
+												src="/img/pages/index/videos.jpg"
+											/>
+										</div>
+										<h2 className={featureStyles.feature__title}>
+											{translate({ message: 'index.videos' })}
+										</h2>
+									</a>
+								</div>
+							</>
+						)}
+						<div className={featureStyles.feature}>
+							<a href="./docs/learning/intro">
+								<div>
+									<img
+										className={featureStyles.feature__illustration}
+										src="/img/pages/index/tutorials.jpg"
+									/>
+								</div>
+								<h2 className={featureStyles.feature__title}>
+									{translate({ message: 'index.tutorials' })}
+								</h2>
+							</a>
+						</div>
+						<div className={featureStyles.feature}>
+							<a href="./gallery">
+								<div>
+									<img
+										className={featureStyles.feature__illustration}
+										src="/img/pages/index/games.jpg"
+									/>
+								</div>
+
+								<h2 className={featureStyles.feature__title}>{translate({ message: 'index.minigames' })}</h2>
+							</a>
+						</div>
 					</div>
-				)}
-				<div className={featureStyles.feature}>
-					<a href="./docs/learning/intro">
+					{currentLocale === 'cs' && (
 						<div>
-							<img
-								className={featureStyles.feature__illustration}
-								src="/img/pages/index/tutorials.jpg"
-							/>
+							<div className={featureStyles.discord}>
+								<a href={discord as any}>
+									<div>
+										<img
+											className={featureStyles.discord__logo}
+											src="/img/global/discord.png"
+										/>
+									</div>
+									<p dangerouslySetInnerHTML={{ __html: translate({ message: 'index.discord' }).replace('#DISCORD', `<a href="${discord as any}">Discord</a>`) }} />
+								</a>
+							</div>
 						</div>
-						<h2 className={featureStyles.feature__title}>
-							{translate({ message: 'index.tutorials' })}
-						</h2>
-					</a>
-				</div>
-				<div className={featureStyles.feature}>
-					<a href="./gallery">
-						<div>
-							<img
-								className={featureStyles.feature__illustration}
-								src="/img/pages/index/games.jpg"
-							/>
-						</div>
-
-						<h2 className={featureStyles.feature__title}>{translate({ message: 'index.minigames' })}</h2>
-					</a>
+					)}
 				</div>
 			</div>
 		</section>

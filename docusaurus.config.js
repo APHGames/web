@@ -105,10 +105,6 @@ const output = {
 							label: i18n['config.courses_aph'].message,
 							to: '/docs/courses/aph',
 						},
-						{
-							label: i18n['config.courses_dph'].message,
-							to: '/docs/courses/dph',
-						},
 					]
 				},
 				/* {
@@ -215,6 +211,12 @@ if(isLocaleCS) {
 	});
 
 	// add between language and github
+	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 1, 0, {
+		label: ' ',
+		className: 'header-discord-link',
+		position: 'right',
+		href: config.discord,	});
+
 	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 1, 0, {
 		label: ' ',
 		className: 'header-youtube-link',

@@ -1,5 +1,9 @@
 [
 	{
+		"date": "11.02.2024",
+		"text": "Added new <a href='./gallery'>semestral projects</a> from the NI-APH course"
+	},
+	{
 		"date": "16.12.2023",
 		"text": "Added networking examples - <a href='./docs/learning/examples/multiplayer/basics'>Networking Basics</a>"
 	},

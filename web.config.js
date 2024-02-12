@@ -7,10 +7,11 @@ module.exports = {
     org: 'DoDoLab',
     github: 'https://github.com/APHGames',
     youtube: 'https://www.youtube.com/@aphgames',
+    discord: 'https://discord.gg/G5MbV8Ex77',
     examples_url: 'https://github.com/APHGames/examples',
     gallery_url: 'https://gallery.aphgames.io', // same for both versions
     examples_version: '6.4.0',
     slides_url: 'https://github.com/APHGames/slides',
-    slides_version: '6.14',
+    slides_version: '6.14.2',
     tiscali_url: 'https://raw.githubusercontent.com/APHGames/support/main/scripts/scripts/tiscali-grabber/data_filtered.json'
 };

@@ -30,7 +30,7 @@
 	--ifm-footer-padding-vertical: 20px;
 }
 
-.header-github-link, .header-lang-link, .header-youtube-link {
+.header-github-link, .header-lang-link, .header-youtube-link .header-discord-link {
 	opacity: 0.8;
 
 	&:hover {
@@ -55,6 +55,15 @@
 	display: flex;
 	height: 26px;
 	width: 26px;
+}
+
+.header-discord-link:before {
+	background: url('/img/global/discord.png');
+	background-size: 100% 100%;
+	content: "";
+	display: flex;
+	height: 26px;
+	width: 32px;
 }
 
 /* Search plugin colors */

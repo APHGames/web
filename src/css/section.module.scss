@@ -18,6 +18,11 @@
 	--ifm-pre-padding: 1rem 1.5rem;
 }
 
+.section--littlepadding {
+	padding: 1rem;
+	margin: 0 auto;
+}
+
 .section--padding {
 	padding: 2rem;
 }
@@ -36,6 +41,23 @@
 	font-size: $font-size-llarge;
 	font-weight: var(--ifm-font-weight-normal);
 	color: $color-royal;
+}
+
+
+.section__innerflex {
+	display: flex;
+	max-width: var(--ifm-container-width);
+	width: 100%;
+	justify-content: center;
+	margin: 0 auto;
+	--ifm-code-padding-horizontal: 1.5rem;
+	--ifm-code-padding-vertical: 1rem;
+	--ifm-pre-padding: 1rem 1.5rem;
+}
+
+.section__innervertical {
+	display: flex;
+	flex-direction: column;
 }
 
 @media (max-width: 996px) {

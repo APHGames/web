@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.2] - 2024-12-23
+### Added
+- Linked new semestral projects
+
 ## [6.2.1] - 2023-12-23
 ### Added
 - Linked new lecture slides

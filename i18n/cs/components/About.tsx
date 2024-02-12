@@ -20,7 +20,7 @@ export default () => (
 				<div>
 					<h3>Jak vznikl APHGames?</h3>
 					<p>APHGames původně vznikl jako samostatný předmět na Fakultě informačních technologií ČVUT pod kódem APH (Architektura Počítačových Her). Původně se jednalo o čistě technický předmět, který se zaměřoval na architekturu herních enginů s praktickými ukázkami v C++. Postupem času se jeho záběr rozšířil do oblasti designu, umění, storytellingu, a mnohých dalších. Místo C++ se začal využívat TypeScript pro snadnou demonstraci ukázkových příkladů přímo na webu.</p>
-					<p>Dnes je APHGames separátní brand s vlastní platformou a Youtube kanálem, jehož cílem je sdílet zajímavé poznatky ze všech různých koutů herního průmyslu.</p>
+					<p>Dnes je APHGames separátní brand s vlastní platformou, Discord serverem a Youtube kanálem, jehož cílem je sdílet zajímavé poznatky ze všech různých koutů herního průmyslu.</p>
 				</div>
 			</div>
 		</div>

@@ -8,8 +8,8 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 
 ### Příklady
 - všechny příklady jsou umístěny na [githubu](https://github.com/APHGames/examples)
-- [COLF.IO webpage](https://colf.io)
-  - šablonový projekt pro COLF.IO knihovnu včetně budling wrapperu je k dispozici [zde](https://github.com/APHGames/ecs-template)
+- webová stránka knihovny COLFIO, ve které byly vytvářeny hry v galerii, je k dispozici na [colf.io](https://colf.io)
+- šablonový projekt pro COLF.IO knihovnu včetně budling wrapperu je k dispozici [zde](https://github.com/APHGames/ecs-template)
 
 ### Obecné slidy
 - slidy je možno nalézt na [githubu](https://github.com/APHGames/slides)
@@ -17,7 +17,7 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 
 :::info
 
-Pro materiály týkající se jednotlivých kurzů, přejděte na příslušné sekce v nabídce Kurzy
+Pro materiály týkající se kurzu Architektura Počítačových Her, přejděte na příslušné sekce v nabídce Kurzy
 
 :::
 

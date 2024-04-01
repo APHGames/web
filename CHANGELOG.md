@@ -6,7 +6,14 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
-## [6.2.2] - 2024-12-23
+## [6.2.3] - 2024-04-01
+### Added
+- Readjusted courses section
+
+### Changed
+- libcurl version
+
+## [6.2.2] - 2024-02-12
 ### Added
 - Linked new semestral projects
 

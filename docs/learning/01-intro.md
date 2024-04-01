@@ -8,8 +8,8 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 
 ### Code examples
 - examples can be found on [github](https://github.com/APHGames/examples)
-- [COLF.IO webpage](https://colf.io)
-  - template project for COLF.IO library with bundling wrapper can be found [here](https://github.com/APHGames/ecs-template)
+- web page of the COLFIO library in which all games in the gallery section were implemented, can be found on [colf.io](https://colf.io)
+- template project for COLF.IO library with bundling wrapper can be found [here](https://github.com/APHGames/ecs-template)
 
 ### General slides
 - slides can be found on [github](https://github.com/APHGames/slides)

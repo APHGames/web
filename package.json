@@ -1,6 +1,6 @@
 {
 	"name": "aphgames-web",
-	"version": "6.2.2",
+	"version": "6.2.3",
 	"license": "BSD",
 	"scripts": {
 		"start": "docusaurus start",
@@ -54,7 +54,7 @@
 		"eslint-plugin-react": "^7.25.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"fork-ts-checker-webpack-plugin": "6.3.3",
-		"node-libcurl": "^3.0.0"
+		"node-libcurl": "^4.0.0"
 	},
 	"browserslist": {
 		"production": [

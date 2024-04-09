@@ -12,6 +12,6 @@ module.exports = {
     gallery_url: 'https://gallery.aphgames.io', // same for both versions
     examples_version: '6.4.0',
     slides_url: 'https://github.com/APHGames/slides',
-    slides_version: '6.14.2',
+    slides_version: '6.15.0',
     tiscali_url: 'https://raw.githubusercontent.com/APHGames/support/main/scripts/scripts/tiscali-grabber/data_filtered.json'
 };

@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.4] - 2024-04-09
+### Changed
+- Slides version
+
 ## [6.2.3] - 2024-04-01
 ### Added
 - Readjusted courses section

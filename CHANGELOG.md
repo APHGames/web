@@ -6,6 +6,10 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.5] - 2024-10-08
+### Changed
+- Forced redeploy to update Tiscali index
+
 ## [6.2.4] - 2024-04-09
 ### Changed
 - Slides version

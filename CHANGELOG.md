@@ -6,6 +6,12 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [6.2.6] - 2025-05-24
+### Changed
+- Forced redeploy to update Tiscali index
+- Removed Discord link
+
+
 ## [6.2.5] - 2024-10-08
 ### Changed
 - Forced redeploy to update Tiscali index

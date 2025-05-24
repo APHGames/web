@@ -152,9 +152,6 @@
 	"index.colfio": {
 		"message": "Pro všechny příklady a minihry používáme vlastní knihovnu #COLFIO, která funguje jako nadstavba grafické knihovny #PIXI."
 	},
-	"index.discord": {
-		"message": "Připoj se na náš #DISCORD!"
-	},
 	"theme.ErrorPageContent.title": {
 		"message": "Web nám spadnul... kdopak nám ho postaví?"
 	},

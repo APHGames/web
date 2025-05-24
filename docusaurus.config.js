@@ -213,12 +213,6 @@ if(isLocaleCS) {
 	// add between language and github
 	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 1, 0, {
 		label: ' ',
-		className: 'header-discord-link',
-		position: 'right',
-		href: config.discord,	});
-
-	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 1, 0, {
-		label: ' ',
 		className: 'header-youtube-link',
 		position: 'right',
 		href: config.youtube,	});

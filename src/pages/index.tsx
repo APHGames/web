@@ -35,7 +35,7 @@ const Title = () => (
 
 const Feature = () => {
 	const context = useDocusaurusContext();
-	const { currentLocale, youtube, discord } = context.siteConfig.customFields;
+	const { currentLocale, youtube } = context.siteConfig.customFields;
 
 	return (
 		<section
@@ -99,21 +99,6 @@ const Feature = () => {
 							</a>
 						</div>
 					</div>
-					{currentLocale === 'cs' && (
-						<div>
-							<div className={featureStyles.discord}>
-								<a href={discord as any}>
-									<div>
-										<img
-											className={featureStyles.discord__logo}
-											src="/img/global/discord.png"
-										/>
-									</div>
-									<p dangerouslySetInnerHTML={{ __html: translate({ message: 'index.discord' }).replace('#DISCORD', `<a href="${discord as any}">Discord</a>`) }} />
-								</a>
-							</div>
-						</div>
-					)}
 				</div>
 			</div>
 		</section>

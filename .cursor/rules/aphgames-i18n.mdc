@@ -1,0 +1,36 @@
+---
+description: Czech/English split builds and doc locale gating
+globs: docs/**/*,i18n/**/*,docusaurus.config.js
+alwaysApply: false
+---
+
+# Internationalization (cs / en)
+
+## Two sites, two builds
+
+- `web.config.js` defines `urls.cs` and `urls.en` (aphgames.cz vs aphgames.io).
+- `docusaurus.config.js` reads `--locale` from CLI and sets **single-locale** mode for that build.
+- UI strings: `i18n/<locale>/code.json`; home news: `i18n/<locale>/news.json`.
+- Home **About** block: `i18n/<locale>/components/About.tsx` (can diverge per language).
+
+## Doc sources
+
+- English canonical docs: `docs/`.
+- Czech overrides: `i18n/cs/docusaurus-plugin-content-docs/current/` (mirrored paths).
+- When adding Czech-only content, update **both** the doc and its Czech mirror if the page should appear in cs builds.
+
+## Per-doc language gating
+
+Front matter flags filtered by `sidebarItemsGenerator` in `docusaurus.config.js`:
+
+```yaml
+exclude_en: true   # Czech-only (e.g. docs/courses/aph.md)
+exclude_cs: true   # English-only
+```
+
+Always test the **target locale build** after gating changes.
+
+## Czech-only UI
+
+- Navbar **Artifacts** and YouTube icon appear only when `currentLocale === 'cs'`.
+- `src/pages/artifacts.tsx` uses `static/tiscali.json` (from `download_data`).

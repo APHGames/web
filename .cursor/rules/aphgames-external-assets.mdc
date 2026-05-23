@@ -1,0 +1,31 @@
+---
+description: External examples/slides releases and download_data workflow
+globs: web.config.js,scripts/download_data.js,static/**/*
+alwaysApply: false
+---
+
+# External assets (examples, slides, tiscali)
+
+## Not in git
+
+These paths are gitignored and produced by `npm run download_data`:
+
+- `static/examples/` — JS bundle from **APHGames/examples** `release.zip`
+- `static/slides/` — Reveal.js HTML + `slides-info.json` from **APHGames/slides**
+- `static/tiscali.json` — Czech artifacts page data
+
+## Updating versions
+
+1. Bump `examples_version` and/or `slides_version` in `web.config.js` to match published GitHub release tags.
+2. Run `npm run download_data`.
+3. Verify `APHCanvas` demos and slide listing UIs in dev.
+
+Release coordinates and URLs live in `web.config.js`; all fields are exposed via Docusaurus `customFields`.
+
+## APHCanvas loading contract
+
+`src/APHCanvas.tsx` sets `window.BASE_URL`, loads `@site/static/examples/examples`, and calls `new window.APH[name](config)`. Changes to the examples bundle format may require edits there — coordinate with the examples repo, not this site alone.
+
+## CI / security note
+
+`download_data.js` uses `rejectUnauthorized: false` for HTTPS downloads. Do not copy that pattern elsewhere without explicit justification.

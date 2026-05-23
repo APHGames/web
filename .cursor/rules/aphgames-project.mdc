@@ -1,0 +1,29 @@
+---
+description: APHGames Web — core project context and agent workflow
+alwaysApply: true
+---
+
+# APHGames Web (static Docusaurus site)
+
+This repo is **aphgames-web**: a static documentation and teaching hub. No backend — production is `docusaurus build` output only.
+
+## Before non-trivial changes
+
+Read **[aidocs/prd.md](aidocs/prd.md)** for stack versions, folder layout, i18n model, and external asset wiring.
+
+## Key constraints
+
+- **Examples** (`static/examples/`) and **slides** (`static/slides/`) are **not committed**. After clone or version bump: `npm run download_data`.
+- **Locale = separate build**, not runtime switch: use `npm run start_en` / `start_cs` (and matching `build_*` / `deploy_*`).
+- **Gallery** links out to `gallery.aphgames.io`; game data lives in `src/internals/gallery-data.ts`, not in this repo.
+- **Docusaurus 2.0.0-beta.17** — upgrading touches webpack, MDX, i18n, and swizzled theme APIs.
+
+## When to update aidocs/prd.md
+
+Update the PRD when changes span **content + assets + config** (e.g. new external release wiring, i18n behavior, slide/example embedding, navbar or sidebar rules).
+
+## Do not
+
+- Add server-side APIs or assume a Node runtime in production.
+- Commit `static/examples/`, `static/slides/`, or `static/tiscali.json`.
+- Use generic `npm start` / `npm build` when testing a specific locale unless both locales are equivalent for the task.

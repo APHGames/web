@@ -3,6 +3,87 @@
 @import "../internals/effects.scss";
 
 
+.artifacts__toolbar {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.artifacts__toolbarInner {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.artifacts__search {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 1.1rem;
+	color: var(--ifm-font-color-base);
+	@include patternBackgroundLighter;
+	border: 1px solid $color-rhino-90;
+
+	&:focus {
+		outline: none;
+		border-color: $color-goldenrod;
+	}
+}
+
+.artifacts__stats {
+	margin: 0;
+	color: $color-goldenrod;
+	font-size: 0.95rem;
+}
+
+.artifacts__empty {
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.artifacts__pagination {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+}
+
+.artifacts__paginationInner {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	@include patternBackgroundLighter;
+	padding: 1rem;
+}
+
+.artifacts__pageButton {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	color: var(--ifm-font-color-base);
+	background-color: $color-rhino-100;
+	border: 1px solid $color-rhino-90;
+	cursor: pointer;
+
+	&:hover:not(:disabled) {
+		background-color: $color-rhino-90;
+	}
+
+	&:disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
+	}
+}
+
+.artifacts__pageInfo {
+	font-size: 0.95rem;
+	color: $color-goldenrod;
+}
+
 .artifacts__title {
 	width: 100%;
 	text-align: center;
@@ -60,6 +141,15 @@
 }
 
 @media (max-width: 700px) and (orientation: portrait) {
+
+	.artifacts__toolbarInner,
+	.artifacts__paginationInner {
+		width: 95%;
+	}
+
+	.artifacts__search {
+		font-size: 1rem;
+	}
 
 	.artifacts__title h3 {
 		font-size: 1rem;

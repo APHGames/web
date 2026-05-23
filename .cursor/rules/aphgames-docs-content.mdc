@@ -1,0 +1,34 @@
+---
+description: MDX docs, sidebar scope, embedded demos and slide lists
+globs: docs/**/*.{md,mdx,tsx}
+alwaysApply: false
+---
+
+# Docs and MDX content
+
+## Sidebar scope
+
+- `sidebars.js` autogenerates from **`docs/learning` only**.
+- Routes under `docs/courses/`, `docs/brand.md`, etc. are reached via explicit nav/links — do not expect them in the tutorial sidebar.
+
+## Embedding interactive examples
+
+Import `APHCanvas` from `@site/src/APHCanvas.tsx`. The `name` prop must match a class on `window.APH` from the downloaded examples bundle:
+
+```mdx
+import APHCanvas from '@site/src/APHCanvas';
+
+<APHCanvas name={'Tetris'} />
+```
+
+Example sources live in **APHGames/examples** (external repo). This site only embeds the prebuilt bundle — do not add example game logic here.
+
+## Slide listing components
+
+- General learning slides: `docs/learning/lectures.tsx` — reads `static/slides/slides-info.json`, filters by `currentLocale` and `!sl.course`.
+- APH course slides: `docs/courses/aph_lectures.tsx` — filters `course === 'APH'`, handles `locked === 'true'`.
+- Slide HTML is served at `/slides/<file_name>.html` (static, from **APHGames/slides** release).
+
+## Doc slug gotcha
+
+Navbar may link to `/docs/learning/intro` while the file is `docs/learning/01-intro.md`. Confirm URL aliases or update links when renaming intro docs.

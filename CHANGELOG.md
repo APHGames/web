@@ -6,6 +6,14 @@ Versioning info:
 - second number indicates a week (1 for the first week)
 - third number indicates minor changes, such as hotfixes and updates
 
+## [7.0.0] - 2026-05-23
+### Added
+- Config and docs for agentic development
+
+### Changed
+- Artifacts for CZ version - added all
+
+
 ## [6.2.6] - 2025-05-24
 ### Changed
 - Forced redeploy to update Tiscali index

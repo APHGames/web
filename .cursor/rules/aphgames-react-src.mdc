@@ -1,0 +1,33 @@
+---
+description: React/TS source, theme swizzles, and styling conventions
+globs: src/**/*.{tsx,ts,scss}
+alwaysApply: false
+---
+
+# src/ React and theme
+
+## Stack
+
+- React **17**, TypeScript for `src/` (Docusaurus build does not rely on `tsc` for main output).
+- Styling: global SCSS (`src/css/global.scss`) + CSS modules (`*.module.scss`) for pages/components.
+- ESLint (Airbnb): `npm run lint` covers `src`, `i18n`, `docs`.
+
+## Config access
+
+Read site-specific values from `useDocusaurusContext().siteConfig.customFields` (merged from `web.config.js`): URLs, `currentLocale`, gallery URL, GitHub links, etc.
+
+## Theme swizzles (`src/theme/`)
+
+- `DocPaginator` → renders `null` (prev/next doc nav disabled site-wide).
+- `NavbarNavLink` — custom active-class behavior.
+- Color mode: default dark, **switch disabled** (single diagram theme set).
+
+## Key components
+
+- `APHCanvas.tsx` — browser-only bridge to examples bundle; guard with `typeof window !== 'undefined'`.
+- `src/pages/` — home, gallery (links to external gallery), Czech artifacts.
+- `src/internals/` — gallery data, resources, custom Prism themes.
+
+## Search plugin
+
+Local fork at `plugins/docusaurus-search-local`. Lunr language includes `"ru"` as tokenizer stand-in for Czech — preserve that intent if touching search config.

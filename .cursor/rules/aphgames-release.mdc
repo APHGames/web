@@ -1,0 +1,71 @@
+---
+description: Release commit workflow — version bump, changelog, tag, and push to main
+alwaysApply: false
+---
+
+# Release Commit Workflow
+
+Use this workflow whenever the user asks to create a release, cut a version, or "add a new commit" for deployment.
+
+## Steps (in order)
+
+### 1. Determine next version
+
+Read `package.json` and extract the current `version`. Increment only the **patch** (third) number.
+
+```
+current: 7.0.1  →  next: 7.0.2
+current: 7.0.9  →  next: 7.0.10
+```
+
+### 2. Update `package.json`
+
+Change the `version` field to the new version. Do **not** touch any other field.
+
+### 3. Update `CHANGELOG.md`
+
+Prepend a new entry **below the first line** (`# Changelog`) following the exact format already used:
+
+```markdown
+## [7.0.2] - YYYY-MM-DD
+### Added
+- <what was added>
+
+### Changed
+- <what was changed>
+```
+
+- Use today's date in `YYYY-MM-DD` format.
+- Include only sections (`Added`, `Changed`, `Fixed`, `Removed`) that are relevant — omit empty sections.
+- Base the description on the actual changes in the working tree / conversation context.
+- Leave one blank line after the closing entry before the next `## [...]` block (match existing style).
+
+### 4. Commit
+
+Stage both changed files and commit:
+
+```bash
+git add package.json CHANGELOG.md
+git commit -m "$(cat <<'EOF'
+chore: release <new-version>
+
+<one-line summary of what changed>
+EOF
+)"
+```
+
+### 5. Create and push the tag
+
+```bash
+git tag <new-version>
+git push origin main --tags
+```
+
+The tag name must match the version string exactly (e.g. `7.0.2`, no `v` prefix).
+
+## Constraints
+
+- Always push to `main` directly — no PR needed for releases.
+- Never skip the changelog entry.
+- Never use `--force` on the push.
+- If `main` has diverged, rebase locally (`git pull --rebase origin main`) before pushing.

@@ -7,6 +7,12 @@
 - 🎓 wiki, slides, and examples
 - 📦 built on top of [docusaurus library](https://docusaurus.io/)
 
+## Documentation
+
+- **[Product Requirements Document (PRD)](./docs/PRD.md)**: Comprehensive project overview, architecture, and technical details
+- **[Cursor AI Rules](./.cursor/rules/)**: AI agent guidelines for maintaining the project
+- **[Changelog](./CHANGELOG.md)**: Version history and changes
+
 
 ## Project Structure
 

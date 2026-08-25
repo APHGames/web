@@ -1,0 +1,362 @@
+# React and TypeScript Development Conventions
+
+## Code Style and Linting
+
+### ESLint Configuration
+This project uses **Airbnb style guide** with TypeScript support.
+
+**Configuration**: `.eslintrc.json`
+
+### Indentation Rules
+**CRITICAL**: Use **TABS**, not spaces!
+
+```tsx
+// ✅ CORRECT
+export function Component() {
+	return (
+		<div>
+			<p>Content</p>
+		</div>
+	);
+}
+
+// ❌ WRONG (spaces)
+export function Component() {
+    return (
+        <div>
+            <p>Content</p>
+        </div>
+    );
+}
+```
+
+### Key ESLint Customizations
+- **Indentation**: Tabs with size 1 for switch cases
+- **Max length**: Disabled (no line length limit)
+- **JSX spreading**: Allowed (`react/jsx-props-no-spreading: off`)
+- **Array index keys**: Allowed (`react/no-array-index-key: off`)
+- **Danger HTML**: Allowed (`react/no-danger: off`)
+- **jsx-a11y**: Some rules disabled (alt-text, anchor-has-content, control-has-associated-label)
+
+### Running Linter
+```bash
+npm run lint  # Lints src, i18n, docs
+```
+
+**ALWAYS** run lint before committing changes.
+
+## React Component Patterns
+
+### SSR Safety Pattern
+
+**CRITICAL**: All browser-dependent components MUST check for window existence!
+
+Docusaurus uses server-side rendering during build. Components that use browser APIs (`window`, `document`, `canvas`, etc.) will crash the build if not protected.
+
+```tsx
+// ✅ CORRECT: SSR-safe component
+export default (props) => {
+	if (typeof window !== 'undefined') {
+		return <ComponentRenderer {...props} />;
+	}
+	return null;
+};
+
+// ❌ WRONG: Will crash during build
+export default (props) => {
+	const canvas = document.createElement('canvas'); // ERROR!
+	return <ComponentRenderer {...props} />;
+};
+```
+
+**Pattern Explanation**:
+- Outer function checks `typeof window !== 'undefined'`
+- Returns `null` during SSR
+- Only renders actual component in browser
+
+### CSS Modules Pattern
+
+**ALWAYS** use SCSS modules for component styling.
+
+```tsx
+// ✅ CORRECT
+import styles from './Component.module.scss';
+
+export function Component() {
+	return <div className={styles.container}>...</div>;
+}
+
+// ❌ WRONG: Global classes
+export function Component() {
+	return <div className="container">...</div>;
+}
+```
+
+**File Naming**: `ComponentName.module.scss`
+
+### Lazy Loading Pattern
+
+Use `@docusaurus/react-loadable` for code splitting, especially for locale-specific components.
+
+```tsx
+import Loadable from '@docusaurus/react-loadable';
+
+const LocaleComponent = Loadable({
+	loader: () => import('./ComponentCS'),
+	loading: () => null,
+});
+```
+
+## TypeScript Conventions
+
+### Type Definitions
+- **Location**: `src/types/` for shared types
+- **Components**: Define props types inline or in same file
+- **Strict mode**: Enabled in `tsconfig.json`
+
+### Module Aliases
+Use `@site/` alias for imports from project root:
+
+```tsx
+import APHCanvas from '@site/src/APHCanvas.tsx';
+import config from '@site/web.config.js';
+```
+
+### Type Safety
+- **Always** define prop types for components
+- Use `any` sparingly (existing in APHCanvas for examples)
+- Prefer interfaces over types for object shapes
+
+## Component File Structure
+
+### Standard Component File
+```tsx
+// Imports
+import React from 'react';
+import styles from './Component.module.scss';
+
+// Types
+type ComponentProps = {
+	title: string;
+	optional?: boolean;
+};
+
+// Component implementation
+class ComponentRenderer extends React.Component<ComponentProps> {
+	// Component logic
+}
+
+// SSR-safe export
+export default (props: ComponentProps) => {
+	if (typeof window !== 'undefined') {
+		return <ComponentRenderer {...props} />;
+	}
+	return null;
+};
+```
+
+## APHCanvas Component Usage
+
+The `APHCanvas` component is the core integration point for interactive Pixi.js examples.
+
+### Basic Usage
+```tsx
+import APHCanvas from '@site/src/APHCanvas.tsx';
+
+<APHCanvas 
+	name="ExampleClassName"
+	width={800}
+	height={600}
+/>
+```
+
+### Available Props
+```tsx
+type APHCanvasProps = {
+	name: string;              // Required: Example class name
+	secondCanvas?: boolean;
+	resizeToScreen?: boolean;
+	transparent?: boolean;
+	backgroundColor?: number;
+	antialias?: boolean;
+	width?: number;
+	height?: number;
+	resolution?: number;
+	gameLoopThreshold?: number;
+	gameLoopFixedTick?: number;
+	speed?: number;
+	canvasId?: string;
+};
+```
+
+### How It Works
+1. Loads examples from `static/examples/examples` bundle
+2. Sets `window.BASE_URL = '../../../../examples'`
+3. Requires examples bundle (once, cached)
+4. Instantiates example class from `window.APH[name]`
+5. Calls `example.init(canvasElement)` on mount
+6. Calls `example.destroy()` on unmount
+7. Blocks arrow keys and space for canvas interaction
+
+### Example Integration Pattern
+```tsx
+// In a Markdown/MDX file
+---
+title: Example Page
+---
+
+import APHCanvas from '@site/src/APHCanvas.tsx'
+
+## Interactive Example
+
+<APHCanvas 
+	name="SteeringSeek"
+	width={800}
+	height={600}
+	backgroundColor={0x1a1a2e}
+/>
+```
+
+## React Hooks vs Class Components
+
+### Current Pattern
+The project primarily uses **class components** for stateful components (see `APHCanvas.tsx`).
+
+### When to Use Each
+- **Class components**: For lifecycle methods, complex state management
+- **Functional components**: For simple, presentational components
+- **Hooks**: Acceptable for new components, but maintain consistency with existing code
+
+## Event Handling
+
+### Keyboard Events in Canvas
+`APHCanvas` implements keyboard blocking for game controls:
+
+```tsx
+preventKeyboard = (e: KeyboardEvent) => {
+	switch (e.keyCode) {
+		case 37: case 39: case 38: case 40: // Arrow keys
+		case 32: e.preventDefault(); break; // Space
+		default: break;
+	}
+};
+```
+
+**Pattern**: Prevent default for arrow keys and space to avoid page scrolling during gameplay.
+
+## Component Refs
+
+Use refs for canvas and DOM elements that need direct access:
+
+```tsx
+class ComponentRenderer extends React.Component {
+	myRef: any;
+	
+	constructor(props) {
+		super(props);
+		this.myRef = React.createRef();
+	}
+	
+	componentDidMount() {
+		// Access DOM element
+		const element = this.myRef.current;
+	}
+	
+	render() {
+		return <canvas ref={this.myRef} />;
+	}
+}
+```
+
+## Error Handling
+
+### ESLint Disable Comments
+Use sparingly and only when necessary:
+
+```tsx
+/* eslint-disable react/require-default-props */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+```
+
+**Prefer**: Fix the underlying issue rather than disabling rules.
+
+## Performance Considerations
+
+### Avoid Unnecessary Re-renders
+- Use `React.memo` for functional components that render often
+- Implement `shouldComponentUpdate` in class components if needed
+- Lazy load heavy components with `Loadable`
+
+### Canvas Optimization
+- Reuse canvas instances (don't recreate on every render)
+- Properly cleanup in `componentWillUnmount`
+- Avoid unnecessary state updates during animation loops
+
+## Common Pitfalls
+
+### ❌ Don't: Use browser APIs without SSR check
+```tsx
+// Will crash build
+const width = window.innerWidth;
+```
+
+### ✅ Do: Check for window first
+```tsx
+const width = typeof window !== 'undefined' ? window.innerWidth : 1024;
+```
+
+### ❌ Don't: Use global CSS classes
+```tsx
+<div className="container">
+```
+
+### ✅ Do: Use CSS modules
+```tsx
+import styles from './styles.module.scss';
+<div className={styles.container}>
+```
+
+### ❌ Don't: Forget to cleanup
+```tsx
+componentDidMount() {
+	window.addEventListener('resize', this.handleResize);
+}
+// Missing cleanup!
+```
+
+### ✅ Do: Remove listeners on unmount
+```tsx
+componentWillUnmount() {
+	window.removeEventListener('resize', this.handleResize);
+}
+```
+
+## Testing Changes
+
+### Local Development
+```bash
+# Start development server (Czech)
+npm run start_cs
+
+# Start development server (English)
+npm run start_en
+
+# Navigate to http://localhost:3000
+```
+
+### Before Committing
+1. Run `npm run lint` and fix any errors
+2. Test both locales if changes affect localization
+3. Test interactive examples if modifying APHCanvas
+4. Check browser console for errors
+5. Verify SSR safety (check build succeeds)
+
+### Build Test
+```bash
+# Test build process
+npm run build_cs
+npm run build_en
+
+# Serve built site
+npm run serve
+```

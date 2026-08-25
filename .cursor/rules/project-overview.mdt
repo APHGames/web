@@ -1,0 +1,153 @@
+# Project Overview and Architecture
+
+## Documentation Reference
+
+**PRIMARY REFERENCE**: Always consult `/docs/PRD.md` for comprehensive project information, architecture, and requirements.
+
+The PRD contains:
+- Complete project overview and purpose
+- Technical architecture and technology stack
+- Full project structure explanation
+- Core features and implementation details
+- Build and deployment pipeline
+- Code patterns and conventions
+- Configuration files reference
+- External dependencies and repositories
+
+## Critical: Documentation Maintenance
+
+**IMPORTANT**: Whenever you make changes to this project, you MUST keep documentation up to date.
+
+### When to Update PRD.md
+
+Update `/docs/PRD.md` when:
+- Adding or removing features
+- Changing architecture or technology stack
+- Modifying build or deployment process
+- Updating external dependencies (examples_version, slides_version)
+- Changing project structure or file organization
+- Adding or modifying configuration files
+- Changing code patterns or conventions
+- Updating third-party integrations
+- Modifying styling system or theme
+
+### When to Update README.md
+
+Update `/README.md` when:
+- Adding or removing major features
+- Changing setup or installation instructions
+- Modifying build or development commands
+- Updating deployment information
+- Changing project structure significantly
+- Adding new external dependencies
+- Important version updates
+
+### Documentation Update Process
+
+1. Make your code changes first
+2. Review both PRD.md and README.md
+3. Update relevant sections with accurate, current information
+4. Keep documentation concise but comprehensive
+5. Maintain existing formatting and structure
+6. Update "Last Updated" date in PRD.md
+
+## External Asset Management
+
+This project depends on external repositories that are downloaded at build time:
+
+### Examples Repository
+- **Repository**: https://github.com/APHGames/examples
+- **Version**: Controlled by `examples_version` in `web.config.js` (currently 6.4.0)
+- **Location**: `static/examples/` (gitignored)
+- **Download**: `npm run download_data` before build
+
+### Slides Repository
+- **Repository**: https://github.com/APHGames/slides
+- **Version**: Controlled by `slides_version` in `web.config.js` (currently 6.15.0)
+- **Location**: `static/slides/` (gitignored)
+- **Download**: `npm run download_data` before build
+
+**NEVER**:
+- Commit files in `static/examples/` or `static/slides/`
+- Manually edit downloaded assets
+- Change versions without verifying GitHub releases exist
+
+**ALWAYS**:
+- Update version numbers in `web.config.js` when upgrading
+- Document version changes in CHANGELOG.md
+- Update PRD.md when versions change
+
+## Multilingual Architecture
+
+This project builds separate versions for Czech and English:
+
+### Build Separation
+- **Czech**: `npm run build_cs` → deployed to https://aphgames.cz
+- **English**: `npm run build_en` → deployed to https://aphgames.io
+- Each build is completely independent
+- Locale determined at build time via `--locale` CLI flag
+
+### Content Localization
+
+**Exclude Content Per Locale**:
+Use frontmatter in Markdown files:
+```yaml
+---
+title: Page Title
+exclude_cs: true  # Exclude from Czech build
+exclude_en: true  # Exclude from English build
+---
+```
+
+**Translations**:
+- Translation files in `i18n/{locale}/code.json`
+- UI strings must be translated for both locales
+- Documentation can be locale-specific
+
+**Conditional Features**:
+- Artifacts page (historical articles) only available in Czech
+- YouTube link only in Czech navbar
+- Gallery shared across both locales
+
+## Key Configuration Files
+
+### web.config.js
+Central configuration for:
+- Deployment URLs for each locale
+- External repository URLs and versions
+- Social media links
+- Owner and organization info
+
+**ALWAYS** update this file when:
+- Changing external asset versions
+- Updating deployment URLs
+- Modifying social media links
+
+### docusaurus.config.js
+Main Docusaurus configuration:
+- Parses locale from CLI arguments
+- Configures navbar, footer, plugins
+- Sets up search functionality
+- Defines theme settings
+
+**CAREFULLY** modify this file when:
+- Adding navbar items
+- Changing theme configuration
+- Updating plugins
+- Modifying search settings
+
+## Project Version Management
+
+**Current Version**: 6.2.6 (in `package.json`)
+
+**Version Components**:
+- Project version: `package.json` → version
+- Examples version: `web.config.js` → examples_version
+- Slides version: `web.config.js` → slides_version
+
+**Version Update Process**:
+1. Update version in `package.json`
+2. Document changes in `CHANGELOG.md`
+3. Update external asset versions in `web.config.js` if needed
+4. Update PRD.md with version information
+5. Create git tag for release

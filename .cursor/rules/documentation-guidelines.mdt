@@ -1,0 +1,535 @@
+# Documentation Guidelines
+
+## Documentation Structure
+
+This project uses Docusaurus with Markdown and MDX (Markdown + React).
+
+### Documentation Locations
+- **Learning Materials**: `docs/learning/`
+- **Course Materials**: `docs/courses/`
+- **Brand Guidelines**: `docs/brand.md`
+- **Product Requirements**: `docs/PRD.md`
+- **Project README**: `README.md`
+- **Changelog**: `CHANGELOG.md`
+
+## Markdown Frontmatter
+
+**ALWAYS** include frontmatter at the top of Markdown files:
+
+```yaml
+---
+title: Page Title
+description: Brief description of the page
+exclude_cs: false  # Optional: true to exclude from Czech build
+exclude_en: false  # Optional: true to exclude from English build
+---
+```
+
+### Frontmatter Fields
+- **title** (required): Page title shown in browser tab and page header
+- **description** (optional): Page description for SEO and search
+- **exclude_cs** (optional): Set to `true` to exclude page from Czech build
+- **exclude_en** (optional): Set to `true` to exclude page from English build
+
+## MDX - React in Markdown
+
+### Importing Components
+
+```tsx
+---
+title: Example Page
+---
+
+import APHCanvas from '@site/src/APHCanvas.tsx'
+
+## Interactive Example
+
+<APHCanvas name="ExampleName" width={800} height={600} />
+```
+
+### Component Usage Rules
+1. Import at the top of the file (after frontmatter)
+2. Use JSX syntax for components
+3. Props must use JSX syntax (camelCase, curly braces for values)
+4. Self-closing tags for components without children
+
+## Interactive Examples Documentation
+
+### Creating Example Pages
+
+**Location**: `docs/learning/examples/{category}/{example-name}.md`
+
+**Template**:
+```md
+---
+title: Example Name
+description: Brief description
+---
+
+import APHCanvas from '@site/src/APHCanvas.tsx'
+
+Brief introduction to the example.
+
+<APHCanvas 
+	name="ExampleClassName"
+	width={800}
+	height={600}
+/>
+
+## Explanation
+
+Detailed explanation of the example...
+
+## Key Concepts
+
+- Concept 1
+- Concept 2
+
+## Code Structure
+
+Explanation of how the example is implemented...
+```
+
+### Example Categories
+Organize examples by category:
+- `01-pixi-intro/`: Basic Pixi.js examples
+- `02-three-intro/`: Three.js examples
+- `03-components/`: Component system examples
+- `04-space/`: Spatial algorithms (pathfinding, quadtree, etc.)
+- `05-dynamics/`: Movement and steering behaviors
+- `06-physics/`: Physics engine examples (Matter.js)
+- `07-graphics/`: Graphics programming (shaders, lighting, etc.)
+- `08-ai/`: AI and game logic
+- `09-multiplayer/`: Multiplayer and networking
+- `10-other/`: Miscellaneous examples
+- `11-games/`: Complete game examples
+
+## Tutorial Documentation
+
+### Tutorial Structure
+
+**Location**: `docs/learning/tutorials/{tutorial-name}.md`
+
+**Template**:
+```md
+---
+title: Tutorial Title
+description: What you'll learn
+---
+
+# Tutorial Title
+
+## Prerequisites
+
+What the reader should know before starting.
+
+## Introduction
+
+Brief overview of what the tutorial covers.
+
+## Step 1: First Step
+
+Explanation and code examples...
+
+```js
+// Code example
+const example = 'code';
+```
+
+## Step 2: Next Step
+
+Continue with next steps...
+
+## Summary
+
+What was covered and next steps.
+
+## Further Reading
+
+Links to related resources.
+```
+
+## Code Blocks
+
+### Syntax Highlighting
+
+Use language identifiers for syntax highlighting:
+
+````md
+```javascript
+const example = 'JavaScript code';
+```
+
+```typescript
+const example: string = 'TypeScript code';
+```
+
+```jsx
+const Component = () => <div>JSX</div>;
+```
+
+```tsx
+const Component: React.FC = () => <div>TSX</div>;
+```
+
+```bash
+npm install package-name
+```
+
+```css
+.class {
+	property: value;
+}
+```
+````
+
+### Supported Languages
+JavaScript, TypeScript, JSX, TSX, HTML, CSS, SCSS, Bash, JSON, Markdown, and more.
+
+## Links
+
+### Internal Links
+```md
+[Link text](/docs/learning/intro)
+[Relative link](./other-page)
+```
+
+### External Links
+```md
+[External link](https://example.com)
+```
+
+### Reference Style Links
+```md
+[Link text][reference]
+
+[reference]: https://example.com
+```
+
+## Images
+
+### Image Locations
+- **Documentation images**: `static/img/docs/{category}/`
+- **Page images**: `static/img/pages/`
+- **Global images**: `static/img/global/`
+
+### Image Syntax
+```md
+![Alt text](/img/docs/category/image.png)
+```
+
+### Best Practices
+- Use descriptive alt text
+- Optimize images before adding
+- Use appropriate formats (PNG for screenshots, SVG for diagrams)
+- Keep images in appropriate subdirectories
+
+## Tables
+
+```md
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Value 1  | Value 2  | Value 3  |
+| Value 4  | Value 5  | Value 6  |
+```
+
+## Admonitions (Callouts)
+
+Docusaurus supports special callout boxes:
+
+```md
+:::note
+This is a note
+:::
+
+:::tip
+This is a tip
+:::
+
+:::info
+This is info
+:::
+
+:::caution
+This is a caution
+:::
+
+:::danger
+This is a danger warning
+:::
+```
+
+## Sidebar Organization
+
+### Auto-Generated Sidebar
+The sidebar is automatically generated from the file structure in `docs/`.
+
+### Sidebar Configuration
+Defined in `sidebars.js` but uses auto-generation with locale filtering.
+
+### File Organization Best Practices
+1. Group related files in subdirectories
+2. Use numbered prefixes for ordering (e.g., `01-intro.md`, `02-resources.md`)
+3. Use descriptive kebab-case names
+4. Create index files for categories if needed
+
+## Slides Documentation
+
+### Slides Listing Component
+
+**Location**: `docs/learning/lectures.tsx`
+
+This React component reads `static/slides/slides-info.json` and displays available slides.
+
+**Features**:
+- Automatically groups slides by category
+- Filters by current locale
+- Provides links to slide HTML files
+- Includes PDF export and presentation mode links
+
+### Slides Integration
+Slides are external (downloaded at build time) and integrated via the `lectures.tsx` component.
+
+**NEVER**:
+- Manually edit slides in `static/slides/`
+- Modify slides-info.json directly (it's downloaded)
+
+**ALWAYS**:
+- Update slides in the external repository
+- Update `slides_version` in `web.config.js`
+- Rebuild to pull new slides
+
+## Resources Documentation
+
+### Resources Listing Component
+
+**Location**: `docs/learning/resources.tsx`
+
+**Data Source**: `src/internals/resources-data.ts`
+
+### Adding New Resources
+1. Edit `src/internals/resources-data.ts`
+2. Add resource object with:
+   - Title
+   - Description
+   - URL
+   - Category
+   - Tags (optional)
+3. Rebuild and test
+
+## Localization in Documentation
+
+### Czech vs English Content
+
+**Separate Translations**:
+Translation files in `i18n/{locale}/docusaurus-plugin-content-docs/current/`
+
+**Example**:
+- English: `docs/learning/intro.md`
+- Czech: `i18n/cs/docusaurus-plugin-content-docs/current/learning/intro.md`
+
+### Excluding Content by Locale
+
+```yaml
+---
+title: English Only Page
+exclude_cs: true
+---
+```
+
+### Translation Best Practices
+1. Maintain parallel structure between locales
+2. Use appropriate technical terms for each language
+3. Keep code examples consistent across locales
+4. Test both locales after changes
+
+## Changelog Maintenance
+
+**Location**: `CHANGELOG.md`
+
+### Format
+Use Keep a Changelog format:
+
+```md
+# Changelog
+
+## [Version] - YYYY-MM-DD
+
+### Added
+- New features
+
+### Changed
+- Changes to existing functionality
+
+### Deprecated
+- Soon-to-be removed features
+
+### Removed
+- Removed features
+
+### Fixed
+- Bug fixes
+
+### Security
+- Security updates
+```
+
+### When to Update
+- Every version bump
+- Significant feature additions
+- Breaking changes
+- Important bug fixes
+- Dependency updates
+
+## README Maintenance
+
+**Location**: `README.md`
+
+### What to Include
+- Project overview
+- Quick start instructions
+- Build and development commands
+- Project structure (high-level)
+- Links to detailed documentation
+- Deployment information
+- License and contact
+
+### What NOT to Include
+- Detailed API documentation (use docs/ instead)
+- Implementation details (use PRD.md)
+- Extensive tutorials (use docs/learning/tutorials/)
+
+### Update Triggers
+Update README.md when:
+- Setup process changes
+- New major features added
+- Build commands change
+- Deployment URLs change
+- Project structure changes significantly
+
+## PRD Maintenance
+
+**Location**: `docs/PRD.md`
+
+This is the **single source of truth** for project architecture and requirements.
+
+### What to Include
+- Complete project overview
+- Technical architecture
+- Detailed feature documentation
+- Build and deployment processes
+- Code patterns and conventions
+- Configuration reference
+- External dependencies
+- Known limitations
+
+### Update Frequency
+**CRITICAL**: Update PRD.md whenever:
+- Architecture changes
+- New features are added
+- Dependencies are updated
+- Build process changes
+- Configuration changes
+- Code patterns change
+- External integrations change
+
+### Update Process
+1. Make code changes first
+2. Identify affected PRD sections
+3. Update with accurate, current information
+4. Update "Last Updated" date at bottom
+5. Review for consistency and completeness
+
+## Documentation Quality Standards
+
+### Writing Style
+- **Clear and concise**: Avoid unnecessary jargon
+- **Active voice**: "Click the button" not "The button should be clicked"
+- **Present tense**: "The function returns" not "The function will return"
+- **Second person**: "You can configure" not "One can configure"
+
+### Code Examples
+- **Working examples**: Always test code before documenting
+- **Complete examples**: Include necessary imports and context
+- **Comments**: Explain non-obvious code
+- **Consistent style**: Follow project code conventions
+
+### Structure
+- **Logical flow**: Organize from general to specific
+- **Clear headings**: Use descriptive heading text
+- **Lists**: Use for multiple related items
+- **Tables**: Use for structured data comparison
+
+### Accessibility
+- **Alt text**: Always provide for images
+- **Descriptive links**: "Read the installation guide" not "Click here"
+- **Clear language**: Avoid idioms that don't translate well
+
+## Search Optimization
+
+### Searchable Content
+The local search plugin indexes:
+- Page titles
+- Headings
+- Body content
+- Parent categories
+
+### Optimizing for Search
+1. **Use descriptive titles**: Clear, specific page titles
+2. **Meaningful headings**: Headings that describe content
+3. **Keywords**: Include relevant technical terms naturally
+4. **Hierarchy**: Proper heading levels (h1, h2, h3)
+
+### Boost Factors
+- Title: 5x boost
+- Content: 1x boost
+- Parent categories: 2x boost
+
+## Common Documentation Tasks
+
+### Adding a New Page
+1. Create Markdown file in appropriate `docs/` subdirectory
+2. Add frontmatter (title, description)
+3. Write content using MDX if needed
+4. Add images to `static/img/docs/`
+5. Test in local development
+6. Update PRD.md if significant
+
+### Adding an Interactive Example
+1. Ensure example exists in external examples repository
+2. Create page in `docs/learning/examples/{category}/`
+3. Import and use APHCanvas component
+4. Document the example thoroughly
+5. Test the example renders correctly
+6. Update PRD.md if adding new category
+
+### Updating External References
+1. Update version in `web.config.js`
+2. Run `npm run download_data`
+3. Test locally
+4. Update PRD.md with new version
+5. Document in CHANGELOG.md
+
+### Translating Content
+1. Create parallel structure in `i18n/{locale}/`
+2. Translate text and descriptions
+3. Keep code examples consistent
+4. Test both locales
+5. Verify sidebar generates correctly
+
+## Documentation Review Checklist
+
+Before committing documentation changes:
+
+- [ ] Frontmatter is complete and accurate
+- [ ] Links work correctly (no broken links)
+- [ ] Images display properly
+- [ ] Code examples are tested and working
+- [ ] Syntax highlighting is correct
+- [ ] MDX components render correctly
+- [ ] Content is clear and well-organized
+- [ ] Spelling and grammar are correct
+- [ ] Both locales tested (if applicable)
+- [ ] PRD.md updated (if needed)
+- [ ] README.md updated (if needed)
+- [ ] CHANGELOG.md updated (if version change)

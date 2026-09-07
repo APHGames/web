@@ -9,29 +9,11 @@ import Loadable from 'react-loadable';
 import featureStyles from '@site/src/css/feature.module.scss';
 import sectionStyles from '@site/src/css/section.module.scss';
 import titleStyles from '@site/src/css/title.module.scss';
-import pacmanStyles from '@site/src/css/pacman.module.scss';
 import contentStyles from '@site/src/css/content.module.scss';
 import LoadingSpinner from '../components/Loading';
-import Logo from '../../static/img/pages/index/logo.svg';
+import HeroParallax from '../components/HeroParallax';
+import heroStyles from '../components/HeroParallax/HeroParallax.module.scss';
 import ColfioLogo from '../../static/img/pages/index/colfio.png';
-
-const Title = () => (
-	<section
-		className={clsx(sectionStyles.section)}
-	>
-		<div className={clsx(sectionStyles['section--inner'], titleStyles.title__section)}>
-			<div className={titleStyles.title}>
-				<div className={titleStyles.title__logo}>
-					<Logo className={titleStyles.svgGlow} />
-					<div className={pacmanStyles.pacman} />
-				</div>
-				<div className={titleStyles.title__title}>
-					<h2>{translate({ message: 'index.title' })}</h2>
-				</div>
-			</div>
-		</div>
-	</section>
-);
 
 const Feature = () => {
 	const context = useDocusaurusContext();
@@ -39,7 +21,7 @@ const Feature = () => {
 
 	return (
 		<section
-			className={clsx(sectionStyles.section)}
+			className={clsx(sectionStyles.section, heroStyles.afterHero)}
 		>
 			<div className={clsx(sectionStyles['section--inner'], sectionStyles['section--littlepadding'])}>
 				<div className={sectionStyles.section__innervertical}>
@@ -171,7 +153,7 @@ const Home = () => {
 				<DocusaurusHead>
 					<link rel="canonical" href={siteConfig.url} />
 				</DocusaurusHead>
-				<Title />
+				<HeroParallax />
 				<Feature />
 				<AboutComponent />
 				<Colfio />

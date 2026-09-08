@@ -149,6 +149,27 @@
 	"index.colfio": {
 		"message": "All examples and minigames utilize our own library #COLFIO that works as an extension of a graphical library #PIXI."
 	},
+	"index.explore": {
+		"message": "Explore"
+	},
+	"index.engine": {
+		"message": "Engine"
+	},
+	"index.about": {
+		"message": "About"
+	},
+	"index.hint.learn": {
+		"message": "learn"
+	},
+	"index.hint.watch": {
+		"message": "watch"
+	},
+	"index.hint.build": {
+		"message": "build"
+	},
+	"index.hint.play": {
+		"message": "play"
+	},
 	"theme.ErrorPageContent.title": {
 		"message": "This page crashed.",
 		"description": "The title of the fallback page when the page crashed"

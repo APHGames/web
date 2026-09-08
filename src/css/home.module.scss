@@ -1,0 +1,356 @@
+@import "./variables.scss";
+@import "../internals/aph-colors.scss";
+@import "../internals/effects.scss";
+
+.page {
+	background:
+		radial-gradient(ellipse 80% 40% at 50% 0%, rgba($color-azure, 0.12), transparent 55%),
+		$color-midnight-dark;
+}
+
+.section {
+	width: 100%;
+	position: relative;
+	padding: 4rem 1.25rem;
+}
+
+.section + .section {
+	border-top: 1px solid rgba($color-royal, 0.18);
+}
+
+.sectionInner {
+	max-width: var(--ifm-container-width);
+	width: 100%;
+	margin: 0 auto;
+}
+
+.sectionLabel {
+	display: inline-block;
+	margin: 0 0 1.25rem;
+	padding: 0.2rem 0.65rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: $color-aqua-light;
+	border-left: 3px solid $color-azure;
+	background: linear-gradient(90deg, rgba($color-azure, 0.18), transparent);
+}
+
+.sectionHeading {
+	margin: 0 0 2rem;
+	font-weight: 300;
+	font-size: clamp(1.6rem, 4vw, 2.4rem);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: $color-white;
+	text-align: center;
+}
+
+/* —— Feature portal grid —— */
+.featureSection {
+	padding-top: min(8vw, 4rem);
+	padding-bottom: 3.5rem;
+	background:
+		linear-gradient(180deg, rgba($color-midnight-dark, 0) 0%, rgba($color-midnight-dark, 0.55) 18%, transparent 40%);
+}
+
+.featureGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+
+	&[data-count="3"] {
+		@media (min-width: 901px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+}
+
+.featureTile {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	min-height: clamp(12rem, 28vw, 16rem);
+	text-decoration: none !important;
+	border: 1px solid rgba($color-royal-light, 0.22);
+	background: $color-rhino-100;
+	isolation: isolate;
+	transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+	&:hover,
+	&:focus-visible {
+		border-color: rgba($color-aqua, 0.65);
+		transform: translateY(-4px);
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba($color-aqua, 0.2);
+		text-decoration: none !important;
+
+		.featureImage {
+			transform: scale(1.06);
+		}
+
+		.featureTitle {
+			color: $color-aqua-light;
+		}
+
+		.featureShine {
+			opacity: 1;
+			transform: translateX(120%);
+		}
+	}
+}
+
+.featureImage {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.45s ease;
+}
+
+.featureOverlay {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, rgba($color-midnight-dark, 0.15) 0%, rgba($color-midnight-dark, 0.82) 70%, rgba($color-midnight-dark, 0.94) 100%),
+		linear-gradient(90deg, rgba($color-azure, 0.18), transparent 45%);
+	z-index: 1;
+}
+
+.featureShine {
+	position: absolute;
+	top: 0;
+	left: -40%;
+	width: 35%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+	transform: translateX(0);
+	transition: transform 0.55s ease, opacity 0.25s ease;
+}
+
+.featureBody {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	padding: 1.25rem 1.35rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.featureTitle {
+	margin: 0;
+	font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: $color-white;
+	transition: color 0.25s ease;
+}
+
+.featureHint {
+	margin: 0;
+	font-size: 0.85rem;
+	color: rgba($color-royal-light, 0.9);
+	letter-spacing: 0.04em;
+}
+
+.featureHint::before {
+	content: "> ";
+	color: $color-aqua;
+}
+
+/* —— About —— */
+.aboutGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	font-size: clamp(1rem, 1.8vw, 1.15rem);
+	line-height: 1.65;
+}
+
+.aboutPanel {
+	padding: 1.75rem 1.6rem;
+	border: 1px solid rgba($color-royal, 0.25);
+	background:
+		linear-gradient(145deg, rgba($color-rhino-100, 0.95), rgba($color-midnight, 0.92)),
+		$color-midnight;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background: linear-gradient(90deg, $color-azure, $color-aqua, transparent);
+	}
+
+	&:nth-child(2)::before {
+		background: linear-gradient(90deg, $color-tomato, $color-goldenrod, transparent);
+	}
+
+	h3 {
+		margin: 0 0 1rem;
+		font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: $color-goldenrod-light;
+	}
+
+	ul {
+		margin: 0;
+		padding-left: 1.1rem;
+	}
+
+	li {
+		margin: 0.85rem 0;
+		color: $color-rhino-20;
+	}
+
+	li::marker {
+		color: $color-aqua;
+	}
+
+	p {
+		margin: 0 0 1rem;
+		color: $color-rhino-20;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* —— Colfio banner —— */
+.colfio {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.colfioBanner {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2rem;
+	align-items: center;
+	padding: 1.75rem 2rem;
+	border: 1px solid rgba($color-goldenrod, 0.35);
+	background:
+		radial-gradient(ellipse 60% 120% at 0% 50%, rgba($color-goldenrod, 0.16), transparent 55%),
+		linear-gradient(120deg, rgba($color-rhino-100, 0.98), rgba($color-midnight, 0.95));
+}
+
+.colfioLogo {
+	width: clamp(4.5rem, 10vw, 6.5rem);
+	height: auto;
+	display: block;
+	filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.4));
+}
+
+.colfioText {
+	margin: 0;
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	line-height: 1.6;
+	color: $color-rhino-10;
+
+	a {
+		color: $color-goldenrod-light;
+		font-weight: 600;
+		text-decoration: none;
+		border-bottom: 1px solid rgba($color-goldenrod, 0.45);
+
+		&:hover {
+			color: $color-lemon-light;
+			border-bottom-color: $color-lemon;
+		}
+	}
+}
+
+/* —— News —— */
+.news {
+	padding-bottom: 5rem;
+}
+
+.newsList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	max-width: 52rem;
+	margin: 0 auto;
+}
+
+.newsItem {
+	display: grid;
+	grid-template-columns: 6.5rem 1fr;
+	gap: 1.25rem;
+	align-items: start;
+	padding: 1.1rem 1.25rem;
+	border: 1px solid rgba($color-royal, 0.2);
+	border-left: 3px solid $color-goldenrod;
+	background: linear-gradient(90deg, rgba($color-rhino-100, 0.9), rgba($color-midnight, 0.75));
+	transition: border-color 0.2s ease, background 0.2s ease;
+
+	&:hover {
+		border-left-color: $color-aqua;
+		background: linear-gradient(90deg, rgba($color-rhino-90, 0.95), rgba($color-midnight, 0.85));
+	}
+}
+
+.newsDate {
+	font-weight: 700;
+	font-size: 0.95rem;
+	letter-spacing: 0.04em;
+	color: $color-goldenrod;
+	padding-top: 0.15rem;
+}
+
+.newsText {
+	font-size: clamp(1rem, 1.8vw, 1.15rem);
+	line-height: 1.55;
+	color: $color-rhino-10;
+
+	a {
+		color: $color-aqua-light;
+	}
+}
+
+@media (max-width: 900px) {
+	.featureGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.featureTile {
+		min-height: 13rem;
+	}
+
+	.aboutGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.colfioBanner {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		text-align: center;
+		gap: 1.25rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.section {
+		padding: 3rem 1rem;
+	}
+
+	.newsItem {
+		grid-template-columns: 1fr;
+		gap: 0.4rem;
+	}
+}

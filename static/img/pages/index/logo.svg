@@ -1,45 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" viewBox="0 0 160.29 69.461" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <rect y="1.3358" width="160.29" height="66.789" fill="#1d232d" style="paint-order:normal"/>
- <g fill="#7b8694">
-  <path d="m33.395 14.694v13.358h-13.358v13.358h13.358v13.358h13.358v-13.358h13.358v-13.358h-13.358v-13.358z"/>
-  <circle cx="133.58" cy="34.73" r="6.6789"/>
-  <circle cx="120.22" cy="21.373" r="6.6789"/>
-  <circle cx="120.22" cy="48.088" r="6.6789"/>
- </g>
- <g fill="#7b8694">
-  <path d="m1.3359 0h10.686v1.3358h-10.686z"/>
-  <path d="m14.694 0h10.686v1.3358h-10.686z"/>
-  <path d="m28.052 0h10.686v1.3358h-10.686z"/>
-  <path d="m41.409 0h10.686v1.3358h-10.686z"/>
-  <path d="m54.767 0h10.686v1.3358h-10.686z"/>
-  <path d="m68.125 0h10.686v1.3358h-10.686z"/>
-  <path d="m81.483 0h10.686v1.3358h-10.686z"/>
-  <path d="m94.841 0h10.686v1.3358h-10.686z"/>
-  <path d="m108.2 0h10.686v1.3358h-10.686z"/>
-  <path d="m121.56 0h10.686v1.3358h-10.686z"/>
-  <path d="m134.91 0h10.686v1.3358h-10.686z"/>
-  <path d="m148.27 0h10.686v1.3358h-10.686z"/>
-  <path d="m1.3359 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m14.694 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m28.052 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m41.409 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m54.767 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m68.125 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m81.483 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m94.841 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m108.2 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m121.56 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m134.91 68.125h10.686v1.3358h-10.686z"/>
-  <path d="m148.27 68.125h10.686v1.3358h-10.686z"/>
- </g>
+<svg version="1.1" viewBox="0 -2 160.29 73.5" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="APH Games" overflow="visible">
+	<defs>
+		<!-- Chip plastic body -->
+		<linearGradient id="aphChipBody" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#3c4554"/>
+			<stop offset="28%" stop-color="#2a323e"/>
+			<stop offset="62%" stop-color="#1d232d"/>
+			<stop offset="100%" stop-color="#12161d"/>
+		</linearGradient>
+		<linearGradient id="aphChipSheen" x1="0" y1="0" x2="1" y2="0.85">
+			<stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+			<stop offset="35%" stop-color="#9eb6ff" stop-opacity="0.05"/>
+			<stop offset="70%" stop-color="#ffffff" stop-opacity="0.015"/>
+			<stop offset="100%" stop-color="#000000" stop-opacity="0.18"/>
+		</linearGradient>
+		<radialGradient id="aphChipVignette" cx="50%" cy="45%" r="72%">
+			<stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+			<stop offset="100%" stop-color="#000000" stop-opacity="0.28"/>
+		</radialGradient>
+
+		<!-- Controls -->
+		<linearGradient id="aphDpadGrad" x1="0" y1="0" x2="0.2" y2="1">
+			<stop offset="0%" stop-color="#d0d6de"/>
+			<stop offset="40%" stop-color="#939da9"/>
+			<stop offset="100%" stop-color="#5a6472"/>
+		</linearGradient>
+		<radialGradient id="aphBtnGrad" cx="32%" cy="28%" r="72%">
+			<stop offset="0%" stop-color="#dce1e8"/>
+			<stop offset="45%" stop-color="#94a0ae"/>
+			<stop offset="100%" stop-color="#525c6a"/>
+		</radialGradient>
+		<filter id="aphControlShade" x="-25%" y="-25%" width="150%" height="150%">
+			<feDropShadow dx="0" dy="0.55" stdDeviation="0.4" flood-color="#03030c" flood-opacity="0.5"/>
+		</filter>
+
+		<!-- Pins: metal + careful glow -->
+		<linearGradient id="aphPinGrad" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#eef2f7"/>
+			<stop offset="30%" stop-color="#c0c8d4"/>
+			<stop offset="100%" stop-color="#7d8796"/>
+		</linearGradient>
+		<linearGradient id="aphPinGradBottom" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0%" stop-color="#eef2f7"/>
+			<stop offset="30%" stop-color="#c0c8d4"/>
+			<stop offset="100%" stop-color="#7d8796"/>
+		</linearGradient>
+		<filter id="aphPinAura" x="-100%" y="-280%" width="300%" height="660%" color-interpolation-filters="sRGB">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur"/>
+			<feColorMatrix in="blur" type="matrix"
+				values="0.3 0 0 0 0.2
+				        0.5 0 0 0 0.35
+				        1.15 0 0 0 0.65
+				        0 0 0 0.65 0"
+				result="glow"/>
+			<feMerge>
+				<feMergeNode in="glow"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+		<filter id="aphPinSoftBloom" x="-140%" y="-360%" width="380%" height="820%" color-interpolation-filters="sRGB">
+			<feGaussianBlur stdDeviation="1.55"/>
+			<feColorMatrix type="matrix"
+				values="0.22 0 0 0 0.14
+				        0.4 0 0 0 0.3
+				        1.05 0 0 0 0.62
+				        0 0 0 0.5 0"/>
+		</filter>
+	</defs>
+
+	<!-- Soft azure bloom behind pin rows -->
+	<g opacity="0.62" filter="url(#aphPinSoftBloom)" aria-hidden="true">
+		<path fill="#7893EA" d="m1.3359 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m14.694 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m28.052 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m41.409 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m54.767 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m68.125 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m81.483 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m94.841 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m108.2 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m121.56 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m134.91 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m148.27 0h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m1.3359 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m14.694 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m28.052 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m41.409 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m54.767 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m68.125 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m81.483 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m94.841 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m108.2 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m121.56 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m134.91 67.7h10.686v1.8h-10.686z"/>
+		<path fill="#7893EA" d="m148.27 67.7h10.686v1.8h-10.686z"/>
+	</g>
+
+	<!-- Chip body -->
+	<g>
+		<rect y="1.3358" width="160.29" height="66.789" fill="url(#aphChipBody)"/>
+		<rect y="1.3358" width="160.29" height="66.789" fill="url(#aphChipSheen)"/>
+		<rect y="1.3358" width="160.29" height="66.789" fill="url(#aphChipVignette)"/>
+		<rect y="1.3358" width="160.29" height="1.35" fill="#ffffff" opacity="0.09"/>
+		<rect y="65.9" width="160.29" height="2.22" fill="#000000" opacity="0.28"/>
+	</g>
+
+	<!-- Gamepad controls -->
+	<g filter="url(#aphControlShade)">
+		<path fill="url(#aphDpadGrad)" d="m33.395 14.694v13.358h-13.358v13.358h13.358v13.358h13.358v-13.358h13.358v-13.358h-13.358v-13.358z"/>
+		<!-- tiny d-pad specular -->
+		<path fill="#ffffff" opacity="0.12" d="m33.395 14.694h13.358v2.2h-13.358z"/>
+		<circle fill="url(#aphBtnGrad)" cx="133.58" cy="34.73" r="6.6789"/>
+		<circle fill="url(#aphBtnGrad)" cx="120.22" cy="21.373" r="6.6789"/>
+		<circle fill="url(#aphBtnGrad)" cx="120.22" cy="48.088" r="6.6789"/>
+		<circle cx="131.75" cy="32.75" r="1.7" fill="#ffffff" opacity="0.22"/>
+		<circle cx="118.4" cy="19.4" r="1.55" fill="#ffffff" opacity="0.2"/>
+		<circle cx="118.4" cy="46.1" r="1.55" fill="#ffffff" opacity="0.18"/>
+	</g>
+
+	<!-- Pins -->
+	<g filter="url(#aphPinAura)">
+		<g fill="url(#aphPinGrad)">
+			<path d="m1.3359 0h10.686v1.3358h-10.686z"/>
+			<path d="m14.694 0h10.686v1.3358h-10.686z"/>
+			<path d="m28.052 0h10.686v1.3358h-10.686z"/>
+			<path d="m41.409 0h10.686v1.3358h-10.686z"/>
+			<path d="m54.767 0h10.686v1.3358h-10.686z"/>
+			<path d="m68.125 0h10.686v1.3358h-10.686z"/>
+			<path d="m81.483 0h10.686v1.3358h-10.686z"/>
+			<path d="m94.841 0h10.686v1.3358h-10.686z"/>
+			<path d="m108.2 0h10.686v1.3358h-10.686z"/>
+			<path d="m121.56 0h10.686v1.3358h-10.686z"/>
+			<path d="m134.91 0h10.686v1.3358h-10.686z"/>
+			<path d="m148.27 0h10.686v1.3358h-10.686z"/>
+		</g>
+		<g fill="url(#aphPinGradBottom)">
+			<path d="m1.3359 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m14.694 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m28.052 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m41.409 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m54.767 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m68.125 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m81.483 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m94.841 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m108.2 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m121.56 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m134.91 68.125h10.686v1.3358h-10.686z"/>
+			<path d="m148.27 68.125h10.686v1.3358h-10.686z"/>
+		</g>
+	</g>
 </svg>

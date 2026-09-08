@@ -152,6 +152,27 @@
 	"index.colfio": {
 		"message": "Pro všechny příklady a minihry používáme vlastní knihovnu #COLFIO, která funguje jako nadstavba grafické knihovny #PIXI."
 	},
+	"index.explore": {
+		"message": "Prozkoumej"
+	},
+	"index.engine": {
+		"message": "Engine"
+	},
+	"index.about": {
+		"message": "O projektu"
+	},
+	"index.hint.learn": {
+		"message": "uč se"
+	},
+	"index.hint.watch": {
+		"message": "sleduj"
+	},
+	"index.hint.build": {
+		"message": "stavěj"
+	},
+	"index.hint.play": {
+		"message": "hraj"
+	},
 	"theme.ErrorPageContent.title": {
 		"message": "Web nám spadnul... kdopak nám ho postaví?"
 	},

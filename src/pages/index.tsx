@@ -6,81 +6,74 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { translate } from '@docusaurus/Translate';
 import Loadable from 'react-loadable';
-import featureStyles from '@site/src/css/feature.module.scss';
-import sectionStyles from '@site/src/css/section.module.scss';
-import titleStyles from '@site/src/css/title.module.scss';
-import contentStyles from '@site/src/css/content.module.scss';
+import homeStyles from '@site/src/css/home.module.scss';
 import LoadingSpinner from '../components/Loading';
 import HeroParallax from '../components/HeroParallax';
-import heroStyles from '../components/HeroParallax/HeroParallax.module.scss';
 import ColfioLogo from '../../static/img/pages/index/colfio.png';
+
+type FeatureItem = {
+	href: string;
+	image: string;
+	title: string;
+	hint: string;
+	external?: boolean;
+};
 
 const Feature = () => {
 	const context = useDocusaurusContext();
 	const { currentLocale, youtube } = context.siteConfig.customFields;
 
+	const items: FeatureItem[] = [
+		{
+			href: './docs/learning/intro',
+			image: '/img/pages/index/lectures.jpg',
+			title: translate({ message: 'index.workshops' }),
+			hint: translate({ message: 'index.hint.learn' }),
+		},
+		...(currentLocale === 'cs'
+			? [{
+				href: youtube as string,
+				image: '/img/pages/index/videos.jpg',
+				title: translate({ message: 'index.videos' }),
+				hint: translate({ message: 'index.hint.watch' }),
+				external: true,
+			}]
+			: []),
+		{
+			href: './docs/learning/intro',
+			image: '/img/pages/index/tutorials.jpg',
+			title: translate({ message: 'index.tutorials' }),
+			hint: translate({ message: 'index.hint.build' }),
+		},
+		{
+			href: './gallery',
+			image: '/img/pages/index/games.jpg',
+			title: translate({ message: 'index.minigames' }),
+			hint: translate({ message: 'index.hint.play' }),
+		},
+	];
+
 	return (
-		<section
-			className={clsx(sectionStyles.section, heroStyles.afterHero)}
-		>
-			<div className={clsx(sectionStyles['section--inner'], sectionStyles['section--littlepadding'])}>
-				<div className={sectionStyles.section__innervertical}>
-					<div className={sectionStyles.section__innerflex}>
-						<div className={featureStyles.feature}>
-							<a href="./docs/learning/intro">
-								<div>
-									<img
-										className={featureStyles.feature__illustration}
-										src="/img/pages/index/lectures.jpg"
-									/>
-								</div>
-
-								<h2 className={featureStyles.feature__title}>{translate({ message: 'index.workshops' })}</h2>
-							</a>
-						</div>
-						{currentLocale === 'cs' && (
-							<>
-								<div className={featureStyles.feature}>
-									<a href={youtube as any}>
-										<div>
-											<img
-												className={featureStyles.feature__illustration}
-												src="/img/pages/index/videos.jpg"
-											/>
-										</div>
-										<h2 className={featureStyles.feature__title}>
-											{translate({ message: 'index.videos' })}
-										</h2>
-									</a>
-								</div>
-							</>
-						)}
-						<div className={featureStyles.feature}>
-							<a href="./docs/learning/intro">
-								<div>
-									<img
-										className={featureStyles.feature__illustration}
-										src="/img/pages/index/tutorials.jpg"
-									/>
-								</div>
-								<h2 className={featureStyles.feature__title}>
-									{translate({ message: 'index.tutorials' })}
-								</h2>
-							</a>
-						</div>
-						<div className={featureStyles.feature}>
-							<a href="./gallery">
-								<div>
-									<img
-										className={featureStyles.feature__illustration}
-										src="/img/pages/index/games.jpg"
-									/>
-								</div>
-
-								<h2 className={featureStyles.feature__title}>{translate({ message: 'index.minigames' })}</h2>
-							</a>
-						</div>
-					</div>
+		<section className={clsx(homeStyles.section, homeStyles.featureSection)}>
+			<div className={homeStyles.sectionInner}>
+				<span className={homeStyles.sectionLabel}>{translate({ message: 'index.explore' })}</span>
+				<div className={homeStyles.featureGrid} data-count={items.length}>
+					{items.map((item) => (
+						<a
+							key={item.title}
+							className={homeStyles.featureTile}
+							href={item.href}
+							{...(item.external ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+						>
+							<img className={homeStyles.featureImage} src={item.image} alt="" />
+							<span className={homeStyles.featureOverlay} />
+							<span className={homeStyles.featureShine} />
+							<span className={homeStyles.featureBody}>
+								<h2 className={homeStyles.featureTitle}>{item.title}</h2>
+								<p className={homeStyles.featureHint}>{item.hint}</p>
+							</span>
+						</a>
+					))}
 				</div>
 			</div>
 		</section>
@@ -88,18 +81,17 @@ const Feature = () => {
 };
 
 const Colfio = () => {
-	// TODO perhaps move this component into a i18n folder completely, as Docusaurus doesn't support links inside the JSON file
-	const text = translate({ message: 'index.colfio' }).replace('#COLFIO', '<a href="https://colf.io">COLF.IO</a>').replace('#PIXI', '<a href="https://pixijs.com">PixiJS</a>');
+	const text = translate({ message: 'index.colfio' })
+		.replace('#COLFIO', '<a href="https://colf.io">COLF.IO</a>')
+		.replace('#PIXI', '<a href="https://pixijs.com">PixiJS</a>');
+
 	return (
-		<section
-			className={clsx(sectionStyles.section)}
-		>
-			<div className={clsx(contentStyles.content__vertical, titleStyles.title__colfio)}>
-				<div>
-					<img src={ColfioLogo} />
-				</div>
-				<div>
-					<p dangerouslySetInnerHTML={{ __html: text }} />
+		<section className={clsx(homeStyles.section, homeStyles.colfio)}>
+			<div className={homeStyles.sectionInner}>
+				<span className={homeStyles.sectionLabel}>{translate({ message: 'index.engine' })}</span>
+				<div className={homeStyles.colfioBanner}>
+					<img className={homeStyles.colfioLogo} src={ColfioLogo} alt="COLF.IO" />
+					<p className={homeStyles.colfioText} dangerouslySetInnerHTML={{ __html: text }} />
 				</div>
 			</div>
 		</section>
@@ -109,30 +101,33 @@ const Colfio = () => {
 const News = () => {
 	const context = useDocusaurusContext();
 	const { currentLocale } = context.siteConfig.customFields;
-
 	const [newsData, setNewsData] = useState(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await import(`../../i18n/${currentLocale}/news.json`);
-			// TODO doesn't serialize into array out of the box
 			const converted = Array(data.length).fill(0, 0, data.length).map((_, idx) => data[idx]);
 			setNewsData(converted);
 		};
 		fetchData();
-	}, []);
-	return newsData && (
-		<section
-			className={clsx(sectionStyles.section)}
-		>
-			<h2 className={contentStyles.content__title}>{translate({ message: 'index.news' })}</h2>
-			<div className={contentStyles.content__list}>
-				{newsData.map((dt) => (
-					<div key={dt.date}>
-						<div className={contentStyles.list_title}>{dt.date}</div>
-						<div className={contentStyles.list_text} dangerouslySetInnerHTML={{ __html: dt.text }} />
-					</div>
-				))}
+	}, [currentLocale]);
+
+	if (!newsData) {
+		return null;
+	}
+
+	return (
+		<section className={clsx(homeStyles.section, homeStyles.news)}>
+			<div className={homeStyles.sectionInner}>
+				<h2 className={homeStyles.sectionHeading}>{translate({ message: 'index.news' })}</h2>
+				<div className={homeStyles.newsList}>
+					{newsData.map((dt) => (
+						<article className={homeStyles.newsItem} key={dt.date}>
+							<div className={homeStyles.newsDate}>{dt.date}</div>
+							<div className={homeStyles.newsText} dangerouslySetInnerHTML={{ __html: dt.text }} />
+						</article>
+					))}
+				</div>
 			</div>
 		</section>
 	);
@@ -153,11 +148,13 @@ const Home = () => {
 				<DocusaurusHead>
 					<link rel="canonical" href={siteConfig.url} />
 				</DocusaurusHead>
-				<HeroParallax />
-				<Feature />
-				<AboutComponent />
-				<Colfio />
-				<News />
+				<div className={homeStyles.page}>
+					<HeroParallax />
+					<Feature />
+					<AboutComponent />
+					<Colfio />
+					<News />
+				</div>
 			</Layout>
 		</>
 	);

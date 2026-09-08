@@ -7,6 +7,7 @@ $ball-size: 20px;
 
 .pacman {
 	position: absolute;
+	z-index: 2;
 	right: 30%;
 	bottom: 50%;
 	border-radius: 50%;

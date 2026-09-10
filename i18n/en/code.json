@@ -20,6 +20,15 @@
 	"config.gallery": {
 		"message": "Gallery"
 	},
+	"config.events": {
+		"message": "Events"
+	},
+	"config.events_gamehack": {
+		"message": "GameHack FIT"
+	},
+	"config.events_gamejam": {
+		"message": "GameJam FIT"
+	},
 	"config.archive": {
 		"message": "Archive"
 	},
@@ -64,6 +73,63 @@
 	},
 	"gallery.title": {
 		"message": "Projects Gallery"
+	},
+	"events.title": {
+		"message": "Events"
+	},
+	"events.rules": {
+		"message": "Rules"
+	},
+	"events.faq": {
+		"message": "FAQ"
+	},
+	"events.archive": {
+		"message": "Archive"
+	},
+	"events.gamehack.hint": {
+		"message": "November 2023"
+	},
+	"events.gamejam.hint": {
+		"message": "2020–2023 series"
+	},
+	"events.gamehack.rules": {
+		"message": "GameHack rules"
+	},
+	"events.gamehack.faq": {
+		"message": "GameHack FAQ"
+	},
+	"events.gamejam.rules": {
+		"message": "GameJam rules"
+	},
+	"events.gamejam.faq": {
+		"message": "GameJam FAQ"
+	},
+	"events.gamejam.archive": {
+		"message": "GameJam archive"
+	},
+	"events.programme": {
+		"message": "Programme"
+	},
+	"events.sponsors": {
+		"message": "Sponsors"
+	},
+	"events.organizers": {
+		"message": "Organizers"
+	},
+	"events.trailer": {
+		"message": "Trailer"
+	},
+	"events.welcome": {
+		"message": "Welcome"
+	},
+	"events.ingredients": {
+		"message": "Ingredients"
+	},
+	"events.games": {
+		"message": "Games"
+	},
+	"events.recaps": {
+		"message": "Recaps"
 	},
 	"pages.resources.assets": {
 		"message": "Assets"

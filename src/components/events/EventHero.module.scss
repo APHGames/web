@@ -1,0 +1,59 @@
+@import "../../internals/aph-colors.scss";
+@import "../../css/variables.scss";
+
+.hero {
+	width: 100%;
+	max-width: 100%;
+	height: calc(100vh - var(--ifm-navbar-height));
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	background: $color-midnight-dark;
+}
+
+.banner,
+.bannerFallback {
+	height: 100%;
+	width: 100%;
+	position: absolute !important;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden !important;
+}
+
+.banner :global(div) {
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+}
+
+.gamehack {
+	background: radial-gradient(#4d6fdc, #010000);
+}
+
+.gamejam {
+	background: radial-gradient(#3ba6c6, #010000);
+}
+
+.titleBar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	background: rgba($color-midnight-dark, 0.96);
+	border-top: 1px solid rgba($color-royal, 0.25);
+}
+
+.title {
+	margin: 0;
+	padding: 0.45rem 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: clamp(1.35rem, 5.2vw, $font-size-xxlarge);
+	line-height: 1.2;
+	color: $color-white;
+}

@@ -123,6 +123,20 @@ const output = {
 					to: '/gallery',
 				},
 				{
+					label: i18n['config.events'].message,
+					position: 'left',
+					items: [
+						{
+							label: i18n['config.events_gamehack'].message,
+							to: '/events/gamehack',
+						},
+						{
+							label: i18n['config.events_gamejam'].message,
+							to: '/events/gamejam',
+						},
+					],
+				},
+				{
 					label: i18n['config.archive'].message,
 					position: 'left',
 					items: [

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { translate } from '@docusaurus/Translate';
 import Loadable from 'react-loadable';
+import layoutStyles from '@site/src/css/layout.module.scss';
 import homeStyles from '@site/src/css/home.module.scss';
 import LoadingSpinner from '../components/Loading';
 import HeroParallax from '../components/HeroParallax';
@@ -54,23 +55,23 @@ const Feature = () => {
 	];
 
 	return (
-		<section className={clsx(homeStyles.section, homeStyles.featureSection)}>
-			<div className={homeStyles.sectionInner}>
-				<span className={homeStyles.sectionLabel}>{translate({ message: 'index.explore' })}</span>
-				<div className={homeStyles.featureGrid} data-count={items.length}>
+		<section className={clsx(layoutStyles.section, layoutStyles.featureSection)}>
+			<div className={layoutStyles.sectionInner}>
+				<span className={layoutStyles.sectionLabel}>{translate({ message: 'index.explore' })}</span>
+				<div className={layoutStyles.featureGrid} data-count={items.length}>
 					{items.map((item) => (
 						<a
 							key={item.title}
-							className={homeStyles.featureTile}
+							className={layoutStyles.featureTile}
 							href={item.href}
 							{...(item.external ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
 						>
-							<img className={homeStyles.featureImage} src={item.image} alt="" />
-							<span className={homeStyles.featureOverlay} />
-							<span className={homeStyles.featureShine} />
-							<span className={homeStyles.featureBody}>
-								<h2 className={homeStyles.featureTitle}>{item.title}</h2>
-								<p className={homeStyles.featureHint}>{item.hint}</p>
+							<img className={layoutStyles.featureImage} src={item.image} alt="" />
+							<span className={layoutStyles.featureOverlay} />
+							<span className={layoutStyles.featureShine} />
+							<span className={layoutStyles.featureBody}>
+								<h2 className={layoutStyles.featureTitle}>{item.title}</h2>
+								<p className={layoutStyles.featureHint}>{item.hint}</p>
 							</span>
 						</a>
 					))}
@@ -86,9 +87,9 @@ const Colfio = () => {
 		.replace('#PIXI', '<a href="https://pixijs.com">PixiJS</a>');
 
 	return (
-		<section className={clsx(homeStyles.section, homeStyles.colfio)}>
-			<div className={homeStyles.sectionInner}>
-				<span className={homeStyles.sectionLabel}>{translate({ message: 'index.engine' })}</span>
+		<section className={clsx(layoutStyles.section, homeStyles.colfio)}>
+			<div className={layoutStyles.sectionInner}>
+				<span className={layoutStyles.sectionLabel}>{translate({ message: 'index.engine' })}</span>
 				<div className={homeStyles.colfioBanner}>
 					<img className={homeStyles.colfioLogo} src={ColfioLogo} alt="COLF.IO" />
 					<p className={homeStyles.colfioText} dangerouslySetInnerHTML={{ __html: text }} />
@@ -117,9 +118,9 @@ const News = () => {
 	}
 
 	return (
-		<section className={clsx(homeStyles.section, homeStyles.news)}>
-			<div className={homeStyles.sectionInner}>
-				<h2 className={homeStyles.sectionHeading}>{translate({ message: 'index.news' })}</h2>
+		<section className={clsx(layoutStyles.section, homeStyles.news)}>
+			<div className={layoutStyles.sectionInner}>
+				<h2 className={layoutStyles.sectionHeading}>{translate({ message: 'index.news' })}</h2>
 				<div className={homeStyles.newsList}>
 					{newsData.map((dt) => (
 						<article className={homeStyles.newsItem} key={dt.date}>
@@ -148,7 +149,7 @@ const Home = () => {
 				<DocusaurusHead>
 					<link rel="canonical" href={siteConfig.url} />
 				</DocusaurusHead>
-				<div className={homeStyles.page}>
+				<div className={layoutStyles.page}>
 					<HeroParallax />
 					<Feature />
 					<AboutComponent />

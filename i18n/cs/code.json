@@ -20,6 +20,15 @@
 	"config.gallery": {
 		"message": "Galerie"
 	},
+	"config.events": {
+		"message": "Akce"
+	},
+	"config.events_gamehack": {
+		"message": "GameHack FIT"
+	},
+	"config.events_gamejam": {
+		"message": "GameJam FIT"
+	},
 	"config.archive": {
 		"message": "Archiv"
 	},
@@ -67,6 +76,63 @@
 	},
 	"gallery.title": {
 		"message": "Galerie projektů"
+	},
+	"events.title": {
+		"message": "Akce"
+	},
+	"events.rules": {
+		"message": "Pravidla"
+	},
+	"events.faq": {
+		"message": "FAQ"
+	},
+	"events.archive": {
+		"message": "Archiv"
+	},
+	"events.gamehack.hint": {
+		"message": "listopad 2023"
+	},
+	"events.gamejam.hint": {
+		"message": "série 2020–2023"
+	},
+	"events.gamehack.rules": {
+		"message": "Pravidla GameHacku"
+	},
+	"events.gamehack.faq": {
+		"message": "FAQ GameHacku"
+	},
+	"events.gamejam.rules": {
+		"message": "Pravidla GameJamu"
+	},
+	"events.gamejam.faq": {
+		"message": "FAQ GameJamu"
+	},
+	"events.gamejam.archive": {
+		"message": "Archiv GameJamu"
+	},
+	"events.programme": {
+		"message": "Program"
+	},
+	"events.sponsors": {
+		"message": "Sponzoři"
+	},
+	"events.organizers": {
+		"message": "Organizátoři"
+	},
+	"events.trailer": {
+		"message": "Trailer"
+	},
+	"events.welcome": {
+		"message": "Pozvánka"
+	},
+	"events.ingredients": {
+		"message": "Ingredience"
+	},
+	"events.games": {
+		"message": "Hry"
+	},
+	"events.recaps": {
+		"message": "Sestřihy"
 	},
 	"pages.resources.assets": {
 		"message": "Assety"

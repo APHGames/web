@@ -1,0 +1,35 @@
+@import "../../internals/aph-colors.scss";
+
+.looper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.inner {
+	display: flex;
+	justify-content: center;
+	width: fit-content;
+}
+
+.animate {
+	animation-name: slide;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: var(--looper-duration, 40s);
+	animation-direction: var(--looper-direction, normal);
+}
+
+.instance {
+	display: flex;
+	width: max-content;
+}
+
+@keyframes slide {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(var(--looper-slide, -100%));
+	}
+}

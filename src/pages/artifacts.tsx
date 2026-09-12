@@ -3,7 +3,7 @@ import DocusaurusHead from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
-import sectionStyles from '@site/src/css/section.module.scss';
+import layoutStyles from '@site/src/css/layout.module.scss';
 import artifactsStyles from '@site/src/css/artifacts.module.scss';
 import artifacts from '../../static/tiscali.json';
 
@@ -75,22 +75,22 @@ const ArtifactsList = ({ items }: { items: ArtifactItem[] }) => {
 			{yearGroups.map(({ year, items: yearItems }) => (
 				<section
 					key={`year_${year}`}
-					className={clsx(sectionStyles.section)}
+					className={clsx(layoutStyles.section, artifactsStyles.yearSection)}
 				>
-					<h3
-						className={clsx(sectionStyles.section__title, artifactsStyles.artifacts__year, 'text--center')}
-					>
-						{year}
-					</h3>
-					<div className={artifactsStyles.artifacts__container}>
-						{yearItems.map((item) => (
-							<a key={`${item.link}_${item.date}`} href={item.link}>
-								<div className={artifactsStyles.artifacts__item}>
-									<div className={artifactsStyles.artifacts__date}>{item.date}</div>
-									<div className={artifactsStyles.artifacts__link}>{item.text}</div>
-								</div>
-							</a>
-						))}
+					<div className={layoutStyles.sectionInner}>
+						<h2 className={layoutStyles.sectionHeading}>{year}</h2>
+						<div className={artifactsStyles.list}>
+							{yearItems.map((item) => (
+								<a
+									key={`${item.link}_${item.date}`}
+									className={artifactsStyles.item}
+									href={item.link}
+								>
+									<div className={artifactsStyles.date}>{item.date}</div>
+									<div className={artifactsStyles.text}>{item.text}</div>
+								</a>
+							))}
+						</div>
 					</div>
 				</section>
 			))}
@@ -138,72 +138,85 @@ const ArtifactsPage = () => {
 	const isSearching = search.trim().length > 0;
 
 	return (
-		<Layout description={siteConfig.customFields.description as string} title="Artefakty">
+		<Layout description={siteConfig.customFields?.description as string} title="Artefakty">
 			<DocusaurusHead>
 				<link rel="canonical" href={siteConfig.url} />
 			</DocusaurusHead>
-
-			<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__title)}>
-				<h3>
-					Zde se nachází seznam článků z&nbsp;
-					<a href="https://games.tiscali.cz">games.tiscali</a>
-					. Je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.
-				</h3>
-			</section>
-
-			<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__toolbar)}>
-				<div className={artifactsStyles.artifacts__toolbarInner}>
-					<input
-						type="search"
-						className={artifactsStyles.artifacts__search}
-						value={search}
-						onChange={(event) => setSearch(event.target.value)}
-						placeholder="Hledat v názvech a datech…"
-						aria-label="Hledat články"
-					/>
-					<p className={artifactsStyles.artifacts__stats}>
-						{isSearching
-							? `Nalezeno ${filteredItems.length} z ${allItems.length} článků`
-							: `${allItems.length} článků celkem`}
-					</p>
-				</div>
-			</section>
-
-			{pageItems.length > 0 ? (
-				<ArtifactsList items={pageItems} />
-			) : (
-				<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__empty)}>
-					<p>Žádné články neodpovídají hledanému výrazu.</p>
-				</section>
-			)}
-
-			{filteredItems.length > PAGE_SIZE && (
-				<section className={clsx(sectionStyles.section, artifactsStyles.artifacts__pagination)}>
-					<div className={artifactsStyles.artifacts__paginationInner}>
-						<button
-							type="button"
-							className={artifactsStyles.artifacts__pageButton}
-							onClick={() => setPage((value) => Math.max(1, value - 1))}
-							disabled={currentPage === 1}
-						>
-							Předchozí
-						</button>
-						<span className={artifactsStyles.artifacts__pageInfo}>
-							Strana {currentPage} z {totalPages}
-							{' '}
-							({pageStart}–{pageEnd})
-						</span>
-						<button
-							type="button"
-							className={artifactsStyles.artifacts__pageButton}
-							onClick={() => setPage((value) => Math.min(totalPages, value + 1))}
-							disabled={currentPage === totalPages}
-						>
-							Další
-						</button>
+			<div className={layoutStyles.page}>
+				<section className={clsx(layoutStyles.section, artifactsStyles.introSection)}>
+					<div className={layoutStyles.sectionInner}>
+						<span className={layoutStyles.sectionLabel}>Archiv</span>
+						<h1 className={layoutStyles.sectionHeading}>Artefakty</h1>
+						<div className={layoutStyles.aboutGrid} data-stack="true">
+							<div className={layoutStyles.aboutPanel}>
+								<p className={artifactsStyles.introText}>
+									Zde se nachází seznam článků z&nbsp;
+									<a href="https://games.tiscali.cz">games.tiscali</a>
+									. Je možno z nich vyčíst průřez celou herní historií od roku 2000 včetně české subkultury.
+								</p>
+							</div>
+						</div>
 					</div>
 				</section>
-			)}
+
+				<section className={clsx(layoutStyles.section, artifactsStyles.toolbar)}>
+					<div className={layoutStyles.sectionInner}>
+						<div className={artifactsStyles.toolbarInner}>
+							<input
+								type="search"
+								className={artifactsStyles.search}
+								value={search}
+								onChange={(event) => setSearch(event.target.value)}
+								placeholder="Hledat v názvech a datech…"
+								aria-label="Hledat články"
+							/>
+							<p className={artifactsStyles.stats}>
+								{isSearching
+									? `Nalezeno ${filteredItems.length} z ${allItems.length} článků`
+									: `${allItems.length} článků celkem`}
+							</p>
+						</div>
+					</div>
+				</section>
+
+				{pageItems.length > 0 ? (
+					<ArtifactsList items={pageItems} />
+				) : (
+					<section className={clsx(layoutStyles.section, artifactsStyles.empty)}>
+						<div className={layoutStyles.sectionInner}>
+							<p>Žádné články neodpovídají hledanému výrazu.</p>
+						</div>
+					</section>
+				)}
+
+				{filteredItems.length > PAGE_SIZE && (
+					<section className={clsx(layoutStyles.section, artifactsStyles.pagination)}>
+						<div className={layoutStyles.sectionInner}>
+							<div className={artifactsStyles.paginationInner}>
+								<button
+									type="button"
+									className={artifactsStyles.pageButton}
+									onClick={() => setPage((value) => Math.max(1, value - 1))}
+									disabled={currentPage === 1}
+								>
+									Předchozí
+								</button>
+								<span className={artifactsStyles.pageInfo}>
+									{`Strana ${currentPage} z ${totalPages} (${pageStart}–${pageEnd})`}
+								</span>
+								<button
+									type="button"
+									className={artifactsStyles.pageButton}
+									onClick={() => setPage((value) => Math.min(totalPages, value + 1))}
+									disabled={currentPage === totalPages}
+								>
+									Další
+								</button>
+							</div>
+						</div>
+					</section>
+				)}
+			</div>
 		</Layout>
 	);
 };

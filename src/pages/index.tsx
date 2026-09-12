@@ -22,7 +22,7 @@ type FeatureItem = {
 
 const Feature = () => {
 	const context = useDocusaurusContext();
-	const { currentLocale, youtube } = context.siteConfig.customFields;
+	const { currentLocale } = context.siteConfig.customFields;
 
 	const items: FeatureItem[] = [
 		{
@@ -33,11 +33,10 @@ const Feature = () => {
 		},
 		...(currentLocale === 'cs'
 			? [{
-				href: youtube as string,
+				href: './videos',
 				image: '/img/pages/index/videos.jpg',
 				title: translate({ message: 'index.videos' }),
 				hint: translate({ message: 'index.hint.watch' }),
-				external: true,
 			}]
 			: []),
 		{

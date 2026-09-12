@@ -219,6 +219,10 @@ const output = {
 if(isLocaleCS) {
 	// add next to the archive
 	output.themeConfig.navbar.items.splice(output.themeConfig.navbar.items.length - 3, 0, {
+		label: i18n['config.videos'].message,
+		position: 'left',
+		to: '/videos',
+	}, {
 		label: i18n['config.artifacts'].message,
 		position: 'left',
 		to: '/artifacts',

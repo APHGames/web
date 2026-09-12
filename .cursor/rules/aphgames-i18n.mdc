@@ -32,5 +32,6 @@ Always test the **target locale build** after gating changes.
 
 ## Czech-only UI
 
-- Navbar **Artifacts** and YouTube icon appear only when `currentLocale === 'cs'`.
+- Navbar **Videa**, **Artifacts**, and YouTube icon appear only when `currentLocale === 'cs'`.
+- `src/pages/videos.tsx` catalogues YouTube videos; English builds redirect `/videos` to `/`.
 - `src/pages/artifacts.tsx` uses `static/tiscali.json` (from `download_data`).

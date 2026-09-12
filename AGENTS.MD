@@ -14,7 +14,7 @@ That file describes stack versions, folder layout, how `web.config.js` and `scri
 
 - **No backend** in this repo; production is static output from `docusaurus build`.
 - **Examples and slides** are not committed: run `npm run download_data` after clone.
-- **Locale:** use `npm run start_en` / `start_cs` (and matching `build_*`). Each build targets one language; Czech-only docs use front matter `exclude_en` / `exclude_cs` and sidebar filtering in `docusaurus.config.js`.
+- **Locale:** use `npm run start_en` / `start_cs` (and matching `build_*`). Each build targets one language; Czech-only docs use front matter `exclude_en` / `exclude_cs` and sidebar filtering in `docusaurus.config.js`. Czech-only pages: `/videos`, `/artifacts`.
 - **Embedding demos:** docs import `APHCanvas` with a `name` matching `window.APH` from the downloaded examples bundle.
 - **Slide listings:** driven by `static/slides/slides-info.json` from the slides release; see `docs/learning/lectures.tsx` vs `docs/courses/aph_lectures.tsx`.
 

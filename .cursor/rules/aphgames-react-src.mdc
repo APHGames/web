@@ -25,7 +25,7 @@ Read site-specific values from `useDocusaurusContext().siteConfig.customFields` 
 ## Key components
 
 - `APHCanvas.tsx` — browser-only bridge to examples bundle; guard with `typeof window !== 'undefined'`.
-- `src/pages/` — home, gallery (links to external gallery), Czech artifacts.
+- `src/pages/` — home, gallery (links to external gallery), Czech videos catalog, Czech artifacts.
 - `src/internals/` — gallery data, resources, custom Prism themes.
 
 ## Search plugin

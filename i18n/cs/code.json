@@ -38,6 +38,9 @@
 	"config.artifacts": {
 		"message": "Artefakty"
 	},
+	"config.videos": {
+		"message": "Videa"
+	},
 	"gallery.preview": {
 		"message": "Ukázkové hry"
 	},

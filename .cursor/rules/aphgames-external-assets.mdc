@@ -24,7 +24,7 @@ Release coordinates and URLs live in `web.config.js`; all fields are exposed via
 
 ## APHCanvas loading contract
 
-`src/APHCanvas.tsx` sets `window.BASE_URL`, loads `@site/static/examples/examples`, and calls `new window.APH[name](config)`. Changes to the examples bundle format may require edits there — coordinate with the examples repo, not this site alone.
+`src/APHCanvas.tsx` sets `window.BASE_URL` to the site-absolute `/examples` path and injects `static/examples/examples.js` as a classic `<script>`. Do **not** webpack-`require` that Parcel bundle — wrapping it in a CJS module breaks its embedded `punycode.toASCII` and crashes demos that load assets. Instantiation remains `new window.APH[name](config)`. Coordinate bundle format changes with the examples repo.
 
 ## CI / security note
 

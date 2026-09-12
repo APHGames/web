@@ -1,10 +1,11 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/no-unused-prop-types */
-// src/App.js
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import React from 'react';
 
 type APHCanvasProps = {
 	name: string;
+	examplesBase?: string;
 	secondCanvas?: boolean;
 	// if true, the game will be automatically resized to fit the screen
 	resizeToScreen?: boolean;
@@ -30,38 +31,108 @@ type APHCanvasProps = {
 	canvasId?: string;
 };
 
-let examplesObj: NodeRequire;
+type WindowWithAPH = Window & {
+	APH?: Record<string, new (config: Record<string, unknown>) => {
+		init: (canvas: HTMLCanvasElement) => void;
+		destroy: () => void;
+	}>;
+	BASE_URL?: string;
+};
+
+const SCRIPT_ATTR = 'data-aph-examples';
+
+let examplesLoad: Promise<void> | null = null;
+
+const loadExamplesBundle = (examplesBase: string): Promise<void> => {
+	const win = window as WindowWithAPH;
+	win.BASE_URL = examplesBase;
+
+	if (win.APH) {
+		return Promise.resolve();
+	}
+
+	if (examplesLoad) {
+		return examplesLoad;
+	}
+
+	const src = `${examplesBase}/examples.js`;
+
+	examplesLoad = new Promise((resolve, reject) => {
+		const existing = document.querySelector<HTMLScriptElement>(`script[${SCRIPT_ATTR}="true"]`);
+		const onReady = () => {
+			if (win.APH) {
+				resolve();
+				return;
+			}
+			reject(new Error('Examples bundle loaded without window.APH'));
+		};
+
+		if (existing) {
+			if (win.APH) {
+				resolve();
+				return;
+			}
+			existing.addEventListener('load', onReady);
+			existing.addEventListener('error', () => reject(new Error('Failed to load examples bundle')));
+			return;
+		}
+
+		const script = document.createElement('script');
+		script.src = src;
+		script.async = false;
+		script.setAttribute(SCRIPT_ATTR, 'true');
+		script.addEventListener('load', onReady);
+		script.addEventListener('error', () => reject(new Error(`Failed to load ${src}`)));
+		document.body.appendChild(script);
+	}).catch((error) => {
+		examplesLoad = null;
+		throw error;
+	});
+
+	return examplesLoad;
+};
 
 class APHCanvasRenderer extends React.Component<APHCanvasProps> {
-	aphExample: any;
-	myRef: any;
-	myRef2: any;
+	aphExample?: { init: (canvas: HTMLCanvasElement) => void; destroy: () => void; };
 
-	constructor(props) {
+	myRef: React.RefObject<HTMLCanvasElement>;
+
+	myRef2: React.RefObject<HTMLCanvasElement>;
+
+	unmounted = false;
+
+	constructor(props: APHCanvasProps) {
 		super(props);
 		this.myRef = React.createRef();
 		this.myRef2 = React.createRef();
-
-		if (!examplesObj) {
-			(window as any).BASE_URL = '../../../../examples';
-			(window as any).parcelRequire = null;
-			// eslint-disable-next-line global-require
-			examplesObj = require('@site/static/examples/examples');
-		}
 	}
 
 	componentDidMount() {
-		const { name } = this.props;
-		const config = { ...this.props };
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		this.aphExample = new (window as any).APH[name](config);
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		this.aphExample.init(this.myRef.current);
+		const { name, examplesBase = '/examples', ...config } = this.props;
+
+		loadExamplesBundle(examplesBase).then(() => {
+			if (this.unmounted || !this.myRef.current) {
+				return;
+			}
+
+			const Example = (window as WindowWithAPH).APH?.[name];
+			if (!Example) {
+				throw new Error(`Unknown example "${name}"`);
+			}
+
+			this.aphExample = new Example(config);
+			this.aphExample.init(this.myRef.current);
+		}).catch((error) => {
+			if (!this.unmounted) {
+				// eslint-disable-next-line no-console
+				console.error(error);
+			}
+		});
 	}
 
 	componentWillUnmount() {
+		this.unmounted = true;
 		if (this.aphExample) {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 			this.aphExample.destroy();
 		}
 		window.removeEventListener('keydown', this.preventKeyboard);
@@ -72,9 +143,9 @@ class APHCanvasRenderer extends React.Component<APHCanvasProps> {
 	};
 
 	/**
- * Will prevent the keyboard from scrolling the page once we click
- * on the canvas
- */
+	 * Will prevent the keyboard from scrolling the page once we click
+	 * on the canvas
+	 */
 	preventKeyboard = (e: KeyboardEvent) => {
 		switch (e.keyCode) {
 			case 37: case 39: case 38: case 40: // Arrow keys
@@ -94,9 +165,14 @@ class APHCanvasRenderer extends React.Component<APHCanvasProps> {
 	}
 }
 
-export default (props) => {
-	if (typeof (window) !== 'undefined') {
-		return <APHCanvasRenderer {...props} />;
+const APHCanvas = (props: APHCanvasProps) => {
+	const examplesBase = useBaseUrl('/examples').replace(/\/$/, '');
+
+	if (typeof window === 'undefined') {
+		return null;
 	}
-	return null;
+
+	return <APHCanvasRenderer {...props} examplesBase={examplesBase} />;
 };
+
+export default APHCanvas;

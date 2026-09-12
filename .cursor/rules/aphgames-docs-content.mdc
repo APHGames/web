@@ -9,7 +9,8 @@ alwaysApply: false
 ## Sidebar scope
 
 - `sidebars.js` autogenerates from **`docs/learning` only**.
-- Routes under `docs/courses/`, `docs/brand.md`, etc. are reached via explicit nav/links — do not expect them in the tutorial sidebar.
+- Routes under `docs/brand.md`, etc. are reached via explicit nav/links — do not expect them in the tutorial sidebar.
+- Navbar **Materiály** → `/docs/learning/intro`. NI-APH course copy and APH slides live on that intro page. `docs/courses/aph.md` is a redirect to intro.
 
 ## Embedding interactive examples
 

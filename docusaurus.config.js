@@ -98,21 +98,6 @@ const output = {
 					to: '/docs/learning/intro',
 				},
 				{
-					label: i18n['config.courses'].message,
-					position: 'left',
-					items: [
-						{
-							label: i18n['config.courses_aph'].message,
-							to: '/docs/courses/aph',
-						},
-					]
-				},
-				/* {
-					label: 'Blog',
-					to: '/blog/',
-					position: 'left'
-				}, */
-				{
 					label: i18n['config.brand'].message,
 					position: 'left',
 					to: '/docs/brand/',

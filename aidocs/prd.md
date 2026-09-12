@@ -112,7 +112,7 @@ flowchart TB
 
 - Canonical English docs live under `docs/`.
 - Czech overrides live under `i18n/cs/docusaurus-plugin-content-docs/current/` (mirrored paths).
-- **Per-doc language gating:** `sidebarItemsGenerator` in `docusaurus.config.js` filters out docs whose front matter includes `exclude_cs` or `exclude_en` for the active build. Examples in tree: `docs/courses/aph.md` and `docs/learning/03-aph-requirements.md` use `exclude_en: true` (Czech-oriented course material).
+- **Per-doc language gating:** `sidebarItemsGenerator` in `docusaurus.config.js` filters out docs whose front matter includes `exclude_cs` or `exclude_en` for the active build. Example in tree: `docs/learning/03-aph-requirements.md` uses `exclude_en: true` (Czech-oriented course requirements).
 
 ### 5.4 Czech-only UI
 
@@ -125,10 +125,10 @@ flowchart TB
 
 ## 6. Content model (docs)
 
-- **Sidebar:** `sidebars.js` autogenerates from folder `docs/learning` only. Other doc routes (e.g. `docs/courses/`, `docs/brand.md`) are reached via explicit links/nav, not the main tutorial sidebar.
+- **Sidebar:** `sidebars.js` autogenerates from folder `docs/learning` only. Other doc routes (e.g. `docs/brand.md`) are reached via explicit links/nav, not the main tutorial sidebar.
 - **MDX:** Docs can import React/TSX modules (e.g. `@site/docs/learning/lectures.tsx`, `@site/src/APHCanvas.tsx`).
-- **Intro + slides index:** `docs/learning/01-intro.md` embeds `<Lectures />` from `docs/learning/lectures.tsx`, which reads `static/slides/slides-info.json` and groups slides for the **current locale**, excluding course-tagged rows (`!sl.course`).
-- **Course slides:** `docs/courses/aph.md` embeds `docs/courses/aph_lectures.tsx`, filtering `slides-info.json` for `locale` match and `course === 'APH'`, with optional **locked** tiles (`locked === 'true'` string from JSON).
+- **Intro + slides index:** `docs/learning/01-intro.md` (navbar **Materiály**) embeds `<Lectures />` from `docs/learning/lectures.tsx` (locale match, `!sl.course`) and NI-APH course copy plus `<AphLectures />` from `docs/courses/aph_lectures.tsx` (`course === 'APH'`, optional **locked** tiles where `locked === 'true'`).
+- **Legacy course URL:** `docs/courses/aph.md` is a client redirect to `/docs/learning/intro` so old `/docs/courses/aph` bookmarks still work.
 
 ---
 
@@ -273,7 +273,7 @@ All of the above are spread into Docusaurus `siteConfig.customFields` for use in
 - **Docusaurus beta.17** is dated; upgrading will touch webpack, MDX, i18n, and the swizzled theme APIs.
 - **`APHCanvas`** depends on globals and a **Parcel-style** examples bundle; changing the examples build output may require edits to `BASE_URL`, `require` path, or constructor names.
 - **`download_data`** uses `SSL_VERIFYPEER: false` — acceptable only in a trusted controlled environment; revisit for CI security policy.
-- **Course / intro links** in navbar point to `/docs/learning/intro`; the on-disk intro file is `docs/learning/01-intro.md` — confirm URL aliases or fix links when changing doc slugs.
+- **Materiály / intro links** in navbar point to `/docs/learning/intro`; the on-disk intro file is `docs/learning/01-intro.md` — confirm URL aliases or fix links when changing doc slugs. `/docs/courses/aph` redirects to that intro page.
 
 ---
 

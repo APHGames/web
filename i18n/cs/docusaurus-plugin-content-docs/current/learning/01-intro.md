@@ -5,6 +5,7 @@ description: Úvod
 ---
 
 import Lectures from '@site/docs/learning/lectures.tsx'
+import AphLectures from '@site/docs/courses/aph_lectures.tsx'
 
 ### Příklady
 - všechny příklady jsou umístěny na [githubu](https://github.com/APHGames/examples)
@@ -15,10 +16,11 @@ import Lectures from '@site/docs/learning/lectures.tsx'
 - slidy je možno nalézt na [githubu](https://github.com/APHGames/slides)
 - krátký návod jak pracovat s RevealJS slidy je k dispozici <a href="./misc/slides">zde</a>
 
-:::info
-
-Pro materiály týkající se kurzu Architektura Počítačových Her, přejděte na příslušné sekce v nabídce Kurzy
-
-:::
-
 <Lectures />
+
+## NI-APH
+- kurz běžel v letech 2017-2023 na FIT ČVUT
+- hlavním cílem kurzu bylo seznamit se se základy programování počítačových her (nezávisle na konrétním enginu) a naprogramovat semestrální práci
+- odevzdané semestrální práce jsou k dispozici v sekci [galerie](/gallery)
+
+<AphLectures />

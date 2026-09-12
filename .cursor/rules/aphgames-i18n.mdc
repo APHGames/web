@@ -24,7 +24,7 @@ alwaysApply: false
 Front matter flags filtered by `sidebarItemsGenerator` in `docusaurus.config.js`:
 
 ```yaml
-exclude_en: true   # Czech-only (e.g. docs/courses/aph.md)
+exclude_en: true   # Czech-only (e.g. docs/learning/03-aph-requirements.md)
 exclude_cs: true   # English-only
 ```
 

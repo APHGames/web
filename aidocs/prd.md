@@ -127,6 +127,7 @@ flowchart TB
 - **MDX:** Docs can import React/TSX modules (e.g. `@site/docs/learning/lectures.tsx`, `@site/src/APHCanvas.tsx`).
 - **Intro + slides index:** `docs/learning/01-intro.md` embeds `<Lectures />` from `docs/learning/lectures.tsx`, which reads `static/slides/slides-info.json` and groups slides for the **current locale**, excluding course-tagged rows (`!sl.course`).
 - **Course slides:** `docs/courses/aph.md` embeds `docs/courses/aph_lectures.tsx`, filtering `slides-info.json` for `locale` match and `course === 'APH'`, with optional **locked** tiles (`locked === 'true'` string from JSON).
+- **500 Worthwhile Games** (`docs/learning/04-worthwhile-games.md`, Czech title „500 nej her“ in the cs doc override): a filterable index of 500 games. Each title is its own page at `/games/<slug>` (`plugins/worthwhile-games-routes.js`, `WorthwhileGameArticle`). The index in `src/internals/worthwhile-games.json` stores only the basic record (name, year, platform, categories, picture paths). The article text is markdown in `content/worthwhile/{cs,en}/{slug}-{id}.md` (same slug as `/games/<slug>`), written by `scripts/export_game_markdown.py`. Pictures are listed in `src/internals/worthwhile-media.json` and stored under `static/img/worthwhile-games/`. On the article page they float beside the paragraphs and are capped at 320px wide. Sources at or below 640×480 that are actual pixel art are enlarged with nearest-neighbor scaling.
 
 ---
 

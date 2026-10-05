@@ -36,6 +36,7 @@ const output = {
 	},
 	customFields,
 	plugins: [
+		path.resolve(__dirname, 'plugins/worthwhile-games-routes.js'),
 		[path.resolve(__dirname, 'plugins/docusaurus-search-local'), {
 			// whether to index docs pages
 			indexDocs: true,

@@ -1,23 +1,24 @@
 @use 'sass:math';
 @import "../internals/aph-colors.scss";
 
-$pacman-size: 50px;
-$ball-size: 20px;
-
+// The chip logo is 560px wide at its reference size, where this animation
+// was drawn at 50px / 20px. 1em is 100px at that width and tracks the logo
+// container, so the mouth and the dots stay proportional when the window resizes.
+$pacman-size: 0.5em;
+$ball-size: 0.2em;
 
 .pacman {
 	position: absolute;
 	z-index: 2;
 	right: 30%;
 	bottom: 50%;
-	border-radius: 50%;
-	margin: 0 auto;
-	margin-top: 5em;
+	font-size: 100px;
+	font-size: calc(100cqw / 5.6);
+	margin: 0;
 	border-radius: 100em 100em 0 0;
 	transform-origin: bottom;
 	animation: eating-top 0.5s infinite;
 }
-
 
 .pacman,
 .pacman::before {
@@ -49,44 +50,6 @@ $ball-size: 20px;
 	transform-origin: center;
 	animation: center 0.5s infinite, ball 0.5s -0.33s infinite linear;
 }
-
-/* once we start scaling below 700px, we need to take VW as the main calc unit */
-@media (max-width: 700px) {
-	$pacman-size: 50px;
-	$ball-size: 14px;
-
-
-	.pacman,
-	.pacman::before {
-		width: 8vw;
-		height: 4vw;
-	}
-	
-	.pacman::before {
-		content: "";
-		display: block;
-		margin-top: 4vw;
-		position: absolute;
-		transform-origin: top;
-		border-radius: 0 0 100em 100em;
-		transform: rotate(80deg);
-		animation: eating-bottom 0.5s infinite;
-	}
-	
-	.pacman::after {
-		position: absolute;
-		border-radius: 100em;
-		content: "";
-		display: block;
-		height: 3vw;
-		width: 3vw;
-		margin-top: 8vw - 6vw;
-		margin-left: 8vw - 6vw;
-		transform-origin: center;
-		animation: center 0.5s infinite, ballscaled 0.5s -0.33s infinite linear;
-	}
-}
-
 
 /* freeze for pdf printing mode */
 .print-pdf {
@@ -134,18 +97,9 @@ $ball-size: 20px;
 
 @keyframes ball {
 	0% {
-		box-shadow: -80px 0 0 0 $color-white, -140px 0 0 0 $color-white;
+		box-shadow: -0.8em 0 0 0 $color-white, -1.4em 0 0 0 $color-white;
 	}
 	100% {
-		box-shadow: -20px 0 0 0 $color-white, -80px 0 0 0 $color-white;
-	}
-}
-
-@keyframes ballscaled {
-	0% {
-		box-shadow: -12vw 0 0 0 $color-white, -22vw 0 0 0 $color-white;
-	}
-	100% {
-		box-shadow: -2vw 0 0 0 $color-white, -12vw 0 0 0 $color-white;
+		box-shadow: -0.2em 0 0 0 $color-white, -0.8em 0 0 0 $color-white;
 	}
 }

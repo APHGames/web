@@ -1,0 +1,1002 @@
+{
+  "1": {
+    "summary": "Two spaceships fight around a gravitational star.",
+    "why": "One of the most important early examples of a real-time graphical computer game, physics, and direct multiplayer control."
+  },
+  "2": {
+    "summary": "The player steers a ship against flying saucers.",
+    "why": "It brought the university type of space action into a commercial coin-operated machine and foreshadowed Atari."
+  },
+  "3": {
+    "summary": "Two players bounce an electronic \"ball\" between paddles.",
+    "why": "With an extremely simple loop, it demonstrated the commercial potential of arcade video games and contributed decisively to the early boom."
+  },
+  "4": {
+    "summary": "Players move through a maze from an eye-level view.",
+    "why": "It belongs among the earliest precedents of first-person navigation and networked competition."
+  },
+  "5": {
+    "summary": "A car laps a track against the clock.",
+    "why": "It helped define the physical language of automobile cabinets: a steering wheel, pedals, and a top-down view."
+  },
+  "6": {
+    "summary": "A vast cave world is explored through a text parser.",
+    "why": "It formed the basic grammar of the text adventure: rooms, inventory, word commands, and space as a puzzle. The CHM preserves its source code."
+  },
+  "7": {
+    "summary": "A paddle bounces a ball and breaks rows of bricks.",
+    "why": "It reduced Pong to a strong single-player loop and founded its own branch of arcade design."
+  },
+  "8": {
+    "summary": "The player explores an underground realm full of objects and word puzzles.",
+    "why": "It substantially raised both parser complexity and the coherence of the interactive world, and later defined Infocom."
+  },
+  "9": {
+    "summary": "Two players fight with tanks or planes in small arenas.",
+    "why": "As an early showcase of the VCS, it demonstrated the value of rule variations and home competitive multiplayer."
+  },
+  "10": {
+    "summary": "The player defends the bottom of the screen against descending aliens.",
+    "why": "A tempo that rises as enemies dwindle, and a score chase, created one of the archetypal arcade loops."
+  },
+  "11": {
+    "summary": "Multiple players inhabit a text fantasy world at the same time.",
+    "why": "The foundational ancestor of MUDs, MMORPGs, and persistent social online spaces."
+  },
+  "12": {
+    "summary": "A compact fantasy adventure based on text commands.",
+    "why": "It showed that a parser adventure could be taken from mainframes onto home microcomputers and sold commercially."
+  },
+  "13": {
+    "summary": "A ship with momentum destroys asteroids in open space.",
+    "why": "Vector imagery, inertia, and a wrap-around arena created an extraordinarily clean systems design."
+  },
+  "14": {
+    "summary": "Formations of aliens break away for independent attacks.",
+    "why": "Color graphics and individual attack trajectories moved the Space Invaders model toward livelier enemy patterns."
+  },
+  "15": {
+    "summary": "An adventurer carries out Lord British's tasks in wireframe 3D dungeons.",
+    "why": "An important precursor of Ultima, joining an overmap, statistics, and first-person dungeon exploration."
+  },
+  "16": {
+    "summary": "Pac-Man collects dots in a maze while pursued by four ghosts.",
+    "why": "A departure from the military shooter, readable opponent personalities, and universal visual design substantially widened the arcade audience."
+  },
+  "17": {
+    "summary": "A procedural dungeon changes with every new adventure.",
+    "why": "Procedural generation, permadeath, systemic items, and ASCII space created the \"roguelike\" genus."
+  },
+  "18": {
+    "summary": "With limited anti-missile defense, the player protects cities from bombardment.",
+    "why": "The mechanic of inevitable losses turned a score arcade into an unusually anxious resource system."
+  },
+  "19": {
+    "summary": "A tank fights in a vector landscape from the first person.",
+    "why": "One of the key early precedents of a 3D first-person combat space."
+  },
+  "20": {
+    "summary": "The player solves a murder mystery in a house using text commands and pictures.",
+    "why": "Roberta Williams joined the parser with illustrated rooms and opened the way to graphic adventures."
+  },
+  "21": {
+    "summary": "Jumpman rescues Pauline from Donkey Kong across a series of obstacle screens.",
+    "why": "It helped establish jumping over obstacles as a central mechanic and introduced Mario."
+  },
+  "22": {
+    "summary": "In a fast horizontal landscape, the player protects people from aliens.",
+    "why": "It combined high speed, a radar, many buttons, and several simultaneous priorities into an unusually complex arcade game."
+  },
+  "23": {
+    "summary": "A hero travels the world, fights, and visits first-person dungeons.",
+    "why": "It joined several representations of space and laid the foundation of one of the most influential CRPG lines."
+  },
+  "24": {
+    "summary": "A six-member party maps a first-person dungeon and develops its characters.",
+    "why": "The template of a party-based dungeon RPG with classes and tactical statistics strongly influenced Western and Japanese RPGs."
+  },
+  "25": {
+    "summary": "A soldier escapes a Nazi fortress, searches the guards, and uses disguises.",
+    "why": "A very early combination of stealth, inventory, and systemic infiltration."
+  },
+  "26": {
+    "summary": "Two rulers build island economies and respond to disasters.",
+    "why": "One of the early ancestors of real-time strategy and management simulation on consoles."
+  },
+  "27": {
+    "summary": "The player destroys formations of an insect fleet and can gain a double ship.",
+    "why": "It refined the fixed shooter through the risk of ship capture, bonus waves, and finer enemy movement."
+  },
+  "28": {
+    "summary": "The player moves along the edge of a geometric \"tunnel\" and shoots inward.",
+    "why": "A vector 3D impression, a rotary controller, and abstract space created an entirely distinctive action geometry."
+  },
+  "29": {
+    "summary": "A frog crosses a road and a river over moving obstacles.",
+    "why": "Precise timing and readable multi-lane systems are an early example of emergent \"traffic\" level design."
+  },
+  "30": {
+    "summary": "With a trackball, the player fights insects in a field of mushrooms.",
+    "why": "An unusual trackball input and a changing obstacle field gave the shooter a tactile, spatial dynamic."
+  },
+  "31": {
+    "summary": "Knights on ostriches collide with opponents in the air.",
+    "why": "Inertia and wing-flapping created physics-based combat that worked equally well cooperatively and competitively."
+  },
+  "32": {
+    "summary": "The player rescues people in the midst of aggressive robotic hordes.",
+    "why": "Two independent joysticks separated movement from firing — a scheme that became a basic action grammar."
+  },
+  "33": {
+    "summary": "Pitfall Harry overcomes pits, crocodiles, and vines in a connected jungle.",
+    "why": "A long connected world showed that a cartridge could offer a more extensive adventure than a single scoring screen."
+  },
+  "34": {
+    "summary": "A Pac-Man maze gains new maps and more variable ghosts.",
+    "why": "One of the classic examples of a sequel that expands the original mechanism rather than merely repeating it."
+  },
+  "35": {
+    "summary": "By hopping around a pyramid, the player changes the color of the tiles and avoids enemies.",
+    "why": "Isometric presentation turned simple movement into a spatial puzzle."
+  },
+  "36": {
+    "summary": "A Formula car races along a pseudo-3D track.",
+    "why": "Perspective scrolling and a qualifying structure became the model of an entire generation of racing games."
+  },
+  "37": {
+    "summary": "A civil aircraft is flown according to instruments and a simple 3D landscape.",
+    "why": "Early proof that a PC could support a long-developed technical simulation instead of arcade abstraction."
+  },
+  "38": {
+    "summary": "The player travels the Earth and various time periods.",
+    "why": "It unusually expanded the scale of the RPG world and experimented with time travel and multiple maps."
+  },
+  "39": {
+    "summary": "A helicopter rescues hostages and fights the defenders at the same time.",
+    "why": "The task of rescuing civilians gave the shooter a strong spatial and logistical goal."
+  },
+  "40": {
+    "summary": "A ship flies through isometric fortresses and must watch its altitude.",
+    "why": "Isometric pseudo-3D created a distinctive sense of space and height in the shooter genre."
+  },
+  "41": {
+    "summary": "Mario and Luigi clear the sewers of creatures by striking platforms.",
+    "why": "Single-screen cooperative-competitive design cemented Mario's identity before Super Mario Bros."
+  },
+  "42": {
+    "summary": "Colonists produce, trade, and sabotage a market of limited resources.",
+    "why": "A brilliant linking of auctions, production, and direct player interaction created one of the first great social strategies."
+  },
+  "43": {
+    "summary": "Pieces on a chessboard map resolve clashes through real-time combat.",
+    "why": "It joined abstract turn-based strategy with an action outcome for individual battles."
+  },
+  "44": {
+    "summary": "A hero collects gold and digs into floors in order to escape the guards.",
+    "why": "A built-in level editor and the combinatorial logic of the environment substantially extended the life of the game."
+  },
+  "45": {
+    "summary": "A vector X-wing attacks the Death Star.",
+    "why": "One of the most impressive early examples of using a license to create a technically specific arcade experience."
+  },
+  "46": {
+    "summary": "The player navigates an animated hero with correctly timed inputs.",
+    "why": "Laserdisc made the quality of feature-length animation possible; the game demonstrated both the appeal and the limits of the \"interactive movie.\""
+  },
+  "47": {
+    "summary": "Miner Willy passes through twenty bizarre rooms full of precise jumps.",
+    "why": "It made the most of the Spectrum both technically and aesthetically, and embodied the British 8-bit auteur scene."
+  },
+  "48": {
+    "summary": "An armed car fights enemy vehicles on an endless road.",
+    "why": "A fluid transition between driving, shooting, and various traffic situations foreshadowed action-racing hybrids."
+  },
+  "49": {
+    "summary": "A bartender serves several parallel counters.",
+    "why": "Pure multitasking: the difficulty comes from dividing attention among identical processes with different timing."
+  },
+  "50": {
+    "summary": "A pilot trades, fights, and travels a vast procedural galaxy.",
+    "why": "A procedural universe, a free career, and an economy created a fundamental prefiguration of open-world and sandbox design."
+  },
+  "51": {
+    "summary": "Sir Graham explores a fairy-tale world and carries out tasks for the king.",
+    "why": "An animated character moved \"inside\" the graphic scene, by which Sierra advanced the graphic adventure beyond static illustrations."
+  },
+  "52": {
+    "summary": "Rockford digs dirt, collects diamonds, and manipulates falling rocks.",
+    "why": "Simple material physics enables chain reactions and emergent puzzles."
+  },
+  "53": {
+    "summary": "Falling tetrominoes are stacked into complete rows.",
+    "why": "Extraordinary combinatorial purity, endless scalability of difficulty, and platform independence made it a universal game language."
+  },
+  "54": {
+    "summary": "A fighter penetrates a fortress and fights one-on-one duels.",
+    "why": "Rotated animation references and cinematic staging foreshadowed Mechner's Prince of Persia."
+  },
+  "55": {
+    "summary": "A pilot rescues castaways in a procedural alien landscape.",
+    "why": "Fractal terrain created a surprisingly convincing 3D landscape on 8-bit hardware."
+  },
+  "56": {
+    "summary": "The player leads heroes and armies against Doomdark in a vast fantasy landscape.",
+    "why": "It joined first-person exploration, strategic war, and thousands of views of the world into a remarkably open system."
+  },
+  "57": {
+    "summary": "Willy passes through a nonlinear mansion full of absurd dangers.",
+    "why": "A larger, connected map moved the British platformer from short standalone rooms toward exploration."
+  },
+  "58": {
+    "summary": "A fighter plane fights over the Pacific and escapes by rolls.",
+    "why": "A more accessible rhythm and a distinctive defensive roll helped define Capcom's arcade school of shooters."
+  },
+  "59": {
+    "summary": "Two futuristic gliders compete for a ball in a first-person arena.",
+    "why": "Fast perspective 3D presentation showed the potential of computer sport beyond imitating real disciplines."
+  },
+  "60": {
+    "summary": "Mario runs through the Mushroom Kingdom, jumps on enemies, and rescues the princess.",
+    "why": "The rhythm of movement, inertia, and teaching the rules through level design became a foundational model of the 2D platformer. MobyGames records the Japanese NES/Famicom release of September 13, 1985."
+  },
+  "61": {
+    "summary": "The goal is not to defeat a main villain, but to become a moral Avatar.",
+    "why": "Eight virtues and the evaluation of behavior made ethics the RPG system itself, not mere dialogue decoration."
+  },
+  "62": {
+    "summary": "Up to four heroes fight endless hordes in dungeons at the same time.",
+    "why": "Four-member cooperation, character roles, and the consumption of health created a highly influential arcade social loop."
+  },
+  "63": {
+    "summary": "Vic Viper gains power-ups through a selectable scale of upgrades.",
+    "why": "The power meter gives the player strategic control over the order of upgrades and makes progression part of immediate decision-making."
+  },
+  "64": {
+    "summary": "Knight Arthur fights a demonic world, and hits destroy his armor.",
+    "why": "Extremely precise timing and two-stage vulnerability are an archetype of difficult arcade action."
+  },
+  "65": {
+    "summary": "A lone soldier advances vertically through an enemy army.",
+    "why": "It helped standardize the multidirectional infantry run-and-gun shooter."
+  },
+  "66": {
+    "summary": "The player observes and indirectly influences a virtual person living in a house.",
+    "why": "An early precedent of \"dollhouse\" simulations and The Sims: the character is not only the player's avatar, but an autonomous inhabitant of the system."
+  },
+  "67": {
+    "summary": "The USA and the USSR compete for global influence without triggering a nuclear war.",
+    "why": "It models conflict as escalation and diplomatic risk instead of conventional conquest of the map."
+  },
+  "68": {
+    "summary": "A shipwrecked pilot moves freely around a planet and looks for a way to escape.",
+    "why": "A surprisingly open 3D world foreshadowed the sandbox exploration tradition."
+  },
+  "69": {
+    "summary": "The player takes control of robots aboard a spaceship.",
+    "why": "The \"transfer\" mechanic turns enemies into temporary classes of the player character and creates strategy from the choice of body."
+  },
+  "70": {
+    "summary": "A party of adventurers clears the city of Skara Brae through turn-based battles.",
+    "why": "Distinctive graphics, a musical bard, and elaborate party progression helped the CRPG reach a wider home audience."
+  },
+  "71": {
+    "summary": "Samus explores the connected Zebes and opens older paths with new abilities.",
+    "why": "A nonlinear world blocked by abilities became one of the main roots of later \"metroidvania\" design."
+  },
+  "72": {
+    "summary": "Link freely explores Hyrule, finds dungeons, and assembles the Triforce.",
+    "why": "An open world, secrets, and saving progress created a console adventure founded on the player's curiosity."
+  },
+  "73": {
+    "summary": "Simon Belmont penetrates Dracula's castle with a whip and secondary weapons.",
+    "why": "Precise committed attacks and a gothic theme gave rise to an extraordinarily long action line."
+  },
+  "74": {
+    "summary": "A hero travels Alefgard, gains experience, and defeats the Dragonlord.",
+    "why": "It simplified computer RPGs for the Famicom controller and became the basic template of the console JRPG."
+  },
+  "75": {
+    "summary": "A Ferrari drives through a branching landscape against the clock.",
+    "why": "Yu Suzuki joined scaling-sprite technology, a branching route, a choice of music, and a feeling of a \"luxury drive\" instead of pure motorsport."
+  },
+  "76": {
+    "summary": "Two little dragons catch enemies in bubbles on single-screen levels.",
+    "why": "Cooperation, the chaining of bonuses, and surprisingly deep rules of secrets make it a model of the systemic arcade."
+  },
+  "77": {
+    "summary": "A paddle destroys blocks and collects modifying power-ups.",
+    "why": "It revived Breakout through a multitude of ball states, lasers, paddle expansions, and structured levels."
+  },
+  "78": {
+    "summary": "Pit ascends through the underworld, collects upgrades, and passes through fortresses.",
+    "why": "An interesting hybrid of the platformer, RPG progression, and vertical scrolling."
+  },
+  "79": {
+    "summary": "The player absorbs the energy of objects and changes position under the Sentinel's watch.",
+    "why": "A unique spatial game of visibility, energy, and teleportation in procedural 3D landscapes."
+  },
+  "80": {
+    "summary": "English nobles conquer territory through a map and cinematic minigames.",
+    "why": "The production quality of the Amiga showed it was possible to present strategy as an \"interactive film\" with high visual appeal."
+  },
+  "81": {
+    "summary": "A party explores a vast first-person fantasy world.",
+    "why": "It combined an open world, dense statistical progression, and long-term exploration into a lasting RPG series."
+  },
+  "82": {
+    "summary": "The player pilots a combat helicopter through tactical missions.",
+    "why": "A significant milestone of \"serious\" military simulation on home computers."
+  },
+  "83": {
+    "summary": "Four Warriors of Light restore the elemental crystals.",
+    "why": "A choice of classes, a large adventure, and production ambition helped create the second fundamental pillar of the Japanese RPG."
+  },
+  "84": {
+    "summary": "A robotic hero defeats the Robot Masters and takes their weapons.",
+    "why": "An optional boss order and the acquisition of their abilities create a strategic network of weaknesses inside an action platformer."
+  },
+  "85": {
+    "summary": "Solid Snake infiltrates a base and is meant rather to avoid conflicts.",
+    "why": "It shifted the emphasis from the elimination of enemies to visibility, patrols, the alarm, and information asymmetry."
+  },
+  "86": {
+    "summary": "A group of teenagers infiltrates the mansion of a mad scientist.",
+    "why": "SCUMM and the verb-interface replaced the need to type commands; more characters and solutions increased the systemic quality of the adventure."
+  },
+  "87": {
+    "summary": "A party moves through a physical dungeon in real time.",
+    "why": "Real-time combat, direct manipulation, and spatial sound signals radically increased the immersion of the dungeon crawler."
+  },
+  "88": {
+    "summary": "The R-9 fights the biomorphic Bydo empire with a detachable Force module.",
+    "why": "The Force functions as a shield, a weapon, and an independent object; the levels thus require a spatial solution, not only reflexes."
+  },
+  "89": {
+    "summary": "Two soldiers shoot across side-view and pseudo-3D sections.",
+    "why": "Cooperative speed and multidirectional fire created one of the canonical run-and-gun models."
+  },
+  "90": {
+    "summary": "Two brothers advance through the streets against gangs.",
+    "why": "Side-scrolling cooperative brawling fundamentally defined the beat 'em up before Final Fight and Streets of Rage."
+  },
+  "91": {
+    "summary": "A captain trades, fights, searches for family, and changes careers in the Caribbean.",
+    "why": "A series of linked systems without a single obligatory activity is an early demonstration of a sandbox \"story machine.\""
+  },
+  "92": {
+    "summary": "A procedural dungeon is full of items with very complex mutual reactions.",
+    "why": "Extreme systemic quality and a multitude of emergent solutions became the measure of deep roguelike design."
+  },
+  "93": {
+    "summary": "Hapless Larry looks for romance in the parodic city of Lost Wages.",
+    "why": "An adult theme, humor, and a strong authorial voice showed the widening audience of graphic adventures."
+  },
+  "94": {
+    "summary": "Alis leads a party among several planets against tyranny.",
+    "why": "A sci-fi/fantasy mix, a distinctive heroine, and pseudo-3D dungeons set it apart from the dominant medieval JRPG model."
+  },
+  "95": {
+    "summary": "A ninja passes through isometric locations, fights, and solves obstacles.",
+    "why": "Exceptional presentation and the joining of action with exploration rank among the peaks of the C64 aesthetic school."
+  },
+  "96": {
+    "summary": "Link travels a map, but the battles take place from the side, with RPG statistics.",
+    "why": "A bold experiment with genre, experience, and precise swordplay shows the low rigidity of the early identity of the Zelda series."
+  },
+  "97": {
+    "summary": "Mario travels thematic worlds with new suits and map branches.",
+    "why": "An encyclopedic stock of ideas, power-ups, and secret paths created a peak of classic 2D Mario design."
+  },
+  "98": {
+    "summary": "Rangers survive in post-nuclear America and solve tasks by multiple paths.",
+    "why": "Persistent changes to the world, skill checks, and reactivity created a direct design line to Fallout."
+  },
+  "99": {
+    "summary": "A D&D party clears the city of Phlan in turn-based tactical battles.",
+    "why": "The \"Gold Box\" transferred AD&D rules into an extraordinarily successful digital tactical RPG framework."
+  },
+  "100": {
+    "summary": "A journalist uncovers a global alien conspiracy.",
+    "why": "Extensive travel and several controllable characters developed SCUMM beyond the single mansion of Maniac Mansion."
+  },
+  "101": {
+    "summary": "A futuristic aircraft carrier conquers a network of islands by means of drones.",
+    "why": "An exceptionally early mix of a strategic map, real-time logistics, and direct 3D control of units."
+  },
+  "102": {
+    "summary": "Detective Gillian Seed hunts androids that imitate people.",
+    "why": "Kojima's cinematic storytelling joined cyberpunk, the parser/menu adventure, and distinctive direction."
+  },
+  "103": {
+    "summary": "Ninja Ryu Hayabusa fights through fast levels and follows a story of revenge.",
+    "why": "\"Cinema scenes\" between levels substantially expanded the narrative ambitions of console action."
+  },
+  "104": {
+    "summary": "The prince has an hour to escape the dungeon and rescue the princess.",
+    "why": "Rotoscoped animation, physical inertia, and precise spatial rules created the cinematic-platformer tradition."
+  },
+  "105": {
+    "summary": "The player, as a deity, shapes the terrain and supports their followers.",
+    "why": "Indirect control and manipulation of the world instead of units founded a significant branch of the \"god game.\""
+  },
+  "106": {
+    "summary": "The player zones a city and watches the interaction of traffic, the economy, and services.",
+    "why": "Without a classic victory, it created a sandbox in which the city is a dynamic system and the experiment itself is the goal."
+  },
+  "107": {
+    "summary": "A transforming aircraft buys units and conquers bases in real time.",
+    "why": "A significant console predecessor of the RTS: an economy, production, bases, and simultaneous combat between two players."
+  },
+  "108": {
+    "summary": "Children travel a modern America full of aliens and absurd humor.",
+    "why": "A contemporary setting and a literary tone disrupted the fantasy conventions of the JRPG and led to EarthBound."
+  },
+  "109": {
+    "summary": "Fantasy heroes fight Death Adder on foot and on creatures.",
+    "why": "It carried the beat 'em up into fantasy space, with magic, distinct characters, and mounts."
+  },
+  "110": {
+    "summary": "An IndyCar race models car setup, tires, and a full 500 miles.",
+    "why": "One of the decisive steps from arcade racing toward a serious PC sim-racing tradition."
+  },
+  "111": {
+    "summary": "Mario explores Dinosaur Land with Yoshi and a multitude of secret exits.",
+    "why": "A branching overworld map and multilayered secret paths make a perfectly controllable platformer into an exploration game at the same time."
+  },
+  "112": {
+    "summary": "A Confederation pilot goes through a cinematically staged war against the Kilrathi.",
+    "why": "The dynamic course of the campaign and audiovisual spectacle substantially raised the narrative ambitions of PC simulations."
+  },
+  "113": {
+    "summary": "Guybrush Threepwood wants to become a pirate and clashes with LeChuck.",
+    "why": "Humor, \"insult swordfighting,\" and more benevolent design showed an alternative to Sierra's punishing adventures."
+  },
+  "114": {
+    "summary": "The player builds a railway network, trades, and competes with rivals.",
+    "why": "An economic system reacting to transport infrastructure became the foundation of the tycoon school."
+  },
+  "115": {
+    "summary": "Billy Blaze travels planets in a fast PC platformer.",
+    "why": "Carmack's adaptive tile-scrolling solution showed that a DOS PC could handle smooth console scrolling."
+  },
+  "116": {
+    "summary": "The Avatar resolves the conflict between the Britannians and the gargoyles in a continuous world.",
+    "why": "Removing separate dungeon modes brought the RPG world closer to a model of unified simulated space."
+  },
+  "117": {
+    "summary": "Marth leads an army in turn-based battles, and units can die permanently.",
+    "why": "Permadeath joined strategic pieces with individual characters and founded a significant tactical RPG tradition."
+  },
+  "118": {
+    "summary": "Futuristic craft race at extreme speed on sci-fi tracks.",
+    "why": "Mode 7 created a convincing rotating \"3D\" track and demonstrated the strengths of the SNES."
+  },
+  "119": {
+    "summary": "A deity alternates platform battles with the administration of growing cities.",
+    "why": "An unusual bond between two distinct genres gave progress both a macro level and a micro level."
+  },
+  "120": {
+    "summary": "A party explores the Forgotten Realms in a real-time first-person dungeon.",
+    "why": "It transferred the dynamics of Dungeon Master into the popular AD&D license and made the real-time crawler substantially more accessible on the PC."
+  },
+  "121": {
+    "summary": "Physicist Lester is teleported into a hostile alien world.",
+    "why": "Minimalist direction narrated without words, and vector animation, prove that atmosphere can arise directly from movement and editing."
+  },
+  "122": {
+    "summary": "The player assigns abilities among a crowd of creatures so that as many of them as possible survive.",
+    "why": "Indirect control of a large group and a shared time system created an entirely distinctive puzzle grammar."
+  },
+  "123": {
+    "summary": "Eight fighters with distinct styles compete in one-on-one matches.",
+    "why": "The combination of differing characters, special inputs, and combo potential defined the modern competitive fighting game."
+  },
+  "124": {
+    "summary": "Sonic frees animals and uses the speed and the slopes of the environment.",
+    "why": "Momentum, multiple routes at different heights, and an immediately readable identity gave Sega its own alternative to Mario."
+  },
+  "125": {
+    "summary": "Link travels between the Light World and the Dark World and solves dungeons.",
+    "why": "Parallel worlds, items as spatial \"keys,\" and compact dungeon design settled the 2D Zelda formula."
+  },
+  "126": {
+    "summary": "Cecil undergoes a personal transformation during a war over the crystals.",
+    "why": "Active Time Battle joined turn-based commands with time pressure, and the game substantially strengthened character-driven JRPG storytelling."
+  },
+  "127": {
+    "summary": "The player leads a civilization from antiquity to the modern age.",
+    "why": "A \"one more turn\" structure, a technology tree, and multiple paths to victory created one of the foundational strategic templates. The GDC preserves Meier's postmortem."
+  },
+  "128": {
+    "summary": "Guybrush searches for the treasure Big Whoop and clashes with LeChuck again.",
+    "why": "A more nonlinear structure and contextual humor represent one of the peaks of the classic SCUMM adventure."
+  },
+  "129": {
+    "summary": "D&D adventurers share a graphical online world of the Forgotten Realms.",
+    "why": "One of the important intermediate steps between text MUDs and graphical MMORPGs."
+  },
+  "130": {
+    "summary": "B. J. Blazkowicz shoots Nazis in fast first-person labyrinths.",
+    "why": "Smooth raycasting and immediate action helped create the mass language of the PC FPS."
+  },
+  "131": {
+    "summary": "The Atreides, the Harkonnens, and the Ordos mine spice, build bases, and lead armies.",
+    "why": "It standardized resource gathering, base construction, unit production, and real-time commands — the key model of the RTS."
+  },
+  "132": {
+    "summary": "The Avatar explores a fully 3D underground with physics, conversations, and magic.",
+    "why": "Free 3D movement and an interaction system are a direct ancestor of the immersive sim tradition."
+  },
+  "133": {
+    "summary": "A hero survives a haunted mansion from cinematic fixed cameras.",
+    "why": "Polygonal characters in pre-rendered scenes and limited resources created the basic model of 3D survival horror."
+  },
+  "134": {
+    "summary": "By exploring the galaxy, the player builds an alliance against the Ur-Quan.",
+    "why": "Free travel, alien diplomacy, and skill-based combat created an extraordinarily open sci-fi RPG."
+  },
+  "135": {
+    "summary": "Indy searches for Atlantis before the Nazis do.",
+    "why": "Three markedly different paths — team, logic, and action — gave the adventure unusual replayability."
+  },
+  "136": {
+    "summary": "Digitized fighters compete in a brutal tournament.",
+    "why": "It turned digitized actors, fatalities, and cultural controversy into a distinctive identity and a part of the debate about game ratings."
+  },
+  "137": {
+    "summary": "Mario characters race and use items against one another.",
+    "why": "Karting joined readable racing with \"weapons\" and comeback mechanics; a new mass subgenre arose."
+  },
+  "138": {
+    "summary": "Conrad recovers his memory and escapes an alien conspiracy.",
+    "why": "The rotoscoped fluidity of Prince of Persia met sci-fi action and a more extensive adventure structure here."
+  },
+  "139": {
+    "summary": "The Avatar investigates a murder and the religious movement Fellowship.",
+    "why": "A detailed world with daily routines of NPCs, manipulable objects, and a minimum of separate interfaces is a milestone of the systemic RPG."
+  },
+  "140": {
+    "summary": "Fox McCloud leads a team through polygonal space.",
+    "why": "The Super FX chip brought 3D polygonal action to the SNES, and branching routes increased replayability."
+  },
+  "141": {
+    "summary": "Rebel pilots undertake tactical missions from the cockpit of an X-wing.",
+    "why": "It transferred the precision of PC flight simulation into Star Wars and rejected arcade simplification of the license."
+  },
+  "142": {
+    "summary": "A trio of heroes across three epochs stops a mutant tentacle.",
+    "why": "Puzzles based on cause and effect between time periods are a demonstration of extraordinarily elegant systemic comedy."
+  },
+  "143": {
+    "summary": "A space marine fights demons on Mars and in hell.",
+    "why": "Fast pseudo-3D action, networked deathmatch, WAD modification, and shareware distribution fundamentally shaped PC games; the original release was on DOS in December 1993."
+  },
+  "144": {
+    "summary": "The player explores a quiet island and reconstructs the story of the Atrus family.",
+    "why": "The CD-ROM made visually rich, slow exploration possible; the world communicated mainly through the environment instead of a UI."
+  },
+  "145": {
+    "summary": "The player builds a layered city with transport, water, taxes, and zones.",
+    "why": "It expanded the original system into height, infrastructure, and a more detailed economy, without leaving the open sandbox."
+  },
+  "146": {
+    "summary": "Cybernetic agents carry out violent missions in dystopian cities.",
+    "why": "Real-time control of a small group, body upgrades, and a destructive city sandbox foreshadowed squad tactics."
+  },
+  "147": {
+    "summary": "A trio of heroes restores the power of Mana in real-time battles.",
+    "why": "Ring Command and local multiplayer showed an alternative to menu-driven turn-based JRPGs."
+  },
+  "148": {
+    "summary": "Polygonal fighters compete according to more realistic fighting styles.",
+    "why": "A breakthrough fully polygonal 3D fighting game moved the genre into a new spatial and animation paradigm."
+  },
+  "149": {
+    "summary": "Samurai fight with weapons that deal high damage.",
+    "why": "An emphasis on spacing, individual heavy strikes, and weapons created a counterpoint to combo-oriented Street Fighter."
+  },
+  "150": {
+    "summary": "A writer investigates voodoo murders in New Orleans.",
+    "why": "More adult, research-oriented storytelling and strong characterization represent a peak of Sierra's literary adventure."
+  },
+  "151": {
+    "summary": "Empires colonize the galaxy and develop technology and diplomacy.",
+    "why": "It popularized the compact space 4X model and a term that became one of the main strategies of the PC."
+  },
+  "152": {
+    "summary": "Two-member teams play exaggerated basketball full of dunks.",
+    "why": "\"On fire,\" simple controls, and theatrical commentary defined arcade sport as a distinctive alternative to simulation."
+  },
+  "153": {
+    "summary": "A small group of soldiers is led by the mouse through a series of fast missions.",
+    "why": "Simple RTS-like control contrasts with the permanent names and graves of the fallen, giving losses a human weight."
+  },
+  "154": {
+    "summary": "A settlement grows through detailed production and transport chains.",
+    "why": "The logistics of paths, carriers, and the processing of raw materials made economic flow the main gameplay."
+  },
+  "155": {
+    "summary": "Stock cars race on colorful polygonal circuits.",
+    "why": "Model 2 brought extraordinarily smooth textured 3D and the networking of multiple cabinets."
+  },
+  "156": {
+    "summary": "Sports cars drift along fast tracks.",
+    "why": "Drifting and a purely arcade response created a second significant 3D racing school alongside Sega."
+  },
+  "157": {
+    "summary": "Doomguy fights on Earth against larger hordes of demons.",
+    "why": "The super shotgun and an expanded enemy lineup dramatically increased the combinatorial depth of the combat arenas."
+  },
+  "158": {
+    "summary": "A hacker survives Citadel Station, controlled by the AI SHODAN.",
+    "why": "3D space, audio logs, multiple modes of interaction, and systemic solutions laid the foundation of the immersive-sim tradition."
+  },
+  "159": {
+    "summary": "The organization X-COM directs global defense and turn-based ground operations against UFOs.",
+    "why": "A strategic macro layer and destructive tactical missions with permanent soldiers create emergent stories from the mechanics."
+  },
+  "160": {
+    "summary": "Humans and orcs build bases and fight over Azeroth.",
+    "why": "It brought the RTS closer to a wider audience and began Blizzard's design competition with Command & Conquer."
+  },
+  "161": {
+    "summary": "Samus explores the planet Zebes again in a connected world.",
+    "why": "Extraordinarily elegant nonverbal teaching, movement, and layered shortcuts created one of the main models of the metroidvania."
+  },
+  "162": {
+    "summary": "A large ensemble of rebels faces an empire and the nihilist Kefka.",
+    "why": "An ensemble cast, a dramatic change of the world, and musically staged scenes showed the narrative range of the 16-bit JRPG."
+  },
+  "163": {
+    "summary": "Donkey and Diddy Kong recover a stock of bananas.",
+    "why": "Pre-rendered 3D graphic assets created an exceptional visual effect on 16-bit hardware."
+  },
+  "164": {
+    "summary": "3D combat extends the technique of the original game with more detailed animation and speed.",
+    "why": "High resolution, 60fps movement, and deeper stance/throw play showed that a polygonal fighter can be a technically precise esports system."
+  },
+  "165": {
+    "summary": "Fighters compete in the King of Iron Fist tournament.",
+    "why": "Four limb buttons and 3D presentation founded a fighting philosophy distinct over the long term."
+  },
+  "166": {
+    "summary": "The player builds attractions, sets prices, and runs an amusement park.",
+    "why": "It joined economic management with visually immediate sandbox building — an important ancestor of the \"tycoon\" boom."
+  },
+  "167": {
+    "summary": "A transport company connects industry and cities by trains, ships, and planes.",
+    "why": "Complex network logistics and emergent economic growth created one of the most durable management simulations."
+  },
+  "168": {
+    "summary": "Robert Foster uncovers the dystopian secret of Union City.",
+    "why": "An intelligent sci-fi script and a clearer interface represent a European alternative to the schools of LucasArts and Sierra."
+  },
+  "169": {
+    "summary": "Twinsen escapes a dictatorship in the isometric world of Twinsun.",
+    "why": "Character behavior modes and a fluid joining of exploration, dialogue, and action give the world a distinctive systemic rhythm."
+  },
+  "170": {
+    "summary": "A wizard conquers two fantasy worlds with armies and magic.",
+    "why": "Civilization-like expansion joined with tactical battles and an enormous spell system."
+  },
+  "171": {
+    "summary": "Christopher Blair fights in the conclusion of the war against the Kilrathi.",
+    "why": "Big-budget FMV with Hollywood actors symbolized the CD-ROM era of the \"interactive movie.\""
+  },
+  "172": {
+    "summary": "A wizard flies over deformable landscapes, collects mana, and fights for territory.",
+    "why": "Free 3D flight, terrain deformation, and a strategic economy were unusual for their time, both technically and in design."
+  },
+  "173": {
+    "summary": "Ness and the children save a contemporary, oddly American world from Giygas.",
+    "why": "Humor, modern everyday life, and an experimental finale created a cult alternative to heroic fantasy."
+  },
+  "174": {
+    "summary": "Fast top-down football is complemented by an enormous database and a career.",
+    "why": "Joining immediate arcade controllability with management created a uniquely integral football model."
+  },
+  "175": {
+    "summary": "A security officer fights aboard the colonization ship Marathon and reads AI terminals.",
+    "why": "Vertical aiming, networked multiplayer, and an ambitious text story foreshadow later Bungie design."
+  },
+  "176": {
+    "summary": "A group of heroes travels through epochs in order to avert an apocalypse.",
+    "why": "Visible enemies, combined attacks, multiple endings, and an elegant time structure minimize the friction of the classic JRPG."
+  },
+  "177": {
+    "summary": "The GDI and the Brotherhood of Nod wage war over Tiberium.",
+    "why": "An intuitive sidebar, an aggressive tempo, and networked multiplayer helped the RTS become the dominant PC genre."
+  },
+  "178": {
+    "summary": "Humans and orcs wage a larger war on land, at sea, and in the air.",
+    "why": "Firmer asymmetry, fog of war, and online compatibility substantially refined the RTS language."
+  },
+  "179": {
+    "summary": "A ship flies through robotic mines with complete freedom in three axes.",
+    "why": "A true six degrees of freedom forced the player to think about FPS space without a fixed \"up.\""
+  },
+  "180": {
+    "summary": "Antigravity machines race futuristic tracks to electronic music.",
+    "why": "A club aesthetic, licensed electronica, and technical design helped the PlayStation reach a more adult audience."
+  },
+  "181": {
+    "summary": "The King of Iron Fist continues with an expanded roster and techniques.",
+    "why": "It sped up and deepened the original limb-based combat and became an early demonstration of the quality of PS1 arcade ports."
+  },
+  "182": {
+    "summary": "A dragon rider fights in a melancholic post-apocalyptic world.",
+    "why": "360° aiming around the flying character used 3D space differently from ordinary forward rail shooters."
+  },
+  "183": {
+    "summary": "Armless Rayman saves a colorful world from Mr. Dark.",
+    "why": "Extremely detailed 2D animation showed that the arrival of polygons did not mean the end of the visual relevance of sprite art."
+  },
+  "184": {
+    "summary": "Yoshi carries Baby Mario and uses eggs as projectiles.",
+    "why": "A drawn look that feels analog, and the mechanic of aiming eggs, radically distinguished the game from the previous Mario."
+  },
+  "185": {
+    "summary": "Heroes occupy a map, develop cities, and lead armies.",
+    "why": "It joined exploration, RPG development of heroes, and a turn-based army economy into an extraordinarily addictive strategy."
+  },
+  "186": {
+    "summary": "Biker Ben uncovers a corporate conspiracy.",
+    "why": "Cinematic direction, voice acting, and a simplified contextual interface showed a path from verb-heavy adventures toward a cleaner UX."
+  },
+  "187": {
+    "summary": "Astronauts discover an abandoned alien civilization.",
+    "why": "Unusually serious science fiction and environmental archaeology widened the tonal range of LucasArts adventures."
+  },
+  "188": {
+    "summary": "Five traumatized people face the sadistic AI AM.",
+    "why": "A psychological theme and morally burdened branching showed the potential of the adventure for a difficult literary adaptation."
+  },
+  "189": {
+    "summary": "BattleMech pilots wage a war of the clans in heavy combat machines.",
+    "why": "The combination of mecha systems simulation with 3D action created an iconic PC cockpit experience."
+  },
+  "190": {
+    "summary": "Armed cars destroy one another in the arenas of a sadistic tournament.",
+    "why": "It helped create the console vehicular-combat genre and showed the multiplayer potential of the early PS1."
+  },
+  "191": {
+    "summary": "A young hero builds a rebellion and recruits the 108 Stars of Destiny.",
+    "why": "Recruiting dozens of characters and a developing base translate the revolution directly into the progression system."
+  },
+  "192": {
+    "summary": "A political civil war branches according to the protagonist's moral decisions.",
+    "why": "Height-based tactics, permanent consequences of choices, and political grayness fundamentally influenced Final Fantasy Tactics."
+  },
+  "193": {
+    "summary": "An Earth expedition discovers the living planet Albion, threatened by mining.",
+    "why": "It combines 2D towns, first-person dungeons, and ecological sci-fi in an ambitious European RPG."
+  },
+  "194": {
+    "summary": "Kyle Katarn uncovers the Dark Trooper project.",
+    "why": "Layered maps, jumping, crouch, and strong mission design expanded the Doom-like space of that time."
+  },
+  "195": {
+    "summary": "Mercenaries liberate an island sector by sector.",
+    "why": "Individual personalities, finances, and permanent injuries joined squad tactics with management."
+  },
+  "196": {
+    "summary": "Teams of worms destroy their opponents on deformable terrain.",
+    "why": "Simple ballistics, random maps, and humor created an extraordinarily durable local multiplayer."
+  },
+  "197": {
+    "summary": "Ranger fights fully 3D gothic dimensions.",
+    "why": "A true-3D engine, mouselook, client-server networking, modding, and early esports make it one of the key technical watersheds of the FPS."
+  },
+  "198": {
+    "summary": "Duke saves the Earth in interactive urban locations.",
+    "why": "The Build engine enabled mirrors, destruction, and a multitude of usable details; the environment felt like a place, not only a corridor."
+  },
+  "199": {
+    "summary": "Mario freely explores 3D worlds and collects stars.",
+    "why": "Analog control, the camera, and levels open in their goals created one of the most fundamental models of movement in 3D."
+  },
+  "200": {
+    "summary": "Lara Croft explores tombs, climbs, and fights creatures.",
+    "why": "It transferred precise spatial platforming into polygonal 3D and created a new icon of game culture."
+  },
+  "201": {
+    "summary": "Members of S.T.A.R.S. survive a mansion full of zombies and laboratory secrets.",
+    "why": "Limited ammunition, saving, and fixed cameras popularized survival horror as a clearly recognizable genre."
+  },
+  "202": {
+    "summary": "A hero descends beneath Tristram and fights procedural demonic hordes.",
+    "why": "Click-based real-time combat, random loot, and Battle.net created one of the strongest ARPG loops; Retro Gamer ranks it among essential retro titles."
+  },
+  "203": {
+    "summary": "A trainer catches, trains, and trades monsters on the way to the championship.",
+    "why": "The Link Cable turned single-player collecting into a social economy of trade and competition."
+  },
+  "204": {
+    "summary": "A civilization passes through history in a more elaborate turn-based simulation.",
+    "why": "An isometric map, scenarios, and editability created a long-lived PC strategy ecosystem."
+  },
+  "205": {
+    "summary": "An alternate history sets the Allies against the Soviets.",
+    "why": "Stronger faction asymmetry, excellent multiplayer, and fast control helped the RTS become a mass online genre."
+  },
+  "206": {
+    "summary": "Four players race in 3D and use items.",
+    "why": "The four-port N64 and battle mode made karting one of the pillars of couch multiplayer."
+  },
+  "207": {
+    "summary": "Nights flies dream circuits and links objects into chains.",
+    "why": "Analog curves of movement and scoring according to fluidity created a game more about graceful flight than about a target route."
+  },
+  "208": {
+    "summary": "A dragon rider fights through branching levels with an evolving dragon.",
+    "why": "Routes and the development of the dragon gave the linear rail shooter surprising replayability."
+  },
+  "209": {
+    "summary": "Crash advances along narrow 3D tracks against Cortex.",
+    "why": "\"Corridor 3D\" made it possible to preserve the readability of the 2D platformer and, at the same time, to demonstrate the performance of the PS1."
+  },
+  "210": {
+    "summary": "Mario joins forces with Bowser and new characters against Smithy.",
+    "why": "Timed hits inserted an active input into turn-based battles and helped create the later Paper Mario/Mario & Luigi tradition."
+  },
+  "211": {
+    "summary": "The player travels the enormous procedural region of Iliac Bay.",
+    "why": "Extreme scale, factions, and free character creation represent a radical branch of the computer open-world RPG."
+  },
+  "212": {
+    "summary": "An interstellar empire combines colonization, diplomacy, research, and tactical battles.",
+    "why": "It substantially expanded the first game and became a long-term comparative measure of space 4X."
+  },
+  "213": {
+    "summary": "Heroes conquer fantasy maps and develop armies.",
+    "why": "Richer factions and a distinctive audiovisual style firmed up the Heroes formula before the third game."
+  },
+  "214": {
+    "summary": "American George Stobbart unravels a Templar conspiracy in Europe.",
+    "why": "A \"serious cartoon\" aesthetic and elegant point-and-click UX rank among the peaks of the European adventure."
+  },
+  "215": {
+    "summary": "PaRappa repeats the rhythmic phrases of the teachers in order to gain self-confidence.",
+    "why": "One of the games that established the rhythm game as a separate console genre."
+  },
+  "216": {
+    "summary": "A soldier in power armor leads a unit through extensive outdoor missions.",
+    "why": "The combination of squad commands, looser 3D maps, and simulation was a preliminary step toward tactical FPS games."
+  },
+  "217": {
+    "summary": "Cloud and Avalanche face Shinra and Sephiroth on Planet Gaia.",
+    "why": "FMV, polygonal presentation, and a big-budget global release substantially widened the Western audience of the JRPG."
+  },
+  "218": {
+    "summary": "Bond carries out objective missions and fights in local multiplayer.",
+    "why": "Objective missions, stealth elements, and four-player split-screen convincingly established the FPS on the console."
+  },
+  "219": {
+    "summary": "The Vault Dweller searches for a water chip in post-nuclear California.",
+    "why": "SPECIAL, consequences of choices, alternative solutions, and black humor created a new standard of the reactive Western RPG."
+  },
+  "220": {
+    "summary": "Thousands of players together inhabit persistent Britannia.",
+    "why": "Economy, housing, PvP, and emergent social behavior showed the complications and the possibilities of a truly shared virtual world."
+  },
+  "221": {
+    "summary": "Alucard explores Dracula's connected castle.",
+    "why": "A Metroid structure, RPG equipment, and an inverted castle gave rise to the second pole of the term \"metroidvania.\""
+  },
+  "222": {
+    "summary": "Fox's team defends the Lylat System in a branching campaign.",
+    "why": "The Rumble Pak, dynamic radio messages, and branching showed the possibilities of haptics and of a repeated campaign."
+  },
+  "223": {
+    "summary": "The player earns licenses, buys cars, and races with extensive tuning.",
+    "why": "\"Real Driving Simulator\" joined car-collecting culture with more serious physics for a mass console audience."
+  },
+  "224": {
+    "summary": "Civilizations advance through epochs and wage war in antiquity.",
+    "why": "It joined a Warcraft-like RTS structure with historical technology and civilizational progression."
+  },
+  "225": {
+    "summary": "The player builds an underground as a villain and lures monsters into it.",
+    "why": "It reversed the fantasy perspective and combined indirect control of workers with a direct \"possession\" mode."
+  },
+  "226": {
+    "summary": "Robots wage war on 3D battlefields with physics-based projectiles.",
+    "why": "Large numbers of units, queue commands, terrain/elevation, and streamed resources significantly expanded RTS technique."
+  },
+  "227": {
+    "summary": "A small army fights in real-time battles without building bases.",
+    "why": "Physics-based projectiles, formations, and persistent units focused the RTS on the tactics of combat itself."
+  },
+  "228": {
+    "summary": "Detective Ray McCoy hunts replicants in parallel with the plot of the film.",
+    "why": "The changeable identity of suspects and autonomously moving characters create an unusually dynamic detective story."
+  },
+  "229": {
+    "summary": "Abe rescues Mudokons from the RuptureFarms meat plant.",
+    "why": "\"Gamespeak\" made it possible to communicate with NPCs as part of the puzzle system, and joined grotesque satire with precise platforming."
+  },
+  "230": {
+    "summary": "Ramza becomes entangled in the class and religious conflict of Ivalice.",
+    "why": "The FF job system joined with isometric height-based tactics and political drama."
+  },
+  "231": {
+    "summary": "Races can be won by the track, by destroying opponents, or by a violent sandbox.",
+    "why": "Destruction, physics, and looser rules turned the race into an anarchic systemic space."
+  },
+  "232": {
+    "summary": "Kurt Hectic fights alien \"minecrawlers\" in bizarre 3D levels.",
+    "why": "Extreme sniper zoom, surrealism, and fast third-person action showed the experimental potential of early 3D."
+  },
+  "233": {
+    "summary": "A marine attacks the home planet of the Strogg.",
+    "why": "Colorful hardware-accelerated 3D, client-server code, and modding firmed up the technical direction of the PC FPS."
+  },
+  "234": {
+    "summary": "A criminal carries out tasks in an open city from a top-down view.",
+    "why": "A city sandbox allowing the player to leave a mission and simply experiment with the system laid the foundation of the future GTA."
+  },
+  "235": {
+    "summary": "A new generation of fighters enters the King of Iron Fist Tournament.",
+    "why": "A faster sidestep, animation, and an extraordinarily high-quality PS1 adaptation made it one of the main 3D fighters of the decade."
+  },
+  "236": {
+    "summary": "The Chosen One searches for the GECK in a more extensive post-nuclear California.",
+    "why": "Greater systemic interconnection and a multitude of alternative solutions pushed the reactivity of the first Fallout still further."
+  },
+  "237": {
+    "summary": "Leon and Claire survive the catastrophe in Raccoon City.",
+    "why": "Two campaigns in A/B variants gave the story parallel perspectives and increased replay value."
+  },
+  "238": {
+    "summary": "A bear and a bird collect Jiggies in compact thematic worlds.",
+    "why": "A two-character moveset and dense levels refined the collectathon branch of Mario 64 design."
+  },
+  "239": {
+    "summary": "Thirty futuristic machines race at high speed.",
+    "why": "It sacrificed graphic detail for stable speed and an enormous peloton — design subordinated to the readability of movement."
+  },
+  "240": {
+    "summary": "A prisoner explores the alien planet Na Pali.",
+    "why": "The Unreal Engine, colored lighting, and large outdoor spaces substantially shifted visual expectations of the PC FPS."
+  },
+  "241": {
+    "summary": "Link travels through time and saves Hyrule from Ganondorf.",
+    "why": "Z-targeting elegantly solved orientation in 3D combat; Nintendo directly documents its origin in Iwata Asks."
+  },
+  "242": {
+    "summary": "Gordon Freeman survives a scientific catastrophe in Black Mesa.",
+    "why": "The scenario mostly takes place without the camera being detached from the player; scripted sequences, AI, and a coherent environment fundamentally changed expectations of the FPS. Valve confirms the original release in November 1998."
+  },
+  "243": {
+    "summary": "The Terrans, the Zerg, and the Protoss wage an asymmetric galactic war.",
+    "why": "Three dramatically different yet competitively balanced factions, and Battle.net, helped create a professional RTS culture."
+  },
+  "244": {
+    "summary": "A child of Bhaal travels the Sword Coast with a party of companions.",
+    "why": "The Infinity Engine and \"real-time with pause\" revived the party CRPG and joined the AD&D system with rich characters."
+  },
+  "245": {
+    "summary": "Solid Snake infiltrates Shadow Moses and faces FOXHOUND.",
+    "why": "Cinematic direction, voice dubbing, stealth rules, and meta-games with the hardware showed new possibilities of console storytelling."
+  },
+  "246": {
+    "summary": "Garrett steals in the fantasy-steampunk City and relies on darkness and sound.",
+    "why": "Light and acoustics are real systems; stealth here is not a supplement to shooting, but a full-fledged spatial game."
+  },
+  "247": {
+    "summary": "Manny Calavera guides the dead through a noir world of Mexican afterlife mythology.",
+    "why": "Art direction, dialogue, and cinematic staging represent an artistic peak of the classic LucasArts adventure."
+  },
+  "248": {
+    "summary": "Fei uncovers the history of a world full of mecha, religion, and psychology.",
+    "why": "Extraordinarily ambitious philosophical themes showed how far a mainstream JRPG can push an authorial narrative."
+  },
+  "249": {
+    "summary": "Large teams fight in an open landscape with jetpacks.",
+    "why": "\"Skiing,\" verticality, and team roles were ahead of later large-scale online shooters."
+  },
+  "250": {
+    "summary": "A counterterrorist team plans and carries out short, lethal operations.",
+    "why": "A pre-mission plan, low durability, and team waypoints introduced a harder tactical alternative to the Quake school."
+  }
+}

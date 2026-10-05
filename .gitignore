@@ -26,3 +26,11 @@ src/css/infima.css
 static/slides/
 static/examples/
 static/tiscali.json
+
+# Local secrets
+.key
+
+# Python caches and fetched article cache
+__pycache__/
+*.py[cod]
+scripts/game-notes/wiki-cache.json

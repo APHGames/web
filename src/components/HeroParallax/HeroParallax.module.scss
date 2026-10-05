@@ -21,10 +21,9 @@
 	z-index: 0;
 	overflow: hidden !important;
 	background:
-		radial-gradient(ellipse 75% 55% at 50% 40%, rgba($color-azure, 0.26), transparent 64%),
-		radial-gradient(ellipse 42% 36% at 10% 78%, rgba($color-aqua, 0.16), transparent 55%),
-		radial-gradient(ellipse 40% 34% at 92% 72%, rgba($color-tomato, 0.14), transparent 52%),
-		linear-gradient(165deg, $color-midnight 0%, $color-midnight-dark 58%, #050814 100%);
+		radial-gradient(ellipse 28% 40% at 0% 88%, rgba($color-azure, 0.22), transparent 70%),
+		radial-gradient(ellipse 32% 36% at 100% 82%, rgba($color-goldenrod, 0.14), transparent 68%),
+		linear-gradient(180deg, $color-midnight 0%, $color-midnight-dark 62%, #050814 100%);
 }
 
 .bannerFallback {
@@ -33,11 +32,12 @@
 	justify-content: center;
 }
 
-.atmosphere,
-.formsLeft,
-.formsRight,
-.formsMid,
-.formsBase {
+.field,
+.far,
+.mid,
+.signals,
+.nearLeft,
+.nearRight {
 	position: absolute;
 	inset: 0;
 	pointer-events: none;
@@ -46,442 +46,352 @@
 .glow {
 	position: absolute;
 	border-radius: 50%;
-	filter: blur(48px);
-	opacity: 0.5;
-
-	&[data-tone="center"] {
-		width: min(46vw, 460px);
-		height: min(46vw, 460px);
-		left: 50%;
-		top: 40%;
-		transform: translate(-50%, -50%);
-		background: radial-gradient(circle, rgba($color-royal-light, 0.55), rgba($color-azure, 0.12) 55%, transparent 72%);
-	}
+	filter: blur(42px);
+	pointer-events: none;
 
 	&[data-tone="left"] {
-		width: min(26vw, 240px);
-		height: min(26vw, 240px);
-		left: 8%;
-		top: 24%;
-		background: radial-gradient(circle, rgba($color-aqua, 0.32), transparent 70%);
+		width: min(22vw, 220px);
+		height: min(36vh, 280px);
+		left: -6%;
+		bottom: -8%;
+		background: radial-gradient(circle, rgba($color-azure, 0.38), transparent 70%);
+		opacity: 0.7;
 	}
 
 	&[data-tone="right"] {
-		width: min(28vw, 260px);
-		height: min(28vw, 260px);
-		right: 8%;
-		bottom: 20%;
-		background: radial-gradient(circle, rgba($color-goldenrod, 0.3), transparent 70%);
-	}
-
-	&[data-tone="top"] {
-		width: min(36vw, 320px);
-		height: min(20vw, 180px);
-		left: 50%;
-		top: 8%;
-		transform: translateX(-50%);
-		background: radial-gradient(circle, rgba($color-royal, 0.22), transparent 70%);
-		opacity: 0.4;
+		width: min(24vw, 240px);
+		height: min(30vh, 240px);
+		right: -8%;
+		bottom: -6%;
+		background: radial-gradient(circle, rgba($color-tomato, 0.22), transparent 72%);
+		opacity: 0.65;
 	}
 }
 
 .grid {
 	position: absolute;
 	inset: 0;
-	opacity: 0.14;
+	opacity: 0.1;
 	background-image:
-		linear-gradient(rgba($color-royal-light, 0.35) 1px, transparent 1px),
-		linear-gradient(90deg, rgba($color-royal-light, 0.35) 1px, transparent 1px);
-	background-size: 64px 64px;
-	mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 75%);
+		linear-gradient(rgba($color-royal-light, 0.4) 1px, transparent 1px),
+		linear-gradient(90deg, rgba($color-royal-light, 0.4) 1px, transparent 1px);
+	background-size: 72px 72px;
+	mask-image: radial-gradient(ellipse 70% 64% at 50% 42%, transparent 46%, #000 100%);
+	-webkit-mask-image: radial-gradient(ellipse 70% 64% at 50% 42%, transparent 46%, #000 100%);
 }
 
-.col {
+.hair,
+.tick,
+.frame,
+.bar,
+.diamond,
+.ring,
+.dot,
+.pip,
+.rail,
+.rule,
+.stack,
+.slab,
+.orbit {
 	position: absolute;
-	bottom: -18%;
-	width: clamp(2rem, 3.8vw, 3.6rem);
-	clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
-	box-shadow: 10px 0 28px rgba(0, 0, 0, 0.28);
+}
 
-	&[data-variant="far"] {
-		left: 1.5%;
-		height: 42%;
-		width: clamp(1.1rem, 2vw, 1.8rem);
-		background: linear-gradient(180deg, rgba($color-midnight-light, 0.9), $color-azure-dark);
+.hair {
+	width: 1px;
+	background: linear-gradient(180deg, transparent, $color-aqua-light, transparent);
+
+	&[data-slot="l"] {
+		left: 11%;
+		top: 10%;
+		height: 22%;
 		opacity: 0.7;
 	}
 
-	&[data-variant="tall"] {
-		left: 5%;
-		height: 78%;
-		background: linear-gradient(180deg, lighten($color-azure, 10%) 0%, $color-azure 40%, $color-azure-dark 100%);
-	}
-
-	&[data-variant="mid"] {
-		left: 10.5%;
-		height: 64%;
-		width: clamp(1.6rem, 3vw, 2.8rem);
-		background: linear-gradient(180deg, $color-aqua-light 0%, $color-aqua 45%, $color-aqua-dark 100%);
-		opacity: 0.92;
-	}
-
-	&[data-variant="short"] {
-		left: 15%;
-		height: 50%;
-		width: clamp(1.4rem, 2.6vw, 2.4rem);
-		background: linear-gradient(180deg, $color-royal-light 0%, $color-royal 50%, $color-royal-dark 100%);
-		opacity: 0.88;
-	}
-
-	&[data-variant="stub"] {
-		left: 19%;
+	&[data-slot="r"] {
+		right: 9%;
+		top: 14%;
 		height: 28%;
-		width: clamp(1rem, 2vw, 1.7rem);
-		background: linear-gradient(180deg, $color-emerald-light, $color-emerald-dark);
-		opacity: 0.75;
+		opacity: 0.55;
+		background: linear-gradient(180deg, transparent, $color-goldenrod-light, transparent);
 	}
 }
 
-.blade {
-	position: absolute;
-	height: clamp(0.7rem, 1.4vw, 1.1rem);
-	border-radius: 1px;
-	transform-origin: left center;
+.tick {
+	height: 2px;
 
-	&[data-variant="a"] {
-		left: 4%;
-		bottom: 42%;
-		width: clamp(5.5rem, 13vw, 9.5rem);
-		transform: rotate(-22deg);
-		background: linear-gradient(90deg, $color-tomato-light, $color-tomato-dark);
-		box-shadow: 0 8px 22px rgba($color-tomato-dark, 0.35);
-	}
-
-	&[data-variant="b"] {
-		left: 7%;
-		bottom: 28%;
-		width: clamp(3.5rem, 8vw, 6rem);
-		transform: rotate(-12deg);
-		background: linear-gradient(90deg, rgba($color-lemon, 0.95), rgba($color-goldenrod, 0.85));
-		opacity: 0.8;
-	}
-
-	&[data-variant="c"] {
-		left: 3%;
-		bottom: 56%;
-		width: clamp(4rem, 9vw, 7rem);
-		transform: rotate(-28deg);
-		background: linear-gradient(90deg, rgba($color-aqua-light, 0.9), rgba($color-azure, 0.7));
-		opacity: 0.7;
-	}
-}
-
-.fin {
-	position: absolute;
-	bottom: -20%;
-	width: clamp(1.2rem, 2.4vw, 2rem);
-	box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
-
-	&[data-side="left"] {
-		left: 23%;
-		height: 38%;
-		clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
-		background: linear-gradient(180deg, rgba($color-tomato, 0.85), rgba($color-tomato-dark, 0.9));
-		opacity: 0.7;
-	}
-
-	&[data-side="right"] {
-		right: 31%;
-		height: 44%;
-		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-		background: linear-gradient(180deg, rgba($color-royal-light, 0.85), rgba($color-royal-dark, 0.9));
-		opacity: 0.72;
-	}
-}
-
-.spike {
-	position: absolute;
-	bottom: -16%;
-	width: clamp(3rem, 7vw, 5.5rem);
-	height: clamp(8rem, 26vh, 14rem);
-	opacity: 0.55;
-
-	&[data-side="left"] {
-		left: 26%;
-		background: linear-gradient(180deg, rgba($color-aqua, 0.75), rgba($color-aqua-dark, 0.35));
-		clip-path: polygon(50% 0, 100% 100%, 0 100%);
-	}
-
-	&[data-side="right"] {
-		right: 35%;
-		background: linear-gradient(180deg, rgba($color-goldenrod, 0.7), rgba($color-goldenrod-dark, 0.35));
-		clip-path: polygon(40% 0, 100% 100%, 0 100%);
-	}
-}
-
-.panel {
-	position: absolute;
-	border-radius: 2px;
-	transform-origin: bottom center;
-	box-shadow: -12px 0 30px rgba(0, 0, 0, 0.38);
-
-	&[data-variant="back"] {
-		right: 5%;
-		bottom: -28%;
-		width: clamp(5.5rem, 13vw, 9.5rem);
-		height: clamp(16rem, 55vh, 28rem);
-		transform: skewY(-7deg);
-		background: linear-gradient(165deg, $color-goldenrod-light 0%, $color-goldenrod 40%, $color-goldenrod-dark 100%);
-	}
-
-	&[data-variant="mid"] {
-		right: 13%;
-		bottom: -26%;
-		width: clamp(4rem, 9vw, 6.5rem);
-		height: clamp(13rem, 45vh, 23rem);
-		transform: skewY(-7deg);
-		background: linear-gradient(165deg, $color-tomato-light 0%, $color-tomato 45%, $color-tomato-dark 100%);
-		opacity: 0.94;
-	}
-
-	&[data-variant="front"] {
-		right: 19%;
-		bottom: -22%;
-		width: clamp(3rem, 6.5vw, 5rem);
-		height: clamp(10rem, 34vh, 17rem);
-		transform: skewY(-7deg);
-		background: linear-gradient(165deg, $color-emerald-light 0%, $color-emerald 50%, $color-emerald-dark 100%);
-		opacity: 0.9;
-	}
-
-	&[data-variant="thin"] {
-		right: 1%;
-		bottom: -24%;
-		width: clamp(1.4rem, 2.8vw, 2.4rem);
-		height: clamp(12rem, 40vh, 20rem);
-		transform: skewY(-5deg);
-		background: linear-gradient(180deg, $color-manhattan-light, $color-manhattan-dark);
-		opacity: 0.75;
-	}
-}
-
-.wedge {
-	position: absolute;
-	opacity: 0.65;
-
-	&[data-variant="main"] {
-		right: 26%;
-		bottom: -18%;
-		width: clamp(4.5rem, 10vw, 7.5rem);
-		height: clamp(10rem, 34vh, 18rem);
-		background: linear-gradient(180deg, rgba($color-azure-light, 0.8), rgba($color-azure-dark, 0.45));
-		clip-path: polygon(50% 0, 100% 100%, 0 100%);
-	}
-
-	&[data-variant="side"] {
-		right: 38%;
-		bottom: -14%;
-		width: clamp(3rem, 6vw, 4.5rem);
-		height: clamp(6rem, 20vh, 11rem);
-		background: linear-gradient(180deg, rgba($color-lemon, 0.7), rgba($color-goldenrod-dark, 0.4));
-		clip-path: polygon(60% 0, 100% 100%, 0 100%);
-		opacity: 0.5;
-	}
-}
-
-/* Mid floating accents — small, no “grounded bottom” requirement */
-.shard {
-	position: absolute;
-	width: clamp(1.6rem, 3.2vw, 2.6rem);
-	height: clamp(1.6rem, 3.2vw, 2.6rem);
-	opacity: 0.72;
-	animation: drift 7s ease-in-out infinite;
-
-	&[data-variant="a"] {
-		left: 28%;
-		top: 22%;
-		background: linear-gradient(135deg, $color-aqua-light, $color-azure);
-		transform: rotate(18deg);
-		animation-delay: 0s;
-	}
-
-	&[data-variant="b"] {
-		right: 27%;
+	&[data-slot="l"] {
+		left: 0;
 		top: 18%;
-		background: linear-gradient(135deg, $color-tomato-light, $color-tomato);
-		transform: rotate(-24deg);
-		animation-delay: -1.5s;
-	}
-
-	&[data-variant="c"] {
-		left: 32%;
-		top: 58%;
-		width: clamp(1.1rem, 2.2vw, 1.8rem);
-		height: clamp(1.1rem, 2.2vw, 1.8rem);
-		background: linear-gradient(135deg, $color-goldenrod-light, $color-goldenrod-dark);
-		transform: rotate(40deg);
-		animation-delay: -3s;
-	}
-
-	&[data-variant="d"] {
-		right: 30%;
-		top: 52%;
-		width: clamp(1.2rem, 2.4vw, 2rem);
-		height: clamp(1.2rem, 2.4vw, 2rem);
-		background: linear-gradient(135deg, $color-emerald-light, $color-emerald-dark);
-		transform: rotate(-12deg);
-		animation-delay: -4.5s;
+		width: 9%;
+		background: linear-gradient(90deg, $color-azure-light, transparent);
+		box-shadow: 0 0 10px rgba($color-azure, 0.6);
 	}
 }
 
-.ring {
-	position: absolute;
-	width: clamp(2.4rem, 5vw, 3.8rem);
-	height: clamp(2.4rem, 5vw, 3.8rem);
-	border: 3px solid rgba($color-royal-light, 0.55);
-	border-radius: 2px;
-	opacity: 0.55;
-	transform: rotate(18deg);
-	animation: drift 9s ease-in-out infinite;
+.far .frame {
+	border: 1.5px solid rgba($color-royal-light, 0.7);
+	background: transparent;
+	box-shadow: 0 0 16px rgba($color-royal, 0.35);
 
-	&[data-side="left"] {
-		left: 24%;
-		top: 36%;
-		border-color: rgba($color-aqua, 0.55);
+	&[data-slot="l"] {
+		left: 3%;
+		top: 14%;
+		width: 42px;
+		height: 42px;
+		transform: rotate(8deg);
 	}
 
-	&[data-side="right"] {
-		right: 23%;
-		top: 34%;
-		border-color: rgba($color-goldenrod, 0.5);
-		transform: rotate(-14deg);
-		animation-delay: -2s;
+	&[data-slot="r"] {
+		right: 14%;
+		top: 28%;
+		width: 28px;
+		height: 28px;
+		border-color: rgba($color-emerald-light, 0.8);
+		box-shadow: 0 0 14px rgba($color-emerald, 0.35);
+		transform: rotate(-12deg);
+	}
+}
+
+.mid .bar {
+	&[data-slot="l"] {
+		left: 7%;
+		bottom: 22%;
+		width: 14px;
+		height: 28%;
+		background: linear-gradient(180deg, $color-aqua-light, $color-aqua 50%, $color-aqua-dark);
+		box-shadow: 0 0 22px rgba($color-aqua, 0.55);
+	}
+
+	&[data-slot="r"] {
+		right: 12%;
+		bottom: 36%;
+		width: min(16vw, 180px);
+		height: 8px;
+		background: linear-gradient(90deg, transparent, $color-goldenrod-light 30%, $color-goldenrod);
+		box-shadow: 0 0 18px rgba($color-goldenrod, 0.5);
+	}
+}
+
+.mid .diamond {
+	transform: rotate(45deg);
+
+	&[data-slot="l"] {
+		left: 10%;
+		bottom: 42%;
+		width: 28px;
+		height: 28px;
+		background: linear-gradient(135deg, $color-aqua-light, $color-azure);
+		box-shadow: 0 0 18px rgba($color-aqua, 0.7);
+	}
+
+	&[data-slot="r"] {
+		right: 18%;
+		top: 22%;
+		width: 20px;
+		height: 20px;
+		background: linear-gradient(135deg, $color-emerald-light, $color-emerald);
+		box-shadow: 0 0 16px rgba($color-emerald, 0.65);
+	}
+}
+
+.mid .ring {
+	border-radius: 50%;
+	border: 2px solid rgba($color-royal-light, 0.85);
+	background: radial-gradient(circle, rgba($color-azure, 0.18), transparent 68%);
+	box-shadow: 0 0 22px rgba($color-royal, 0.4);
+
+	&[data-slot="l"] {
+		left: 14%;
+		top: 20%;
+		width: 64px;
+		height: 64px;
+	}
+}
+
+.mid .frame {
+	border: 1.5px solid rgba($color-tomato-light, 0.8);
+	background: transparent;
+	box-shadow: 0 0 16px rgba($color-tomato, 0.35);
+
+	&[data-slot="r"] {
+		right: 6%;
+		top: 16%;
+		width: 46px;
+		height: 46px;
+		transform: rotate(12deg);
 	}
 }
 
 .dot {
-	position: absolute;
-	width: 0.55rem;
-	height: 0.55rem;
-	background: $color-white;
-	opacity: 0.55;
-	box-shadow: 0 0 10px currentColor;
-	animation: pulseDot 2.4s ease-in-out infinite;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	animation: pulseDot 2.8s ease-in-out infinite;
 
-	&[data-variant="a"] {
-		left: 30%;
-		top: 30%;
-		background: $color-aqua-light;
-		color: $color-aqua;
-	}
-
-	&[data-variant="b"] {
-		right: 29%;
-		top: 28%;
-		background: $color-tomato-light;
-		color: $color-tomato;
-		animation-delay: -0.6s;
-	}
-
-	&[data-variant="c"] {
-		left: 22%;
-		top: 48%;
-		background: $color-goldenrod;
-		color: $color-goldenrod;
-		animation-delay: -1.2s;
-	}
-
-	&[data-variant="d"] {
-		right: 20%;
-		top: 46%;
-		background: $color-emerald-light;
-		color: $color-emerald;
-		animation-delay: -1.8s;
-	}
-}
-
-.ridge {
-	position: absolute;
-	bottom: -4%;
-	height: clamp(3rem, 9vh, 5rem);
-	opacity: 0.5;
-
-	&[data-side="left"] {
+	&[data-slot="1"] {
 		left: 18%;
-		width: clamp(6rem, 14vw, 11rem);
-		background: linear-gradient(90deg, transparent, rgba($color-aqua, 0.55), transparent);
-		clip-path: polygon(0 100%, 18% 0, 55% 55%, 100% 100%);
+		top: 12%;
+		background: $color-aqua-light;
+		box-shadow: 0 0 14px $color-aqua;
 	}
 
-	&[data-side="center"] {
-		left: 42%;
-		width: clamp(8rem, 18vw, 14rem);
-		background: linear-gradient(90deg, transparent, rgba($color-royal, 0.35), transparent);
-		clip-path: polygon(0 100%, 30% 20%, 70% 45%, 100% 100%);
-		opacity: 0.35;
+	&[data-slot="2"] {
+		left: 8%;
+		top: 30%;
+		background: $color-azure-light;
+		box-shadow: 0 0 12px $color-azure;
+		animation-delay: -0.8s;
 	}
 
-	&[data-side="right"] {
-		right: 28%;
-		width: clamp(5rem, 12vw, 9rem);
-		background: linear-gradient(90deg, transparent, rgba($color-royal, 0.5), transparent);
-		clip-path: polygon(0 100%, 40% 35%, 70% 0, 100% 100%);
-	}
-}
-
-.step {
-	position: absolute;
-	bottom: -12%;
-	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	gap: 3px;
-	width: clamp(3.5rem, 8vw, 6rem);
-	height: clamp(5rem, 16vh, 8.5rem);
-	opacity: 0.7;
-
-	&::before,
-	&::after {
-		content: "";
-		background: linear-gradient(90deg, $color-rhino-80, $color-rhino-90);
+	&[data-slot="3"] {
+		right: 16%;
+		top: 10%;
+		background: $color-goldenrod-light;
+		box-shadow: 0 0 14px $color-goldenrod;
+		animation-delay: -1.4s;
 	}
 
-	&[data-side="left"] {
-		left: 34%;
-		background:
-			linear-gradient($color-azure, $color-azure-dark) top / 100% 32% no-repeat,
-			linear-gradient($color-aqua, $color-aqua-dark) center / 100% 32% no-repeat,
-			linear-gradient($color-royal, $color-royal-dark) bottom / 100% 32% no-repeat;
-	}
-
-	&[data-side="right"] {
-		right: 42%;
-		background:
-			linear-gradient($color-goldenrod, $color-goldenrod-dark) top / 100% 32% no-repeat,
-			linear-gradient($color-tomato, $color-tomato-dark) center / 100% 32% no-repeat,
-			linear-gradient($color-emerald, $color-emerald-dark) bottom / 100% 32% no-repeat;
+	&[data-slot="4"] {
+		right: 8%;
+		top: 34%;
+		background: $color-tomato-light;
+		box-shadow: 0 0 12px $color-tomato;
+		animation-delay: -2s;
 	}
 }
 
-@keyframes drift {
-	0%,
-	100% {
-		translate: 0 0;
+.pip {
+	width: 11px;
+	height: 11px;
+	transform: rotate(45deg);
+
+	&[data-slot="l"] {
+		left: 21%;
+		top: 20%;
+		background: $color-emerald-light;
+		box-shadow: 0 0 14px rgba($color-emerald, 0.85);
 	}
 
-	50% {
-		translate: 0 -10px;
+	&[data-slot="r"] {
+		right: 22%;
+		top: 18%;
+		background: $color-goldenrod;
+		box-shadow: 0 0 14px rgba($color-goldenrod, 0.8);
 	}
+}
+
+.rail {
+	bottom: 12%;
+
+	&[data-slot="back"] {
+		left: -12px;
+		width: 56px;
+		height: 62%;
+		background:
+			linear-gradient(90deg, rgba(255, 255, 255, 0.35), transparent 46%),
+			linear-gradient(180deg, $color-azure-light 0%, $color-azure 40%, $color-azure-dark 100%);
+		box-shadow: 0 0 36px rgba($color-azure, 0.55);
+	}
+
+	&[data-slot="front"] {
+		left: 58px;
+		bottom: 18%;
+		width: 22px;
+		height: 42%;
+		background: linear-gradient(180deg, $color-aqua-light, $color-aqua 45%, $color-aqua-dark);
+		box-shadow: 0 0 24px rgba($color-aqua, 0.55);
+	}
+}
+
+.rule {
+	left: 0;
+	bottom: 38%;
+	width: 190px;
+	height: 3px;
+	background: linear-gradient(90deg, $color-aqua-light, transparent);
+	box-shadow: 0 0 14px rgba($color-aqua, 0.65);
+}
+
+.stack {
+	left: 96px;
+	height: 8px;
+
+	&[data-slot="1"] {
+		bottom: 24%;
+		width: 110px;
+		background: linear-gradient(90deg, $color-emerald-light, $color-emerald);
+		box-shadow: 0 0 14px rgba($color-emerald, 0.5);
+	}
+
+	&[data-slot="2"] {
+		bottom: 20.5%;
+		width: 68px;
+		background: linear-gradient(90deg, $color-royal-light, $color-royal);
+		box-shadow: 0 0 12px rgba($color-royal, 0.45);
+	}
+}
+
+.nearLeft .diamond {
+	left: 46px;
+	bottom: 46%;
+	width: 26px;
+	height: 26px;
+	transform: rotate(45deg);
+	background: linear-gradient(135deg, $color-lemon-light, $color-goldenrod);
+	box-shadow: 0 0 18px rgba($color-goldenrod, 0.7);
+}
+
+.slab {
+	&[data-slot="1"] {
+		right: -18px;
+		bottom: 10%;
+		width: 230px;
+		height: 168px;
+		background: linear-gradient(155deg, $color-goldenrod-light, $color-goldenrod 46%, $color-goldenrod-dark);
+		box-shadow: -10px 0 32px rgba($color-goldenrod, 0.4);
+	}
+
+	&[data-slot="2"] {
+		right: 78px;
+		bottom: 24%;
+		width: 156px;
+		height: 118px;
+		background: linear-gradient(160deg, $color-tomato-light, $color-tomato 50%, $color-tomato-dark);
+		box-shadow: 0 0 28px rgba($color-tomato, 0.4);
+	}
+
+	&[data-slot="3"] {
+		right: 16px;
+		bottom: 46%;
+		width: 150px;
+		height: 8px;
+		background: linear-gradient(90deg, transparent, $color-emerald-light 40%, $color-emerald);
+		box-shadow: 0 0 16px rgba($color-emerald, 0.6);
+	}
+}
+
+.orbit {
+	right: 36px;
+	bottom: 30%;
+	width: 132px;
+	height: 132px;
+	border-radius: 50%;
+	border: 2px solid rgba($color-tomato-light, 0.85);
+	background: radial-gradient(circle, rgba($color-tomato, 0.16), transparent 68%);
+	box-shadow:
+		0 0 28px rgba($color-tomato, 0.35),
+		inset 0 0 20px rgba($color-goldenrod, 0.2);
 }
 
 @keyframes pulseDot {
 	0%,
 	100% {
-		opacity: 0.35;
+		opacity: 0.4;
 		transform: scale(1);
 	}
 
 	50% {
-		opacity: 0.9;
+		opacity: 0.95;
 		transform: scale(1.35);
 	}
 }
@@ -501,11 +411,12 @@
 	flex-direction: column;
 	align-items: flex-start;
 	position: relative;
+	container-type: inline-size;
+	container-name: hero-logo;
 	width: min(560px, 72vw);
 	max-width: 100%;
 	filter: drop-shadow(0 18px 40px rgba(3, 3, 12, 0.55));
 
-	/* soft pin-row atmosphere — kept light so SVG glow stays primary */
 	&::before,
 	&::after {
 		content: "";
@@ -577,10 +488,6 @@
 	animation: chromaticMove 2.5s ease infinite;
 }
 
-.afterHero {
-	padding-top: 2rem;
-}
-
 @media (max-width: 996px) {
 	.logoWrap {
 		width: min(420px, 78vw);
@@ -590,19 +497,14 @@
 		padding-bottom: 5rem;
 	}
 
-	.col[data-variant="short"],
-	.col[data-variant="stub"],
-	.col[data-variant="far"],
-	.panel[data-variant="front"],
-	.panel[data-variant="thin"],
-	.blade[data-variant="b"],
-	.blade[data-variant="c"],
-	.wedge[data-variant="side"],
-	.spike,
-	.step,
-	.shard[data-variant="c"],
-	.shard[data-variant="d"],
-	.ring {
+	.far .frame,
+	.mid .ring,
+	.mid .frame,
+	.mid .diamond[data-slot="r"],
+	.stack,
+	.pip,
+	.dot[data-slot="2"],
+	.dot[data-slot="4"] {
 		display: none;
 	}
 }
@@ -621,27 +523,20 @@
 		padding-bottom: 4.25rem;
 	}
 
-	.panel[data-variant="mid"],
-	.blade[data-variant="a"],
-	.ridge,
-	.fin,
-	.shard[data-variant="a"],
+	.mid,
+	.rule,
+	.orbit,
+	.slab[data-slot="2"],
 	.dot {
 		display: none;
 	}
 
-	.col[data-variant="tall"] {
-		height: 62%;
-		bottom: -16%;
-	}
-
-	.col[data-variant="mid"] {
+	.rail[data-slot="back"] {
 		height: 52%;
-		bottom: -16%;
 	}
 
-	.panel[data-variant="back"] {
-		height: clamp(14rem, 48vh, 20rem);
-		bottom: -24%;
+	.slab[data-slot="1"] {
+		width: 34vw;
+		height: 18vh;
 	}
 }

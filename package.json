@@ -13,6 +13,7 @@
 		"build_en": "docusaurus build --locale en",
 		"deploy_en": "docusaurus deploy --locale en",
 		"download_data": "node scripts/download_data.js",
+		"catalog_games": "python scripts/build_worthwhile_catalog.py --write-games",
 		"swizzle": "docusaurus swizzle",
 		"serve": "docusaurus serve",
 		"lint": "eslint src i18n docs",

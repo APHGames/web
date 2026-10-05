@@ -1,0 +1,219 @@
+@import "./variables.scss";
+@import "../internals/aph-colors.scss";
+
+.shell {
+	width: 100%;
+	max-width: none;
+}
+
+.page {
+	width: 100%;
+	max-width: none;
+	box-sizing: border-box;
+	padding: 1.5rem clamp(1.25rem, 3vw, 3.5rem) 3.5rem;
+	color: $color-rhino-10;
+	font-family: inherit;
+}
+
+.back {
+	display: inline-block;
+	margin: 0 0 1.25rem;
+	color: $color-goldenrod;
+	font: inherit;
+	font-size: 1rem;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-goldenrod-light;
+	}
+}
+
+.sheet {
+	width: min(1040px, 100%);
+	max-width: 1040px;
+	margin: 0 auto;
+	background: transparent;
+	color: inherit;
+	font-family: inherit;
+}
+
+.kicker {
+	margin: 0 0 0.45rem;
+	color: $color-goldenrod;
+	font-size: 0.95rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.sheet h1 {
+	margin: 0;
+	max-width: none;
+	color: $color-white;
+	font-family: inherit;
+	font-size: clamp(2.4rem, 4vw, 4rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: 0;
+}
+
+.deck {
+	margin: 0.85rem 0 0;
+	max-width: none;
+	color: $color-rhino-20;
+	font-family: inherit;
+	font-size: 1.35rem;
+	font-style: normal;
+	line-height: 1.4;
+}
+
+.facts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0;
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
+	color: $color-rhino-40;
+	font-size: 1.05rem;
+
+	li {
+		display: flex;
+		align-items: center;
+	}
+
+	li + li::before {
+		content: "";
+		width: 1px;
+		height: 0.95rem;
+		margin: 0 0.75rem;
+		background: $color-rhino-80;
+	}
+}
+
+.rule {
+	height: 1px;
+	margin: 1.15rem 0 1.4rem;
+	border: 0;
+	background: $color-rhino-80;
+}
+
+.lead {
+	color: $color-rhino-5;
+	font-size: 1.28rem;
+	line-height: 1.5;
+}
+
+.banner,
+.wide {
+	float: none;
+	clear: both;
+	width: 360px;
+	max-width: 100%;
+	margin: 0 auto 1.2rem;
+}
+
+.copy {
+	font-size: 1.15rem;
+	line-height: 1.6;
+	color: $color-rhino-10;
+
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	p {
+		margin: 0 0 1.05rem;
+	}
+}
+
+.figure {
+	margin: 0.15rem 0 0.9rem;
+	background: $color-midnight-dark;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 420px;
+		object-fit: contain;
+	}
+
+	figcaption {
+		padding: 0.4rem 0.15rem 0.1rem;
+		color: $color-rhino-40;
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+
+		a {
+			color: $color-aqua;
+			text-decoration: none;
+
+			&:hover {
+				color: $color-aqua-light;
+			}
+		}
+	}
+}
+
+.left,
+.right {
+	clear: both;
+	width: 340px;
+	max-width: 46%;
+}
+
+.left {
+	float: left;
+	margin: 0.15rem 1.35rem 0.7rem 0;
+}
+
+.right {
+	float: right;
+	margin: 0.15rem 0 0.7rem 1.35rem;
+}
+
+.pixel img {
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+.pager {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid $color-rhino-80;
+	font-size: 1.05rem;
+
+	a {
+		color: $color-goldenrod-light;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
+
+.missing {
+	width: 100%;
+	margin: 2rem 0;
+	color: $color-rhino-10;
+}
+
+@media (max-width: 720px) {
+	.page {
+		padding: 1rem 1rem 2.5rem;
+	}
+
+	.left,
+	.right {
+		float: none;
+		width: min(360px, 100%);
+		max-width: 360px;
+		margin: 0 auto 1rem;
+	}
+}

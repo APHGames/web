@@ -1,0 +1,172 @@
+@import "./variables.scss";
+@import "../internals/aph-colors.scss";
+
+.catalog {
+	margin-top: 0.5rem;
+}
+
+.introNote {
+	color: $color-rhino-20;
+	margin-bottom: 1.25rem;
+}
+
+.toolbar {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	margin-bottom: 1.5rem;
+}
+
+.search {
+	width: 100%;
+	background: $color-rhino-100;
+	color: $color-rhino-5;
+	border: 1px solid $color-rhino-80;
+	border-radius: 8px;
+	padding: 0.65rem 0.9rem;
+	font: inherit;
+	font-size: 1rem;
+
+	&:focus {
+		outline: 2px solid $color-goldenrod;
+		border-color: transparent;
+	}
+}
+
+.group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	align-items: center;
+}
+
+.groupLabel {
+	flex: 0 0 100%;
+	color: $color-goldenrod;
+	font-size: 0.78rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 0.35rem 0 0.1rem;
+}
+
+.chip {
+	appearance: none;
+	border: 1px solid $color-rhino-80;
+	background: $color-rhino-100;
+	color: $color-rhino-10;
+	border-radius: 999px;
+	padding: 0.28rem 0.7rem;
+	font: inherit;
+	font-size: 0.92rem;
+	cursor: pointer;
+	line-height: 1.3;
+
+	&:hover {
+		border-color: $color-goldenrod;
+		color: $color-white;
+	}
+}
+
+.chipActive {
+	background: $color-goldenrod;
+	border-color: $color-goldenrod;
+	color: $color-midnight-dark;
+	font-weight: 700;
+}
+
+.blurb {
+	color: $color-rhino-20;
+	margin: 0;
+}
+
+.count {
+	color: $color-rhino-40;
+	font-size: 0.95rem;
+}
+
+.decade {
+	grid-column: 1 / -1;
+	margin: 1.6rem 0 0.15rem;
+	font-size: 1.35rem;
+	color: $color-goldenrod-light;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+	gap: 0.85rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+	padding: 0;
+	border: 1px solid $color-rhino-80;
+	border-radius: 10px;
+	background: $color-rhino-100;
+	color: inherit;
+	cursor: pointer;
+	overflow: hidden;
+	font: inherit;
+	text-decoration: none;
+	transition: transform 0.18s ease, border-color 0.18s ease;
+
+	&:hover,
+	&:focus {
+		border-color: $color-goldenrod;
+		color: inherit;
+		text-decoration: none;
+		transform: scale(1.045);
+	}
+}
+
+.shot {
+	height: 132px;
+	background: $color-midnight-dark;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.pixel img {
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+.placeholder {
+	color: $color-goldenrod;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.meta {
+	padding: 0.65rem 0.75rem 0.8rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	min-height: 5.4rem;
+}
+
+.name {
+	font-weight: 700;
+	color: $color-white;
+	line-height: 1.25;
+}
+
+.sub {
+	color: $color-rhino-40;
+	font-size: 0.88rem;
+}
+
+.empty {
+	color: $color-rhino-20;
+	padding: 2rem 0;
+}

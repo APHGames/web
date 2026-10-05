@@ -17,105 +17,80 @@ const LogoMark = () => (
 );
 
 const Atmosphere = () => (
-	<div className={styles.atmosphere} aria-hidden>
-		<span className={styles.glow} data-tone="center" />
+	<div className={styles.field} aria-hidden>
 		<span className={styles.glow} data-tone="left" />
 		<span className={styles.glow} data-tone="right" />
-		<span className={styles.glow} data-tone="top" />
 		<span className={styles.grid} />
 	</div>
 );
 
-const LeftForms = () => (
-	<div className={styles.formsLeft} aria-hidden>
-		<span className={styles.col} data-variant="far" />
-		<span className={styles.col} data-variant="tall" />
-		<span className={styles.col} data-variant="mid" />
-		<span className={styles.col} data-variant="short" />
-		<span className={styles.col} data-variant="stub" />
-		<span className={styles.blade} data-variant="a" />
-		<span className={styles.blade} data-variant="b" />
-		<span className={styles.blade} data-variant="c" />
-		<span className={styles.fin} data-side="left" />
-		<span className={styles.spike} data-side="left" />
+const FarMarks = () => (
+	<div className={styles.far} aria-hidden>
+		<span className={styles.hair} data-slot="l" />
+		<span className={styles.hair} data-slot="r" />
+		<span className={styles.tick} data-slot="l" />
+		<span className={styles.frame} data-slot="l" />
+		<span className={styles.frame} data-slot="r" />
 	</div>
 );
 
-const RightForms = () => (
-	<div className={styles.formsRight} aria-hidden>
-		<span className={styles.panel} data-variant="back" />
-		<span className={styles.panel} data-variant="mid" />
-		<span className={styles.panel} data-variant="front" />
-		<span className={styles.panel} data-variant="thin" />
-		<span className={styles.wedge} data-variant="main" />
-		<span className={styles.wedge} data-variant="side" />
-		<span className={styles.fin} data-side="right" />
-		<span className={styles.spike} data-side="right" />
+const MidMarks = () => (
+	<div className={styles.mid} aria-hidden>
+		<span className={styles.bar} data-slot="l" />
+		<span className={styles.diamond} data-slot="l" />
+		<span className={styles.ring} data-slot="l" />
+		<span className={styles.bar} data-slot="r" />
+		<span className={styles.frame} data-slot="r" />
+		<span className={styles.diamond} data-slot="r" />
 	</div>
 );
 
-const MidAccents = () => (
-	<div className={styles.formsMid} aria-hidden>
-		<span className={styles.shard} data-variant="a" />
-		<span className={styles.shard} data-variant="b" />
-		<span className={styles.shard} data-variant="c" />
-		<span className={styles.shard} data-variant="d" />
-		<span className={styles.ring} data-side="left" />
-		<span className={styles.ring} data-side="right" />
-		<span className={styles.dot} data-variant="a" />
-		<span className={styles.dot} data-variant="b" />
-		<span className={styles.dot} data-variant="c" />
-		<span className={styles.dot} data-variant="d" />
+const Accents = () => (
+	<div className={styles.signals} aria-hidden>
+		<span className={styles.dot} data-slot="1" />
+		<span className={styles.dot} data-slot="2" />
+		<span className={styles.pip} data-slot="l" />
+		<span className={styles.dot} data-slot="3" />
+		<span className={styles.dot} data-slot="4" />
+		<span className={styles.pip} data-slot="r" />
 	</div>
 );
 
-const BaseForms = () => (
-	<div className={styles.formsBase} aria-hidden>
-		<span className={styles.ridge} data-side="left" />
-		<span className={styles.ridge} data-side="center" />
-		<span className={styles.ridge} data-side="right" />
-		<span className={styles.step} data-side="left" />
-		<span className={styles.step} data-side="right" />
+const AnchorLeft = () => (
+	<div className={styles.nearLeft} aria-hidden>
+		<span className={styles.rail} data-slot="back" />
+		<span className={styles.rail} data-slot="front" />
+		<span className={styles.rule} />
+		<span className={styles.stack} data-slot="1" />
+		<span className={styles.stack} data-slot="2" />
+		<span className={styles.diamond} />
 	</div>
 );
+
+const AnchorRight = () => (
+	<div className={styles.nearRight} aria-hidden>
+		<span className={styles.slab} data-slot="1" />
+		<span className={styles.slab} data-slot="2" />
+		<span className={styles.slab} data-slot="3" />
+		<span className={styles.orbit} />
+	</div>
+);
+
+const layer = (children: React.ReactNode, translateY: [number, number]) => ({
+	children,
+	translateY,
+	shouldAlwaysCompleteAnimation: true,
+	expanded: false,
+});
 
 const layers = () => [
-	{
-		children: <Atmosphere />,
-		translateY: [0, -55],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
-	{
-		children: <LeftForms />,
-		translateY: [8, 75],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
-	{
-		children: <RightForms />,
-		translateY: [5, 85],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
-	{
-		children: <MidAccents />,
-		translateY: [-8, -95],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
-	{
-		children: <BaseForms />,
-		translateY: [0, 60],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
-	{
-		children: <LogoMark />,
-		translateY: [0, 45],
-		shouldAlwaysCompleteAnimation: true,
-		expanded: false,
-	},
+	layer(<Atmosphere />, [0, -10]),
+	layer(<FarMarks />, [0, 24]),
+	layer(<MidMarks />, [0, 68]),
+	layer(<Accents />, [-4, -96]),
+	layer(<AnchorLeft />, [0, 148]),
+	layer(<AnchorRight />, [0, 188]),
+	layer(<LogoMark />, [0, 20]),
 ];
 
 const HeroParallax = () => {
